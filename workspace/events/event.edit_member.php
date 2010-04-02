@@ -1,15 +1,15 @@
 <?php
 
 	require_once(TOOLKIT . '/class.event.php');
-	
+
 	Class eventedit_member extends Event{
-		
+
 		const ROOTELEMENT = 'edit-member';
-		
+
 		public $eParamFILTERS = array(
-			
+
 		);
-			
+
 		public static function about(){
 			return array(
 					 'name' => 'Edit Member',
@@ -27,7 +27,7 @@
 		}
 
 		public static function allowEditorToParse(){
-			return true;
+			return false;
 		}
 
 		public static function documentation(){
@@ -88,12 +88,24 @@
         <p>To redirect to a different location upon a successful save, include the redirect location in the form. This is best as a hidden field like so, where the value is the URL to redirect to:</p>
         <pre class="XML"><code>&lt;input name="redirect" type="hidden" value="http://home/sym/sym-forum/success/" /></code></pre>';
 		}
-		
+
 		public function load(){			
 			if(isset($_POST['action']['edit-member'])) return $this->__trigger();
 		}
-		
+
 		protected function __trigger(){
+
+			$Members = Frontend::instance()->ExtensionManager->create('members');
+			$Members->initialiseCookie();
+
+			if($Members->isLoggedIn() !== true || $_POST['id'] != (int)$Members->Member->get('id')){
+				// Oi! you can't be here
+				redirect(URL . '/forbidden/');
+				exit();
+			}
+
+			include(TOOLKIT . '/events/event.section.php');
+			return $result;
 			include(TOOLKIT . '/events/event.section.php');
 			return $result;
 		}		
