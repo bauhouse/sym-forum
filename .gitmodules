@@ -19,3 +19,24 @@
 [submodule "extensions/debugdevkit"]
 	path = extensions/debugdevkit
 	url = git://github.com/symphony/debugdevkit.git
+[submodule "extensions/asdc"]
+	path = extensions/asdc
+	url = git://github.com/pointybeard/asdc.git
+[submodule "extensions/content_type_mappings"]
+	path = extensions/content_type_mappings
+	url = git://github.com/pointybeard/content_type_mappings.git
+[submodule "extensions/numberfield"]
+	path = extensions/numberfield
+	url = git://github.com/pointybeard/numberfield.git
+[submodule "extensions/forum"]
+	path = extensions/forum
+	url = git://github.com/bauhouse/forum.git
+[submodule "extensions/members"]
+	path = extensions/members
+	url = git://github.com/symphony/members.git
+[submodule "extensions/library"]
+	path = extensions/library
+	url = git://github.com/bauhouse/library.git
+[submodule "extensions/smtp_email_library"]
+	path = extensions/smtp_email_library
+	url = git://github.com/pointybeard/smtp_email_library.git
