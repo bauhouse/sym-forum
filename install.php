@@ -195,10 +195,10 @@
 		$conf['symphony']['allow_page_subscription'] = '1';
 		$conf['symphony']['lang'] = 'en';
 		$conf['symphony']['version'] = '2.0.7';
-		$conf['symphony']['pages_table_nest_children'] = 'yes';
+		$conf['symphony']['pages_table_nest_children'] = 'no';
 		$conf['log']['archive'] = '1';
 		$conf['log']['maxsize'] = '102400';
-		$conf['general']['sitename'] = 'Symphony CMS';
+		$conf['general']['sitename'] = 'Forum';
 		$conf['image']['cache'] = '1';
 		$conf['image']['quality'] = '90';
 		$conf['database']['driver'] = 'mysql';
@@ -210,6 +210,28 @@
 		$conf['region']['time_format'] = 'H:i';
 		$conf['region']['date_format'] = 'd F Y';
 		$conf['maintenance_mode']['enabled'] = 'no';
+		$conf['members']['cookie-prefix'] = 'sym-members';
+		$conf['members']['member_section'] = '1';
+		$conf['members']['email_address_field_id'] = '4';
+		$conf['members']['timezone_offset_field_id'] = '10';
+		$conf['members']['new_member_default_role'] = '4';
+		$conf['members']['require_activation'] = 'yes';
+		$conf['smtp_email_library']['host'] = '';
+		$conf['smtp_email_library']['port'] = '';
+		$conf['smtp_email_library']['auth'] = '0';
+		$conf['smtp_email_library']['username'] = '';
+		$conf['smtp_email_library']['password'] = '';
+		$conf['forum']['discussion-section'] = '2';
+		$conf['forum']['comment-section'] = '3';
+		$conf['forum']['member-link-field'] = '21';
+		$conf['forum']['discussion-last-post-field'] = '14';
+		$conf['forum']['discussion-last-active-field'] = '15';
+		$conf['forum']['unread-cutoff-field'] = '20';
+		$conf['forum']['pinned-field'] = '16';
+		$conf['forum']['locked-field'] = '17';
+		$conf['forum']['comment-discussion-link-field'] = '19';
+		$conf['forum']['comment-member-link-field'] = '21';
+		$conf['forum']['comment-creation-date-field'] = '20';
 	
 		return $conf;
 	
