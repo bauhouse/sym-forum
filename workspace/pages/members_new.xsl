@@ -4,9 +4,12 @@
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/timezone.xsl"/>
 
+<xsl:variable name="event-action" select="'members-register'"/>
+<xsl:variable name="event" select="/data/events/*[name()=$event-action]"/>
+
 <xsl:template match="data">
 	<h2 class="heading">Member Registration</h2>
-	<xsl:if test="events/save-member/username-and-password/@type = 'invalid'">
+	<xsl:if test="$event/username-and-password/@type = 'invalid'">
 		<div id="system-message">
 			<p class="error">The username supplied already exist.</p>
 		</div>
@@ -14,32 +17,32 @@
 	<form method="post" action="{$current-url}">
 		<fieldset>
 			<p>
-				<xsl:if test="events/save-member/name">
+				<xsl:if test="$event/name">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="name">Full Name</label>
-				<input id="name" name="fields[name]" type="text" value="{events/save-member/post-values/name}" />
+				<input id="name" name="fields[name]" type="text" value="{$event/post-values/name}" />
 			</p>
 			<p>
-				<xsl:if test="events/save-member/username-and-password">
+				<xsl:if test="$event/username-and-password">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="username">Username</label>
-				<input id="username" name="fields[username-and-password][username]" type="text" value="{events/save-member/post-values/username-and-password/username}" />
+				<input id="username" name="fields[username-and-password][username]" type="text" value="{$event/post-values/username-and-password/username}" />
 			</p>
 			<p>
 				<label for="password">Password</label>
 				<input id="password" name="fields[username-and-password][password]" type="password" />
 			</p>
 			<p>
-				<xsl:if test="events/save-member/email-address">
+				<xsl:if test="$event/email-address">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="email">Email</label>
-				<input id="email" name="fields[email-address]" type="text" value="{events/save-member/post-values/email-address}" />
+				<input id="email" name="fields[email-address]" type="text" value="{$event/post-values/email-address}" />
 			</p>					
 			<p>
-				<xsl:if test="events/save-member/location">
+				<xsl:if test="$event/location">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="location">Country</label>
@@ -57,11 +60,11 @@
 				</select>
 			</p>	
 			<p>
-				<xsl:if test="events/save-member/city">
+				<xsl:if test="$event/city">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="city">City</label>
-				<input id="city" name="fields[city]" type="text" value="{events/save-member/post-values/city}" />
+				<input id="city" name="fields[city]" type="text" value="{$event/post-values/city}" />
 			</p>		
 			<p>
 				<label for="timezone">Timezone</label>
@@ -71,8 +74,8 @@
 						<xsl:with-param name="count">12</xsl:with-param>
 						<xsl:with-param name="selected">
 							<xsl:choose>
-								<xsl:when test="events/save-member/post-values/timezone-offset">
-									<xsl:value-of select="events/save-member/post-values/timezone-offset"/>
+								<xsl:when test="$event/post-values/timezone-offset">
+									<xsl:value-of select="$event/post-values/timezone-offset"/>
 								</xsl:when>
 								<xsl:otherwise>10</xsl:otherwise>
 							</xsl:choose>
@@ -81,11 +84,11 @@
 				</select>
 			</p>											
 			<p>
-				<xsl:if test="events/save-member/website">
+				<xsl:if test="$event/website">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="website">Website</label>
-				<input id="website" name="fields[website]" type="text" value="{events/save-member/post-values/website}" />
+				<input id="website" name="fields[website]" type="text" value="{$event/post-values/website}" />
 			</p>					
 			<p class="option">
 				<label for="email-opt-in">Opt-in</label>
@@ -95,7 +98,8 @@
 				</span>
 			</p>				
 			<div id="submission">
-				<input id="submit" name="action[save-member]" type="submit" value="Register" class="button"/>
+				<input name="redirect" type="hidden" value="http://home/sym/sym-forum/" />
+				<input id="submit" name="action[{$event-action}]" type="submit" value="Register" class="button"/>
 				<a id="cancel" href="{$root}/" class="button">Cancel and go back</a>
 			</div>
 		</fieldset>

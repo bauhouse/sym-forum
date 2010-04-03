@@ -5,9 +5,9 @@
 
 <xsl:template match="data">
 	<xsl:choose>
-		<xsl:when test="$mode = 'success'"><xsl:apply-templates select="." mode="success"/></xsl:when>
-		<xsl:when test="$mode = 'failed'"><xsl:apply-templates select="." mode="failed"/></xsl:when>		
-		<xsl:when test="$mode = 'sent'"><xsl:apply-templates select="." mode="sent"/></xsl:when>
+		<xsl:when test="$code = 'success'"><xsl:apply-templates select="." mode="success"/></xsl:when>
+		<xsl:when test="$code = 'failed'"><xsl:apply-templates select="." mode="failed"/></xsl:when>
+		<xsl:when test="$code = 'sent'"><xsl:apply-templates select="." mode="sent"/></xsl:when>
 		<xsl:when test="$logged-in = 'false'"><xsl:apply-templates select="." mode="guest"/></xsl:when>
 		<xsl:when test="$member/role = 'Inactive'"><xsl:apply-templates select="." mode="activate"/></xsl:when>
 		<xsl:otherwise><xsl:apply-templates select="." mode="already-active"/></xsl:otherwise>
@@ -30,11 +30,11 @@
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label for="name">Code</label>
-				<input id="name" name="fields[code]" type="text" value="" />
+				<input id="name" name="fields[code]" type="text" value="{$code}" />
 			</p>
 			<div id="submission">
-				<input id="submit" class="resend button" name="action[resend-activation-email]" type="submit" value="Resend the activation email" />
-				<input id="submit" name="action[activate-account]" type="submit" value="Activate account" class="button"/>
+				<input id="submit" class="resend button" name="action[members-resend-activation-email]" type="submit" value="Resend the activation email" />
+				<input id="submit" name="action[members-activate-account]" type="submit" value="Activate account" class="button"/>
 			</div>
 			<input name="redirect" type="hidden" value="{$root}" />
 		</fieldset>
