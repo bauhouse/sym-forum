@@ -214,7 +214,7 @@
 		$conf['members']['member_section'] = '1';
 		$conf['members']['email_address_field_id'] = '4';
 		$conf['members']['timezone_offset_field_id'] = '10';
-		$conf['members']['new_member_default_role'] = '4';
+		$conf['members']['new_member_default_role'] = '3';
 		$conf['members']['require_activation'] = 'yes';
 		$conf['smtp_email_library']['host'] = '';
 		$conf['smtp_email_library']['port'] = '';

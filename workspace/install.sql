@@ -593,11 +593,15 @@ INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id
 -- *** DATA: `tbl_members_roles` ***
 INSERT INTO `tbl_members_roles` (`id`, `name`) VALUES (1, 'Guest');
 INSERT INTO `tbl_members_roles` (`id`, `name`) VALUES (2, 'Inactive');
-INSERT INTO `tbl_members_roles` (`id`, `name`) VALUES (3, 'Administrator');
-INSERT INTO `tbl_members_roles` (`id`, `name`) VALUES (4, 'Member');
+INSERT INTO `tbl_members_roles` (`id`, `name`) VALUES (3, 'Member');
+INSERT INTO `tbl_members_roles` (`id`, `name`) VALUES (4, 'Administrator');
 
 -- *** DATA: `tbl_members_roles_event_permissions` ***
-INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (1, 3, 'members_register', 'create', 1);
-INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (2, 3, 'members_register', 'edit', 2);
-INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (5, 4, 'members_register', 'create', 1);
-INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (6, 4, 'members_register', 'edit', 1);
+INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (24, 3, 'members_register', 'edit', 1);
+INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (21, 4, 'members_register', 'create', 1);
+INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (22, 4, 'members_register', 'edit', 2);
+INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (7, 1, 'members_register', 'create', 1);
+INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (8, 1, 'members_register', 'edit', 0);
+INSERT INTO `tbl_members_roles_event_permissions` (`id`, `role_id`, `event`, `action`, `level`) VALUES (23, 3, 'members_register', 'create', 1);
+
+-- *** DATA: `tbl_members_roles_forbidden_pages` ***
