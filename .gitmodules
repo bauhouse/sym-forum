@@ -39,7 +39,7 @@
 	url = git://github.com/bauhouse/library.git
 [submodule "extensions/smtp_email_library"]
 	path = extensions/smtp_email_library
-	url = git://github.com/pointybeard/smtp_email_library.git
+	url = git://github.com/bauhouse/smtp_email_library.git
 [submodule "extensions/export_forum"]
 	path = extensions/export_forum
 	url = git://github.com/bauhouse/export_forum.git
