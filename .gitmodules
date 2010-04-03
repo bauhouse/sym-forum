@@ -43,3 +43,6 @@
 [submodule "extensions/export_members_install_file"]
 	path = extensions/export_members_install_file
 	url = git://github.com/bauhouse/export_members_install_file.git
+[submodule "extensions/export_forum"]
+	path = extensions/export_forum
+	url = git://github.com/bauhouse/export_forum.git
