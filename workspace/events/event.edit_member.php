@@ -10,6 +10,10 @@
 
 		);
 
+		public static function showInRolePermissions(){
+			return true;
+		}
+
 		public static function about(){
 			return array(
 					 'name' => 'Edit Member',
