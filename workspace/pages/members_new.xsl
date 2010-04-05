@@ -11,10 +11,13 @@
 	<h2 class="heading">Member Registration</h2>
 	<xsl:if test="$event/username-and-password/@type = 'invalid'">
 		<div id="system-message">
-			<p class="error">The username supplied already exist.</p>
+			<p class="error">The username supplied already exists.</p>
 		</div>
 	</xsl:if>
-	<form method="post" action="{$current-url}">
+	<xsl:if test="$event[@result = 'success']">
+		<p class="success">You have registered successfully. Please check your email for your activation code.</p>
+	</xsl:if>
+	<form method="post" action="">
 		<fieldset>
 			<p>
 				<xsl:if test="$event/name">
@@ -98,7 +101,6 @@
 				</span>
 			</p>				
 			<div id="submission">
-				<input name="redirect" type="hidden" value="http://home/sym/sym-forum/" />
 				<input id="submit" name="action[{$event-action}]" type="submit" value="Register" class="button"/>
 				<a id="cancel" href="{$root}/" class="button">Cancel and go back</a>
 			</div>
