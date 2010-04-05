@@ -31,18 +31,9 @@
 [submodule "extensions/forum"]
 	path = extensions/forum
 	url = git://github.com/bauhouse/forum.git
-[submodule "extensions/members"]
-	path = extensions/members
-	url = git://github.com/bauhouse/members.git
 [submodule "extensions/library"]
 	path = extensions/library
 	url = git://github.com/bauhouse/library.git
-[submodule "extensions/smtp_email_library"]
-	path = extensions/smtp_email_library
-	url = git://github.com/bauhouse/smtp_email_library.git
 [submodule "extensions/export_forum"]
 	path = extensions/export_forum
 	url = git://github.com/bauhouse/export_forum.git
-[submodule "extensions/eventex"]
-	path = extensions/eventex
-	url = git://github.com/nickdunn/eventex.git
