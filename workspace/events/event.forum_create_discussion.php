@@ -1,8 +1,8 @@
 <?php
 
-	require_once(TOOLKIT . '/class.event.php');
+	require_once(EXTENSIONS . '/eventex/lib/class.eventex.php');
 	
-	Class eventforum_create_discussion extends Event{
+	Class eventforum_create_discussion extends EventEx{
 		
 		const ROOTELEMENT = 'forum-create-discussion';
 		
@@ -10,6 +10,10 @@
 			
 		);
 			
+		public static function showInRolePermissions(){
+			return true;
+		}
+
 		public static function about(){
 			return array(
 					 'name' => 'Forum: Create Discussion',
@@ -23,11 +27,7 @@
 		}
 
 		public static function getSource(){
-			return '2';
-		}
-
-		public static function allowEditorToParse(){
-			return true;
+			return array("discussions", "comments");
 		}
 
 		public static function documentation(){
@@ -75,15 +75,13 @@
         <p>To redirect to a different location upon a successful save, include the redirect location in the form. This is best as a hidden field like so, where the value is the URL to redirect to:</p>
         <pre class="XML"><code>&lt;input name="redirect" type="hidden" value="http://home/sym/test/success/" /></code></pre>';
 		}
-		
-		public function load(){			
-			if(isset($_POST['action']['forum-create-discussion'])) return $this->__trigger();
-		}
-		
+
 		protected function __trigger(){
-			include(TOOLKIT . '/events/event.section.php');
+			// this returns a Symphony XMlElement object
+			$result = $this->updateNamedSections(self::getSource());
+
 			return $result;
-		}		
+		}
 
 	}
 
