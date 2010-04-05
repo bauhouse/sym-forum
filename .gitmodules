@@ -43,3 +43,6 @@
 [submodule "extensions/export_forum"]
 	path = extensions/export_forum
 	url = git://github.com/bauhouse/export_forum.git
+[submodule "extensions/eventex"]
+	path = extensions/eventex
+	url = git://github.com/nickdunn/eventex.git
