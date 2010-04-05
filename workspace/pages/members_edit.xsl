@@ -4,20 +4,28 @@
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:import href="../utilities/timezone.xsl"/>
 
+<xsl:variable name="event-action" select="'edit-member'"/>
+<xsl:variable name="event" select="/data/events/*[name()=$event-action]"/>
+
 <xsl:template match="data">
 	<xsl:for-each select="members-edit/entry">
 		<h2 class="heading">Edit Profile for <xsl:value-of select="username-and-password/@username"/></h2>
+		<xsl:if test="$event[@result = 'success']">
+			<div id="system-message">
+				<p class="success">Your profile has been updated.</p>
+			</div>
+		</xsl:if>
 		<form method="post" action="{$current-url}">
 			<fieldset>
 				<p>
-					<xsl:if test="/data/events/edit-member/name">
+					<xsl:if test="$event/name">
 						<xsl:attribute name="class">error</xsl:attribute>
 					</xsl:if>
 					<label for="name">Full Name</label>
 					<input id="name" name="fields[name]" type="text" value="{name}" />
 				</p>
 				<p>
-					<xsl:if test="/data/events/edit-member/email-address">
+					<xsl:if test="$event/email-address">
 						<xsl:attribute name="class">error</xsl:attribute>
 					</xsl:if>
 					<label for="email">Email</label>
@@ -37,7 +45,7 @@
 					</select>
 				</p>	
 				<p>
-					<xsl:if test="/data/events/edit-member/city">
+					<xsl:if test="$event/city">
 						<xsl:attribute name="class">error</xsl:attribute>
 					</xsl:if>
 					<label for="city">City</label>
@@ -61,7 +69,7 @@
 					</select>
 				</p>
 				<p>
-					<xsl:if test="/data/events/edit-member/website">
+					<xsl:if test="$event/website">
 						<xsl:attribute name="class">error</xsl:attribute>
 					</xsl:if>
 					<label for="website">Website</label>
@@ -86,7 +94,7 @@
 
 				<input name="id" type="hidden" value="{@id}"/>
 				<div id="submission">
-					<input id="submit" name="action[edit-member]" type="submit" value="Save" class="button"/>
+					<input id="submit" name="action[{$event-action}]" type="submit" value="Save" class="button"/>
 					<a id="cancel" href="{$root}/members/{$member/username-and-password/@username}/" class="button">Cancel and go back</a>
 				</div>
 			</fieldset>

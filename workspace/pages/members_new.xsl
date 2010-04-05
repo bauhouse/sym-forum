@@ -9,13 +9,21 @@
 
 <xsl:template match="data">
 	<h2 class="heading">Member Registration</h2>
-	<xsl:if test="$event/username-and-password/@type = 'invalid'">
+	<xsl:for-each select="$event[@result = 'error']">
 		<div id="system-message">
-			<p class="error">The username supplied already exists.</p>
+			<p class="message">There was a problem with your registration:</p>
+			<xsl:if test="username-and-password/@type='invalid'">
+				<p class="error"><xsl:value-of select="username-and-password/@message"/></p>
+			</xsl:if>
+			<xsl:if test="email-address/@type='missing' or email-address/@type='invalid'">
+				<p class="error"><xsl:value-of select="email-address/@message"/></p>
+			</xsl:if>
 		</div>
-	</xsl:if>
+	</xsl:for-each>
 	<xsl:if test="$event[@result = 'success']">
-		<p class="success">You have registered successfully. Please check your email for your activation code.</p>
+		<div id="system-message">
+			<p class="success">You have registered successfully. Please check your email for your activation code.</p>
+		</div>
 	</xsl:if>
 	<form method="post" action="">
 		<fieldset>
@@ -34,6 +42,9 @@
 				<input id="username" name="fields[username-and-password][username]" type="text" value="{$event/post-values/username-and-password/username}" />
 			</p>
 			<p>
+				<xsl:if test="$event/username-and-password">
+					<xsl:attribute name="class">error</xsl:attribute>
+				</xsl:if>
 				<label for="password">Password</label>
 				<input id="password" name="fields[username-and-password][password]" type="password" />
 			</p>

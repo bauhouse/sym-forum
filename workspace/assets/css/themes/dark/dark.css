@@ -275,6 +275,19 @@ table td a:hover .new-comments {
 form p {
 	background-color: #222;
 }
+#system-message p {
+	padding: 10px 15px;
+}
+p.message {
+	background-color: #222;
+}
+p.error {
+	background-color: #600;
+}
+p.success {
+	color: #000;
+	background-color: #86e104;
+}
 input[type="text"],
 input[type="password"] {
 	border: none;
@@ -388,7 +401,8 @@ table td .new-comments,
 .heading,
 ul#pagination,
 #sidebar a,
-form p {
+form p,
+#system-message p {
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
