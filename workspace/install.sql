@@ -543,7 +543,7 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (21, 'Created By', 'created-by', 'memberlink', 3, 'yes', 3, 'sidebar', 'yes');
 
 -- *** DATA: `tbl_pages` ***
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', NULL, NULL, 1);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', 'forum_discussions,forum_read_discussions,search_comments,whosonline', 'forum_utilities', 1);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (2, 1, 'Filter', 'forum-filter', 'forum', 'dpage', 'forum_discussions_filtered,forum_read_discussions,whosonline', 'forum_utilities', 2);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (3, 1, 'Discussions', 'discussions', 'forum', 'discussion-id/cpage', 'forum_comments,forum_discussions,forum_moderators,whosonline', 'forum_post,forum_utilities', 3);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (4, 3, 'New Discussion', 'new', 'forum/discussions', NULL, 'whosonline', 'forum_post,forum_utilities', 4);
@@ -560,7 +560,7 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (15, NULL, 'Page Not Found', 'page-not-found', NULL, NULL, 'whosonline', NULL, 15);
 
 -- *** DATA: `tbl_pages_types` ***
-INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (7, 1, 'index');
+INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (8, 1, 'index');
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (3, 7, 'text');
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (4, 14, 403);
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (5, 15, 404);
