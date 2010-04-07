@@ -47,14 +47,18 @@
 		}
 		
 		function grab(&$param_pool){
-			$discussionID = (int)$this->_Parent->Database->fetchVar('relation_id', 0, "SELECT `relation_id` FROM `tbl_entries_data_18` WHERE `entry_id` = ".(int)$this->dsParamFILTERS['id']." LIMIT 1");
+			/* Grab field IDs from configuration settings */
+			$comment_discussion_link_field = (int)Symphony::Configuration()->get('comment-discussion-link-field', 'forum');
+			$comment_field = (int)Symphony::Configuration()->get('comment-field', 'forum');
+
+			$discussionID = (int)$this->_Parent->Database->fetchVar('relation_id', 0, "SELECT `relation_id` FROM `tbl_entries_data_" . $comment_discussion_link_field . "` WHERE `entry_id` = ".(int)$this->dsParamFILTERS['id']." LIMIT 1");
 
 			$xml = new XMLElement($this->dsParamROOTELEMENT);
 
 			$xml->setAttribute('id', (int)$this->dsParamFILTERS['id']);
 			$xml->setAttribute('discussion-id', $discussionID);
 			
-			$body = $this->_Parent->Database->fetchVar('value', 0, "SELECT `value` FROM `tbl_entries_data_17` WHERE `entry_id` = ".(int)$this->dsParamFILTERS['id']." LIMIT 1");
+			$body = $this->_Parent->Database->fetchVar('value', 0, "SELECT `value` FROM `tbl_entries_data_" . $comment_field . "` WHERE `entry_id` = ".(int)$this->dsParamFILTERS['id']." LIMIT 1");
 		
 			if(is_null($body) || strlen(trim($body)) == 0){
 				return $this->emptyXMLSet();
