@@ -26,12 +26,17 @@
 			$xml = new XMLElement($this->dsParamROOTELEMENT);
 			
 			$discussion_id = (int)$this->dsParamFILTERS['discussion-id'];
-			$comment_id = $this->_Parent->Database->fetchVar('entry_id', 0, "SELECT `entry_id` FROM `tbl_entries_data_18` WHERE `relation_id` = $discussion_id ORDER BY `entry_id` ASC LIMIT 1");
+
+			/* Grab field IDs from configuration settings */
+			$comment_discussion_link_field = (int)Symphony::Configuration()->get('comment-discussion-link-field', 'forum');
+			$comment_field = (int)Symphony::Configuration()->get('comment-field', 'forum');
+
+			$comment_id = $this->_Parent->Database->fetchVar('entry_id', 0, "SELECT `entry_id` FROM `tbl_entries_data_" . $comment_discussion_link_field . "` WHERE `relation_id` = $discussion_id ORDER BY `entry_id` ASC LIMIT 1");
 						
 			$xml->setAttribute('comment-id', $comment_id);
 			$xml->setAttribute('discussion-id', $discussion_id);
 			
-			$body = $this->_Parent->Database->fetchVar('value', 0, "SELECT `value` FROM `tbl_entries_data_17` WHERE `entry_id` = $comment_id LIMIT 1");
+			$body = $this->_Parent->Database->fetchVar('value', 0, "SELECT `value` FROM `tbl_entries_data_" . $comment_field . "` WHERE `entry_id` = $comment_id LIMIT 1");
 		
 			if(is_null($body) || strlen(trim($body)) == 0){
 				return $this->emptyXMLSet();
