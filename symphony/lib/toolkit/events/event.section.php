@@ -263,6 +263,9 @@
 		}
 	}
 	
+	if(!isset($this->eParamFILTERS) || !is_array($this->eParamFILTERS)){
+		$this->eParamFILTERS = array();
+	}
 	
 	$result = new XMLElement(self::ROOTELEMENT);
 	
@@ -275,6 +278,7 @@
 
 	$entry_id = $position = $fields = NULL;	
 	$post = General::getPostData();
+	$success = true;
 	
 	if (in_array('expect-multiple', $this->eParamFILTERS)) {
 		if (is_array($post['fields']) && isset($post['fields'][0])) {

@@ -213,12 +213,13 @@ var Symphony;
 			type: 'POST',
 			url: Symphony.WEBSITE + '/symphony/ajax/reorder' + location.href.slice(Symphony.WEBSITE.length + 9),
 			data: $('input', this).map(function(i) { return this.name + '=' + i; }).get().join('&'),
-			complete: function(x) {
-				if (x.status === 200) {
-					Symphony.Message.clear('reorder');
-				} else {
-					Symphony.Message.post(Symphony.Language.get('Reordering was unsuccessful.'), 'reorder error');
-				}
+			success: function() {
+				Symphony.Message.clear('reorder');
+			},
+			error: function() {
+				Symphony.Message.post(Symphony.Language.get('Reordering was unsuccessful.'), 'reorder error');
+			},
+			complete: function() {
 				t.removeClass('busy');
 			}
 		});
@@ -363,7 +364,7 @@ var Symphony;
 
 				t = Symphony.Language.get(t, {
 					'action': o.text().toLowerCase(),
-					'name': $('table input:checked').parents('tr').find('td').eq(0).text(),
+					'name': $.trim($('table input:checked').parents('tr').find('td').eq(0).text()),
 					'count': i
 				});
 

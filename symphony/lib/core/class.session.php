@@ -69,26 +69,19 @@
 		}
 
 		public static function getDomain() {
-			
+
 			if(isset($_SERVER['HTTP_HOST'])){
 
 				if(preg_match('/(localhost|127\.0\.0\.1)/', $_SERVER['HTTP_HOST']) || $_SERVER['SERVER_ADDR'] == '127.0.0.1'){
 					return NULL; // prevent problems on local setups
 				}
-								
+
 				$parsed = parse_url(
 					preg_replace('/^www./i', NULL, $_SERVER['HTTP_HOST'])
 				);
-				
-				if (!isset($parsed['host'])) return NULL;
-				
-				$domain = $parsed['host'];
-				
-				if(isset($parsed['port'])){
-					$domain .= ':' . $parsed['port'];
-				}
-				
-				return $domain; 
+
+				if(isset($parsed['host'])) return $parsed['host'];
+
 			} 
 
 			return NULL;
@@ -140,7 +133,7 @@
 			Symphony::$Log->pushToLog("Session: Taking out the trash!", E_NOTICE, true);
 			return Symphony::Database()->query(
 				sprintf(
-					"DELETE FROM `tbl_sessions` WHERE `session_expires` <= '%s'",
+					"DELETE FROM `tbl_sessions` WHERE `session_expires` <= '%s' OR `session_data` LIKE '%%|a:0:{}'",
 					Symphony::Database()->cleanValue(time() - $max)
 				)
 			);

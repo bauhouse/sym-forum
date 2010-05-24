@@ -5,3 +5,4 @@
 .htaccess
 manifest/
 *.esproj
+*~
