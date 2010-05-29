@@ -1,0 +1,135 @@
+/*
+-----------------------------------------------
+Identity Styles
+-----------------------------------------------
+DesignProjectX
+file:		www.designprojectx.com/domain7/workspace/assets/css/identity.css
+author:		Stephen Bau
+date:		20 August 2007
+----------------------------------------------- */
+
+
+/* Lists
+----------------------------------------------- */
+#brand-panel .lists h3,
+#brands .lists h3,
+#brand-assets .lists h3 {
+	margin-bottom:.5em;
+	}
+
+
+/* Logos
+----------------------------------------------- */
+#branding-content .logo {
+	border:2px solid #ccc;
+	margin-bottom:18px;
+	}
+#branding-content .logo-preview {
+	float:left;
+	margin:10px;
+	padding:10px;
+	}
+#branding-content a.logo-preview:hover {
+	background:#ccc;
+	}
+.eaglewest #branding-content a.logo-preview:hover {
+	background:#f00;
+	}
+#branding-content .white {
+	background:#000;
+	}
+#branding-content a.red:hover {
+	background:#000;
+	}
+#branding-content .logo-details {
+	margin-left:291px;
+	min-height:83px;
+	padding:20px;
+	border-left:1px dotted #ccc;
+	}
+#branding-content .narrow .logo-details {
+	margin-left:185px;
+	}
+#branding-content .logo-details h5 {
+	font-size:1em;
+	color:#000;
+	margin:0 0 12px 0;
+	padding:0;
+	}
+#branding-content .logo-details p {
+	margin:0;
+	padding:0;
+	}
+#branding-content .logo-format {
+	clear:both;
+	padding:10px;
+	background:#eee;
+	margin:0;
+	border-top:1px dotted #ccc;
+	}
+#branding-content p.logo-format {
+	margin:0;
+	}
+
+
+/* Ads
+----------------------------------------------- */
+#branding-content .ad {
+	float:left;
+	border:2px solid #ccc;
+	margin-bottom:18px;
+	}
+#branding-content .ad-preview {
+	float:left;
+	margin:10px;
+	padding:10px;
+	}
+#branding-content .ad-fullsize {
+	float:left;
+	margin:10px;
+	padding:10px;
+	}
+#branding-content a.ad-fullsize:hover, 
+#branding-content a.ad-preview:hover {
+	background:#ddd;
+	}
+#branding-content .ad-details {
+	margin-left:291px;
+	min-height:83px;
+	padding:20px;
+	}
+#branding-content .narrow .ad-details {
+	margin-left:165px;
+	}
+#branding-content .ad-details h5 {
+	margin:0 0 12px 0;
+	padding:0;
+	}
+#branding-content .ad-details p {
+	margin:0 0 12px 0;
+	padding:0;
+	}
+#branding-content .ad-details li {
+	padding:.2em 0;
+	}
+#branding-content .ad-details li a {
+	display:inline;
+	}
+#branding-content .ad-details li a:hover {
+	background:transparent;
+	}
+#branding-content .ad-details span {
+	display:block;
+	float:left;
+	width:144px;
+	}
+#branding-content .ad-specs {
+	clear:both;
+	padding:10px;
+	background:#eee;
+	margin:0;
+	border-top:1px dotted #ccc;
+	}
+#branding-content p.ad-specs {
+	margin:0;
+	}

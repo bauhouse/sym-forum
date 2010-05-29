@@ -1,0 +1,110 @@
+/*
+-----------------------------------------------
+Alternate Stylesheet: Fixed Width - Narrow
+-----------------------------------------------
+site:		designadmin.com
+file:		/css/fixed-narrow.css
+author:		Stephen Bau
+firm:		Bauhouse Design
+date:		29 June 2007
+----------------------------------------------- */
+
+
+/*
+-----------------------------------------------
+Layout
+----------------------------------------------- */
+
+
+/* Main Divs
+----------------------------------------------- */
+#page {
+	float:left;
+	width:100%;
+	}
+#footer {
+	clear:both;
+	background: #ddd url(../img/shadow_footer.gif) center top repeat-x;
+	min-height:6em;
+	}
+
+
+/* Boxes
+----------------------------------------------- */
+.box {
+	width:750px;
+	min-width:750px;
+	margin:0 auto;
+	}
+#header .box {
+	display:block;
+	}
+#navigation .box {
+	border:0;
+	padding:0;
+	height:3em;
+	background:transparent;
+	overflow:hidden;
+	}
+#page .box {
+	float:none;
+	width:750px;
+	background:#fff;
+	}
+#footer .box {
+	float:none;
+	background:transparent;
+	width:750px;
+	}
+
+
+/* columns
+----------------------------------------------- */
+#content {
+	float:left;
+	width:500px;
+	}
+#content .body {
+	border-right:1px dotted #ccc;
+	}
+#side {
+	float:left;
+	width:250px;
+	}
+#links {
+	float:left;
+	width:250px;
+	}
+#meta {
+	float:left;
+	width:250px;
+	}
+#meta .body {
+	padding-left:2em;
+	padding-top:0;
+	}
+
+
+/* branding
+----------------------------------------------- */
+#branding-content {
+	float:left;
+	width:500px;
+	}
+#pane {
+	float:left;
+	width:250px;
+	}
+#brands {
+	float:left;
+	width:250px;
+	}
+#brand-assets {
+	float:left;
+	width:250px;
+	}
+#brand-assets .body {
+	padding-left:2em;
+	padding-top:0;
+	}
+

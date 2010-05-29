@@ -1,0 +1,30 @@
+/*
+-----------------------------------------------
+Print Styles
+-----------------------------------------------
+Domain7 Projects
+file:		projects.domain7.local/workspace/assets/css/print.css
+author:		Stephen Bau
+date:		8 August 2007
+----------------------------------------------- */
+
+
+/*
+-----------------------------------------------
+Hide navigation, submenu and forms
+----------------------------------------------- */
+#horiz-menu,
+#navigation,
+#subheader,
+.breadcrumbs,
+#footer,
+form,
+tr.admin {display:none;}
+
+#header h1 a {
+	font-size:2em;
+	}
+#header h1 a,
+#header h1 a strong {
+	color:#000;
+	}

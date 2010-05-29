@@ -1,0 +1,64 @@
+/*
+-----------------------------------------------
+Alternate Stylesheet: Fixed Width
+-----------------------------------------------
+site:		designadmin.com
+file:		/css/fixed-width.css
+author:		Stephen Bau
+firm:		Bauhouse Design
+date:		29 June 2007
+----------------------------------------------- */
+
+
+/*
+-----------------------------------------------
+Layout
+----------------------------------------------- */
+
+
+/* Main Divs
+----------------------------------------------- */
+#navigation {
+	background:#666 url(../img/shadow_tab.gif) center bottom repeat-x;
+	}
+#page {
+	float:left;
+	width:100%;
+	background:#fff;
+	}
+#footer {
+	clear:both;
+	background: #ddd url(../img/shadow_footer.gif) center top repeat-x;
+	min-height:6em;
+	}
+
+
+/* Boxes
+----------------------------------------------- */
+.box {
+	width:975px;
+	min-width:975px;
+	margin:0 auto;
+	}
+#header .box {
+	display:block;
+	}
+#navigation .box {
+	border:0;
+	padding:0;
+	height:3em;
+	background:transparent;
+	overflow:hidden;
+	}
+#page .box {
+	float:none;
+	width:975px;
+	background:#fff;
+	}
+#footer .box {
+	float:none;
+	background:transparent;
+	width:975px;
+	}
+
+
