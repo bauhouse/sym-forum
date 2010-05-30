@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/date-time.xsl"/>
+<xsl:import href="../utilities/common.xsl"/>
 <xsl:include href="../utilities/typography.xsl"/>
 
 <xsl:output method="xml"
@@ -19,9 +19,9 @@
 	<html>
 		<head>
 			<xsl:apply-templates select="data" mode="page-title"/>
-			<!-- link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/assets/css/styles.css" /-->
+			<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/assets/css/styles.css" />
 			<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/assets/css/layout.css" />
-			<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/assets/css/themes/dark/dark.css" />
+			<!--link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/assets/css/themes/dark/dark.css" /-->
 			<script type="text/javascript" src="{$workspace}/assets/js/jquery/jquery-1.3.2.min.js"></script>
 			<script type="text/javascript" src="{$workspace}/assets/js/system.js"></script>
 			<script type="text/javascript" src="{$workspace}/assets/js/syntax-xml.js"></script>
