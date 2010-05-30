@@ -211,12 +211,12 @@ Layout
 	background:#2A2B2E;
 	}
 #navigation {
-	background:#666 url(../img/shadow_tab.gif) center bottom repeat-x;
+	background:#666 url(img/shadow_tab.gif) center bottom repeat-x;
 	}
 #subheader {
 	margin:0;
 	padding:0;
-	background: #ddd url(../img/shadow_tab_off.gif) center bottom repeat-x;
+	background: #ddd url(img/shadow_tab_off.gif) center bottom repeat-x;
 	border-top:1px solid #fff;
 	border-bottom:1px solid #777;
 	}
@@ -224,7 +224,7 @@ Layout
 	background:#fff;
 	}
 #footer {
-	background: #ddd url(../img/shadow_footer.gif) center top repeat-x;
+	background: #ddd url(img/shadow_footer.gif) center top repeat-x;
 	}
 
 
@@ -255,7 +255,7 @@ Layout
 #footer .box {
 	float:left;
 	width: 100%;
-	background: #ddd url(../img/shadow_footer.gif) center top repeat-x;
+	background: #ddd url(img/shadow_footer.gif) center top repeat-x;
 	}
 
 
@@ -381,18 +381,18 @@ Layout
 	line-height: 2.5em;
 	padding: 0 1em;
 	color:#000;
-	background: #ddd url(../img/shadow_tab_off.gif) center bottom repeat-x;
+	background: #ddd url(img/shadow_tab_off.gif) center bottom repeat-x;
 	border: 0;
 	}
 #navigation .content li a:hover {
 	color:#2A8CC8;
-	background: #eee url(../img/shadow_tab_over.gif) center bottom repeat-x;
+	background: #eee url(img/shadow_tab_over.gif) center bottom repeat-x;
 	}
 #navigation .content li a:active,
 #navigation .content li.current a,
 #navigation .content li.current a:hover {
 	color:#2A8CC8;
-	background:#fff url(../img/shadow_tab_active.gif) center bottom repeat-x;
+	background:#fff url(img/shadow_tab_active.gif) center bottom repeat-x;
 	}
 
 
@@ -424,17 +424,17 @@ Layout
 	padding: 0 1em;
 	line-height: 2em;
 	color:#000;
-	background: #ddd url(../img/shadow_tab_off.gif) center bottom repeat-x;
+	background: #ddd url(img/shadow_tab_off.gif) center bottom repeat-x;
 	border-right:1px solid #aaa;
 	border-left:1px solid #ccc;
 	}
 #submenu li a:hover {
-	background: #eee url(../img/shadow_tab_over.gif) center bottom repeat-x;
+	background: #eee url(img/shadow_tab_over.gif) center bottom repeat-x;
 	color:#2A8CC8;
 	}
 #submenu li a:active,
 #submenu li.current a {
-	background:#fff url(../img/shadow_tab_active.gif) center bottom repeat-x;
+	background:#fff url(img/shadow_tab_active.gif) center bottom repeat-x;
 	color:#2A8CC8;
 	}
 #submenu ul.right {
@@ -656,32 +656,32 @@ Layout
 	}
 .lists ul.portfolios,
 .lists ul.client-list li {
-	list-style-image:url("../img/a_client.gif");
+	list-style-image:url("img/a_client.gif");
 	}
 .lists ul.folders,
 .lists ul.project-list li {
-	list-style-image:url("../img/a_project.gif");
+	list-style-image:url("img/a_project.gif");
 	}
 .lists ul.documents li,
 .lists ul.posts li {
-	list-style-image:url("../img/a_post.gif");
+	list-style-image:url("img/a_post.gif");
 	}
 .lists ul.categories li {
-	list-style-image:url("../img/a_category.gif");
+	list-style-image:url("img/a_category.gif");
 	}
 .lists ul.links li {
-	list-style-image:url("../img/a_link_arrow.gif");
+	list-style-image:url("img/a_link_arrow.gif");
 	}
 .lists ul.file-download-list li {
-	list-style-image:url("../img/a_download.gif");
+	list-style-image:url("img/a_download.gif");
 	}
 .lists ul.feeds li {
-	list-style-image:url("../img/a_feed.gif");
+	list-style-image:url("img/a_feed.gif");
 	}
 .lists ul.categories li.subcategory {
 	list-style-image:none;
 	padding-left:15px;
-	background:url("../img/a_subcategory.gif") left 3px no-repeat;
+	background:url("img/a_subcategory.gif") left 3px no-repeat;
 	}
 .lists ul {
 	margin-bottom:15px;

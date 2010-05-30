@@ -18,9 +18,9 @@
 <xsl:template name="head">
 	<head>
 		<title><xsl:value-of select="$website-name"/> - <xsl:value-of select="$section-title"/></title>
-		<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/public.css"/>
-		<link rel="alternate stylesheet" type="text/css" href="{$workspace}/assets/css/fixed-width.css" title="fixed-width" />
-		<link rel="alternate stylesheet" type="text/css" href="{$workspace}/assets/css/fixed-narrow.css" title="fixed-narrow" />
+		<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/public.css"/>
+		<link rel="alternate stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/fixed-width.css" title="fixed-width" />
+		<link rel="alternate stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/fixed-narrow.css" title="fixed-narrow" />
 	</head>
 </xsl:template>
 
@@ -153,13 +153,13 @@
 <xsl:template name="footer">
 	<div id="footer">
 		<div class="box">
-			<form id="switchform">
+			<!--form id="switchform">
 				<select name="switchcontrol">
 					<option value="none" selected="selected">Full Width</option>
 					<option value="fixed-width">Fixed Width</option>
 					<option value="fixed-narrow">Fixed Width - Narrow</option>
 				</select>
-			</form>
+			</form-->
 			<ul>
 				<li class="copyright">&#169; Copyright <xsl:value-of select="$this-year"/>
 					<xsl:text> </xsl:text>
