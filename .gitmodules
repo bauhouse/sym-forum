@@ -46,3 +46,21 @@
 [submodule "extensions/eventex"]
 	path = extensions/eventex
 	url = git://github.com/alpacaaa/eventex.git
+[submodule "extensions/pagesfield"]
+	path = extensions/pagesfield
+	url = git://github.com/pointybeard/pagesfield.git
+[submodule "extensions/order_entries"]
+	path = extensions/order_entries
+	url = git://github.com/nickdunn/order_entries.git
+[submodule "extensions/section_schemas"]
+	path = extensions/section_schemas
+	url = git://github.com/nickdunn/section_schemas.git
+[submodule "extensions/entity_diagram"]
+	path = extensions/entity_diagram
+	url = git://github.com/nickdunn/entity_diagram.git
+[submodule "extensions/xmlimporter"]
+	path = extensions/xmlimporter
+	url = git://github.com/rowan-lewis/xmlimporter.git
+[submodule "extensions/reflectionfield"]
+	path = extensions/reflectionfield
+	url = git://github.com/rowan-lewis/reflectionfield.git
