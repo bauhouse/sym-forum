@@ -4,6 +4,7 @@
 
 <xsl:import href="../utilities/date-time.xsl"/>
 
+<xsl:param name="section" />
 <xsl:param name="section-title">
 	<xsl:choose>
 		<xsl:when test="$section">
