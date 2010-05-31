@@ -5,14 +5,14 @@
 
 <xsl:template match="data">
 	<h2 class="heading">Edit Discussion</h2>
-	<form method="post" action="{$current-url}">
+	<form method="post" action="{$current-url}" class="comment-form">
 		<fieldset>
 			<p>
 				<xsl:if test="/data/events/forum-post[@result = 'error']/topic">
 					<xsl:attribute name="class">error</xsl:attribute>
 				</xsl:if>
 				<label>Topic</label>
-				<input name="fields[topic]" type="text" value="{forum-discussions/entry/topic}"/>
+				<input name="fields[topic]" id="post-topic" type="text" value="{forum-discussions/entry/topic}"/>
 			</p>
 			<p>
 				<xsl:if test="/data/events/forum-post[@result = 'error']/comment">
@@ -21,7 +21,7 @@
 				<label>Comment</label>
 				<span id="wmd-editor" class="wmd-panel">
 					<span id="wmd-button-bar"></span>
-					<textarea id="wmd-input" name="fields[comment]">
+					<textarea id="wmd-input" name="fields[comment]" rows="20">
 						<xsl:value-of select="forum-edit-discussion"/>							
 					</textarea>
 				</span>
@@ -32,7 +32,7 @@
 
 			<div id="submission">
 				<input id="submit" name="action[forum-edit-discussion]" type="submit" value="Submit changes" class="button"/>
-				<a id="cancel" href="{$root}/forum/" class="button">Cancel and go back</a>
+				<a id="cancel" href="{$root}/forum/discussions/{$discussion-id}/" class="button">Cancel and go back</a>
 			</div>
 			<input name="redirect" type="hidden" value="{$root}/forum/discussions/{$discussion-id}/" />
 		</fieldset>

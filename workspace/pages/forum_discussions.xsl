@@ -35,7 +35,7 @@
 	</xsl:call-template>
 
 	<xsl:if test="($permissions/forum_post/create &gt;= 1 and $closed = 'No') or ($member/role = 'Author')">
-		<form method="post" action="{$current-url}">
+		<form method="post" action="{$current-url}" class="comment-form">
 			<fieldset>
 				<p>
 					<xsl:if test="/data/events/forum-post[@result = 'error']/comment">
@@ -44,7 +44,7 @@
 					<label>Comment</label>
 					<span id="wmd-editor" class="wmd-panel">
 						<span id="wmd-button-bar"></span>
-						<textarea id="wmd-input" name="fields[comment]">
+						<textarea id="wmd-input" name="fields[comment]" rows="20">
 							<xsl:value-of select="/data/events/forum-post/post-values/comment"/>					
 						</textarea>
 					</span>
@@ -95,7 +95,7 @@
 			</ul>
 			<ul>
 				<li class="member">
-					<a href="{$root}/members/{created-by}/">
+					<a href="{$root}/forum/members/{created-by}/">
 						<xsl:value-of select="created-by"/>
 					</a>
 				</li>

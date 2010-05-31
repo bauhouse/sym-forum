@@ -5,7 +5,7 @@
 
 <xsl:template match="data">
 	<h2 class="heading">New Discussion</h2>
-	<form method="post" action="{$current-url}">
+	<form method="post" action="{$current-url}" class="comment-form">
 		<fieldset>
 			<p>
 				<xsl:if test="/data/events/forum-post[@result = 'error']/topic">
@@ -21,7 +21,7 @@
 				<label for="post-comment">Comment</label>
 				<span id="wmd-editor" class="wmd-panel">
 					<span id="wmd-button-bar"></span>
-					<textarea id="wmd-input" name="fields[comment]">
+					<textarea id="wmd-input" name="fields[comment]" rows="20">
 						<xsl:value-of select="/data/events/forum-post-comment/post-values/comment"/>
 					</textarea>
 				</span>

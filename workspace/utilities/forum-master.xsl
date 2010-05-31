@@ -17,7 +17,7 @@
 
 <xsl:template match="/">
 	<html>
-		<xsl:call-template name="head"/>
+		<xsl:call-template name="forum-head"/>
 		<body>
 			<xsl:call-template name="header"/>
 			<xsl:call-template name="navigation-menus"/>
@@ -39,8 +39,21 @@
 				</div>
 			</div>
 			<xsl:call-template name="footer"/>
+			<script type="text/javascript" src="{$workspace}/assets/js/wmd/wmd.js"></script>
 		</body>
 	</html>
+</xsl:template>
+
+<xsl:template name="forum-head">
+	<head>
+		<title><xsl:value-of select="$website-name"/> - <xsl:value-of select="$section-title"/></title>
+		<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/public.css"/>
+		<link rel="alternate stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/fixed-width.css" title="fixed-width" />
+		<link rel="alternate stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/fixed-narrow.css" title="fixed-narrow" />
+		<script type="text/javascript" src="{$workspace}/assets/js/jquery/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="{$workspace}/assets/js/system.js"></script>
+		<script type="text/javascript" src="{$workspace}/assets/js/syntax-xml.js"></script>
+	</head>
 </xsl:template>
 
 <xsl:template name="login-panel">
@@ -94,7 +107,7 @@
 	</div>
 	<xsl:if test="$logged-in = 'true'">
 		<h3>Actions</h3>
-		<ul>
+		<ul class="links">
 			<li>
 				<a id="create" href="{$root}/forum/discussions/new/">Start a new discussion</a>
 			</li>
@@ -103,7 +116,7 @@
 			</li>
 		</ul>
 		<h3>Filters</h3>
-		<ul>
+		<ul class="categories">
 			<li>
 				<a href="{$root}/forum/" title="View all discussions">All Discussions</a>
 			</li>
