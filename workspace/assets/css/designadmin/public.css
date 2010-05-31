@@ -602,10 +602,10 @@ Layout
 #forum-content .body h2 a {
 	font-weight:normal;
 	}
-#brand-content .body h3,
+/* #brand-content .body h3,
 #forum-content .body h3 {
 	margin-bottom:0;
-	}
+	} */
 #discussions {
 	float:left;
 	width:100%;
@@ -641,6 +641,63 @@ Layout
 	color:#333;
 	font-weight:normal;
 	}
+
+
+/* forum table
+----------------------------------------------- */
+table#discussions {
+	border-collapse: collapse;
+}
+tr.discussion {
+	float:none;
+	width: auto;
+	border: 0;
+}
+tr.discussion td {
+	padding: 0.7em 0;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+#discussions th {
+	text-align: left;
+	padding: 1em 0 .5em;
+}
+
+
+/* login panel
+----------------------------------------------- */
+#login-panel {
+	padding: 1.5em;
+}
+#login-panel ul li {
+	margin: 0 0 .7em;
+	padding-bottom: 0;
+}
+#login-panel fieldset,
+#login-panel ul,
+#login-panel ul li.register,
+#login-panel ul li.reset {
+	margin: 0;
+	padding: 0;
+}
+#login-panel ul li.register a,
+#login-panel ul li.reset a {
+	display: inline;
+}
+
+
+/* search panel
+----------------------------------------------- */
+#search form {
+	padding: 1.5em;
+}
+#search form fieldset {
+	margin-bottom: 0;
+}
+#search form #query {
+	margin: 0 0 .7em;
+	padding-bottom: 0;
+}
 
 
 /* lists
@@ -792,6 +849,39 @@ Layout
 	margin-bottom:1em;
 	}
 
+
+/* registration panel
+----------------------------------------------- */
+form.form-complex p {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 0;
+	padding: 0.8em 0;
+}
+form.form-complex p label {
+	width: 23%;
+	float: left;
+	margin-bottom: 0;
+	margin-right: 2%;
+}
+form.form-complex p input[type="password"],
+form.form-complex p input[type="text"] {
+	width: 74%;
+}
+form.form-complex p select {
+	margin-bottom: 0;
+	width: 74%;
+}
+form.form-complex fieldset {
+	border-top: 1px solid #ccc;
+	margin-bottom: 0;
+}
+form.form-complex #submission {
+	padding-top: .8em;
+	margin-left: 25%;
+}
+form.form-complex #cancel {
+	float: right;
+}
 
 /* login form
 ----------------------------------------------- */

@@ -15,7 +15,7 @@
 				<p class="success">Your profile has been updated.</p>
 			</div>
 		</xsl:if>
-		<form method="post" action="{$current-url}">
+		<form method="post" action="{$current-url}" class="form-complex">
 			<fieldset>
 				<p>
 					<xsl:if test="$event/name">

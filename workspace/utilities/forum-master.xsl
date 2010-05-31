@@ -68,8 +68,7 @@
 					<xsl:when test="/data/events/member-login-info/@failed-login-attempt = 'true'">
 						<li>Login Failed, </li>
 						<li><input id="submit" type="submit" name="reset" value="Try Again" class="button"/></li>
-						<li> or </li>
-						<li><a class="button" href="{$root}/forum/members/reset-pass/">Reset Password</a></li>
+						<li class="reset"><span>or </span><a class="button" href="{$root}/forum/members/reset-pass/">Reset Password</a></li>
 					</xsl:when>
 					<xsl:otherwise>
 						<li><input name="username" title="username" type="text" value="username" class="clear-on-focus"/></li>
@@ -89,7 +88,7 @@
 		<form method="get" action="">
 			<fieldset>
 				<input id="query" class="clear-on-focus" name="query" type="text" title="Search" value="" />
-				<button type="submit" value="Search">Search</button>
+				<input type="submit" value="Search" />
 			</fieldset>
 		</form>
 	</div>

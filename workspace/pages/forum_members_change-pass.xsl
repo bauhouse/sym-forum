@@ -35,7 +35,7 @@
 </xsl:template>
 
 <xsl:template name="change-password-form">
-	<form method="post" action="{$current-url}">
+	<form method="post" action="{$current-url}" class="form-complex">
 		<fieldset>
 			<p>
 				<xsl:if test="$event/old-password">

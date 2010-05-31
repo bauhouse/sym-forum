@@ -17,7 +17,7 @@
 	<p>There is only one way you can reset your password &#8211; by persuading us with your force.</p>
 	<p>With your force and some identification (but mostly with your force), we will email you a code that <strong><a href="./code/">you must enter</a></strong> before you can reset your password.</p>
 	<p><strong>Supply us with either your username or email.</strong></p>
-	<form method="post" action="{$current-url}">
+	<form method="post" action="{$current-url}" class="form-complex">
 		<fieldset>
 			<p>
 				<xsl:if test="events/forgot-password/member-username">

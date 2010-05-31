@@ -25,7 +25,7 @@
 			<p class="success">You have registered successfully. Please check your email for your activation code.</p>
 		</div>
 	</xsl:if>
-	<form method="post" action="">
+	<form method="post" action="" class="form-complex">
 		<fieldset>
 			<p>
 				<xsl:if test="$event/name">
