@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/master.xsl"/>
+<xsl:include href="../utilities/forum-master.xsl"/>
 
 <xsl:template match="data[events/member-login-info/@id = members/entry/@id]" mode="side-panel">
 	<h3>Actions</h3>
 	<ul>
-		<li><a href="{$root}/members/edit/">Edit My Profile</a></li>
-		<li class="last"><a href="{$root}/members/change-pass/">Change My Password</a></li>
+		<li><a href="{$root}/forum/members/edit/">Edit My Profile</a></li>
+		<li class="last"><a href="{$root}/forum/members/change-pass/">Change My Password</a></li>
 	</ul>
 </xsl:template>
 

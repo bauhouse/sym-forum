@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../utilities/forum-master.xsl"/>
 <xsl:import href="../utilities/forum-tools.xsl"/>
@@ -9,6 +10,8 @@
 <xsl:param name="url-query"/>
 
 <xsl:template match="data">
+	<h2>Discussions</h2>
+	<h3>All Discussions</h3>
 	<table id="discussions" cellpadding="0" cellspacing="0">
 		<thead>
 			<tr>
@@ -28,38 +31,6 @@
 	    <xsl:with-param name="display-number" select="'7'" />
 	    <xsl:with-param name="url" select="concat($root, '/forum/$/')" />
 	</xsl:call-template>
-</xsl:template>
-
-<xsl:template match="data" mode="side-panel">
-	<h3>Search</h3>
-	<div id="search">
-		<form method="get" action="">
-			<fieldset>
-				<input id="query" class="clear-on-focus" name="query" type="text" title="Search" value="" />
-				<button type="submit" value="Search">Search</button>
-			</fieldset>
-		</form>
-	</div>
-	<xsl:if test="$logged-in = 'true'">
-		<h3>Actions</h3>
-		<ul>
-			<li>
-				<a id="create" href="{$root}/forum/discussions/new/">Start a new discussion</a>
-			</li>
-			<li>
-				<a href="?forum-action=mark-all-as-read">Mark All as Read</a>
-			</li>
-		</ul>
-		<h3>Filters</h3>
-		<ul>
-			<li>
-				<a href="{$root}/" title="View all discussions">All Discussions</a>
-			</li>
-			<li>
-				<a href="{$root}/forum/forum-filter/" title="Filter discussions">My Discussions</a>
-			</li>
-		</ul>
-	</xsl:if>
 </xsl:template>
 
 <xsl:template match="data[search-comments/query-string]">
@@ -190,6 +161,161 @@
 	<tr class="last">
 		<td colspan="3">No records found</td>
 	</tr>
+</xsl:template>
+
+
+<xsl:template match="data" mode="old">
+	<xsl:param name="logged-in" select="events/user/@logged-in"/>
+	<xsl:param name="current-section">
+		<xsl:choose>
+			<xsl:when test="not($section)">all</xsl:when>
+			<xsl:otherwise><xsl:value-of select="sections/entry/fields/title/@handle[.=$section]"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:param>
+	<div id="forum-panel">
+		<div class="body lists">
+			<h2>Forum</h2>
+			<h3>Sections</h3>
+			<ul class="categories">
+				<li><a href="{$root}/forum/">All Sections</a></li>
+				<xsl:for-each select="sections/entry[fields/menu/@handle='content']">
+					<li><a href="{$root}/forum/{@handle}/"><xsl:value-of select="fields/title"/></a></li>
+				</xsl:for-each>
+			</ul>
+			<h3>Categories</h3>
+			<ul class="categories">
+				<xsl:for-each select="categories/entry">
+					<li><a href="{$root}/forum/category/{@handle}/"><xsl:value-of select="fields/title"/></a></li>
+				</xsl:for-each>
+			</ul>
+			<h3>Members</h3>
+			<ul class="links">
+				<xsl:choose>
+					<xsl:when test="$logged-in='true'">
+						<li>Signed in as <xsl:value-of select="//events/user/username"/></li>
+						<li><a href="{$root}/forum/post/">Start a New Discussion</a></li>
+						<li><a href="{$root}/symphony/?page=/logout/">Logout</a></li>
+					</xsl:when>
+					<xsl:otherwise>
+						<li><a href="{$root}/login/">Login</a></li>
+					</xsl:otherwise>
+				</xsl:choose>
+			</ul>
+		</div>
+	</div>
+	<div id="forum-content">
+		<div class="body">
+			<xsl:choose>
+				<xsl:when test="(events/user[@logged-in='true'])">
+					<xsl:for-each select="events/user[@logged-in='true']">
+						<h2>Start a Discussion</h2>
+						<xsl:if test="//events/front-end-entry or //events/author-registration">
+							<div id="messages">
+								<xsl:if test="//events/front-end-entry/@success='false' or //events/author-registration/@success='false'">
+									<h3>Errors were encountered</h3>
+									<xsl:choose>
+										<xsl:when test="//notices/missing or //notices/invalid or //notices/notice">
+											<xsl:if test="//notices/missing">
+												<h4>You did not fill the following required fields</h4>
+												<ul>
+												<xsl:for-each select="//notices/missing">
+													<li><xsl:value-of select="." /></li>
+												</xsl:for-each>
+												</ul>							
+											</xsl:if>
+											<xsl:if test="//events/front-end-entry/notices/invalid">
+												<h4>The information you entered into the following fields was invalid</h4>
+												<ul>
+												<xsl:for-each select="//events/front-end-entry/notices/invalid">
+													<li><xsl:value-of select="." /></li>
+												</xsl:for-each>
+												</ul>							
+											</xsl:if>
+											<xsl:if test="//notices/notice">
+												<h4>The following errors where encountered while attempting to post your comment</h4>
+												<ul>
+												<xsl:for-each select="//notices/notice">
+													<li><xsl:value-of select="." /></li>
+												</xsl:for-each>
+												</ul>							
+											</xsl:if>
+										</xsl:when>
+										<xsl:otherwise>
+											<h4>An unknown error occurred while attempting to post your comment. Please contact the webhost</h4>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:if>
+								<xsl:if test="//events/front-end-entry/@success='true'">
+									<h3>You have successfully added a new forum discussion</h3>
+								</xsl:if>
+							</div>
+						</xsl:if>		
+						<form action="" method="POST">
+							<fieldset>
+								<input type="hidden" name="fields[username]" class="text" value="{username}" />
+								<label class="forum-section">				
+									Section
+									<select name="fields[section]" class="text" id="forum-section"
+										   value="{//events/front-end-entry/cookie/section}">
+										<options>
+											<xsl:for-each select="/data/sections/entry[fields/menu/@handle='content']">
+												<option value="{fields/title}"><xsl:value-of select="fields/title"/></option>
+											</xsl:for-each>
+										</options>
+									</select>
+								</label>
+								<label class="forum-category">				
+									Category
+									<select name="fields[category]" class="text" id="forum-category"
+										   value="{//events/front-end-entry/cookie/category}">
+										<options>
+											<option value="General">General</option>
+											<xsl:for-each select="/data/categories/entry">
+												<option value="{fields/title}"><xsl:value-of select="fields/title"/></option>
+											</xsl:for-each>
+										</options>
+									</select>
+								</label>
+								<label class="forum-topic">				
+									Topic
+									<input name="fields[topic]" class="text" id="forum-topic"
+										   value="{//events/front-end-entry/cookie/topic}" />
+								</label>
+								<label class="forum-comments">				
+									Comments
+									<textarea 
+										name="fields[comments]" 
+										id="forum-comments"
+										value="{//events/front-end-entry/cookie/comments}"
+										rows="10">
+									</textarea>
+								</label>
+							</fieldset>
+							<input type="submit" class="submit" name="action[save]" value="Start Your Discussion" />
+					 
+							<!-- ENTRY CREATION CONFIGURATION -->
+							<input type="hidden" name="notify" value="" />
+							<input type="hidden" name="section-id" value="7" />
+					
+						</form>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<h2>Member Login</h2>
+					<h3>Login Required</h3>
+					<p>You will require a user name and password to access the <a href="{$root}/forum/">Members Forum</a> and to download resources. Please login.</p>
+					<form action="{$current-url}" method="post">
+						<fieldset>
+							<label>Username <input name="username" class="text"/></label>
+							<label>Password <input name="password" class="text" type="password" /></label>
+							<input name="redirect" type="hidden" value="{$root}/"/>
+							<input id="submit" type="submit" name="member-action[login]" value="Log In" class="button"/>
+						</fieldset>
+					</form>
+				</xsl:otherwise>
+			</xsl:choose>
+		</div>
+	</div>
 </xsl:template>
 
 </xsl:stylesheet>

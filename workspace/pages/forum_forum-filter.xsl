@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/forum-master.xsl"/>
 <xsl:import href="../utilities/forum-tools.xsl"/>
 <xsl:import href="../utilities/time-ago.xsl"/>
 <xsl:import href="../utilities/pagination.xsl"/>
@@ -9,6 +9,8 @@
 <xsl:param name="url-query"/>
 
 <xsl:template match="data">
+	<h2>Discussions</h2>
+	<h3>My Discussions</h3>
 	<xsl:if test="$logged-in = 'true'">
 		<div id="toolbox">
 			<a id="create-entry" href="{$root}/forum/discussions/new/" class="button">Start a new discussion</a>

@@ -22,13 +22,13 @@ CREATE TABLE `tbl_fields_checkbox` (
   `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_checkbox` ***
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (1, 9, 'off', 'Send me email when there is important news.');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (2, 15, 'off', 'Pin discussion');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (3, 16, 'off', 'Close this discussion');
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (13, 28, 'on', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (17, 28, 'on', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (15, 38, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (16, 39, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (11, 48, 'off', NULL);
@@ -43,12 +43,12 @@ CREATE TABLE `tbl_fields_date` (
   `pre_populate` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_date` ***
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (1, 12, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (2, 14, 'yes');
-INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (3, 19, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (11, 19, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (10, 37, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (7, 47, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (8, 60, 'yes');
@@ -62,7 +62,7 @@ CREATE TABLE `tbl_fields_input` (
   `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_input` ***
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (1, 1, NULL);
@@ -71,8 +71,8 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (3, 4, '/^
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (4, 6, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (5, 7, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (6, 10, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (21, 21, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (22, 23, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (31, 21, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (32, 23, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (29, 29, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (30, 30, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (19, 40, NULL);
@@ -107,12 +107,12 @@ CREATE TABLE `tbl_fields_memberlink` (
   `allow_multiple` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_memberlink` ***
 INSERT INTO `tbl_fields_memberlink` (`id`, `field_id`, `allow_multiple`) VALUES (1, 11, 'no');
 INSERT INTO `tbl_fields_memberlink` (`id`, `field_id`, `allow_multiple`) VALUES (2, 13, 'no');
-INSERT INTO `tbl_fields_memberlink` (`id`, `field_id`, `allow_multiple`) VALUES (3, 20, 'no');
+INSERT INTO `tbl_fields_memberlink` (`id`, `field_id`, `allow_multiple`) VALUES (4, 20, 'no');
 
 -- *** STRUCTURE: `tbl_fields_memberrole` ***
 DROP TABLE IF EXISTS `tbl_fields_memberrole`;
@@ -146,10 +146,10 @@ CREATE TABLE `tbl_fields_order_entries` (
   `hide` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_fields_order_entries` ***
-INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (2, 27, NULL, 'no');
+INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (3, 27, NULL, 'no');
 
 -- *** STRUCTURE: `tbl_fields_pages` ***
 DROP TABLE IF EXISTS `tbl_fields_pages`;
@@ -159,10 +159,10 @@ CREATE TABLE `tbl_fields_pages` (
   `allow_multiple_selection` enum('yes','no') NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_fields_pages` ***
-INSERT INTO `tbl_fields_pages` (`id`, `field_id`, `allow_multiple_selection`) VALUES (2, 22, 'no');
+INSERT INTO `tbl_fields_pages` (`id`, `field_id`, `allow_multiple_selection`) VALUES (3, 22, 'no');
 
 -- *** STRUCTURE: `tbl_fields_reflection` ***
 DROP TABLE IF EXISTS `tbl_fields_reflection`;
@@ -203,11 +203,11 @@ CREATE TABLE `tbl_fields_selectbox_link` (
   `limit` int(4) unsigned NOT NULL DEFAULT '20',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_selectbox_link` ***
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (1, 18, 'no', 10, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (13, 26, 'no', 50, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (20, 18, 'no', 10, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (19, 26, 'no', 50, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (16, 33, 'no', 21, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (17, 34, 'no', 1, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (18, 35, 'no', 54, 20);
@@ -241,12 +241,12 @@ CREATE TABLE `tbl_fields_textarea` (
   `size` int(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_textarea` ***
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (1, 17, 'markdown_with_purifier', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (17, 24, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (18, 25, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (26, 17, 'markdown_with_purifier', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (24, 24, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (25, 25, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (22, 31, 'markdown_extra_with_smartypants', 6);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (23, 32, 'markdown_extra_with_smartypants', 18);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (15, 43, 'markdown_extra_with_smartypants', 15);
@@ -283,9 +283,10 @@ CREATE TABLE `tbl_entries_data_1` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_1` ***
+INSERT INTO `tbl_entries_data_1` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'stephen-bau', 'Stephen Bau');
 
 -- *** STRUCTURE: `tbl_entries_data_10` ***
 DROP TABLE IF EXISTS `tbl_entries_data_10`;
@@ -298,9 +299,11 @@ CREATE TABLE `tbl_entries_data_10` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_10` ***
+INSERT INTO `tbl_entries_data_10` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 9, 'overview', 'Overview');
+INSERT INTO `tbl_entries_data_10` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 11, 'block-elements', 'Block Elements');
 
 -- *** STRUCTURE: `tbl_entries_data_11` ***
 DROP TABLE IF EXISTS `tbl_entries_data_11`;
@@ -313,9 +316,11 @@ CREATE TABLE `tbl_entries_data_11` (
   KEY `entry_id` (`entry_id`),
   KEY `member_id` (`member_id`),
   KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_11` ***
+INSERT INTO `tbl_entries_data_11` (`id`, `entry_id`, `member_id`, `username`) VALUES (5, 9, 8, 'stephen');
+INSERT INTO `tbl_entries_data_11` (`id`, `entry_id`, `member_id`, `username`) VALUES (6, 11, 8, 'stephen');
 
 -- *** STRUCTURE: `tbl_entries_data_12` ***
 DROP TABLE IF EXISTS `tbl_entries_data_12`;
@@ -328,9 +333,11 @@ CREATE TABLE `tbl_entries_data_12` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_12` ***
+INSERT INTO `tbl_entries_data_12` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (5, 9, '2010-05-30T16:53:00-07:00', 1275263580, 1275263580);
+INSERT INTO `tbl_entries_data_12` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 11, '2010-05-30T17:06:00-07:00', 1275264360, 1275264360);
 
 -- *** STRUCTURE: `tbl_entries_data_13` ***
 DROP TABLE IF EXISTS `tbl_entries_data_13`;
@@ -343,9 +350,11 @@ CREATE TABLE `tbl_entries_data_13` (
   KEY `entry_id` (`entry_id`),
   KEY `member_id` (`member_id`),
   KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_13` ***
+INSERT INTO `tbl_entries_data_13` (`id`, `entry_id`, `member_id`, `username`) VALUES (5, 9, 8, 'stephen');
+INSERT INTO `tbl_entries_data_13` (`id`, `entry_id`, `member_id`, `username`) VALUES (6, 11, 8, 'stephen');
 
 -- *** STRUCTURE: `tbl_entries_data_14` ***
 DROP TABLE IF EXISTS `tbl_entries_data_14`;
@@ -358,9 +367,11 @@ CREATE TABLE `tbl_entries_data_14` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_14` ***
+INSERT INTO `tbl_entries_data_14` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (5, 9, '2010-05-30T16:53:00-07:00', 1275263580, 1275263580);
+INSERT INTO `tbl_entries_data_14` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 11, '2010-05-30T17:06:00-07:00', 1275264360, 1275264360);
 
 -- *** STRUCTURE: `tbl_entries_data_15` ***
 DROP TABLE IF EXISTS `tbl_entries_data_15`;
@@ -371,9 +382,11 @@ CREATE TABLE `tbl_entries_data_15` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_15` ***
+INSERT INTO `tbl_entries_data_15` (`id`, `entry_id`, `value`) VALUES (5, 9, 'no');
+INSERT INTO `tbl_entries_data_15` (`id`, `entry_id`, `value`) VALUES (6, 11, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_16` ***
 DROP TABLE IF EXISTS `tbl_entries_data_16`;
@@ -384,9 +397,11 @@ CREATE TABLE `tbl_entries_data_16` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_16` ***
+INSERT INTO `tbl_entries_data_16` (`id`, `entry_id`, `value`) VALUES (5, 9, 'no');
+INSERT INTO `tbl_entries_data_16` (`id`, `entry_id`, `value`) VALUES (6, 11, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_17` ***
 DROP TABLE IF EXISTS `tbl_entries_data_17`;
@@ -398,9 +413,11 @@ CREATE TABLE `tbl_entries_data_17` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_17` ***
+INSERT INTO `tbl_entries_data_17` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 10, '### Philosophy\r\n\r\nMarkdown is intended to be as easy-to-read and easy-to-write as is feasible.\r\n\r\nReadability, however, is emphasized above all else. A Markdown-formatted\r\ndocument should be publishable as-is, as plain text, without looking\r\nlike it\'s been marked up with tags or formatting instructions. While\r\nMarkdown\'s syntax has been influenced by several existing text-to-HTML\r\nfilters -- including [Setext] [1], [atx] [2], [Textile] [3], [reStructuredText] [4],\r\n[Grutatext] [5], and [EtText] [6] -- the single biggest source of\r\ninspiration for Markdown\'s syntax is the format of plain text email.\r\n\r\n  [1]: http://docutils.sourceforge.net/mirror/setext.html\r\n  [2]: http://www.aaronsw.com/2002/atx/\r\n  [3]: http://textism.com/tools/textile/\r\n  [4]: http://docutils.sourceforge.net/rst.html\r\n  [5]: http://www.triptico.com/software/grutatxt.html\r\n  [6]: http://ettext.taint.org/doc/\r\n\r\nTo this end, Markdown\'s syntax is comprised entirely of punctuation\r\ncharacters, which punctuation characters have been carefully chosen so\r\nas to look like what they mean. E.g., asterisks around a word actually\r\nlook like *emphasis*. Markdown lists look like, well, lists. Even\r\nblockquotes look like quoted passages of text, assuming you\'ve ever\r\nused email.\r\n\r\n\r\n\r\n<h3 id=\"html\">Inline HTML</h3>\r\n\r\nMarkdown\'s syntax is intended for one purpose: to be used as a\r\nformat for *writing* for the web.\r\n\r\nMarkdown is not a replacement for HTML, or even close to it. Its\r\nsyntax is very small, corresponding only to a very small subset of\r\nHTML tags. The idea is *not* to create a syntax that makes it easier\r\nto insert HTML tags. In my opinion, HTML tags are already easy to\r\ninsert. The idea for Markdown is to make it easy to read, write, and\r\nedit prose. HTML is a *publishing* format; Markdown is a *writing*\r\nformat. Thus, Markdown\'s formatting syntax only addresses issues that\r\ncan be conveyed in plain text.\r\n\r\nFor any markup that is not covered by Markdown\'s syntax, you simply\r\nuse HTML itself. There\'s no need to preface it or delimit it to\r\nindicate that you\'re switching from Markdown to HTML; you just use\r\nthe tags.\r\n\r\nThe only restrictions are that block-level HTML elements -- e.g. `<div>`,\r\n`<table>`, `<pre>`, `<p>`, etc. -- must be separated from surrounding\r\ncontent by blank lines, and the start and end tags of the block should\r\nnot be indented with tabs or spaces. Markdown is smart enough not\r\nto add extra (unwanted) `<p>` tags around HTML block-level tags.\r\n\r\nFor example, to add an HTML table to a Markdown article:\r\n\r\n    This is a regular paragraph.\r\n\r\n    <table>\r\n        <tr>\r\n            <td>Foo</td>\r\n        </tr>\r\n    </table>\r\n\r\n    This is another regular paragraph.\r\n\r\nNote that Markdown formatting syntax is not processed within block-level\r\nHTML tags. E.g., you can\'t use Markdown-style `*emphasis*` inside an\r\nHTML block.\r\n\r\nSpan-level HTML tags -- e.g. `<span>`, `<cite>`, or `<del>` -- can be\r\nused anywhere in a Markdown paragraph, list item, or header. If you\r\nwant, you can even use HTML tags instead of Markdown formatting; e.g. if\r\nyou\'d prefer to use HTML `<a>` or `<img>` tags instead of Markdown\'s\r\nlink or image syntax, go right ahead.\r\n\r\nUnlike block-level HTML tags, Markdown syntax *is* processed within\r\nspan-level tags.\r\n\r\n\r\n<h3 id=\"autoescape\">Automatic Escaping for Special Characters</h3>\r\n\r\nIn HTML, there are two characters that demand special treatment: `<`\r\nand `&`. Left angle brackets are used to start tags; ampersands are\r\nused to denote HTML entities. If you want to use them as literal\r\ncharacters, you must escape them as entities, e.g. `&lt;`, and\r\n`&amp;`.\r\n\r\nAmpersands in particular are bedeviling for web writers. If you want to\r\nwrite about \'AT&T\', you need to write \'`AT&amp;T`\'. You even need to\r\nescape ampersands within URLs. Thus, if you want to link to:\r\n\r\n    http://images.google.com/images?num=30&q=larry+bird\r\n\r\nyou need to encode the URL as:\r\n\r\n    http://images.google.com/images?num=30&amp;q=larry+bird\r\n\r\nin your anchor tag `href` attribute. Needless to say, this is easy to\r\nforget, and is probably the single most common source of HTML validation\r\nerrors in otherwise well-marked-up web sites.\r\n\r\nMarkdown allows you to use these characters naturally, taking care of\r\nall the necessary escaping for you. If you use an ampersand as part of\r\nan HTML entity, it remains unchanged; otherwise it will be translated\r\ninto `&amp;`.\r\n\r\nSo, if you want to include a copyright symbol in your article, you can write:\r\n\r\n    &copy;\r\n\r\nand Markdown will leave it alone. But if you write:\r\n\r\n    AT&T\r\n\r\nMarkdown will translate it to:\r\n\r\n    AT&amp;T\r\n\r\nSimilarly, because Markdown supports [inline HTML](#html), if you use\r\nangle brackets as delimiters for HTML tags, Markdown will treat them as\r\nsuch. But if you write:\r\n\r\n    4 < 5\r\n\r\nMarkdown will translate it to:\r\n\r\n    4 &lt; 5\r\n\r\nHowever, inside Markdown code spans and blocks, angle brackets and\r\nampersands are *always* encoded automatically. This makes it easy to use\r\nMarkdown to write about HTML code. (As opposed to raw HTML, which is a\r\nterrible format for writing about HTML syntax, because every single `<`\r\nand `&` in your example code needs to be escaped.)\r\n\r\n\r\n* * *\r\n', '<h3>Philosophy</h3>\n\n<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>\n\n<p>Readability, however, is emphasized above all else. A Markdown-formatted\ndocument should be publishable as-is, as plain text, without looking\nlike it\'s been marked up with tags or formatting instructions. While\nMarkdown\'s syntax has been influenced by several existing text-to-HTML\nfilters -- including <a href=\"http://docutils.sourceforge.net/mirror/setext.html\">Setext</a>, <a href=\"http://www.aaronsw.com/2002/atx/\">atx</a>, <a href=\"http://textism.com/tools/textile/\">Textile</a>, <a href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>,\n<a href=\"http://www.triptico.com/software/grutatxt.html\">Grutatext</a>, and <a href=\"http://ettext.taint.org/doc/\">EtText</a> -- the single biggest source of\ninspiration for Markdown\'s syntax is the format of plain text email.</p>\n\n<p>To this end, Markdown\'s syntax is comprised entirely of punctuation\ncharacters, which punctuation characters have been carefully chosen so\nas to look like what they mean. E.g., asterisks around a word actually\nlook like <em>emphasis</em>. Markdown lists look like, well, lists. Even\nblockquotes look like quoted passages of text, assuming you\'ve ever\nused email.</p>\n\n<h3>Inline HTML</h3>\n\n<p>Markdown\'s syntax is intended for one purpose: to be used as a\nformat for <em>writing</em> for the web.</p>\n\n<p>Markdown is not a replacement for HTML, or even close to it. Its\nsyntax is very small, corresponding only to a very small subset of\nHTML tags. The idea is <em>not</em> to create a syntax that makes it easier\nto insert HTML tags. In my opinion, HTML tags are already easy to\ninsert. The idea for Markdown is to make it easy to read, write, and\nedit prose. HTML is a <em>publishing</em> format; Markdown is a <em>writing</em>\nformat. Thus, Markdown\'s formatting syntax only addresses issues that\ncan be conveyed in plain text.</p>\n\n<p>For any markup that is not covered by Markdown\'s syntax, you simply\nuse HTML itself. There\'s no need to preface it or delimit it to\nindicate that you\'re switching from Markdown to HTML; you just use\nthe tags.</p>\n\n<p>The only restrictions are that block-level HTML elements -- e.g. <code>&lt;div&gt;</code>,\n<code>&lt;table&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;p&gt;</code>, etc. -- must be separated from surrounding\ncontent by blank lines, and the start and end tags of the block should\nnot be indented with tabs or spaces. Markdown is smart enough not\nto add extra (unwanted) <code>&lt;p&gt;</code> tags around HTML block-level tags.</p>\n\n<p>For example, to add an HTML table to a Markdown article:</p>\n\n<pre><code>This is a regular paragraph.\n\n&lt;table&gt;\n    &lt;tr&gt;\n        &lt;td&gt;Foo&lt;/td&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;\n\nThis is another regular paragraph.\n</code></pre>\n\n<p>Note that Markdown formatting syntax is not processed within block-level\nHTML tags. E.g., you can\'t use Markdown-style <code>*emphasis*</code> inside an\nHTML block.</p>\n\n<p>Span-level HTML tags -- e.g. <code>&lt;span&gt;</code>, <code>&lt;cite&gt;</code>, or <code>&lt;del&gt;</code> -- can be\nused anywhere in a Markdown paragraph, list item, or header. If you\nwant, you can even use HTML tags instead of Markdown formatting; e.g. if\nyou\'d prefer to use HTML <code>&lt;a&gt;</code> or <code>&lt;img&gt;</code> tags instead of Markdown\'s\nlink or image syntax, go right ahead.</p>\n\n<p>Unlike block-level HTML tags, Markdown syntax <em>is</em> processed within\nspan-level tags.</p>\n\n<h3>Automatic Escaping for Special Characters</h3>\n\n<p>In HTML, there are two characters that demand special treatment: <code>&lt;</code>\nand <code>&amp;</code>. Left angle brackets are used to start tags; ampersands are\nused to denote HTML entities. If you want to use them as literal\ncharacters, you must escape them as entities, e.g. <code>&amp;lt;</code>, and\n<code>&amp;amp;</code>.</p>\n\n<p>Ampersands in particular are bedeviling for web writers. If you want to\nwrite about \'AT&amp;T\', you need to write \'<code>AT&amp;amp;T</code>\'. You even need to\nescape ampersands within URLs. Thus, if you want to link to:</p>\n\n<pre><code>http://images.google.com/images?num=30&amp;q=larry+bird\n</code></pre>\n\n<p>you need to encode the URL as:</p>\n\n<pre><code>http://images.google.com/images?num=30&amp;amp;q=larry+bird\n</code></pre>\n\n<p>in your anchor tag <code>href</code> attribute. Needless to say, this is easy to\nforget, and is probably the single most common source of HTML validation\nerrors in otherwise well-marked-up web sites.</p>\n\n<p>Markdown allows you to use these characters naturally, taking care of\nall the necessary escaping for you. If you use an ampersand as part of\nan HTML entity, it remains unchanged; otherwise it will be translated\ninto <code>&amp;amp;</code>.</p>\n\n<p>So, if you want to include a copyright symbol in your article, you can write:</p>\n\n<pre><code>&amp;copy;\n</code></pre>\n\n<p>and Markdown will leave it alone. But if you write:</p>\n\n<pre><code>AT&amp;T\n</code></pre>\n\n<p>Markdown will translate it to:</p>\n\n<pre><code>AT&amp;amp;T\n</code></pre>\n\n<p>Similarly, because Markdown supports <a href=\"#html\">inline HTML</a>, if you use\nangle brackets as delimiters for HTML tags, Markdown will treat them as\nsuch. But if you write:</p>\n\n<pre><code>4 &lt; 5\n</code></pre>\n\n<p>Markdown will translate it to:</p>\n\n<pre><code>4 &amp;lt; 5\n</code></pre>\n\n<p>However, inside Markdown code spans and blocks, angle brackets and\nampersands are <em>always</em> encoded automatically. This makes it easy to use\nMarkdown to write about HTML code. (As opposed to raw HTML, which is a\nterrible format for writing about HTML syntax, because every single <code>&lt;</code>\nand <code>&amp;</code> in your example code needs to be escaped.)</p>\n\n<hr />');
+INSERT INTO `tbl_entries_data_17` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 12, '<h2 id=\"block\">Block Elements</h2>\r\n\r\n\r\n<h3 id=\"p\">Paragraphs and Line Breaks</h3>\r\n\r\nA paragraph is simply one or more consecutive lines of text, separated\r\nby one or more blank lines. (A blank line is any line that looks like a\r\nblank line -- a line containing nothing but spaces or tabs is considered\r\nblank.) Normal paragraphs should not be indented with spaces or tabs.\r\n\r\nThe implication of the \"one or more consecutive lines of text\" rule is\r\nthat Markdown supports \"hard-wrapped\" text paragraphs. This differs\r\nsignificantly from most other text-to-HTML formatters (including Movable\r\nType\'s \"Convert Line Breaks\" option) which translate every line break\r\ncharacter in a paragraph into a `<br />` tag.\r\n\r\nWhen you *do* want to insert a `<br />` break tag using Markdown, you\r\nend a line with two or more spaces, then type return.\r\n\r\nYes, this takes a tad more effort to create a `<br />`, but a simplistic\r\n\"every line break is a `<br />`\" rule wouldn\'t work for Markdown.\r\nMarkdown\'s email-style [blockquoting][bq] and multi-paragraph [list items][l]\r\nwork best -- and look better -- when you format them with hard breaks.\r\n\r\n  [bq]: #blockquote\r\n  [l]:  #list\r\n\r\n\r\n\r\n<h3 id=\"header\">Headers</h3>\r\n\r\nMarkdown supports two styles of headers, [Setext] [1] and [atx] [2].\r\n\r\nSetext-style headers are \"underlined\" using equal signs (for first-level\r\nheaders) and dashes (for second-level headers). For example:\r\n\r\n    This is an H1\r\n    =============\r\n\r\n    This is an H2\r\n    -------------\r\n\r\nAny number of underlining `=`\'s or `-`\'s will work.\r\n\r\nAtx-style headers use 1-6 hash characters at the start of the line,\r\ncorresponding to header levels 1-6. For example:\r\n\r\n    # This is an H1\r\n\r\n    ## This is an H2\r\n\r\n    ###### This is an H6\r\n\r\nOptionally, you may \"close\" atx-style headers. This is purely\r\ncosmetic -- you can use this if you think it looks better. The\r\nclosing hashes don\'t even need to match the number of hashes\r\nused to open the header. (The number of opening hashes\r\ndetermines the header level.) :\r\n\r\n    # This is an H1 #\r\n\r\n    ## This is an H2 ##\r\n\r\n    ### This is an H3 ######\r\n\r\n\r\n<h3 id=\"blockquote\">Blockquotes</h3>\r\n\r\nMarkdown uses email-style `>` characters for blockquoting. If you\'re\r\nfamiliar with quoting passages of text in an email message, then you\r\nknow how to create a blockquote in Markdown. It looks best if you hard\r\nwrap the text and put a `>` before every line:\r\n\r\n    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,\r\n    > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.\r\n    > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.\r\n    > \r\n    > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse\r\n    > id sem consectetuer libero luctus adipiscing.\r\n\r\nMarkdown allows you to be lazy and only put the `>` before the first\r\nline of a hard-wrapped paragraph:\r\n\r\n    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,\r\n    consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.\r\n    Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.\r\n\r\n    > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse\r\n    id sem consectetuer libero luctus adipiscing.\r\n\r\nBlockquotes can be nested (i.e. a blockquote-in-a-blockquote) by\r\nadding additional levels of `>`:\r\n\r\n    > This is the first level of quoting.\r\n    >\r\n    > > This is nested blockquote.\r\n    >\r\n    > Back to the first level.\r\n\r\nBlockquotes can contain other Markdown elements, including headers, lists,\r\nand code blocks:\r\n\r\n	> ## This is a header.\r\n	> \r\n	> 1.   This is the first list item.\r\n	> 2.   This is the second list item.\r\n	> \r\n	> Here\'s some example code:\r\n	> \r\n	>     return shell_exec(\"echo $input | $markdown_script\");\r\n\r\nAny decent text editor should make email-style quoting easy. For\r\nexample, with BBEdit, you can make a selection and choose Increase\r\nQuote Level from the Text menu.\r\n\r\n\r\n<h3 id=\"list\">Lists</h3>\r\n\r\nMarkdown supports ordered (numbered) and unordered (bulleted) lists.\r\n\r\nUnordered lists use asterisks, pluses, and hyphens -- interchangably\r\n-- as list markers:\r\n\r\n    *   Red\r\n    *   Green\r\n    *   Blue\r\n\r\nis equivalent to:\r\n\r\n    +   Red\r\n    +   Green\r\n    +   Blue\r\n\r\nand:\r\n\r\n    -   Red\r\n    -   Green\r\n    -   Blue\r\n\r\nOrdered lists use numbers followed by periods:\r\n\r\n    1.  Bird\r\n    2.  McHale\r\n    3.  Parish\r\n\r\nIt\'s important to note that the actual numbers you use to mark the\r\nlist have no effect on the HTML output Markdown produces. The HTML\r\nMarkdown produces from the above list is:\r\n\r\n    <ol>\r\n    <li>Bird</li>\r\n    <li>McHale</li>\r\n    <li>Parish</li>\r\n    </ol>\r\n\r\nIf you instead wrote the list in Markdown like this:\r\n\r\n    1.  Bird\r\n    1.  McHale\r\n    1.  Parish\r\n\r\nor even:\r\n\r\n    3. Bird\r\n    1. McHale\r\n    8. Parish\r\n\r\nyou\'d get the exact same HTML output. The point is, if you want to,\r\nyou can use ordinal numbers in your ordered Markdown lists, so that\r\nthe numbers in your source match the numbers in your published HTML.\r\nBut if you want to be lazy, you don\'t have to.\r\n\r\nIf you do use lazy list numbering, however, you should still start the\r\nlist with the number 1. At some point in the future, Markdown may support\r\nstarting ordered lists at an arbitrary number.\r\n\r\nList markers typically start at the left margin, but may be indented by\r\nup to three spaces. List markers must be followed by one or more spaces\r\nor a tab.\r\n\r\nTo make lists look nice, you can wrap items with hanging indents:\r\n\r\n    *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\r\n        Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,\r\n        viverra nec, fringilla in, laoreet vitae, risus.\r\n    *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.\r\n        Suspendisse id sem consectetuer libero luctus adipiscing.\r\n\r\nBut if you want to be lazy, you don\'t have to:\r\n\r\n    *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\r\n    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,\r\n    viverra nec, fringilla in, laoreet vitae, risus.\r\n    *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.\r\n    Suspendisse id sem consectetuer libero luctus adipiscing.\r\n\r\nIf list items are separated by blank lines, Markdown will wrap the\r\nitems in `<p>` tags in the HTML output. For example, this input:\r\n\r\n    *   Bird\r\n    *   Magic\r\n\r\nwill turn into:\r\n\r\n    <ul>\r\n    <li>Bird</li>\r\n    <li>Magic</li>\r\n    </ul>\r\n\r\nBut this:\r\n\r\n    *   Bird\r\n\r\n    *   Magic\r\n\r\nwill turn into:\r\n\r\n    <ul>\r\n    <li><p>Bird</p></li>\r\n    <li><p>Magic</p></li>\r\n    </ul>\r\n\r\nList items may consist of multiple paragraphs. Each subsequent\r\nparagraph in a list item must be indented by either 4 spaces\r\nor one tab:\r\n\r\n    1.  This is a list item with two paragraphs. Lorem ipsum dolor\r\n        sit amet, consectetuer adipiscing elit. Aliquam hendrerit\r\n        mi posuere lectus.\r\n\r\n        Vestibulum enim wisi, viverra nec, fringilla in, laoreet\r\n        vitae, risus. Donec sit amet nisl. Aliquam semper ipsum\r\n        sit amet velit.\r\n\r\n    2.  Suspendisse id sem consectetuer libero luctus adipiscing.\r\n\r\nIt looks nice if you indent every line of the subsequent\r\nparagraphs, but here again, Markdown will allow you to be\r\nlazy:\r\n\r\n    *   This is a list item with two paragraphs.\r\n\r\n        This is the second paragraph in the list item. You\'re\r\n    only required to indent the first line. Lorem ipsum dolor\r\n    sit amet, consectetuer adipiscing elit.\r\n\r\n    *   Another item in the same list.\r\n\r\nTo put a blockquote within a list item, the blockquote\'s `>`\r\ndelimiters need to be indented:\r\n\r\n    *   A list item with a blockquote:\r\n\r\n        > This is a blockquote\r\n        > inside a list item.\r\n\r\nTo put a code block within a list item, the code block needs\r\nto be indented *twice* -- 8 spaces or two tabs:\r\n\r\n    *   A list item with a code block:\r\n\r\n            <code goes here>\r\n\r\n\r\nIt\'s worth noting that it\'s possible to trigger an ordered list by\r\naccident, by writing something like this:\r\n\r\n    1986. What a great season.\r\n\r\nIn other words, a *number-period-space* sequence at the beginning of a\r\nline. To avoid this, you can backslash-escape the period:\r\n\r\n    1986. What a great season.\r\n\r\n\r\nMarkdown is intended to be as easy-to-read and easy-to-write as is feasible.\r\n\r\nReadability, however, is emphasized above all else. A Markdown-formatted\r\ndocument should be publishable as-is, as plain text, without looking\r\nlike it\'s been marked up with tags or formatting instructions. While\r\nMarkdown\'s syntax has been influenced by several existing text-to-HTML\r\nfilters -- including [Setext] [1], [atx] [2], [Textile] [3], [reStructuredText] [4],\r\n[Grutatext] [5], and [EtText] [6] -- the single biggest source of\r\ninspiration for Markdown\'s syntax is the format of plain text email.\r\n\r\n  [1]: http://docutils.sourceforge.net/mirror/setext.html\r\n  [2]: http://www.aaronsw.com/2002/atx/\r\n  [3]: http://textism.com/tools/textile/\r\n  [4]: http://docutils.sourceforge.net/rst.html\r\n  [5]: http://www.triptico.com/software/grutatxt.html\r\n  [6]: http://ettext.taint.org/doc/\r\n\r\nTo this end, Markdown\'s syntax is comprised entirely of punctuation\r\ncharacters, which punctuation characters have been carefully chosen so\r\nas to look like what they mean. E.g., asterisks around a word actually\r\nlook like *emphasis*. Markdown lists look like, well, lists. Even\r\nblockquotes look like quoted passages of text, assuming you\'ve ever\r\nused email.\r\n\r\n\r\n\r\n<h3 id=\"html\">Inline HTML</h3>\r\n\r\nMarkdown\'s syntax is intended for one purpose: to be used as a\r\nformat for *writing* for the web.\r\n\r\nMarkdown is not a replacement for HTML, or even close to it. Its\r\nsyntax is very small, corresponding only to a very small subset of\r\nHTML tags. The idea is *not* to create a syntax that makes it easier\r\nto insert HTML tags. In my opinion, HTML tags are already easy to\r\ninsert. The idea for Markdown is to make it easy to read, write, and\r\nedit prose. HTML is a *publishing* format; Markdown is a *writing*\r\nformat. Thus, Markdown\'s formatting syntax only addresses issues that\r\ncan be conveyed in plain text.\r\n\r\nFor any markup that is not covered by Markdown\'s syntax, you simply\r\nuse HTML itself. There\'s no need to preface it or delimit it to\r\nindicate that you\'re switching from Markdown to HTML; you just use\r\nthe tags.\r\n\r\nThe only restrictions are that block-level HTML elements -- e.g. `<div>`,\r\n`<table>`, `<pre>`, `<p>`, etc. -- must be separated from surrounding\r\ncontent by blank lines, and the start and end tags of the block should\r\nnot be indented with tabs or spaces. Markdown is smart enough not\r\nto add extra (unwanted) `<p>` tags around HTML block-level tags.\r\n\r\nFor example, to add an HTML table to a Markdown article:\r\n\r\n    This is a regular paragraph.\r\n\r\n    <table>\r\n        <tr>\r\n            <td>Foo</td>\r\n        </tr>\r\n    </table>\r\n\r\n    This is another regular paragraph.\r\n\r\nNote that Markdown formatting syntax is not processed within block-level\r\nHTML tags. E.g., you can\'t use Markdown-style `*emphasis*` inside an\r\nHTML block.\r\n\r\nSpan-level HTML tags -- e.g. `<span>`, `<cite>`, or `<del>` -- can be\r\nused anywhere in a Markdown paragraph, list item, or header. If you\r\nwant, you can even use HTML tags instead of Markdown formatting; e.g. if\r\nyou\'d prefer to use HTML `<a>` or `<img>` tags instead of Markdown\'s\r\nlink or image syntax, go right ahead.\r\n\r\nUnlike block-level HTML tags, Markdown syntax *is* processed within\r\nspan-level tags.\r\n\r\n\r\n<h3 id=\"autoescape\">Automatic Escaping for Special Characters</h3>\r\n\r\nIn HTML, there are two characters that demand special treatment: `<`\r\nand `&`. Left angle brackets are used to start tags; ampersands are\r\nused to denote HTML entities. If you want to use them as literal\r\ncharacters, you must escape them as entities, e.g. `&lt;`, and\r\n`&amp;`.\r\n\r\nAmpersands in particular are bedeviling for web writers. If you want to\r\nwrite about \'AT&T\', you need to write \'`AT&amp;T`\'. You even need to\r\nescape ampersands within URLs. Thus, if you want to link to:\r\n\r\n    http://images.google.com/images?num=30&q=larry+bird\r\n\r\nyou need to encode the URL as:\r\n\r\n    http://images.google.com/images?num=30&amp;q=larry+bird\r\n\r\nin your anchor tag `href` attribute. Needless to say, this is easy to\r\nforget, and is probably the single most common source of HTML validation\r\nerrors in otherwise well-marked-up web sites.\r\n\r\nMarkdown allows you to use these characters naturally, taking care of\r\nall the necessary escaping for you. If you use an ampersand as part of\r\nan HTML entity, it remains unchanged; otherwise it will be translated\r\ninto `&amp;`.\r\n\r\nSo, if you want to include a copyright symbol in your article, you can write:\r\n\r\n    &copy;\r\n\r\nand Markdown will leave it alone. But if you write:\r\n\r\n    AT&T\r\n\r\nMarkdown will translate it to:\r\n\r\n    AT&amp;T\r\n\r\nSimilarly, because Markdown supports [inline HTML](#html), if you use\r\nangle brackets as delimiters for HTML tags, Markdown will treat them as\r\nsuch. But if you write:\r\n\r\n    4 < 5\r\n\r\nMarkdown will translate it to:\r\n\r\n    4 &lt; 5\r\n\r\nHowever, inside Markdown code spans and blocks, angle brackets and\r\nampersands are *always* encoded automatically. This makes it easy to use\r\nMarkdown to write about HTML code. (As opposed to raw HTML, which is a\r\nterrible format for writing about HTML syntax, because every single `<`\r\nand `&` in your example code needs to be escaped.)\r\n\r\n\r\n* * *\r\n', '<h2>Block Elements</h2>\n\n<h3>Paragraphs and Line Breaks</h3>\n\n<p>A paragraph is simply one or more consecutive lines of text, separated\nby one or more blank lines. (A blank line is any line that looks like a\nblank line -- a line containing nothing but spaces or tabs is considered\nblank.) Normal paragraphs should not be indented with spaces or tabs.</p>\n\n<p>The implication of the \"one or more consecutive lines of text\" rule is\nthat Markdown supports \"hard-wrapped\" text paragraphs. This differs\nsignificantly from most other text-to-HTML formatters (including Movable\nType\'s \"Convert Line Breaks\" option) which translate every line break\ncharacter in a paragraph into a <code>&lt;br /&gt;</code> tag.</p>\n\n<p>When you <em>do</em> want to insert a <code>&lt;br /&gt;</code> break tag using Markdown, you\nend a line with two or more spaces, then type return.</p>\n\n<p>Yes, this takes a tad more effort to create a <code>&lt;br /&gt;</code>, but a simplistic\n\"every line break is a <code>&lt;br /&gt;</code>\" rule wouldn\'t work for Markdown.\nMarkdown\'s email-style <a href=\"#blockquote\">blockquoting</a> and multi-paragraph <a href=\"#list\">list items</a>\nwork best -- and look better -- when you format them with hard breaks.</p>\n\n<h3>Headers</h3>\n\n<p>Markdown supports two styles of headers, <a href=\"http://docutils.sourceforge.net/mirror/setext.html\">Setext</a> and <a href=\"http://www.aaronsw.com/2002/atx/\">atx</a>.</p>\n\n<p>Setext-style headers are \"underlined\" using equal signs (for first-level\nheaders) and dashes (for second-level headers). For example:</p>\n\n<pre><code>This is an H1\n=============\n\nThis is an H2\n-------------\n</code></pre>\n\n<p>Any number of underlining <code>=</code>\'s or <code>-</code>\'s will work.</p>\n\n<p>Atx-style headers use 1-6 hash characters at the start of the line,\ncorresponding to header levels 1-6. For example:</p>\n\n<pre><code># This is an H1\n\n## This is an H2\n\n###### This is an H6\n</code></pre>\n\n<p>Optionally, you may \"close\" atx-style headers. This is purely\ncosmetic -- you can use this if you think it looks better. The\nclosing hashes don\'t even need to match the number of hashes\nused to open the header. (The number of opening hashes\ndetermines the header level.) :</p>\n\n<pre><code># This is an H1 #\n\n## This is an H2 ##\n\n### This is an H3 ######\n</code></pre>\n\n<h3>Blockquotes</h3>\n\n<p>Markdown uses email-style <code>&gt;</code> characters for blockquoting. If you\'re\nfamiliar with quoting passages of text in an email message, then you\nknow how to create a blockquote in Markdown. It looks best if you hard\nwrap the text and put a <code>&gt;</code> before every line:</p>\n\n<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,\n&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.\n&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.\n&gt; \n&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse\n&gt; id sem consectetuer libero luctus adipiscing.\n</code></pre>\n\n<p>Markdown allows you to be lazy and only put the <code>&gt;</code> before the first\nline of a hard-wrapped paragraph:</p>\n\n<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,\nconsectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.\nVestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.\n\n&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse\nid sem consectetuer libero luctus adipiscing.\n</code></pre>\n\n<p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by\nadding additional levels of <code>&gt;</code>:</p>\n\n<pre><code>&gt; This is the first level of quoting.\n&gt;\n&gt; &gt; This is nested blockquote.\n&gt;\n&gt; Back to the first level.\n</code></pre>\n\n<p>Blockquotes can contain other Markdown elements, including headers, lists,\nand code blocks:</p>\n\n<pre><code>&gt; ## This is a header.\n&gt; \n&gt; 1.   This is the first list item.\n&gt; 2.   This is the second list item.\n&gt; \n&gt; Here\'s some example code:\n&gt; \n&gt;     return shell_exec(\"echo $input | $markdown_script\");\n</code></pre>\n\n<p>Any decent text editor should make email-style quoting easy. For\nexample, with BBEdit, you can make a selection and choose Increase\nQuote Level from the Text menu.</p>\n\n<h3>Lists</h3>\n\n<p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>\n\n<p>Unordered lists use asterisks, pluses, and hyphens -- interchangably\n-- as list markers:</p>\n\n<pre><code>*   Red\n*   Green\n*   Blue\n</code></pre>\n\n<p>is equivalent to:</p>\n\n<pre><code>+   Red\n+   Green\n+   Blue\n</code></pre>\n\n<p>and:</p>\n\n<pre><code>-   Red\n-   Green\n-   Blue\n</code></pre>\n\n<p>Ordered lists use numbers followed by periods:</p>\n\n<pre><code>1.  Bird\n2.  McHale\n3.  Parish\n</code></pre>\n\n<p>It\'s important to note that the actual numbers you use to mark the\nlist have no effect on the HTML output Markdown produces. The HTML\nMarkdown produces from the above list is:</p>\n\n<pre><code>&lt;ol&gt;\n&lt;li&gt;Bird&lt;/li&gt;\n&lt;li&gt;McHale&lt;/li&gt;\n&lt;li&gt;Parish&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre>\n\n<p>If you instead wrote the list in Markdown like this:</p>\n\n<pre><code>1.  Bird\n1.  McHale\n1.  Parish\n</code></pre>\n\n<p>or even:</p>\n\n<pre><code>3. Bird\n1. McHale\n8. Parish\n</code></pre>\n\n<p>you\'d get the exact same HTML output. The point is, if you want to,\nyou can use ordinal numbers in your ordered Markdown lists, so that\nthe numbers in your source match the numbers in your published HTML.\nBut if you want to be lazy, you don\'t have to.</p>\n\n<p>If you do use lazy list numbering, however, you should still start the\nlist with the number 1. At some point in the future, Markdown may support\nstarting ordered lists at an arbitrary number.</p>\n\n<p>List markers typically start at the left margin, but may be indented by\nup to three spaces. List markers must be followed by one or more spaces\nor a tab.</p>\n\n<p>To make lists look nice, you can wrap items with hanging indents:</p>\n\n<pre><code>*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,\n    viverra nec, fringilla in, laoreet vitae, risus.\n*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.\n    Suspendisse id sem consectetuer libero luctus adipiscing.\n</code></pre>\n\n<p>But if you want to be lazy, you don\'t have to:</p>\n\n<pre><code>*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\nAliquam hendrerit mi posuere lectus. Vestibulum enim wisi,\nviverra nec, fringilla in, laoreet vitae, risus.\n*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.\nSuspendisse id sem consectetuer libero luctus adipiscing.\n</code></pre>\n\n<p>If list items are separated by blank lines, Markdown will wrap the\nitems in <code>&lt;p&gt;</code> tags in the HTML output. For example, this input:</p>\n\n<pre><code>*   Bird\n*   Magic\n</code></pre>\n\n<p>will turn into:</p>\n\n<pre><code>&lt;ul&gt;\n&lt;li&gt;Bird&lt;/li&gt;\n&lt;li&gt;Magic&lt;/li&gt;\n&lt;/ul&gt;\n</code></pre>\n\n<p>But this:</p>\n\n<pre><code>*   Bird\n\n*   Magic\n</code></pre>\n\n<p>will turn into:</p>\n\n<pre><code>&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n</code></pre>\n\n<p>List items may consist of multiple paragraphs. Each subsequent\nparagraph in a list item must be indented by either 4 spaces\nor one tab:</p>\n\n<pre><code>1.  This is a list item with two paragraphs. Lorem ipsum dolor\n    sit amet, consectetuer adipiscing elit. Aliquam hendrerit\n    mi posuere lectus.\n\n    Vestibulum enim wisi, viverra nec, fringilla in, laoreet\n    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum\n    sit amet velit.\n\n2.  Suspendisse id sem consectetuer libero luctus adipiscing.\n</code></pre>\n\n<p>It looks nice if you indent every line of the subsequent\nparagraphs, but here again, Markdown will allow you to be\nlazy:</p>\n\n<pre><code>*   This is a list item with two paragraphs.\n\n    This is the second paragraph in the list item. You\'re\nonly required to indent the first line. Lorem ipsum dolor\nsit amet, consectetuer adipiscing elit.\n\n*   Another item in the same list.\n</code></pre>\n\n<p>To put a blockquote within a list item, the blockquote\'s <code>&gt;</code>\ndelimiters need to be indented:</p>\n\n<pre><code>*   A list item with a blockquote:\n\n    &gt; This is a blockquote\n    &gt; inside a list item.\n</code></pre>\n\n<p>To put a code block within a list item, the code block needs\nto be indented <em>twice</em> -- 8 spaces or two tabs:</p>\n\n<pre><code>*   A list item with a code block:\n\n        &lt;code goes here&gt;\n</code></pre>\n\n<p>It\'s worth noting that it\'s possible to trigger an ordered list by\naccident, by writing something like this:</p>\n\n<pre><code>1986. What a great season.\n</code></pre>\n\n<p>In other words, a <em>number-period-space</em> sequence at the beginning of a\nline. To avoid this, you can backslash-escape the period:</p>\n\n<pre><code>1986. What a great season.\n</code></pre>\n\n<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>\n\n<p>Readability, however, is emphasized above all else. A Markdown-formatted\ndocument should be publishable as-is, as plain text, without looking\nlike it\'s been marked up with tags or formatting instructions. While\nMarkdown\'s syntax has been influenced by several existing text-to-HTML\nfilters -- including <a href=\"http://docutils.sourceforge.net/mirror/setext.html\">Setext</a>, <a href=\"http://www.aaronsw.com/2002/atx/\">atx</a>, <a href=\"http://textism.com/tools/textile/\">Textile</a>, <a href=\"http://docutils.sourceforge.net/rst.html\">reStructuredText</a>,\n<a href=\"http://www.triptico.com/software/grutatxt.html\">Grutatext</a>, and <a href=\"http://ettext.taint.org/doc/\">EtText</a> -- the single biggest source of\ninspiration for Markdown\'s syntax is the format of plain text email.</p>\n\n<p>To this end, Markdown\'s syntax is comprised entirely of punctuation\ncharacters, which punctuation characters have been carefully chosen so\nas to look like what they mean. E.g., asterisks around a word actually\nlook like <em>emphasis</em>. Markdown lists look like, well, lists. Even\nblockquotes look like quoted passages of text, assuming you\'ve ever\nused email.</p>\n\n<h3>Inline HTML</h3>\n\n<p>Markdown\'s syntax is intended for one purpose: to be used as a\nformat for <em>writing</em> for the web.</p>\n\n<p>Markdown is not a replacement for HTML, or even close to it. Its\nsyntax is very small, corresponding only to a very small subset of\nHTML tags. The idea is <em>not</em> to create a syntax that makes it easier\nto insert HTML tags. In my opinion, HTML tags are already easy to\ninsert. The idea for Markdown is to make it easy to read, write, and\nedit prose. HTML is a <em>publishing</em> format; Markdown is a <em>writing</em>\nformat. Thus, Markdown\'s formatting syntax only addresses issues that\ncan be conveyed in plain text.</p>\n\n<p>For any markup that is not covered by Markdown\'s syntax, you simply\nuse HTML itself. There\'s no need to preface it or delimit it to\nindicate that you\'re switching from Markdown to HTML; you just use\nthe tags.</p>\n\n<p>The only restrictions are that block-level HTML elements -- e.g. <code>&lt;div&gt;</code>,\n<code>&lt;table&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;p&gt;</code>, etc. -- must be separated from surrounding\ncontent by blank lines, and the start and end tags of the block should\nnot be indented with tabs or spaces. Markdown is smart enough not\nto add extra (unwanted) <code>&lt;p&gt;</code> tags around HTML block-level tags.</p>\n\n<p>For example, to add an HTML table to a Markdown article:</p>\n\n<pre><code>This is a regular paragraph.\n\n&lt;table&gt;\n    &lt;tr&gt;\n        &lt;td&gt;Foo&lt;/td&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;\n\nThis is another regular paragraph.\n</code></pre>\n\n<p>Note that Markdown formatting syntax is not processed within block-level\nHTML tags. E.g., you can\'t use Markdown-style <code>*emphasis*</code> inside an\nHTML block.</p>\n\n<p>Span-level HTML tags -- e.g. <code>&lt;span&gt;</code>, <code>&lt;cite&gt;</code>, or <code>&lt;del&gt;</code> -- can be\nused anywhere in a Markdown paragraph, list item, or header. If you\nwant, you can even use HTML tags instead of Markdown formatting; e.g. if\nyou\'d prefer to use HTML <code>&lt;a&gt;</code> or <code>&lt;img&gt;</code> tags instead of Markdown\'s\nlink or image syntax, go right ahead.</p>\n\n<p>Unlike block-level HTML tags, Markdown syntax <em>is</em> processed within\nspan-level tags.</p>\n\n<h3>Automatic Escaping for Special Characters</h3>\n\n<p>In HTML, there are two characters that demand special treatment: <code>&lt;</code>\nand <code>&amp;</code>. Left angle brackets are used to start tags; ampersands are\nused to denote HTML entities. If you want to use them as literal\ncharacters, you must escape them as entities, e.g. <code>&amp;lt;</code>, and\n<code>&amp;amp;</code>.</p>\n\n<p>Ampersands in particular are bedeviling for web writers. If you want to\nwrite about \'AT&amp;T\', you need to write \'<code>AT&amp;amp;T</code>\'. You even need to\nescape ampersands within URLs. Thus, if you want to link to:</p>\n\n<pre><code>http://images.google.com/images?num=30&amp;q=larry+bird\n</code></pre>\n\n<p>you need to encode the URL as:</p>\n\n<pre><code>http://images.google.com/images?num=30&amp;amp;q=larry+bird\n</code></pre>\n\n<p>in your anchor tag <code>href</code> attribute. Needless to say, this is easy to\nforget, and is probably the single most common source of HTML validation\nerrors in otherwise well-marked-up web sites.</p>\n\n<p>Markdown allows you to use these characters naturally, taking care of\nall the necessary escaping for you. If you use an ampersand as part of\nan HTML entity, it remains unchanged; otherwise it will be translated\ninto <code>&amp;amp;</code>.</p>\n\n<p>So, if you want to include a copyright symbol in your article, you can write:</p>\n\n<pre><code>&amp;copy;\n</code></pre>\n\n<p>and Markdown will leave it alone. But if you write:</p>\n\n<pre><code>AT&amp;T\n</code></pre>\n\n<p>Markdown will translate it to:</p>\n\n<pre><code>AT&amp;amp;T\n</code></pre>\n\n<p>Similarly, because Markdown supports <a href=\"#html\">inline HTML</a>, if you use\nangle brackets as delimiters for HTML tags, Markdown will treat them as\nsuch. But if you write:</p>\n\n<pre><code>4 &lt; 5\n</code></pre>\n\n<p>Markdown will translate it to:</p>\n\n<pre><code>4 &amp;lt; 5\n</code></pre>\n\n<p>However, inside Markdown code spans and blocks, angle brackets and\nampersands are <em>always</em> encoded automatically. This makes it easy to use\nMarkdown to write about HTML code. (As opposed to raw HTML, which is a\nterrible format for writing about HTML syntax, because every single <code>&lt;</code>\nand <code>&amp;</code> in your example code needs to be escaped.)</p>\n\n<hr />');
 
 -- *** STRUCTURE: `tbl_entries_data_18` ***
 DROP TABLE IF EXISTS `tbl_entries_data_18`;
@@ -411,9 +428,11 @@ CREATE TABLE `tbl_entries_data_18` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_18` ***
+INSERT INTO `tbl_entries_data_18` (`id`, `entry_id`, `relation_id`) VALUES (5, 10, 9);
+INSERT INTO `tbl_entries_data_18` (`id`, `entry_id`, `relation_id`) VALUES (6, 12, 11);
 
 -- *** STRUCTURE: `tbl_entries_data_19` ***
 DROP TABLE IF EXISTS `tbl_entries_data_19`;
@@ -426,9 +445,11 @@ CREATE TABLE `tbl_entries_data_19` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_19` ***
+INSERT INTO `tbl_entries_data_19` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (5, 10, '2010-05-30T16:53:00-07:00', 1275263580, 1275263580);
+INSERT INTO `tbl_entries_data_19` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 12, '2010-05-30T17:06:00-07:00', 1275264360, 1275264360);
 
 -- *** STRUCTURE: `tbl_entries_data_2` ***
 DROP TABLE IF EXISTS `tbl_entries_data_2`;
@@ -440,9 +461,10 @@ CREATE TABLE `tbl_entries_data_2` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_2` ***
+INSERT INTO `tbl_entries_data_2` (`id`, `entry_id`, `username`, `password`) VALUES (1, 8, 'stephen', '6a204bd89f3c8348afd5c77c717a097a');
 
 -- *** STRUCTURE: `tbl_entries_data_20` ***
 DROP TABLE IF EXISTS `tbl_entries_data_20`;
@@ -455,9 +477,11 @@ CREATE TABLE `tbl_entries_data_20` (
   KEY `entry_id` (`entry_id`),
   KEY `member_id` (`member_id`),
   KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_20` ***
+INSERT INTO `tbl_entries_data_20` (`id`, `entry_id`, `member_id`, `username`) VALUES (5, 10, 8, 'stephen');
+INSERT INTO `tbl_entries_data_20` (`id`, `entry_id`, `member_id`, `username`) VALUES (6, 12, 8, 'stephen');
 
 -- *** STRUCTURE: `tbl_entries_data_21` ***
 DROP TABLE IF EXISTS `tbl_entries_data_21`;
@@ -470,9 +494,15 @@ CREATE TABLE `tbl_entries_data_21` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_21` ***
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 2, 'home', 'Home');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 3, 'about', 'About');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 4, 'journal', 'Journal');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 5, 'forum', 'Forum');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 6, 'calendar', 'Calendar');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 7, 'contact', 'Contact');
 
 -- *** STRUCTURE: `tbl_entries_data_22` ***
 DROP TABLE IF EXISTS `tbl_entries_data_22`;
@@ -486,9 +516,15 @@ CREATE TABLE `tbl_entries_data_22` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `page_id` (`page_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_22` ***
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (8, 2, 16, 'Home', 'home');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (9, 3, 17, 'About', 'about');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (3, 4, 19, 'Journal', 'journal');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (4, 5, 1, 'Forum', 'forum');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (5, 6, 20, 'Calendar', 'calendar');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (7, 7, 18, 'Contact', 'contact');
 
 -- *** STRUCTURE: `tbl_entries_data_23` ***
 DROP TABLE IF EXISTS `tbl_entries_data_23`;
@@ -501,9 +537,12 @@ CREATE TABLE `tbl_entries_data_23` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_23` ***
+INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 7, 'send-us-a-message', 'Send us a message');
+INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 2, 'take-me-home', 'Take Me Home');
+INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 3, 'what-its-all-about', 'What It\'s All About');
 
 -- *** STRUCTURE: `tbl_entries_data_24` ***
 DROP TABLE IF EXISTS `tbl_entries_data_24`;
@@ -515,9 +554,15 @@ CREATE TABLE `tbl_entries_data_24` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_24` ***
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 2, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 3, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 4, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 5, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 6, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 7, 'Please use the contact form below to send us a message.', '<p>Please use the contact form below to send us a message.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_25` ***
 DROP TABLE IF EXISTS `tbl_entries_data_25`;
@@ -529,9 +574,15 @@ CREATE TABLE `tbl_entries_data_25` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_25` ***
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 2, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 3, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 4, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 5, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 6, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 7, NULL, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_26` ***
 DROP TABLE IF EXISTS `tbl_entries_data_26`;
@@ -542,9 +593,15 @@ CREATE TABLE `tbl_entries_data_26` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_26` ***
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (8, 2, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (9, 3, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (3, 4, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (4, 5, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (5, 6, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (7, 7, 1);
 
 -- *** STRUCTURE: `tbl_entries_data_27` ***
 DROP TABLE IF EXISTS `tbl_entries_data_27`;
@@ -555,9 +612,15 @@ CREATE TABLE `tbl_entries_data_27` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_27` ***
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (8, 2, 1);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (9, 3, 2);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (3, 4, 3);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (4, 5, 4);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (5, 6, 5);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (7, 7, 6);
 
 -- *** STRUCTURE: `tbl_entries_data_28` ***
 DROP TABLE IF EXISTS `tbl_entries_data_28`;
@@ -568,9 +631,15 @@ CREATE TABLE `tbl_entries_data_28` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_28` ***
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (8, 2, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (9, 3, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (3, 4, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (4, 5, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (5, 6, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (7, 7, 'yes');
 
 -- *** STRUCTURE: `tbl_entries_data_29` ***
 DROP TABLE IF EXISTS `tbl_entries_data_29`;
@@ -598,9 +667,10 @@ CREATE TABLE `tbl_entries_data_3` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_3` ***
+INSERT INTO `tbl_entries_data_3` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'http-bauhouseca', 'http://bauhouse.ca/');
 
 -- *** STRUCTURE: `tbl_entries_data_30` ***
 DROP TABLE IF EXISTS `tbl_entries_data_30`;
@@ -751,9 +821,10 @@ CREATE TABLE `tbl_entries_data_4` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_4` ***
+INSERT INTO `tbl_entries_data_4` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'bauhouse-gmailcom', 'bauhouse@gmail.com');
 
 -- *** STRUCTURE: `tbl_entries_data_40` ***
 DROP TABLE IF EXISTS `tbl_entries_data_40`;
@@ -903,9 +974,10 @@ CREATE TABLE `tbl_entries_data_5` (
   `role_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`,`role_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_5` ***
+INSERT INTO `tbl_entries_data_5` (`id`, `entry_id`, `role_id`) VALUES (1, 8, 3);
 
 -- *** STRUCTURE: `tbl_entries_data_50` ***
 DROP TABLE IF EXISTS `tbl_entries_data_50`;
@@ -918,9 +990,10 @@ CREATE TABLE `tbl_entries_data_50` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_50` ***
+INSERT INTO `tbl_entries_data_50` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 1, 'main', 'Main');
 
 -- *** STRUCTURE: `tbl_entries_data_51` ***
 DROP TABLE IF EXISTS `tbl_entries_data_51`;
@@ -932,9 +1005,10 @@ CREATE TABLE `tbl_entries_data_51` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_51` ***
+INSERT INTO `tbl_entries_data_51` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 1, 'Main Navigation Menu', '<p>Main Navigation Menu</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_52` ***
 DROP TABLE IF EXISTS `tbl_entries_data_52`;
@@ -1064,9 +1138,10 @@ CREATE TABLE `tbl_entries_data_6` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_6` ***
+INSERT INTO `tbl_entries_data_6` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'can', 'CAN');
 
 -- *** STRUCTURE: `tbl_entries_data_60` ***
 DROP TABLE IF EXISTS `tbl_entries_data_60`;
@@ -1221,9 +1296,10 @@ CREATE TABLE `tbl_entries_data_7` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_7` ***
+INSERT INTO `tbl_entries_data_7` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'abbotsford', 'Abbotsford');
 
 -- *** STRUCTURE: `tbl_entries_data_70` ***
 DROP TABLE IF EXISTS `tbl_entries_data_70`;
@@ -1248,9 +1324,10 @@ CREATE TABLE `tbl_entries_data_8` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_8` ***
+INSERT INTO `tbl_entries_data_8` (`id`, `entry_id`, `value`) VALUES (1, 8, -8);
 
 -- *** STRUCTURE: `tbl_entries_data_9` ***
 DROP TABLE IF EXISTS `tbl_entries_data_9`;
@@ -1261,11 +1338,24 @@ CREATE TABLE `tbl_entries_data_9` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_9` ***
+INSERT INTO `tbl_entries_data_9` (`id`, `entry_id`, `value`) VALUES (1, 8, 'yes');
 
 -- *** DATA: `tbl_entries` ***
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (1, 7, 1, '2010-05-30 13:01:51', '2010-05-30 20:01:51');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (2, 4, 1, '2010-05-30 13:02:59', '2010-05-30 20:02:59');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (3, 4, 1, '2010-05-30 13:03:09', '2010-05-30 20:03:09');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (4, 4, 1, '2010-05-30 13:03:19', '2010-05-30 20:03:19');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (5, 4, 1, '2010-05-30 13:03:33', '2010-05-30 20:03:33');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (6, 4, 1, '2010-05-30 13:03:46', '2010-05-30 20:03:46');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (7, 4, 1, '2010-05-30 13:03:55', '2010-05-30 20:03:55');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (8, 1, 1, '2010-05-30 16:24:42', '2010-05-30 23:24:42');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (9, 2, 1, '2010-05-30 16:53:06', '2010-05-30 23:53:06');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (10, 3, 1, '2010-05-30 16:53:06', '2010-05-30 23:53:06');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (11, 2, 1, '2010-05-30 17:06:21', '2010-05-31 00:06:21');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (12, 3, 1, '2010-05-30 17:06:21', '2010-05-31 00:06:21');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -1353,8 +1443,8 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (21, 'Title', 'title', 'input', 4, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (22, 'Page', 'page', 'pages', 4, 'no', 1, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (23, 'Heading', 'heading', 'input', 4, 'no', 2, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (24, 'Description', 'description', 'textarea', 4, 'yes', 3, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (25, 'Body', 'body', 'textarea', 4, 'yes', 4, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (24, 'Description', 'description', 'textarea', 4, 'no', 3, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (25, 'Body', 'body', 'textarea', 4, 'no', 4, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (26, 'Navigation', 'navigation', 'selectbox_link', 4, 'yes', 5, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (27, 'Sort', 'sort', 'order_entries', 4, 'no', 6, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (28, 'Publish', 'publish', 'checkbox', 4, 'no', 7, 'sidebar', 'yes');
@@ -1402,21 +1492,21 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (70, 'Note', 'note', 'textarea', 12, 'yes', 1, 'main', 'yes');
 
 -- *** DATA: `tbl_pages` ***
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', 'forum_discussions,forum_read_discussions,search_comments,whosonline', 'forum_utilities', 3);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (2, 1, 'Filter', 'forum-filter', 'forum', 'dpage', 'forum_discussions_filtered,forum_read_discussions,whosonline', 'forum_utilities', 9);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (3, 1, 'Discussions', 'discussions', 'forum', 'discussion-id/cpage', 'forum_comments,forum_discussions,forum_moderators,whosonline', 'forum_post,forum_utilities', 10);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (4, 3, 'New Discussion', 'new', 'forum/discussions', NULL, 'whosonline', 'forum_post,forum_utilities', 11);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (5, 3, 'Edit Discussion', 'edit-discussion', 'forum/discussions', 'discussion-id', 'forum_discussions,forum_edit_discussion,whosonline', 'forum_post', 12);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (6, 3, 'Edit Comment', 'edit-comment', 'forum/discussions', 'comment-id/cpage/position', 'forum_edit_comment,whosonline', 'forum_post', 13);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', 'forum_discussions,forum_read_discussions,navigation,search_comments,whosonline', 'forum_utilities', 3);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (2, 1, 'Filter', 'forum-filter', 'forum', 'dpage', 'forum_discussions_filtered,forum_read_discussions,sections,whosonline', 'forum_utilities', 9);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (3, 1, 'Discussions', 'discussions', 'forum', 'discussion-id/cpage', 'forum_comments,forum_discussions,forum_moderators,navigation,whosonline', 'forum_post,forum_utilities', 10);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (4, 3, 'New Discussion', 'new', 'forum/discussions', NULL, 'navigation,whosonline', 'forum_post,forum_utilities', 11);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (5, 3, 'Edit Discussion', 'edit-discussion', 'forum/discussions', 'discussion-id', 'forum_discussions,forum_edit_discussion,navigation,whosonline', 'forum_post', 12);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (6, 3, 'Edit Comment', 'edit-comment', 'forum/discussions', 'comment-id/cpage/position', 'forum_edit_comment,navigation,whosonline', 'forum_post', 13);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (7, 1, 'Code Source', 'code-source', 'forum', 'comment-id/position', 'forum_code_source', NULL, 14);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (8, NULL, 'Members', 'members', NULL, 'member', 'members,members_forum_comment_count,members_forum_discussion_count,whosonline', NULL, 15);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (9, 8, 'New', 'new', 'members', NULL, 'members_location,whosonline', 'members_register', 16);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (10, 8, 'Edit', 'edit', 'members', NULL, 'members_edit,members_location,whosonline', 'edit_member', 17);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (11, 8, 'Activate', 'activate', 'members', 'code', 'whosonline', 'members_activate_account,members_resend_activation_email', 18);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (12, 8, 'Reset Password', 'reset-pass', 'members', 'mode', 'whosonline', 'members_reset_password', 19);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (13, 8, 'Change Password', 'change-pass', 'members', NULL, 'whosonline', 'members_change_password', 20);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (8, 1, 'Members', 'members', 'forum', 'member', 'members,members_forum_comment_count,members_forum_discussion_count,navigation,whosonline', NULL, 15);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (9, 8, 'New', 'new', 'forum/members', NULL, 'members_location,navigation,whosonline', 'members_register', 16);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (10, 8, 'Edit', 'edit', 'forum/members', NULL, 'members_edit,members_location,navigation,whosonline', 'edit_member', 17);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (11, 8, 'Activate', 'activate', 'forum/members', 'code', 'navigation,whosonline', 'members_activate_account,members_resend_activation_email', 18);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (12, 8, 'Reset Password', 'reset-pass', 'forum/members', 'mode', 'navigation,whosonline', 'members_reset_password', 19);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (13, 8, 'Change Password', 'change-pass', 'forum/members', NULL, 'navigation,whosonline', 'members_change_password', 20);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (14, NULL, 'Forbidden', 'forbidden', NULL, NULL, 'whosonline', NULL, 21);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (15, NULL, 'Page Not Found', 'page-not-found', NULL, NULL, 'whosonline', NULL, 22);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (15, NULL, 'Page Not Found', 'page-not-found', NULL, NULL, 'navigation,whosonline', NULL, 22);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (16, NULL, 'Home', 'home', NULL, 'section', 'bookmarks,entries,navigation,section,sites', 'login', 0);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (17, NULL, 'About', 'about', NULL, 'section', 'bookmarks,entries,navigation,section,sites', 'login', 1);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (18, NULL, 'Contact', 'contact', NULL, 'entry/section', 'bookmarks,entries,navigation,section,sites', 'login', 8);
@@ -1430,7 +1520,7 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (9, 16, 'index');
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (3, 7, 'text');
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (4, 14, 403);
-INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (5, 15, 404);
+INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (11, 15, 404);
 
 -- *** DATA: `tbl_sections` ***
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (1, 'Members', 'members', 9, NULL, 'asc', 'no', 'Forum');
@@ -1447,8 +1537,8 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (12, 'Notes', 'notes', 8, NULL, 'asc', 'no', 'Social');
 
 -- *** DATA: `tbl_sections_association` ***
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (1, 2, 10, 3, 18, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (13, 7, 50, 4, 26, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (20, 2, 10, 3, 18, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (19, 7, 50, 4, 26, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (16, 4, 21, 5, 33, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (17, 1, 1, 5, 34, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (18, 9, 54, 5, 35, 'no');
@@ -1458,12 +1548,11 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (15, 6, 40, 10, 62, 'no');
 
 -- *** DATA: `tbl_forum_read_discussions` ***
+INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (1, 8, 9, 1275266344, 1);
+INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (2, 8, 11, 1275266400, 1);
 
 -- *** DATA: `tbl_members_codes` ***
-INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (3, 'ee93afa8176b3cc4b9958f1569ae3ad6', 1270259728);
-INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (2, 'cc6c0b59f8efb613236d531be4c6a6a7', 1270259848);
-INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (4, 'e9117d0054ca60b2004c81bb30d036f4', 1270260745);
-INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (5, 'd7734cba806fac982d6f206a8af888b3', 1270261055);
+INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (8, 'dbb11479b7744863de188b9a507adf50', 1275265528);
 
 -- *** DATA: `tbl_members_email_templates` ***
 INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (1, 'Account Activation', 'Dear {$name},\r\n\r\nThanks for registering at {$site-name}!\r\n\r\nTo activate your account, head to {$root}/members/activate/{$code}\r\n\r\nThis code will expire in one hour, so if you miss your window, simply head to the link above and click \"Resend activation email\" to get a new one.\r\n\r\nIf you have problems activating your account, please get in touch with us using our contact form at {$root}/contact/ and we\'ll do our best to help.\r\n\r\nWe don\'t know you yet, but we can already tell that you\'ll be a wonderful addition to our growing community!\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'activate-account');

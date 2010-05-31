@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/forum-master.xsl"/>
 <xsl:import href="../utilities/timezone.xsl"/>
 
 <xsl:variable name="event-action" select="'edit-member'"/>
@@ -95,7 +95,7 @@
 				<input name="id" type="hidden" value="{@id}"/>
 				<div id="submission">
 					<input id="submit" name="action[{$event-action}]" type="submit" value="Save" class="button"/>
-					<a id="cancel" href="{$root}/members/{$member/username-and-password/@username}/" class="button">Cancel and go back</a>
+					<a id="cancel" href="{$root}/forum/members/{$member/username-and-password/@username}/" class="button">Cancel and go back</a>
 				</div>
 			</fieldset>
 		</form>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/forum-master.xsl"/>
 <xsl:import href="../utilities/forum-tools.xsl"/>
 <xsl:import href="../utilities/pagination.xsl"/>
+<xsl:import href="../utilities/typography.xsl"/>
 
 <xsl:template match="data">
 	<xsl:apply-templates select="forum-comments"/>
@@ -11,33 +12,6 @@
 
 <xsl:variable name="closed" select="/data/forum-discussions/entry/closed"/>
 <xsl:variable name="pinned" select="/data/forum-discussions/entry/pinned"/>
-
-<xsl:template match="data" mode="side-panel">
-	<h3>Search</h3>
-	<div id="search">
-		<form method="get" action="{$root}/">
-			<fieldset>
-				<input id="query" class="clear-on-focus" name="query" type="text" title="Search" value="" />
-				<button type="submit" value="Search">Search</button>
-			</fieldset>
-		</form>
-	</div>
-	<xsl:if test="$member/role = 'Author' or $member/role = 'Administrator'">
-		<xsl:call-template name="discussion-options">
-			<xsl:with-param name="closed" select="$closed"/>
-			<xsl:with-param name="sticky" select="$pinned"/>
-		</xsl:call-template>
-	</xsl:if>
-	<h3>Filters</h3>
-	<ul>
-		<li>
-			<a href="{$root}/" title="Filter discussions">All Discussions</a>
-		</li>
-		<li>
-			<a href="{$root}/forum/forum-filter/" title="Filter discussions">My Discussions</a>
-		</li>
-	</ul>
-</xsl:template>
 
 <!-- Main comments template -->
 <xsl:template match="forum-comments">
