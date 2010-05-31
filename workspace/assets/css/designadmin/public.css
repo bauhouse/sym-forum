@@ -816,11 +816,12 @@ tr.discussion td {
 	padding: 5px;  
 	height: 20px;
 	background: #fff;
-	border: 1px solid #999;
-	border-bottom: 0;
 }
 #wmd-input {
 	background: #fff;
+	border: none;
+	border-top: 2px solid #eee;
+	height: 300px;
 }
 form label {
 	margin-right: 12px;
