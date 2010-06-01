@@ -4,94 +4,86 @@
 
 <xsl:import href="../utilities/projects-master.xsl"/>
 
+<xsl:param name="login-info">
+	<xsl:text>Logged in as </xsl:text>
+	<a href="{$root}/forum/members/{$member-username}/" title="{$member-info/name}"><xsl:value-of select="$member-username"/></a>
+	<xsl:text>, </xsl:text>
+	<xsl:value-of select="$member-info/role"/>
+</xsl:param>
+
 <xsl:template match="data">
-	<xsl:choose>
-		<xsl:when test="$logged-in='true'">
-			<div class="breadcrumbs">
-				<div class="box">
-					<!--p class="login-info"><xsl:copy-of select="$login-info"/></p-->
-					<p><a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a></p>
+	<div class="breadcrumbs">
+		<div class="box">
+			<p class="login-info"><xsl:copy-of select="$login-info"/></p>
+			<p><a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a></p>
+		</div>
+	</div>
+	<div class="box">
+		<div id="box-content">
+			<div id="content" class="content-3col-wide">
+				<h2><a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a></h2>
+				<div class="colA">
+					<div class="lists">
+						<h3>Clients</h3>
+						<p class="admin-links">
+							<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=1">
+								New Client
+							</a>
+							| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=1">
+								List Clients
+							</a>
+						</p>
+						<ul class="client-list">
+							<xsl:for-each select="client-names/entry">
+								<xsl:sort select="@handle"/>
+								<li><a href="{$root}/clients/{@handle}/" title="View details for {fields/client-name}"><xsl:value-of select="fields/client-name"/></a></li>
+							</xsl:for-each>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="box">
-				<div id="box-content">
-					<div id="content" class="content-3col-wide">
-						<h2><a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a></h2>
-						<div class="colA">
-							<div class="lists">
-								<h3>Clients</h3>
-								<p class="admin-links">
-									<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=1">
-										New Client
-									</a>
-									| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=1">
-										List Clients
-									</a>
-								</p>
-								<ul class="client-list">
-									<xsl:for-each select="client-names/entry">
-										<xsl:sort select="@handle"/>
-										<li><a href="{$root}/clients/{@handle}/" title="View details for {fields/client-name}"><xsl:value-of select="fields/client-name"/></a></li>
-									</xsl:for-each>
-								</ul>
-							</div>
-						</div>
-						<div class="colB">
-							<div class="lists">
-								<h3>Projects</h3>
-								<p class="admin-links">
-									<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=2">
-										New Project
-									</a>
-									| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=2">
-										List Projects
-									</a>
-								</p>
-								<ul class="project-list">
-									<xsl:for-each select="projects-current/entry">
-										<xsl:sort select="@handle" order="descending"/>
-										<li><xsl:call-template name="link-to-project-title"/></li>
-									</xsl:for-each>
-								</ul>
-							</div>
-						</div>
-						<div class="colC">
-							<div class="lists">
-								<h3>Timesheet</h3>
-								<p class="admin-links">
-									<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=5">
-										New Entry
-									</a>
-									| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=5">
-										List Entries
-									</a>
-								</p>
-								<ul class="entries-list">
-									<xsl:for-each select="timesheet-recent/entry">
-										<xsl:sort select="@handle" order="descending"/>
-										<li>
-											<xsl:call-template name="overview-link-to-timesheet-entry"/>
-										</li>
-									</xsl:for-each>
-								</ul>
-							</div>
-						</div>
+				<div class="colB">
+					<div class="lists">
+						<h3>Projects</h3>
+						<p class="admin-links">
+							<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=2">
+								New Project
+							</a>
+							| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=2">
+								List Projects
+							</a>
+						</p>
+						<ul class="project-list">
+							<xsl:for-each select="projects-current/entry">
+								<xsl:sort select="@handle" order="descending"/>
+								<li><xsl:call-template name="link-to-project-title"/></li>
+							</xsl:for-each>
+						</ul>
+					</div>
+				</div>
+				<div class="colC">
+					<div class="lists">
+						<h3>Timesheet</h3>
+						<p class="admin-links">
+							<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=5">
+								New Entry
+							</a>
+							| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=5">
+								List Entries
+							</a>
+						</p>
+						<ul class="entries-list">
+							<xsl:for-each select="timesheet-recent/entry">
+								<xsl:sort select="@handle" order="descending"/>
+								<li>
+									<xsl:call-template name="overview-link-to-timesheet-entry"/>
+								</li>
+							</xsl:for-each>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</xsl:when>
-		<xsl:otherwise>
-			<div class="box">
-				<div id="box-content">
-					<div class="body">
-						<h2>Access Restricted Area</h2>
-						<h3>Admin Login Required</h3>
-						<p>You need to have administrative privileges to access this area.</p>
-					</div>
-				</div>
-			</div>
-		</xsl:otherwise>
-	</xsl:choose>
+		</div>
+	</div>
 </xsl:template>
 
 <xsl:template name="link-to-project-title">

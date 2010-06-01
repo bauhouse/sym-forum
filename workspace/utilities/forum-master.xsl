@@ -66,9 +66,9 @@
 					</xsl:when>
 					<xsl:when test="/data/events/member-login-info/@logged-in = 'true'">
 						<li>
-							<a href="{$root}/forum/members/{/data/events/member-login-info/username-and-password/@username}/">
+							<a href="{$root}/forum/members/{$member-username}/">
 								<xsl:text>Hello, </xsl:text>
-								<xsl:value-of select="/data/events/member-login-info/username-and-password/@username"/>
+								<xsl:value-of select="$member-username"/>
 							</a>
 						</li>
 						<li>

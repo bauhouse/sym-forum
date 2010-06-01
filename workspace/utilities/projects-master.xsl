@@ -14,13 +14,24 @@
 <xsl:template match="/">
 	<html>
 		<xsl:call-template name="projects-head"/>
-		<body>
+		<body class="projects">
 			<xsl:call-template name="header"/>
 			<xsl:call-template name="navigation-menus"/>
 			<xsl:call-template name="projects-submenu"/>
 			<div id="page">
 				<div class="box">
-					<xsl:apply-templates/>
+					<xsl:choose>
+						<xsl:when test="$logged-in='true'">
+							<xsl:apply-templates/>
+						</xsl:when>
+						<xsl:otherwise>
+							<div class="body">
+								<h2>Access Restricted Area</h2>
+								<h3>Admin Login Required</h3>
+								<p>You need to have administrative privileges to access this area.</p>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
 				</div>
 			</div>
 			<xsl:call-template name="footer"/>

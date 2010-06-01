@@ -5,8 +5,9 @@
 <xsl:import href="../utilities/date-time.xsl"/>
 
 <xsl:variable name="member-info" select="/data/events/member-login-info"/>
-<xsl:variable name="logged-in" select="/data/events/member-login-info/@logged-in"/>
-<xsl:variable name="permissions" select="/data/events/member-login-info/permissions"/>
+<xsl:variable name="member-username" select="$member-info/username-and-password/@username"/>
+<xsl:variable name="logged-in" select="$member-info/@logged-in"/>
+<xsl:variable name="permissions" select="$member-info/permissions"/>
 
 <xsl:param name="section" />
 <xsl:param name="section-title">
