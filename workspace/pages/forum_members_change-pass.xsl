@@ -53,7 +53,7 @@
 			</p>
 			<div id="submission">
 				<input id="submit" name="action[{$event-action}]" type="submit" value="Change Password" class="button"/>
-				<a id="cancel" href="{$root}/forum/members/{$member/username-and-password/@username}/" class="button">Cancel and go back</a>
+				<a id="cancel" href="{$root}/forum/members/{$member-info/username-and-password/@username}/" class="button">Cancel and go back</a>
 			</div>
 		</fieldset>
 	</form>

@@ -34,7 +34,7 @@
 	    </xsl:with-param>
 	</xsl:call-template>
 
-	<xsl:if test="($permissions/forum_post/create &gt;= 1 and $closed = 'No') or ($member/role = 'Author')">
+	<xsl:if test="($permissions/forum_post/create &gt;= 1 and $closed = 'No') or ($member-info/role = 'Author')">
 		<form method="post" action="{$current-url}" class="comment-form">
 			<fieldset>
 				<p>
@@ -50,7 +50,7 @@
 					</span>
 				</p>
 				<input name="fields[parent-id]" type="hidden" value="{$discussion-id}"/>
-				<input name="fields[created-by]" type="hidden" value="{$member/@id}"/>
+				<input name="fields[created-by]" type="hidden" value="{$member-info/@id}"/>
 				<input name="redirect" type="hidden">
 					<xsl:attribute name="value">
 						<xsl:value-of select="concat($root, '/forum/discussions/', $discussion-id, '/')"/>
@@ -115,20 +115,20 @@
 				</xsl:choose>
 			</ul>
 			<ul class="comment-options">
-				<xsl:if test="$member/role = 'Administrator'">
+				<xsl:if test="$member-info/role = 'Administrator'">
 					<xsl:attribute name="class">comment-options admin hide</xsl:attribute>
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="(position() = 1 and ../pagination/@current-page = 1) and ($permissions/forum_post/edit = 2)">
 						<li><a href="{$root}/forum/discussions/edit-discussion/{$discussion-id}/" class="button">Edit</a></li>
 					</xsl:when>
-					<xsl:when test="(position() = 1 and ../pagination/@current-page = 1) and ($permissions/forum_post/edit &gt;= 1) and ($member/@id = created-by/@id)">
+					<xsl:when test="(position() = 1 and ../pagination/@current-page = 1) and ($permissions/forum_post/edit &gt;= 1) and ($member-info/@id = created-by/@id)">
 						<li><a href="{$root}/forum/discussions/edit-discussion/{$discussion-id}/" class="button">Edit</a></li>
 					</xsl:when>
 					<xsl:when test="$permissions/forum_post/edit = 2">
 						<li><a href="{$root}/forum/discussions/edit-comment/{@id}/{../pagination/@current-page}/{$comment-position}/" class="button">Edit</a></li>
 					</xsl:when>
-					<xsl:when test="($permissions/forum_post/edit &gt;= 1) and ($member/@id = created-by/@id)">
+					<xsl:when test="($permissions/forum_post/edit &gt;= 1) and ($member-info/@id = created-by/@id)">
 						<li><a href="{$root}/forum/discussions/edit-comment/{@id}/{../pagination/@current-page}/{$comment-position}/" class="button">Edit</a></li>
 					</xsl:when>
 				</xsl:choose>
@@ -136,13 +136,13 @@
 					<xsl:when test="(position() = 1) and $permissions/forum_post/edit = 2">
 						<li><a class="confirm button" title="Are you sure you want to remove the entire discussion?" href="{$current-url}?forum-action=remove">Remove</a></li>
 					</xsl:when>
-					<xsl:when test="(position() = 1) and $permissions/forum_post/edit = 2 and ($member/@id = created-by/@id)">
+					<xsl:when test="(position() = 1) and $permissions/forum_post/edit = 2 and ($member-info/@id = created-by/@id)">
 						<li><a class="confirm button" title="Are you sure you want to remove the entire discussion?" href="{$current-url}?forum-action=remove">Remove</a></li>
 					</xsl:when>
 					<xsl:when test="$permissions/forum_post/edit = 2">
 						<li><a class="confirm button" title="Are you sure you want to remove this comment?" href="{$current-url}?forum-action=remove-comment&amp;comment-id={@id}">Remove</a></li>
 					</xsl:when>
-					<xsl:when test="($permissions/forum_post/edit = 2) and ($member/@id = created-by/@id)">
+					<xsl:when test="($permissions/forum_post/edit = 2) and ($member-info/@id = created-by/@id)">
 						<li><a class="confirm button" title="Are you sure you want to remove this comment?" href="{$current-url}?forum-action=remove-comment&amp;comment-id={@id}">Remove</a></li>
 					</xsl:when>
 				</xsl:choose>

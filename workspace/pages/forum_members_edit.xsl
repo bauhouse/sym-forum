@@ -95,7 +95,7 @@
 				<input name="id" type="hidden" value="{@id}"/>
 				<div id="submission">
 					<input id="submit" name="action[{$event-action}]" type="submit" value="Save" class="button"/>
-					<a id="cancel" href="{$root}/forum/members/{$member/username-and-password/@username}/" class="button">Cancel and go back</a>
+					<a id="cancel" href="{$root}/forum/members/{$member-info/username-and-password/@username}/" class="button">Cancel and go back</a>
 				</div>
 			</fieldset>
 		</form>

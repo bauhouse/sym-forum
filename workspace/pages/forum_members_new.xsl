@@ -122,7 +122,7 @@
 <xsl:template match="data[events/member-login-info/@logged-in='true']">
 	<h2>Switching Secret Identities?</h2>
 	<h3>You already have an account</h3>
-	<p>According to our records, <xsl:value-of select="$member/name"/>, you are currently an existing agent. Coming here can only mean one thing: you're a double agent!</p>
+	<p>According to our records, <xsl:value-of select="$member-info/name"/>, you are currently an existing agent. Coming here can only mean one thing: you're a double agent!</p>
 	<p>We have alerted the authorities and <strong>depending on time and traffic</strong>, they will arrive in 4 to 8 weeks.</p>
 </xsl:template>
 

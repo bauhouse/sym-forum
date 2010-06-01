@@ -5,7 +5,7 @@
 <xsl:import href="../utilities/public-master.xsl"/>
 
 <xsl:variable name="member" select="/data/events/member-login-info"/>
-<xsl:variable name="username" select="$member/username-and-password/@username"/>
+<xsl:variable name="username" select="$member-info/username-and-password/@username"/>
 <xsl:variable name="logged-in" select="/data/events/member-login-info/@logged-in"/>
 <xsl:variable name="permissions" select="/data/events/member-login-info/permissions"/>
 
@@ -16,9 +16,9 @@
 				<xsl:when test="$logged-in='true'">
 					<h2>Logged In</h2>
 					<h3>Hello,
-						<xsl:value-of select="$member/name"/>
+						<xsl:value-of select="$member-info/name"/>
 					</h3>
-					<p>You are currently logged in as <strong><xsl:value-of select="$username"/></strong>, <xsl:value-of select="$member/role"/>.</p>
+					<p>You are currently logged in as <a href="{$root}/forum/members/{$member-info/username-and-password/@username}/"><xsl:value-of select="$username"/></a>, <xsl:value-of select="$member-info/role"/>.</p>
 					<form action="?member-action=logout&amp;redirect={$current-url}" method="post">
 						<p>To end your session, click on the logout button.</p>
 						<input type="submit" class="submit" value="Logout"/>

@@ -26,8 +26,8 @@
 					</textarea>
 				</span>
 			</p>
-			<input name="fields[created-by]" type="hidden" value="{$member/@id}"/>
-			<input name="fields[last-post]" type="hidden" value="{$member/@id}"/>
+			<input name="fields[created-by]" type="hidden" value="{$member-info/@id}"/>
+			<input name="fields[last-post]" type="hidden" value="{$member-info/@id}"/>
 			<div id="submission">
 				<input id="submit" name="action[forum-new-discussion]" type="submit" value="Create discussion" class="button"/>
 				<a id="cancel" href="{$root}/forum/" class="button">Cancel and go back</a>

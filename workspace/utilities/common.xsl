@@ -4,7 +4,7 @@
 
 <xsl:import href="../utilities/date-time.xsl"/>
 
-<xsl:variable name="member" select="/data/events/member-login-info"/>
+<xsl:variable name="member-info" select="/data/events/member-login-info"/>
 <xsl:variable name="logged-in" select="/data/events/member-login-info/@logged-in"/>
 <xsl:variable name="permissions" select="/data/events/member-login-info/permissions"/>
 
@@ -106,9 +106,9 @@
 								</xsl:if>
 								<a href="?member-action=logout&amp;redirect={$root}/login/">Logout</a>
 							</li>
-							<!--xsl:if test="$team-logged-in = 'true' or $owner-logged-in = 'true'">
+							<xsl:if test="$member-info/role = 'Administrator'">
 								<li><a href="{$root}/symphony/">Admin</a></li>
-							</xsl:if-->
+							</xsl:if>
 						</xsl:when>
 						<xsl:otherwise>
 							<li>
