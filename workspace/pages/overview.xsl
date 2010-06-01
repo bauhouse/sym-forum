@@ -4,20 +4,8 @@
 
 <xsl:import href="../utilities/projects-master.xsl"/>
 
-<xsl:param name="login-info">
-	<xsl:text>Logged in as </xsl:text>
-	<a href="{$root}/forum/members/{$member-username}/" title="{$member-info/name}"><xsl:value-of select="$member-username"/></a>
-	<xsl:text>, </xsl:text>
-	<xsl:value-of select="$member-info/role"/>
-</xsl:param>
-
 <xsl:template match="data">
-	<div class="breadcrumbs">
-		<div class="box">
-			<p class="login-info"><xsl:copy-of select="$login-info"/></p>
-			<p><a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a></p>
-		</div>
-	</div>
+	<xsl:call-template name="breadcrumbs" />
 	<div class="box">
 		<div id="box-content">
 			<div id="content" class="content-3col-wide">

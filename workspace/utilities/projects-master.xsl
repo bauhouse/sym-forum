@@ -11,6 +11,13 @@
 	encoding="UTF-8" 
 	indent="yes" />
 
+<xsl:param name="login-info">
+	<xsl:text>Logged in as </xsl:text>
+	<a href="{$root}/forum/members/{$member-username}/" title="{$member-info/name}"><xsl:value-of select="$member-username"/></a>
+	<xsl:text>, </xsl:text>
+	<xsl:value-of select="$member-info/role"/>
+</xsl:param>
+
 <xsl:template match="/">
 	<html>
 		<xsl:call-template name="projects-head"/>
@@ -65,6 +72,15 @@
 				</li-->
 				<xsl:call-template name="members-submenu" />
 			</ul>
+		</div>
+	</div>
+</xsl:template>
+
+<xsl:template name="breadcrumbs">
+	<div class="breadcrumbs">
+		<div class="box">
+			<p class="login-info"><xsl:copy-of select="$login-info"/></p>
+			<p><a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a></p>
 		</div>
 	</div>
 </xsl:template>
