@@ -62,19 +62,20 @@
 					</li>
 				</xsl:for-each>
 			</ul>
-			<ul class="content">
-				<xsl:for-each select="data/sections/entry[fields/menu/@handle='content']">
-					<xsl:sort select="fields/sort"/>
-					<li>
-						<xsl:if test="@handle=$section">
-							<xsl:attribute name="class">
-								<xsl:text>current</xsl:text>
-							</xsl:attribute>
-						</xsl:if>
-						<a href="{$root}/content/{@handle}/"><xsl:value-of select="fields/title"/></a>
-					</li>
-				</xsl:for-each>
-			</ul>
+			<xsl:if test="$logged-in = 'true' and $member-info/role = 'Administrator'">
+				<ul class="content">
+					<xsl:for-each select="data/navigation/entry[navigation/item/@handle='projects']">
+						<li>
+							<xsl:if test="title/@handle=$root-page">
+								<xsl:attribute name="class">
+									<xsl:text>current</xsl:text>
+								</xsl:attribute>
+							</xsl:if>
+							<a href="{$root}/{title/@handle}/"><xsl:value-of select="title"/></a>
+						</li>
+					</xsl:for-each>
+				</ul>
+			</xsl:if>
 		</div>
 	</div>
 </xsl:template>
@@ -83,48 +84,40 @@
 	<div id="subheader">
 		<div class="box">
 			<ul id="submenu">
-				<!--li>
-					<xsl:if test="$current-page = 'project-brief'">
-						<xsl:attribute name="class">current</xsl:attribute>
-					</xsl:if>
-					<a href="{$root}/project-brief/">New Project</a>
-				</li>
-				<li>
-					<xsl:if test="$current-page = 'items' or $current-page = 'item'">
-						<xsl:attribute name="class">current</xsl:attribute>
-					</xsl:if>
-					<a href="{$root}/projects/items/">Items</a>
-				</li-->
-				<ul class="right">
-					<xsl:choose>
-						<xsl:when test="$logged-in = 'true'">
-							<li>
-								<xsl:if test="$current-page = 'logout'">
-									<xsl:attribute name="class">
-										<xsl:text>current</xsl:text>
-									</xsl:attribute>
-								</xsl:if>
-								<a href="?member-action=logout&amp;redirect={$root}/login/">Logout</a>
-							</li>
-							<xsl:if test="$member-info/role = 'Administrator'">
-								<li><a href="{$root}/symphony/">Admin</a></li>
-							</xsl:if>
-						</xsl:when>
-						<xsl:otherwise>
-							<li>
-								<xsl:if test="$current-page = 'login'">
-									<xsl:attribute name="class">
-										<xsl:text>current</xsl:text>
-									</xsl:attribute>
-								</xsl:if>
-								<a href="{$root}/login/">Login</a>
-							</li>
-						</xsl:otherwise>
-					</xsl:choose>
-				</ul>
+				<xsl:call-template name="members-submenu" />
 			</ul>
 		</div>
 	</div>
+</xsl:template>
+
+<xsl:template name="members-submenu">
+	<ul class="right">
+		<xsl:choose>
+			<xsl:when test="$logged-in = 'true'">
+				<li>
+					<xsl:if test="$current-page = 'logout'">
+						<xsl:attribute name="class">
+							<xsl:text>current</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<a href="?member-action=logout&amp;redirect={$root}/login/">Logout</a>
+				</li>
+				<xsl:if test="$member-info/role = 'Administrator'">
+					<li><a href="{$root}/symphony/">Admin</a></li>
+				</xsl:if>
+			</xsl:when>
+			<xsl:otherwise>
+				<li>
+					<xsl:if test="$current-page = 'login'">
+						<xsl:attribute name="class">
+							<xsl:text>current</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<a href="{$root}/login/">Login</a>
+				</li>
+			</xsl:otherwise>
+		</xsl:choose>
+	</ul>
 </xsl:template>
 
 <xsl:template name="side">
