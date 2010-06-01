@@ -22,18 +22,20 @@ CREATE TABLE `tbl_fields_checkbox` (
   `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_checkbox` ***
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (1, 9, 'off', 'Send me email when there is important news.');
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (28, 9, 'off', 'Send me email when there is important news.');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (2, 15, 'off', 'Pin discussion');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (3, 16, 'off', 'Close this discussion');
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (17, 28, 'on', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (18, 28, 'on', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (15, 38, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (16, 39, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (11, 48, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (12, 49, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (14, 64, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (29, 117, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (23, 129, 'off', NULL);
 
 -- *** STRUCTURE: `tbl_fields_date` ***
 DROP TABLE IF EXISTS `tbl_fields_date`;
@@ -43,7 +45,7 @@ CREATE TABLE `tbl_fields_date` (
   `pre_populate` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_date` ***
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (1, 12, 'yes');
@@ -53,6 +55,11 @@ INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (10, 37,
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (7, 47, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (8, 60, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (9, 69, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (58, 92, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (59, 93, 'no');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (57, 109, 'no');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (47, 126, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (48, 127, 'no');
 
 -- *** STRUCTURE: `tbl_fields_input` ***
 DROP TABLE IF EXISTS `tbl_fields_input`;
@@ -62,23 +69,23 @@ CREATE TABLE `tbl_fields_input` (
   `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=194 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_input` ***
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (1, 1, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (2, 3, '/^[^\\s:\\/?#]+:(?:\\/{2,3})?[^\\s.\\/?#]+(?:\\.[^\\s.\\/?#]+)*(?:\\/[^\\s?#]*\\??[^\\s?#]*(#[^\\s#]*)?)?$/');
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (3, 4, '/^\\w(?:\\.?[\\w%+-]+)*@\\w(?:[\\w-]*\\.)+?[a-z]{2,}$/i');
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (4, 6, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (5, 7, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (185, 1, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (186, 3, '/^[^\\s:\\/?#]+:(?:\\/{2,3})?[^\\s.\\/?#]+(?:\\.[^\\s.\\/?#]+)*(?:\\/[^\\s?#]*\\??[^\\s?#]*(#[^\\s#]*)?)?$/');
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (187, 4, '/^\\w(?:\\.?[\\w%+-]+)*@\\w(?:[\\w-]*\\.)+?[a-z]{2,}$/i');
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (188, 6, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (189, 7, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (6, 10, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (31, 21, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (32, 23, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (34, 21, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (35, 23, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (29, 29, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (30, 30, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (19, 40, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (20, 42, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (13, 50, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (14, 52, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (33, 52, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (16, 54, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (23, 57, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (24, 58, '/^\\w(?:\\.?[\\w%+-]+)*@\\w(?:[\\w-]*\\.)+?[a-z]{2,}$/i');
@@ -86,6 +93,27 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (25, 59, '
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (26, 65, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (27, 66, '/^\\w(?:\\.?[\\w%+-]+)*@\\w(?:[\\w-]*\\.)+?[a-z]{2,}$/i');
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (28, 67, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (128, 71, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (129, 76, '/^[^\\s:\\/?#]+:(?:\\/{2,3})?[^\\s.\\/?#]+(?:\\.[^\\s.\\/?#]+)*(?:\\/[^\\s?#]*\\??[^\\s?#]*(#[^\\s#]*)?)?$/');
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (130, 77, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (131, 79, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (132, 80, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (133, 81, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (134, 82, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (135, 83, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (136, 84, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (137, 85, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (138, 86, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (193, 87, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (190, 101, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (191, 107, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (192, 108, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (150, 112, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (162, 118, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (163, 128, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (184, 131, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (176, 135, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (178, 140, NULL);
 
 -- *** STRUCTURE: `tbl_fields_member` ***
 DROP TABLE IF EXISTS `tbl_fields_member`;
@@ -94,10 +122,10 @@ CREATE TABLE `tbl_fields_member` (
   `field_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_member` ***
-INSERT INTO `tbl_fields_member` (`id`, `field_id`) VALUES (1, 2);
+INSERT INTO `tbl_fields_member` (`id`, `field_id`) VALUES (2, 2);
 
 -- *** STRUCTURE: `tbl_fields_memberlink` ***
 DROP TABLE IF EXISTS `tbl_fields_memberlink`;
@@ -121,10 +149,10 @@ CREATE TABLE `tbl_fields_memberrole` (
   `field_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_memberrole` ***
-INSERT INTO `tbl_fields_memberrole` (`id`, `field_id`) VALUES (1, 5);
+INSERT INTO `tbl_fields_memberrole` (`id`, `field_id`) VALUES (2, 5);
 
 -- *** STRUCTURE: `tbl_fields_number` ***
 DROP TABLE IF EXISTS `tbl_fields_number`;
@@ -146,10 +174,12 @@ CREATE TABLE `tbl_fields_order_entries` (
   `hide` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_fields_order_entries` ***
-INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (3, 27, NULL, 'no');
+INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (4, 27, NULL, 'no');
+INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (12, 134, NULL, 'yes');
+INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (10, 138, NULL, 'yes');
 
 -- *** STRUCTURE: `tbl_fields_pages` ***
 DROP TABLE IF EXISTS `tbl_fields_pages`;
@@ -159,10 +189,10 @@ CREATE TABLE `tbl_fields_pages` (
   `allow_multiple_selection` enum('yes','no') NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_fields_pages` ***
-INSERT INTO `tbl_fields_pages` (`id`, `field_id`, `allow_multiple_selection`) VALUES (3, 22, 'no');
+INSERT INTO `tbl_fields_pages` (`id`, `field_id`, `allow_multiple_selection`) VALUES (4, 22, 'no');
 
 -- *** STRUCTURE: `tbl_fields_reflection` ***
 DROP TABLE IF EXISTS `tbl_fields_reflection`;
@@ -175,9 +205,11 @@ CREATE TABLE `tbl_fields_reflection` (
   `hide` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_fields_reflection` ***
+INSERT INTO `tbl_fields_reflection` (`id`, `field_id`, `expression`, `formatter`, `override`, `hide`) VALUES (30, 96, '{entry/project-client}{entry/project-number}', 'none', NULL, 'yes');
+INSERT INTO `tbl_fields_reflection` (`id`, `field_id`, `expression`, `formatter`, `override`, `hide`) VALUES (29, 103, '{entry/project-code}-{entry/task-number}', 'none', NULL, 'yes');
 
 -- *** STRUCTURE: `tbl_fields_select` ***
 DROP TABLE IF EXISTS `tbl_fields_select`;
@@ -189,9 +221,14 @@ CREATE TABLE `tbl_fields_select` (
   `dynamic_options` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_select` ***
+INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (33, 73, 'no', 'Advertising, Design, Architecture, Construction, Ecommerce, Education, Engineering, Financial Services, Hospitality, Industry, Land Development, Manufacturing, Marketing, Non-Profit, Printing, Real Estate, Tourism, Web Development, Web Services', NULL);
+INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (34, 74, 'no', 'Active, Inactive, Retired', NULL);
+INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (57, 94, 'no', 'Created, In Progress, On Hold, Completed, Invoiced, Cancelled', NULL);
+INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (55, 100, 'no', 'Non-Billable, Project, Contract, Service', NULL);
+INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (56, 110, 'no', 'In Progress, Pending, On Hold, Completed, Invoiced, Cancelled', NULL);
 
 -- *** STRUCTURE: `tbl_fields_selectbox_link` ***
 DROP TABLE IF EXISTS `tbl_fields_selectbox_link`;
@@ -203,11 +240,11 @@ CREATE TABLE `tbl_fields_selectbox_link` (
   `limit` int(4) unsigned NOT NULL DEFAULT '20',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=179 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_selectbox_link` ***
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (20, 18, 'no', 10, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (19, 26, 'no', 50, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (21, 26, 'no', 50, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (16, 33, 'no', 21, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (17, 34, 'no', 1, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (18, 35, 'no', 54, 20);
@@ -215,6 +252,35 @@ INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selec
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (12, 45, 'no', 54, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (14, 61, 'no', 29, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (15, 62, 'no', 40, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (92, 78, 'yes', 1, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (177, 90, 'yes', 140, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (178, 91, 'yes', 1, 50);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (173, 97, 'no', 104, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (174, 98, 'no', 96, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (176, 88, 'no', 104, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (114, 114, 'no', 104, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (115, 115, 'no', 96, 100);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (116, 116, 'no', 103, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (139, 121, 'no', 104, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (140, 122, 'no', 96, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (141, 123, 'no', 103, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (142, 124, 'no', 112, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (143, 125, 'no', 135, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (144, 130, 'no', 1, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (172, 133, 'no', 140, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (160, 137, 'no', 131, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (175, 139, 'no', 131, 20);
+
+-- *** STRUCTURE: `tbl_fields_systemid` ***
+DROP TABLE IF EXISTS `tbl_fields_systemid`;
+CREATE TABLE `tbl_fields_systemid` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `field_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `field_id` (`field_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_fields_systemid` ***
 
 -- *** STRUCTURE: `tbl_fields_taglist` ***
 DROP TABLE IF EXISTS `tbl_fields_taglist`;
@@ -241,23 +307,47 @@ CREATE TABLE `tbl_fields_textarea` (
   `size` int(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=96 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_textarea` ***
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (26, 17, 'markdown_with_purifier', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (24, 24, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (25, 25, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (28, 24, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (29, 25, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (22, 31, 'markdown_extra_with_smartypants', 6);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (23, 32, 'markdown_extra_with_smartypants', 18);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (15, 43, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (16, 44, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (8, 51, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (9, 53, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (27, 53, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (11, 55, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (12, 56, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (19, 63, 'markdown_with_purifier', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (20, 68, NULL, 9);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (21, 70, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (49, 75, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (95, 95, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (92, 105, 'markdown_extra_with_smartypants', 20);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (93, 106, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (94, 111, 'markdown_extra_with_smartypants', 6);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (61, 113, NULL, 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (70, 119, 'markdown_extra_with_smartypants', 20);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (91, 132, NULL, 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (83, 136, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (85, 141, 'markdown_extra_with_smartypants', 15);
+
+-- *** STRUCTURE: `tbl_fields_uniqueinput` ***
+DROP TABLE IF EXISTS `tbl_fields_uniqueinput`;
+CREATE TABLE `tbl_fields_uniqueinput` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `field_id` int(11) unsigned NOT NULL,
+  `validator` varchar(100) DEFAULT NULL,
+  `auto_unique` enum('yes','no') NOT NULL DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  KEY `field_id` (`field_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_fields_uniqueinput` ***
+INSERT INTO `tbl_fields_uniqueinput` (`id`, `field_id`, `validator`, `auto_unique`) VALUES (3, 104, NULL, 'no');
 
 -- *** STRUCTURE: `tbl_fields_upload` ***
 DROP TABLE IF EXISTS `tbl_fields_upload`;
@@ -283,10 +373,12 @@ CREATE TABLE `tbl_entries_data_1` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_1` ***
-INSERT INTO `tbl_entries_data_1` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'stephen-bau', 'Stephen Bau');
+INSERT INTO `tbl_entries_data_1` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 8, 'stephen-bau', 'Stephen Bau');
+INSERT INTO `tbl_entries_data_1` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 13, 'john-doe', 'John Doe');
+INSERT INTO `tbl_entries_data_1` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 14, 'jane-doe', 'Jane Doe');
 
 -- *** STRUCTURE: `tbl_entries_data_10` ***
 DROP TABLE IF EXISTS `tbl_entries_data_10`;
@@ -305,6 +397,153 @@ CREATE TABLE `tbl_entries_data_10` (
 INSERT INTO `tbl_entries_data_10` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 9, 'overview', 'Overview');
 INSERT INTO `tbl_entries_data_10` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 11, 'block-elements', 'Block Elements');
 
+-- *** STRUCTURE: `tbl_entries_data_100` ***
+DROP TABLE IF EXISTS `tbl_entries_data_100`;
+CREATE TABLE `tbl_entries_data_100` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_100` ***
+
+-- *** STRUCTURE: `tbl_entries_data_101` ***
+DROP TABLE IF EXISTS `tbl_entries_data_101`;
+CREATE TABLE `tbl_entries_data_101` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_101` ***
+
+-- *** STRUCTURE: `tbl_entries_data_102` ***
+DROP TABLE IF EXISTS `tbl_entries_data_102`;
+CREATE TABLE `tbl_entries_data_102` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_102` ***
+
+-- *** STRUCTURE: `tbl_entries_data_103` ***
+DROP TABLE IF EXISTS `tbl_entries_data_103`;
+CREATE TABLE `tbl_entries_data_103` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`),
+  FULLTEXT KEY `value_formatted` (`value_formatted`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_103` ***
+
+-- *** STRUCTURE: `tbl_entries_data_104` ***
+DROP TABLE IF EXISTS `tbl_entries_data_104`;
+CREATE TABLE `tbl_entries_data_104` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_104` ***
+INSERT INTO `tbl_entries_data_104` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 15, 'abc', 'ABC');
+
+-- *** STRUCTURE: `tbl_entries_data_105` ***
+DROP TABLE IF EXISTS `tbl_entries_data_105`;
+CREATE TABLE `tbl_entries_data_105` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_105` ***
+
+-- *** STRUCTURE: `tbl_entries_data_106` ***
+DROP TABLE IF EXISTS `tbl_entries_data_106`;
+CREATE TABLE `tbl_entries_data_106` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_106` ***
+
+-- *** STRUCTURE: `tbl_entries_data_107` ***
+DROP TABLE IF EXISTS `tbl_entries_data_107`;
+CREATE TABLE `tbl_entries_data_107` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_107` ***
+
+-- *** STRUCTURE: `tbl_entries_data_108` ***
+DROP TABLE IF EXISTS `tbl_entries_data_108`;
+CREATE TABLE `tbl_entries_data_108` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_108` ***
+
+-- *** STRUCTURE: `tbl_entries_data_109` ***
+DROP TABLE IF EXISTS `tbl_entries_data_109`;
+CREATE TABLE `tbl_entries_data_109` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` varchar(80) DEFAULT NULL,
+  `local` int(11) DEFAULT NULL,
+  `gmt` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_109` ***
+
 -- *** STRUCTURE: `tbl_entries_data_11` ***
 DROP TABLE IF EXISTS `tbl_entries_data_11`;
 CREATE TABLE `tbl_entries_data_11` (
@@ -321,6 +560,145 @@ CREATE TABLE `tbl_entries_data_11` (
 -- *** DATA: `tbl_entries_data_11` ***
 INSERT INTO `tbl_entries_data_11` (`id`, `entry_id`, `member_id`, `username`) VALUES (5, 9, 8, 'stephen');
 INSERT INTO `tbl_entries_data_11` (`id`, `entry_id`, `member_id`, `username`) VALUES (6, 11, 8, 'stephen');
+
+-- *** STRUCTURE: `tbl_entries_data_110` ***
+DROP TABLE IF EXISTS `tbl_entries_data_110`;
+CREATE TABLE `tbl_entries_data_110` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_110` ***
+
+-- *** STRUCTURE: `tbl_entries_data_111` ***
+DROP TABLE IF EXISTS `tbl_entries_data_111`;
+CREATE TABLE `tbl_entries_data_111` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_111` ***
+
+-- *** STRUCTURE: `tbl_entries_data_112` ***
+DROP TABLE IF EXISTS `tbl_entries_data_112`;
+CREATE TABLE `tbl_entries_data_112` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_112` ***
+
+-- *** STRUCTURE: `tbl_entries_data_113` ***
+DROP TABLE IF EXISTS `tbl_entries_data_113`;
+CREATE TABLE `tbl_entries_data_113` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_113` ***
+
+-- *** STRUCTURE: `tbl_entries_data_114` ***
+DROP TABLE IF EXISTS `tbl_entries_data_114`;
+CREATE TABLE `tbl_entries_data_114` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_114` ***
+
+-- *** STRUCTURE: `tbl_entries_data_115` ***
+DROP TABLE IF EXISTS `tbl_entries_data_115`;
+CREATE TABLE `tbl_entries_data_115` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_115` ***
+
+-- *** STRUCTURE: `tbl_entries_data_116` ***
+DROP TABLE IF EXISTS `tbl_entries_data_116`;
+CREATE TABLE `tbl_entries_data_116` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_116` ***
+
+-- *** STRUCTURE: `tbl_entries_data_117` ***
+DROP TABLE IF EXISTS `tbl_entries_data_117`;
+CREATE TABLE `tbl_entries_data_117` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` enum('yes','no') NOT NULL DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_117` ***
+
+-- *** STRUCTURE: `tbl_entries_data_118` ***
+DROP TABLE IF EXISTS `tbl_entries_data_118`;
+CREATE TABLE `tbl_entries_data_118` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_118` ***
+
+-- *** STRUCTURE: `tbl_entries_data_119` ***
+DROP TABLE IF EXISTS `tbl_entries_data_119`;
+CREATE TABLE `tbl_entries_data_119` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_119` ***
 
 -- *** STRUCTURE: `tbl_entries_data_12` ***
 DROP TABLE IF EXISTS `tbl_entries_data_12`;
@@ -339,6 +717,141 @@ CREATE TABLE `tbl_entries_data_12` (
 INSERT INTO `tbl_entries_data_12` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (5, 9, '2010-05-30T16:53:00-07:00', 1275263580, 1275263580);
 INSERT INTO `tbl_entries_data_12` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 11, '2010-05-30T17:06:00-07:00', 1275264360, 1275264360);
 
+-- *** STRUCTURE: `tbl_entries_data_120` ***
+DROP TABLE IF EXISTS `tbl_entries_data_120`;
+CREATE TABLE `tbl_entries_data_120` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_120` ***
+
+-- *** STRUCTURE: `tbl_entries_data_121` ***
+DROP TABLE IF EXISTS `tbl_entries_data_121`;
+CREATE TABLE `tbl_entries_data_121` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_121` ***
+
+-- *** STRUCTURE: `tbl_entries_data_122` ***
+DROP TABLE IF EXISTS `tbl_entries_data_122`;
+CREATE TABLE `tbl_entries_data_122` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_122` ***
+
+-- *** STRUCTURE: `tbl_entries_data_123` ***
+DROP TABLE IF EXISTS `tbl_entries_data_123`;
+CREATE TABLE `tbl_entries_data_123` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_123` ***
+
+-- *** STRUCTURE: `tbl_entries_data_124` ***
+DROP TABLE IF EXISTS `tbl_entries_data_124`;
+CREATE TABLE `tbl_entries_data_124` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_124` ***
+
+-- *** STRUCTURE: `tbl_entries_data_125` ***
+DROP TABLE IF EXISTS `tbl_entries_data_125`;
+CREATE TABLE `tbl_entries_data_125` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_125` ***
+
+-- *** STRUCTURE: `tbl_entries_data_126` ***
+DROP TABLE IF EXISTS `tbl_entries_data_126`;
+CREATE TABLE `tbl_entries_data_126` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` varchar(80) DEFAULT NULL,
+  `local` int(11) DEFAULT NULL,
+  `gmt` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_126` ***
+
+-- *** STRUCTURE: `tbl_entries_data_127` ***
+DROP TABLE IF EXISTS `tbl_entries_data_127`;
+CREATE TABLE `tbl_entries_data_127` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` varchar(80) DEFAULT NULL,
+  `local` int(11) DEFAULT NULL,
+  `gmt` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_127` ***
+
+-- *** STRUCTURE: `tbl_entries_data_128` ***
+DROP TABLE IF EXISTS `tbl_entries_data_128`;
+CREATE TABLE `tbl_entries_data_128` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_128` ***
+
+-- *** STRUCTURE: `tbl_entries_data_129` ***
+DROP TABLE IF EXISTS `tbl_entries_data_129`;
+CREATE TABLE `tbl_entries_data_129` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` enum('yes','no') NOT NULL DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_129` ***
+
 -- *** STRUCTURE: `tbl_entries_data_13` ***
 DROP TABLE IF EXISTS `tbl_entries_data_13`;
 CREATE TABLE `tbl_entries_data_13` (
@@ -356,6 +869,206 @@ CREATE TABLE `tbl_entries_data_13` (
 INSERT INTO `tbl_entries_data_13` (`id`, `entry_id`, `member_id`, `username`) VALUES (5, 9, 8, 'stephen');
 INSERT INTO `tbl_entries_data_13` (`id`, `entry_id`, `member_id`, `username`) VALUES (6, 11, 8, 'stephen');
 
+-- *** STRUCTURE: `tbl_entries_data_130` ***
+DROP TABLE IF EXISTS `tbl_entries_data_130`;
+CREATE TABLE `tbl_entries_data_130` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_130` ***
+
+-- *** STRUCTURE: `tbl_entries_data_131` ***
+DROP TABLE IF EXISTS `tbl_entries_data_131`;
+CREATE TABLE `tbl_entries_data_131` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_131` ***
+INSERT INTO `tbl_entries_data_131` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 21, 'discovery', 'Discovery');
+INSERT INTO `tbl_entries_data_131` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 22, 'research', 'Research');
+INSERT INTO `tbl_entries_data_131` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 23, 'design', 'Design');
+INSERT INTO `tbl_entries_data_131` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 24, 'production', 'Production');
+INSERT INTO `tbl_entries_data_131` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 25, 'delivery', 'Delivery');
+
+-- *** STRUCTURE: `tbl_entries_data_132` ***
+DROP TABLE IF EXISTS `tbl_entries_data_132`;
+CREATE TABLE `tbl_entries_data_132` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_132` ***
+INSERT INTO `tbl_entries_data_132` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 21, 'Establishing the defining parameters of the project', NULL);
+INSERT INTO `tbl_entries_data_132` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 22, 'Gathering information is one of the most important phases of the project', NULL);
+INSERT INTO `tbl_entries_data_132` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 23, 'Exploring and refining concepts and ideas that will provide the best impact for your message', NULL);
+INSERT INTO `tbl_entries_data_132` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 24, 'Using the right tools and applications for the job to ensure a quality product', NULL);
+INSERT INTO `tbl_entries_data_132` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 25, 'Deploying sites, distributing brand assets and propagating your message through various media', NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_133` ***
+DROP TABLE IF EXISTS `tbl_entries_data_133`;
+CREATE TABLE `tbl_entries_data_133` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_133` ***
+INSERT INTO `tbl_entries_data_133` (`id`, `entry_id`, `relation_id`) VALUES (7, 21, 37);
+INSERT INTO `tbl_entries_data_133` (`id`, `entry_id`, `relation_id`) VALUES (8, 22, 37);
+INSERT INTO `tbl_entries_data_133` (`id`, `entry_id`, `relation_id`) VALUES (9, 23, 40);
+INSERT INTO `tbl_entries_data_133` (`id`, `entry_id`, `relation_id`) VALUES (10, 24, 39);
+INSERT INTO `tbl_entries_data_133` (`id`, `entry_id`, `relation_id`) VALUES (11, 25, 38);
+
+-- *** STRUCTURE: `tbl_entries_data_134` ***
+DROP TABLE IF EXISTS `tbl_entries_data_134`;
+CREATE TABLE `tbl_entries_data_134` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` double DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_134` ***
+INSERT INTO `tbl_entries_data_134` (`id`, `entry_id`, `value`) VALUES (7, 21, 1);
+INSERT INTO `tbl_entries_data_134` (`id`, `entry_id`, `value`) VALUES (8, 22, 2);
+INSERT INTO `tbl_entries_data_134` (`id`, `entry_id`, `value`) VALUES (9, 23, 3);
+INSERT INTO `tbl_entries_data_134` (`id`, `entry_id`, `value`) VALUES (10, 24, 4);
+INSERT INTO `tbl_entries_data_134` (`id`, `entry_id`, `value`) VALUES (11, 25, 5);
+
+-- *** STRUCTURE: `tbl_entries_data_135` ***
+DROP TABLE IF EXISTS `tbl_entries_data_135`;
+CREATE TABLE `tbl_entries_data_135` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_135` ***
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 26, 'project-management', 'Project Management');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 27, 'client-brief', 'Client Brief');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 28, 'creative-brief', 'Creative Brief');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 29, 'analysis', 'Analysis');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 30, 'strategy', 'Strategy');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 31, 'preliminary-concepts', 'Preliminary Concepts');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 32, 'comprehensive-layouts', 'Comprehensive Layouts');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 33, 'development', 'Development');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 34, 'content-integration', 'Content Integration');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (12, 35, 'test-and-deploy', 'Test & Deploy');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (13, 36, 'evaluate-results', 'Evaluate Results');
+
+-- *** STRUCTURE: `tbl_entries_data_136` ***
+DROP TABLE IF EXISTS `tbl_entries_data_136`;
+CREATE TABLE `tbl_entries_data_136` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_136` ***
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 26, 'Managing the process and scheduling phases and tasks to meet the design objectives', '<p>Managing the process and scheduling phases and tasks to meet the design objectives</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 27, 'Initial discussions regarding the details and scope of the project', '<p>Initial discussions regarding the details and scope of the project</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 28, 'Initial project assessment, proposed creative direction and timeline', '<p>Initial project assessment, proposed creative direction and timeline</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 29, 'Information gathering and indepth analysis of the project requirements', '<p>Information gathering and indepth analysis of the project requirements</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 30, 'Assess the best means to convey the message and build the brand', '<p>Assess the best means to convey the message and build the brand</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 31, 'Explore possible solutions to the design problem', '<p>Explore possible solutions to the design problem</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 32, 'Establish design direction and refine layouts and design details', '<p>Establish design direction and refine layouts and design details</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 33, 'Using the right tools to build the application, identity or branding message', '<p>Using the right tools to build the application, identity or branding message</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 34, 'Building the final product to the highest possible standards', '<p>Building the final product to the highest possible standards</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 35, 'Deploying sites and distributing media', '<p>Deploying sites and distributing media</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 36, 'Assess the results of the project in fulfilling the design objectives', '<p>Assess the results of the project in fulfilling the design objectives</p>\n');
+
+-- *** STRUCTURE: `tbl_entries_data_137` ***
+DROP TABLE IF EXISTS `tbl_entries_data_137`;
+CREATE TABLE `tbl_entries_data_137` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_137` ***
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (1, 26, 24);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (2, 27, 21);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (3, 28, 21);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (4, 29, 22);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (5, 30, 22);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (8, 31, 23);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (9, 32, 23);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (10, 33, 24);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (11, 34, 24);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (12, 35, 25);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (13, 36, 25);
+
+-- *** STRUCTURE: `tbl_entries_data_138` ***
+DROP TABLE IF EXISTS `tbl_entries_data_138`;
+CREATE TABLE `tbl_entries_data_138` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` double DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_138` ***
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (1, 26, 1);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (2, 27, 2);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (3, 28, 3);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (4, 29, 4);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (5, 30, 5);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (8, 31, 6);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (9, 32, 7);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (10, 33, 8);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (11, 34, 9);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (12, 35, 10);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (13, 36, 11);
+
+-- *** STRUCTURE: `tbl_entries_data_139` ***
+DROP TABLE IF EXISTS `tbl_entries_data_139`;
+CREATE TABLE `tbl_entries_data_139` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_139` ***
+
 -- *** STRUCTURE: `tbl_entries_data_14` ***
 DROP TABLE IF EXISTS `tbl_entries_data_14`;
 CREATE TABLE `tbl_entries_data_14` (
@@ -372,6 +1085,43 @@ CREATE TABLE `tbl_entries_data_14` (
 -- *** DATA: `tbl_entries_data_14` ***
 INSERT INTO `tbl_entries_data_14` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (5, 9, '2010-05-30T16:53:00-07:00', 1275263580, 1275263580);
 INSERT INTO `tbl_entries_data_14` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 11, '2010-05-30T17:06:00-07:00', 1275264360, 1275264360);
+
+-- *** STRUCTURE: `tbl_entries_data_140` ***
+DROP TABLE IF EXISTS `tbl_entries_data_140`;
+CREATE TABLE `tbl_entries_data_140` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_140` ***
+INSERT INTO `tbl_entries_data_140` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 37, 'strategy', 'Strategy');
+INSERT INTO `tbl_entries_data_140` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 38, 'marketing', 'Marketing');
+INSERT INTO `tbl_entries_data_140` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 39, 'development', 'Development');
+INSERT INTO `tbl_entries_data_140` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 40, 'creative', 'Creative');
+
+-- *** STRUCTURE: `tbl_entries_data_141` ***
+DROP TABLE IF EXISTS `tbl_entries_data_141`;
+CREATE TABLE `tbl_entries_data_141` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_141` ***
+INSERT INTO `tbl_entries_data_141` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 37, 'Brand Development, Content Strategy & Web Governance', '<p>Brand Development, Content Strategy &amp; Web Governance</p>\n');
+INSERT INTO `tbl_entries_data_141` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 39, 'Web & Application Development', '<p>Web &amp; Application Development</p>\n');
+INSERT INTO `tbl_entries_data_141` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 40, 'Creative Branding & Identity', '<p>Creative Branding &amp; Identity</p>\n');
+INSERT INTO `tbl_entries_data_141` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 38, 'Print, Web and Search Engine Marketing', '<p>Print, Web and Search Engine Marketing</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_15` ***
 DROP TABLE IF EXISTS `tbl_entries_data_15`;
@@ -462,10 +1212,12 @@ CREATE TABLE `tbl_entries_data_2` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_2` ***
-INSERT INTO `tbl_entries_data_2` (`id`, `entry_id`, `username`, `password`) VALUES (1, 8, 'stephen', '6a204bd89f3c8348afd5c77c717a097a');
+INSERT INTO `tbl_entries_data_2` (`id`, `entry_id`, `username`, `password`) VALUES (2, 8, 'stephen', '6a204bd89f3c8348afd5c77c717a097a');
+INSERT INTO `tbl_entries_data_2` (`id`, `entry_id`, `username`, `password`) VALUES (3, 13, 'john', '6a204bd89f3c8348afd5c77c717a097a');
+INSERT INTO `tbl_entries_data_2` (`id`, `entry_id`, `username`, `password`) VALUES (4, 14, 'jane', '6a204bd89f3c8348afd5c77c717a097a');
 
 -- *** STRUCTURE: `tbl_entries_data_20` ***
 DROP TABLE IF EXISTS `tbl_entries_data_20`;
@@ -668,10 +1420,10 @@ CREATE TABLE `tbl_entries_data_3` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_3` ***
-INSERT INTO `tbl_entries_data_3` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'http-bauhouseca', 'http://bauhouse.ca/');
+INSERT INTO `tbl_entries_data_3` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 8, 'http-bauhouseca', 'http://bauhouse.ca/');
 
 -- *** STRUCTURE: `tbl_entries_data_30` ***
 DROP TABLE IF EXISTS `tbl_entries_data_30`;
@@ -822,10 +1574,12 @@ CREATE TABLE `tbl_entries_data_4` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_4` ***
-INSERT INTO `tbl_entries_data_4` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'bauhouse-gmailcom', 'bauhouse@gmail.com');
+INSERT INTO `tbl_entries_data_4` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 8, 'bauhouse-gmailcom', 'bauhouse@gmail.com');
+INSERT INTO `tbl_entries_data_4` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 13, 'bauhouse-gmailcom', 'bauhouse@gmail.com');
+INSERT INTO `tbl_entries_data_4` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 14, 'bauhouse-gmailcom', 'bauhouse@gmail.com');
 
 -- *** STRUCTURE: `tbl_entries_data_40` ***
 DROP TABLE IF EXISTS `tbl_entries_data_40`;
@@ -975,10 +1729,12 @@ CREATE TABLE `tbl_entries_data_5` (
   `role_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`,`role_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_5` ***
-INSERT INTO `tbl_entries_data_5` (`id`, `entry_id`, `role_id`) VALUES (1, 8, 3);
+INSERT INTO `tbl_entries_data_5` (`id`, `entry_id`, `role_id`) VALUES (2, 8, 4);
+INSERT INTO `tbl_entries_data_5` (`id`, `entry_id`, `role_id`) VALUES (3, 13, 3);
+INSERT INTO `tbl_entries_data_5` (`id`, `entry_id`, `role_id`) VALUES (4, 14, 3);
 
 -- *** STRUCTURE: `tbl_entries_data_50` ***
 DROP TABLE IF EXISTS `tbl_entries_data_50`;
@@ -1022,9 +1778,13 @@ CREATE TABLE `tbl_entries_data_52` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_52` ***
+INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (12, 17, 'tools', 'Tools');
+INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 18, 'files', 'Files');
+INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (13, 19, 'resources', 'Resources');
+INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 20, 'sites', 'Sites');
 
 -- *** STRUCTURE: `tbl_entries_data_53` ***
 DROP TABLE IF EXISTS `tbl_entries_data_53`;
@@ -1036,9 +1796,13 @@ CREATE TABLE `tbl_entries_data_53` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_53` ***
+INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 17, 'Noteworthy applications and tools of the trade', '<p>Noteworthy applications and tools of the trade</p>\n');
+INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 18, 'Images and downloads', '<p>Images and downloads</p>\n');
+INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 19, 'Interesting articles', '<p>Interesting articles</p>\n');
+INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 20, 'Sites we like to frequent', '<p>Sites we like to frequent</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_54` ***
 DROP TABLE IF EXISTS `tbl_entries_data_54`;
@@ -1139,10 +1903,12 @@ CREATE TABLE `tbl_entries_data_6` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_6` ***
-INSERT INTO `tbl_entries_data_6` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'can', 'CAN');
+INSERT INTO `tbl_entries_data_6` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 8, 'can', 'CAN');
+INSERT INTO `tbl_entries_data_6` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 13, 'aus', 'AUS');
+INSERT INTO `tbl_entries_data_6` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 14, 'can', 'CAN');
 
 -- *** STRUCTURE: `tbl_entries_data_60` ***
 DROP TABLE IF EXISTS `tbl_entries_data_60`;
@@ -1297,10 +2063,12 @@ CREATE TABLE `tbl_entries_data_7` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_7` ***
-INSERT INTO `tbl_entries_data_7` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 8, 'abbotsford', 'Abbotsford');
+INSERT INTO `tbl_entries_data_7` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 8, 'abbotsford', 'Abbotsford');
+INSERT INTO `tbl_entries_data_7` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 13, 'new-york', 'New York');
+INSERT INTO `tbl_entries_data_7` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 14, 'abbotsford', 'Abbotsford');
 
 -- *** STRUCTURE: `tbl_entries_data_70` ***
 DROP TABLE IF EXISTS `tbl_entries_data_70`;
@@ -1316,6 +2084,128 @@ CREATE TABLE `tbl_entries_data_70` (
 
 -- *** DATA: `tbl_entries_data_70` ***
 
+-- *** STRUCTURE: `tbl_entries_data_71` ***
+DROP TABLE IF EXISTS `tbl_entries_data_71`;
+CREATE TABLE `tbl_entries_data_71` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_71` ***
+INSERT INTO `tbl_entries_data_71` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'abc-company', 'ABC Company');
+
+-- *** STRUCTURE: `tbl_entries_data_73` ***
+DROP TABLE IF EXISTS `tbl_entries_data_73`;
+CREATE TABLE `tbl_entries_data_73` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_73` ***
+INSERT INTO `tbl_entries_data_73` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'advertising', 'Advertising');
+
+-- *** STRUCTURE: `tbl_entries_data_74` ***
+DROP TABLE IF EXISTS `tbl_entries_data_74`;
+CREATE TABLE `tbl_entries_data_74` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_74` ***
+INSERT INTO `tbl_entries_data_74` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'active', 'Active');
+
+-- *** STRUCTURE: `tbl_entries_data_75` ***
+DROP TABLE IF EXISTS `tbl_entries_data_75`;
+CREATE TABLE `tbl_entries_data_75` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_75` ***
+INSERT INTO `tbl_entries_data_75` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 15, NULL, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_76` ***
+DROP TABLE IF EXISTS `tbl_entries_data_76`;
+CREATE TABLE `tbl_entries_data_76` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_76` ***
+
+-- *** STRUCTURE: `tbl_entries_data_77` ***
+DROP TABLE IF EXISTS `tbl_entries_data_77`;
+CREATE TABLE `tbl_entries_data_77` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_77` ***
+
+-- *** STRUCTURE: `tbl_entries_data_78` ***
+DROP TABLE IF EXISTS `tbl_entries_data_78`;
+CREATE TABLE `tbl_entries_data_78` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_78` ***
+INSERT INTO `tbl_entries_data_78` (`id`, `entry_id`, `relation_id`) VALUES (2, 15, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_79` ***
+DROP TABLE IF EXISTS `tbl_entries_data_79`;
+CREATE TABLE `tbl_entries_data_79` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_79` ***
+
 -- *** STRUCTURE: `tbl_entries_data_8` ***
 DROP TABLE IF EXISTS `tbl_entries_data_8`;
 CREATE TABLE `tbl_entries_data_8` (
@@ -1325,10 +2215,160 @@ CREATE TABLE `tbl_entries_data_8` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_8` ***
-INSERT INTO `tbl_entries_data_8` (`id`, `entry_id`, `value`) VALUES (1, 8, -8);
+INSERT INTO `tbl_entries_data_8` (`id`, `entry_id`, `value`) VALUES (2, 8, -8);
+INSERT INTO `tbl_entries_data_8` (`id`, `entry_id`, `value`) VALUES (3, 13, -5);
+INSERT INTO `tbl_entries_data_8` (`id`, `entry_id`, `value`) VALUES (4, 14, -8);
+
+-- *** STRUCTURE: `tbl_entries_data_80` ***
+DROP TABLE IF EXISTS `tbl_entries_data_80`;
+CREATE TABLE `tbl_entries_data_80` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_80` ***
+
+-- *** STRUCTURE: `tbl_entries_data_81` ***
+DROP TABLE IF EXISTS `tbl_entries_data_81`;
+CREATE TABLE `tbl_entries_data_81` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_81` ***
+
+-- *** STRUCTURE: `tbl_entries_data_82` ***
+DROP TABLE IF EXISTS `tbl_entries_data_82`;
+CREATE TABLE `tbl_entries_data_82` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_82` ***
+
+-- *** STRUCTURE: `tbl_entries_data_83` ***
+DROP TABLE IF EXISTS `tbl_entries_data_83`;
+CREATE TABLE `tbl_entries_data_83` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_83` ***
+
+-- *** STRUCTURE: `tbl_entries_data_84` ***
+DROP TABLE IF EXISTS `tbl_entries_data_84`;
+CREATE TABLE `tbl_entries_data_84` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_84` ***
+
+-- *** STRUCTURE: `tbl_entries_data_85` ***
+DROP TABLE IF EXISTS `tbl_entries_data_85`;
+CREATE TABLE `tbl_entries_data_85` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_85` ***
+
+-- *** STRUCTURE: `tbl_entries_data_86` ***
+DROP TABLE IF EXISTS `tbl_entries_data_86`;
+CREATE TABLE `tbl_entries_data_86` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_86` ***
+
+-- *** STRUCTURE: `tbl_entries_data_87` ***
+DROP TABLE IF EXISTS `tbl_entries_data_87`;
+CREATE TABLE `tbl_entries_data_87` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_87` ***
+INSERT INTO `tbl_entries_data_87` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 16, 'abc-company-website', 'ABC Company Website');
+
+-- *** STRUCTURE: `tbl_entries_data_88` ***
+DROP TABLE IF EXISTS `tbl_entries_data_88`;
+CREATE TABLE `tbl_entries_data_88` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_88` ***
+INSERT INTO `tbl_entries_data_88` (`id`, `entry_id`, `relation_id`) VALUES (4, 16, 15);
+
+-- *** STRUCTURE: `tbl_entries_data_89` ***
+DROP TABLE IF EXISTS `tbl_entries_data_89`;
+CREATE TABLE `tbl_entries_data_89` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_89` ***
+INSERT INTO `tbl_entries_data_89` (`id`, `entry_id`, `value`) VALUES (4, 16, 16);
 
 -- *** STRUCTURE: `tbl_entries_data_9` ***
 DROP TABLE IF EXISTS `tbl_entries_data_9`;
@@ -1339,10 +2379,149 @@ CREATE TABLE `tbl_entries_data_9` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_9` ***
-INSERT INTO `tbl_entries_data_9` (`id`, `entry_id`, `value`) VALUES (1, 8, 'yes');
+INSERT INTO `tbl_entries_data_9` (`id`, `entry_id`, `value`) VALUES (2, 8, 'yes');
+INSERT INTO `tbl_entries_data_9` (`id`, `entry_id`, `value`) VALUES (3, 13, 'no');
+INSERT INTO `tbl_entries_data_9` (`id`, `entry_id`, `value`) VALUES (4, 14, 'no');
+
+-- *** STRUCTURE: `tbl_entries_data_90` ***
+DROP TABLE IF EXISTS `tbl_entries_data_90`;
+CREATE TABLE `tbl_entries_data_90` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_90` ***
+INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (4, 16, 37);
+INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (5, 16, 38);
+INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (6, 16, 39);
+INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (7, 16, 40);
+
+-- *** STRUCTURE: `tbl_entries_data_91` ***
+DROP TABLE IF EXISTS `tbl_entries_data_91`;
+CREATE TABLE `tbl_entries_data_91` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_91` ***
+INSERT INTO `tbl_entries_data_91` (`id`, `entry_id`, `relation_id`) VALUES (4, 16, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_92` ***
+DROP TABLE IF EXISTS `tbl_entries_data_92`;
+CREATE TABLE `tbl_entries_data_92` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` varchar(80) DEFAULT NULL,
+  `local` int(11) DEFAULT NULL,
+  `gmt` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_92` ***
+INSERT INTO `tbl_entries_data_92` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (4, 16, '2010-05-31T23:26:00-07:00', 1275373560, 1275373560);
+
+-- *** STRUCTURE: `tbl_entries_data_93` ***
+DROP TABLE IF EXISTS `tbl_entries_data_93`;
+CREATE TABLE `tbl_entries_data_93` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` varchar(80) DEFAULT NULL,
+  `local` int(11) DEFAULT NULL,
+  `gmt` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_93` ***
+INSERT INTO `tbl_entries_data_93` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (4, 16, NULL, NULL, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_94` ***
+DROP TABLE IF EXISTS `tbl_entries_data_94`;
+CREATE TABLE `tbl_entries_data_94` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_94` ***
+INSERT INTO `tbl_entries_data_94` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 16, 'created', 'Created');
+
+-- *** STRUCTURE: `tbl_entries_data_95` ***
+DROP TABLE IF EXISTS `tbl_entries_data_95`;
+CREATE TABLE `tbl_entries_data_95` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_95` ***
+INSERT INTO `tbl_entries_data_95` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 16, NULL, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_96` ***
+DROP TABLE IF EXISTS `tbl_entries_data_96`;
+CREATE TABLE `tbl_entries_data_96` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` text,
+  `value_formatted` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`),
+  FULLTEXT KEY `value_formatted` (`value_formatted`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_96` ***
+INSERT INTO `tbl_entries_data_96` (`id`, `entry_id`, `handle`, `value`, `value_formatted`) VALUES (4, 16, NULL, NULL, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_97` ***
+DROP TABLE IF EXISTS `tbl_entries_data_97`;
+CREATE TABLE `tbl_entries_data_97` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_97` ***
+
+-- *** STRUCTURE: `tbl_entries_data_98` ***
+DROP TABLE IF EXISTS `tbl_entries_data_98`;
+CREATE TABLE `tbl_entries_data_98` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_98` ***
 
 -- *** DATA: `tbl_entries` ***
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (1, 7, 1, '2010-05-30 13:01:51', '2010-05-30 20:01:51');
@@ -1357,6 +2536,34 @@ INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `cr
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (10, 3, 1, '2010-05-30 16:53:06', '2010-05-30 23:53:06');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (11, 2, 1, '2010-05-30 17:06:21', '2010-05-31 00:06:21');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (12, 3, 1, '2010-05-30 17:06:21', '2010-05-31 00:06:21');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (13, 1, 1, '2010-05-31 21:18:27', '2010-06-01 04:18:27');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (14, 1, 1, '2010-05-31 21:23:51', '2010-06-01 04:23:51');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (15, 13, 1, '2010-05-31 23:26:13', '2010-06-01 06:26:13');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (16, 14, 1, '2010-05-31 23:29:28', '2010-06-01 06:29:28');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (17, 8, 1, '2010-06-01 07:55:14', '2010-06-01 14:55:14');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (18, 8, 1, '2010-06-01 07:55:57', '2010-06-01 14:55:57');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (19, 8, 1, '2010-06-01 07:57:32', '2010-06-01 14:57:32');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (20, 8, 1, '2010-06-01 07:58:44', '2010-06-01 14:58:44');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (21, 18, 1, '2010-06-01 09:01:11', '2010-06-01 16:01:11');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (22, 18, 1, '2010-06-01 09:01:37', '2010-06-01 16:01:37');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (23, 18, 1, '2010-06-01 09:01:59', '2010-06-01 16:01:59');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (24, 18, 1, '2010-06-01 09:03:43', '2010-06-01 16:03:43');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (25, 18, 1, '2010-06-01 09:04:18', '2010-06-01 16:04:18');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (26, 19, 1, '2010-06-01 09:10:49', '2010-06-01 16:10:49');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (27, 19, 1, '2010-06-01 09:12:24', '2010-06-01 16:12:24');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (28, 19, 1, '2010-06-01 09:12:54', '2010-06-01 16:12:54');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (29, 19, 1, '2010-06-01 09:13:22', '2010-06-01 16:13:22');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (30, 19, 1, '2010-06-01 09:14:15', '2010-06-01 16:14:15');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (31, 19, 1, '2010-06-01 09:15:29', '2010-06-01 16:15:29');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (32, 19, 1, '2010-06-01 09:18:51', '2010-06-01 16:18:51');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (33, 19, 1, '2010-06-01 09:19:33', '2010-06-01 16:19:33');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (34, 19, 1, '2010-06-01 09:20:17', '2010-06-01 16:20:17');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (35, 19, 1, '2010-06-01 09:20:44', '2010-06-01 16:20:44');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (36, 19, 1, '2010-06-01 09:21:05', '2010-06-01 16:21:05');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (37, 20, 1, '2010-06-01 09:27:05', '2010-06-01 16:27:05');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (38, 20, 1, '2010-06-01 09:27:53', '2010-06-01 16:27:53');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (39, 20, 1, '2010-06-01 09:28:13', '2010-06-01 16:28:13');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (40, 20, 1, '2010-06-01 09:28:47', '2010-06-01 16:28:47');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -1379,6 +2586,8 @@ INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (24, 're
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (25, 'order_entries', 'enabled', 1.8);
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (26, 'section_schemas', 'enabled', 1.4);
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (27, 'xmlimporter', 'enabled', 0.10);
+INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (28, 'systemidfield', 'enabled', '1.0.2');
+INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (29, 'uniqueinputfield', 'enabled', 1.3);
 
 -- *** DATA: `tbl_extensions_delegates` ***
 INSERT INTO `tbl_extensions_delegates` (`id`, `extension_id`, `page`, `delegate`, `callback`) VALUES (1, 1, '/frontend/', 'FrontendDevKitResolve', 'frontendDevKitResolve');
@@ -1426,9 +2635,9 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (3, 'Website', 'website', 'input', 1, 'no', 2, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (4, 'Email Address', 'email-address', 'input', 1, 'no', 3, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (5, 'Role', 'role', 'memberrole', 1, 'no', 4, 'sidebar', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (6, 'Location', 'location', 'input', 1, 'no', 5, 'sidebar', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (7, 'City', 'city', 'input', 1, 'no', 6, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (8, 'Timezone Offset', 'timezone-offset', 'number', 1, 'yes', 7, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (6, 'Location', 'location', 'input', 1, 'no', 5, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (7, 'City', 'city', 'input', 1, 'no', 6, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (8, 'Timezone Offset', 'timezone-offset', 'number', 1, 'yes', 7, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (9, 'Email Opt-in', 'email-opt-in', 'checkbox', 1, 'no', 8, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (10, 'Topic', 'topic', 'input', 2, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (11, 'Created By', 'created-by', 'memberlink', 2, 'yes', 1, 'main', 'yes');
@@ -1446,7 +2655,7 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (23, 'Heading', 'heading', 'input', 4, 'no', 2, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (24, 'Description', 'description', 'textarea', 4, 'no', 3, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (25, 'Body', 'body', 'textarea', 4, 'no', 4, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (26, 'Navigation', 'navigation', 'selectbox_link', 4, 'yes', 5, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (26, 'Navigation', 'navigation', 'selectbox_link', 4, 'yes', 5, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (27, 'Sort', 'sort', 'order_entries', 4, 'no', 6, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (28, 'Publish', 'publish', 'checkbox', 4, 'no', 7, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (29, 'Title', 'title', 'input', 5, 'yes', 0, 'main', 'yes');
@@ -1472,8 +2681,8 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (49, 'Enable Comments', 'enable-comments', 'checkbox', 6, 'no', 9, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (50, 'Navigation', 'navigation', 'input', 7, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (51, 'Description', 'description', 'textarea', 7, 'no', 1, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (52, 'Title', 'title', 'input', 8, 'yes', 0, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (53, 'Description', 'description', 'textarea', 8, 'no', 1, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (52, 'Title', 'title', 'input', 8, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (53, 'Description', 'description', 'textarea', 8, 'no', 1, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (54, 'Title', 'title', 'input', 9, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (55, 'Description', 'description', 'textarea', 9, 'yes', 1, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (56, 'Body', 'body', 'textarea', 9, 'yes', 2, 'main', 'no');
@@ -1491,6 +2700,75 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (68, 'Message', 'message', 'textarea', 11, 'yes', 3, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (69, 'Date', 'date', 'date', 12, 'no', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (70, 'Note', 'note', 'textarea', 12, 'yes', 1, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (71, 'Name', 'name', 'input', 13, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (104, 'Code', 'code', 'uniqueinput', 13, 'yes', 1, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (73, 'Type', 'type', 'select', 13, 'no', 2, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (74, 'Status', 'status', 'select', 13, 'no', 3, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (75, 'Description', 'description', 'textarea', 13, 'no', 4, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (76, 'Website URL', 'website-url', 'input', 13, 'no', 5, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (77, 'PST Number', 'pst-number', 'input', 13, 'no', 6, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (78, 'Contacts', 'contacts', 'selectbox_link', 13, 'no', 15, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (79, 'Primary Contact', 'primary-contact', 'input', 13, 'no', 7, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (80, 'Phone', 'phone', 'input', 13, 'no', 8, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (81, 'Fax', 'fax', 'input', 13, 'no', 9, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (82, 'Address', 'address', 'input', 13, 'no', 10, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (83, 'City', 'city', 'input', 13, 'no', 11, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (84, 'Province/State', 'province-state', 'input', 13, 'no', 12, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (85, 'Postal/Zip Code', 'postal-zip-code', 'input', 13, 'no', 13, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (86, 'Country', 'country', 'input', 13, 'no', 14, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (87, 'Title', 'title', 'input', 14, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (88, 'Client', 'client', 'selectbox_link', 14, 'yes', 1, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (89, 'Number', 'number', 'systemid', 14, 'no', 2, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (90, 'Type', 'type', 'selectbox_link', 14, 'no', 4, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (91, 'Assigned To', 'assigned-to', 'selectbox_link', 14, 'no', 6, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (92, 'Start Date', 'start-date', 'date', 14, 'no', 7, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (93, 'Completed Date', 'completed-date', 'date', 14, 'no', 8, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (94, 'Status', 'status', 'select', 14, 'no', 9, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (95, 'Description', 'description', 'textarea', 14, 'no', 5, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (96, 'Code', 'code', 'reflection', 14, 'no', 3, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (97, 'Client', 'client', 'selectbox_link', 15, 'yes', 3, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (98, 'Project', 'project', 'selectbox_link', 15, 'yes', 4, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (100, 'Billing Terms', 'billing-terms', 'select', 15, 'no', 6, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (101, 'Title', 'title', 'input', 15, 'no', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (102, 'Number', 'number', 'systemid', 15, 'no', 1, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (103, 'Code', 'code', 'reflection', 15, 'no', 2, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (106, 'Notes', 'notes', 'textarea', 15, 'yes', 8, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (105, 'Description', 'description', 'textarea', 15, 'yes', 7, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (107, 'Hourly Rate', 'hourly-rate', 'input', 15, 'no', 9, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (108, 'Budget', 'budget', 'input', 15, 'no', 10, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (109, 'Due Date', 'due-date', 'date', 15, 'no', 11, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (110, 'Status', 'status', 'select', 15, 'no', 12, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (111, 'Status Details', 'status-details', 'textarea', 15, 'no', 13, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (112, 'Title', 'title', 'input', 16, 'no', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (113, 'Description', 'description', 'textarea', 16, 'yes', 1, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (114, 'Client', 'client', 'selectbox_link', 16, 'yes', 2, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (115, 'Project', 'project', 'selectbox_link', 16, 'no', 3, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (116, 'Milestone', 'milestone', 'selectbox_link', 16, 'no', 4, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (117, 'Quote Required', 'quote-required', 'checkbox', 15, 'no', 14, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (118, 'Title', 'title', 'input', 17, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (119, 'Description', 'description', 'textarea', 17, 'no', 1, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (120, 'Number', 'number', 'systemid', 17, 'no', 2, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (121, 'Client', 'client', 'selectbox_link', 17, 'yes', 3, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (122, 'Project', 'project', 'selectbox_link', 17, 'no', 4, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (123, 'Milestone', 'milestone', 'selectbox_link', 17, 'no', 5, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (124, 'Task', 'task', 'selectbox_link', 17, 'no', 6, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (125, 'Function', 'function', 'selectbox_link', 17, 'no', 7, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (126, 'Start Time', 'start-time', 'date', 17, 'no', 8, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (127, 'Stop Time', 'stop-time', 'date', 17, 'no', 9, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (128, 'Hours', 'hours', 'input', 17, 'no', 10, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (129, 'Overtime', 'overtime', 'checkbox', 17, 'no', 11, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (130, 'Person', 'person', 'selectbox_link', 17, 'yes', 12, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (131, 'Title', 'title', 'input', 18, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (132, 'Description', 'description', 'textarea', 18, 'no', 1, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (133, 'Type', 'type', 'selectbox_link', 18, 'no', 2, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (134, 'Sort', 'sort', 'order_entries', 18, 'no', 3, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (135, 'Title', 'title', 'input', 19, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (136, 'Description', 'description', 'textarea', 19, 'no', 1, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (137, 'Phase', 'phase', 'selectbox_link', 19, 'no', 2, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (138, 'Sort', 'sort', 'order_entries', 19, 'no', 3, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (139, 'Phase', 'phase', 'selectbox_link', 15, 'no', 5, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (140, 'Title', 'title', 'input', 20, 'yes', 0, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (141, 'Description', 'description', 'textarea', 20, 'no', 1, 'main', 'yes');
 
 -- *** DATA: `tbl_pages` ***
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', 'forum_discussions,forum_read_discussions,navigation,search_comments,whosonline', 'forum_utilities', 3);
@@ -1528,7 +2806,7 @@ INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (11, 15, 404);
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (1, 'Members', 'members', 9, NULL, 'asc', 'no', 'Forum');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (2, 'Discussions', 'discussions', 10, NULL, 'asc', 'no', 'Forum');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (3, 'Comments', 'comments', 11, NULL, 'asc', 'no', 'Forum');
-INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (4, 'Sections', 'sections', 0, NULL, 'asc', 'no', 'Content');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (4, 'Sections', 'sections', 0, 27, 'asc', 'no', 'Content');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (5, 'Entries', 'entries', 1, NULL, 'asc', 'no', 'Content');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (6, 'Items', 'items', 2, NULL, 'asc', 'no', 'Content');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (7, 'Menus', 'menus', 3, NULL, 'asc', 'no', 'Meta');
@@ -1537,10 +2815,18 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (10, 'Entry Comments', 'entry-comments', 6, NULL, 'asc', 'no', 'Social');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (11, 'Messages', 'messages', 7, NULL, 'asc', 'no', 'Social');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (12, 'Notes', 'notes', 8, NULL, 'asc', 'no', 'Social');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (13, 'Clients', 'clients', 12, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (14, 'Projects', 'projects', 13, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (15, 'Milestones', 'milestones', 14, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (16, 'Tasks', 'tasks', 15, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (17, 'Tickets', 'tickets', 16, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (18, 'Phases', 'phases', 18, 134, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (19, 'Functions', 'functions', 19, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (20, 'Project Types', 'project-types', 17, NULL, 'asc', 'no', 'Projects');
 
 -- *** DATA: `tbl_sections_association` ***
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (20, 2, 10, 3, 18, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (19, 7, 50, 4, 26, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (21, 7, 50, 4, 26, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (16, 4, 21, 5, 33, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (17, 1, 1, 5, 34, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (18, 9, 54, 5, 35, 'no');
@@ -1548,25 +2834,44 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (12, 9, 54, 6, 45, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (14, 5, 29, 10, 61, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (15, 6, 40, 10, 62, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (91, 1, 1, 13, 78, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (175, 13, 104, 14, 88, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (176, 20, 140, 14, 90, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (177, 1, 1, 14, 91, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (172, 13, 104, 15, 97, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (173, 14, 96, 15, 98, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (113, 13, 104, 16, 114, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (114, 14, 96, 16, 115, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (115, 15, 103, 16, 116, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (138, 13, 104, 17, 121, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (139, 14, 96, 17, 122, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (140, 15, 103, 17, 123, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (141, 16, 112, 17, 124, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (142, 19, 135, 17, 125, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (143, 1, 1, 17, 130, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (171, 20, 140, 18, 133, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (159, 18, 131, 19, 137, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (174, 18, 131, 15, 139, 'no');
 
 -- *** DATA: `tbl_forum_read_discussions` ***
 INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (1, 8, 9, 1275320433, 1);
-INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (2, 8, 11, 1275362099, 1);
+INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (2, 8, 11, 1275367843, 1);
 
 -- *** DATA: `tbl_members_codes` ***
-INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (8, 'dbb11479b7744863de188b9a507adf50', 1275265528);
+INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (14, '07460078ecd74cf1de37391659ce638f', 1275369856);
+INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (13, '21ce96b84d5af1c279cc7e6f0f0543f4', 1275369607);
 
 -- *** DATA: `tbl_members_email_templates` ***
-INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (1, 'Account Activation', 'Dear {$name},\r\n\r\nThanks for registering at {$site-name}!\r\n\r\nTo activate your account, head to {$root}/members/activate/{$code}\r\n\r\nThis code will expire in one hour, so if you miss your window, simply head to the link above and click \"Resend activation email\" to get a new one.\r\n\r\nIf you have problems activating your account, please get in touch with us using our contact form at {$root}/contact/ and we\'ll do our best to help.\r\n\r\nWe don\'t know you yet, but we can already tell that you\'ll be a wonderful addition to our growing community!\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'activate-account');
-INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (2, 'Reset Password', 'Dear {$name},\r\n\r\nTo reset your password, please head over to: {$root}/reset-password/{$code}\r\n\r\nThe code will expire in one hour, so if you miss your window, head back to {$root}/reset-password/ and click the \"Resend Email\" button to generate a new reset key.\r\n\r\nIf you have any trouble, please get in touch with us via our contact form at {$root}/contact/ and we\'ll do our best to help.\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'reset-password');
+INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (1, 'Account Activation', 'Dear {$name},\r\n\r\nThanks for registering at {$site-name}!\r\n\r\nTo activate your account, head to {$root}/forum/members/activate/{$code}\r\n\r\nThis code will expire in one hour, so if you miss your window, simply head to the link above and click \"Resend activation email\" to get a new one.\r\n\r\nIf you have problems activating your account, please get in touch with us using our contact form at {$root}/contact/ and we\'ll do our best to help.\r\n\r\nWe don\'t know you yet, but we can already tell that you\'ll be a wonderful addition to our growing community!\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'activate-account');
+INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (2, 'Reset Password', 'Dear {$name},\r\n\r\nTo reset your password, please head over to: {$root}/forum/members/reset-password/{$code}\r\n\r\nThe code will expire in one hour, so if you miss your window, head back to {$root}/forum/members/reset-password/ and click the \"Resend Email\" button to generate a new reset key.\r\n\r\nIf you have any trouble, please get in touch with us via our contact form at {$root}/contact/ and we\'ll do our best to help.\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'reset-password');
 INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (3, 'New password', 'Dear {$name},\r\n\r\nJust now, you have made a request for a new password. Here it is: {$new-password}\r\n\r\nThere\'s a good chance that you won\'t like this new password and would like to change it--that\'s okay, we\'re not offended.\r\n\r\nYou can do that once you\'re logged in by going to your member profile page.\r\n\r\nIf you have any trouble, please get in touch with us via our contact form at {$root}/contact/ and we\'ll do our best to help.\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'new-password');
 INSERT INTO `tbl_members_email_templates` (`id`, `subject`, `body`, `type`) VALUES (4, 'Membership Activated', 'Dear {$name},\r\n\r\nCongratulations on obtaining your citizenship! You are now a fully fledged member of the community.\r\n\r\nRegards,\r\n\r\n---\r\nSymphony Team', 'welcome');
 
 -- *** DATA: `tbl_members_email_templates_role_mapping` ***
-INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (7, 2, 2);
-INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (14, 1, 2);
-INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (6, 2, 3);
-INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (8, 2, 4);
+INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (18, 2, 4);
+INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (15, 1, 2);
+INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (17, 2, 3);
+INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (16, 2, 2);
 INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (9, 3, 3);
 INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (10, 3, 2);
 INSERT INTO `tbl_members_email_templates_role_mapping` (`id`, `email_template_id`, `role_id`) VALUES (11, 3, 4);
