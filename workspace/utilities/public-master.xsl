@@ -26,6 +26,7 @@
 			</xsl:attribute>
 			<xsl:call-template name="header"/>
 			<xsl:call-template name="navigation-menus"/>
+			<xsl:call-template name="submenu"/>
 			<div id="page">
 				<div class="box">
 					<xsl:apply-templates/>

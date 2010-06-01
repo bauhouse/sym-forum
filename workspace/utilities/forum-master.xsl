@@ -11,16 +11,13 @@
 	encoding="UTF-8" 
 	indent="yes" />
 
-<xsl:variable name="member" select="/data/events/member-login-info"/>
-<xsl:variable name="logged-in" select="/data/events/member-login-info/@logged-in"/>
-<xsl:variable name="permissions" select="/data/events/member-login-info/permissions"/>
-
 <xsl:template match="/">
 	<html>
 		<xsl:call-template name="forum-head"/>
 		<body>
 			<xsl:call-template name="header"/>
 			<xsl:call-template name="navigation-menus"/>
+			<xsl:call-template name="submenu"/>
 			<div id="page">
 				<div class="box">
 					<div id="forum-panel">

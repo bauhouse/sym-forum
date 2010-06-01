@@ -4,6 +4,10 @@
 
 <xsl:import href="../utilities/date-time.xsl"/>
 
+<xsl:variable name="member" select="/data/events/member-login-info"/>
+<xsl:variable name="logged-in" select="/data/events/member-login-info/@logged-in"/>
+<xsl:variable name="permissions" select="/data/events/member-login-info/permissions"/>
+
 <xsl:param name="section" />
 <xsl:param name="section-title">
 	<xsl:choose>
@@ -70,6 +74,54 @@
 						<a href="{$root}/content/{@handle}/"><xsl:value-of select="fields/title"/></a>
 					</li>
 				</xsl:for-each>
+			</ul>
+		</div>
+	</div>
+</xsl:template>
+
+<xsl:template name="submenu">
+	<div id="subheader">
+		<div class="box">
+			<ul id="submenu">
+				<!--li>
+					<xsl:if test="$current-page = 'project-brief'">
+						<xsl:attribute name="class">current</xsl:attribute>
+					</xsl:if>
+					<a href="{$root}/project-brief/">New Project</a>
+				</li>
+				<li>
+					<xsl:if test="$current-page = 'items' or $current-page = 'item'">
+						<xsl:attribute name="class">current</xsl:attribute>
+					</xsl:if>
+					<a href="{$root}/projects/items/">Items</a>
+				</li-->
+				<ul class="right">
+					<xsl:choose>
+						<xsl:when test="$logged-in = 'true'">
+							<li>
+								<xsl:if test="$current-page = 'logout'">
+									<xsl:attribute name="class">
+										<xsl:text>current</xsl:text>
+									</xsl:attribute>
+								</xsl:if>
+								<a href="?member-action=logout&amp;redirect={$root}/login/">Logout</a>
+							</li>
+							<!--xsl:if test="$team-logged-in = 'true' or $owner-logged-in = 'true'">
+								<li><a href="{$root}/symphony/">Admin</a></li>
+							</xsl:if-->
+						</xsl:when>
+						<xsl:otherwise>
+							<li>
+								<xsl:if test="$current-page = 'login'">
+									<xsl:attribute name="class">
+										<xsl:text>current</xsl:text>
+									</xsl:attribute>
+								</xsl:if>
+								<a href="{$root}/login/">Login</a>
+							</li>
+						</xsl:otherwise>
+					</xsl:choose>
+				</ul>
 			</ul>
 		</div>
 	</div>
