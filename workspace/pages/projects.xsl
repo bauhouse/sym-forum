@@ -149,13 +149,13 @@
 									</xsl:when>
 									<xsl:when test="$client='client'">
 										<xsl:for-each select="$page-datasource">
-											<xsl:sort select="fields/project-client/item/@entry-handle" order="{$sort}"/>
+											<xsl:sort select="project-client/item/@entry-handle" order="{$sort}"/>
 											<xsl:call-template name="list-projects"/>
 										</xsl:for-each>
 									</xsl:when>
 									<xsl:when test="$client='project-title'">
 										<xsl:for-each select="$page-datasource">
-											<xsl:sort select="fields/project-title/@handle" order="{$sort}"/>
+											<xsl:sort select="project-title/@handle" order="{$sort}"/>
 											<xsl:call-template name="list-projects"/>
 										</xsl:for-each>
 									</xsl:when>
@@ -167,18 +167,18 @@
 									</xsl:when>
 									<xsl:when test="$client='due-date'">
 										<xsl:for-each select="$page-datasource">
-											<xsl:sort select="fields/due-date" order="{$sort}"/>
+											<xsl:sort select="due-date" order="{$sort}"/>
 											<xsl:call-template name="list-projects"/>
 										</xsl:for-each>
 									</xsl:when>
 									<xsl:when test="$client='status'">
 										<xsl:for-each select="$page-datasource">
-											<xsl:sort select="fields/project-status/@handle" order="{$sort}"/>
+											<xsl:sort select="project-status/@handle" order="{$sort}"/>
 											<xsl:call-template name="list-projects"/>
 										</xsl:for-each>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:for-each select="$page-datasource[fields/project-client/item/@entry-handle=$client]">
+										<xsl:for-each select="$page-datasource[project-client/item/@entry-handle=$client]">
 											<xsl:sort select="@handle" order="{$sort}"/>
 											<xsl:call-template name="list-projects"/>
 										</xsl:for-each>
@@ -224,28 +224,28 @@
 											<h2>
 												<xsl:call-template name="link-to-project-title"/>
 											</h2>
-											<xsl:if test="(fields/project-description)">
-												<xsl:copy-of select="fields/project-description"/>
+											<xsl:if test="(project-description)">
+												<xsl:copy-of select="project-description"/>
 											</xsl:if>
 											<p class="entry-info"><span>Client </span>
 												<xsl:call-template name="link-to-client-name"/>
 											</p>
 											<p class="entry-info"><span>Start Date </span>
-												<xsl:call-template name="get-formatted-date">
-													<xsl:with-param name="date" select="date"/>
-													<xsl:with-param name="format-type" select="'long'"/>
+												<xsl:call-template name="format-date">
+													<xsl:with-param name="date" select="start-date"/>
+													<xsl:with-param name="format" select="'x M Y'"/>
 												</xsl:call-template>
 											</p>
-											<xsl:if test="(fields/due-date)">
+											<xsl:if test="(due-date)">
 												<p class="entry-info"><span>Due Date </span>
-													<xsl:call-template name="get-formatted-date">
-														<xsl:with-param name="date" select="fields/due-date"/>
-														<xsl:with-param name="format-type" select="'long'"/>
+													<xsl:call-template name="format-date">
+														<xsl:with-param name="date" select="due-date"/>
+														<xsl:with-param name="format" select="'x M Y'"/>
 													</xsl:call-template>
 												</p>
 											</xsl:if>
 											<p class="entry-info"><span>Project Status </span>
-												<xsl:value-of select="fields/project-status"/>
+												<xsl:value-of select="project-status"/>
 											</p>
 											<xsl:if test="$owner-logged-in='true' or $admin-logged-in='true'">
 												<p class="entry-info"><span>Symphony </span>
@@ -277,7 +277,7 @@
 									</a>
 								</p>
 								<ul class="project-list">
-									<xsl:for-each select="projects/entry[fields/project-client/item/@entry-handle=$client]">
+									<xsl:for-each select="projects/entry[project-client/item/@entry-handle=$client]">
 										<xsl:sort select="@handle" order="descending"/>
 										<li><xsl:call-template name="link-to-project-title"/></li>
 									</xsl:for-each>
@@ -309,14 +309,13 @@
 </xsl:template>
 
 <xsl:template name="list-projects">
-	<xsl:param name="owner-logged-in" select="/data/events/user[account-type='Owner']/@logged-in"/>
-	<xsl:param name="admin-logged-in" select="/data/events/user[account-type='Administrator']/@logged-in"/>
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="client-name" select="/data/client-names/entry[fields/client-code/@handle=$client-handle]/fields/client-name"/>
-	<xsl:param name="client-code" select="fields/project-client/item"/>
-	<xsl:param name="project-title" select="fields/project-title"/>
-	<xsl:param name="project-number" select="@handle"/>
-	<xsl:param name="project-status" select="fields/project-status"/>
+	<xsl:param name="admin-logged-in" select="$member-info[role='Administrator']/@logged-in"/>
+	<xsl:param name="client-handle" select="client/item/@handle"/>
+	<xsl:param name="client-name" select="client/item"/>
+	<xsl:param name="client-code" select="client/item"/>
+	<xsl:param name="project-title" select="title"/>
+	<xsl:param name="project-number" select="number"/>
+	<xsl:param name="project-status" select="status/item"/>
 	<tr>
 		<td class="link">
 			<xsl:call-template name="link-to-code"/>
@@ -334,19 +333,19 @@
 			</a>
 		</td>
 		<td class="date">
-			<xsl:call-template name="get-formatted-date">
-				<xsl:with-param name="date" select="date"/>
-				<xsl:with-param name="format-type" select="'mixed'"/>
+			<xsl:call-template name="format-date">
+				<xsl:with-param name="date" select="start-date"/>
+				<xsl:with-param name="format" select="'x m Y'"/>
 			</xsl:call-template>
 		</td>
 		<td class="date">
-			<xsl:call-template name="get-formatted-date">
-				<xsl:with-param name="date" select="fields/due-date"/>
-				<xsl:with-param name="format-type" select="'mixed'"/>
+			<xsl:call-template name="format-date">
+				<xsl:with-param name="date" select="due-date"/>
+				<xsl:with-param name="format" select="'x m Y'"/>
 			</xsl:call-template>
 		</td>
 		<xsl:choose>
-			<xsl:when test="$owner-logged-in='true' or $admin-logged-in='true'">
+			<xsl:when test="$admin-logged-in='true'">
 				<td class="link">
 					<a href="{$root}/symphony/?page=/publish/section/edit/&amp;_sid=2&amp;id={@id}"
 						title="Change Status: {$client-code}{$project-number}">
@@ -366,27 +365,27 @@
 </xsl:template>
 
 <xsl:template name="link-to-client-name">
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="client-name" select="/data/client-names/entry[fields/client-code/@handle=$client-handle]/fields/client-name"/>
+	<xsl:param name="client-handle" select="project-client/item/@entry-handle"/>
+	<xsl:param name="client-name" select="/data/client-names/entry[client-code/@handle=$client-handle]/client-name"/>
 	<a href="{$root}/clients/{$client-handle}/" title="Clients : {$client-name}">
 		<xsl:value-of select="$client-name"/>
 	</a>
 </xsl:template>
 
 <xsl:template name="link-to-projects-client-name">
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="client-name" select="/data/client-names/entry[fields/client-code/@handle=$client-handle]/fields/client-name"/>
+	<xsl:param name="client-handle" select="project-client/item/@entry-handle"/>
+	<xsl:param name="client-name" select="/data/client-names/entry[client-code/@handle=$client-handle]/client-name"/>
 	<a href="{$root}/projects/{$client-handle}/" title="Projects : {$client-name}">
 		<xsl:value-of select="$client-name"/>
 	</a>
 </xsl:template>
 
 <xsl:template name="link-to-project-title">
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="project-title" select="fields/project-title"/>
+	<xsl:param name="client-handle" select="project-client/item/@entry-handle"/>
+	<xsl:param name="project-title" select="project-title"/>
 	<xsl:param name="project-number" select="@handle"/>
-	<a href="{$root}/projects/project/{$client-handle}/{$project-number}/" title="Projects : {fields/project-client/item} {@handle}-{$project-title}">
-		<xsl:value-of select="fields/project-client/item"/>
+	<a href="{$root}/projects/project/{$client-handle}/{$project-number}/" title="Projects : {project-client/item} {@handle}-{$project-title}">
+		<xsl:value-of select="project-client/item"/>
 		<xsl:text> </xsl:text>
 		<xsl:value-of select="$project-number"/>
 		<xsl:text> - </xsl:text>
@@ -395,52 +394,52 @@
 </xsl:template>
 
 <xsl:template name="link-to-project-number">
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="project-title" select="fields/project-title"/>
+	<xsl:param name="client-handle" select="project-client/item/@entry-handle"/>
+	<xsl:param name="project-title" select="project-title"/>
 	<xsl:param name="project-number" select="@handle"/>
-	<a href="{$root}/projects/project/{$client-handle}/{$project-number}/" title="Projects : {fields/project-client/item} {$project-number}-{$project-title}">
-		<xsl:value-of select="fields/project-client/item"/>
+	<a href="{$root}/projects/project/{$client-handle}/{$project-number}/" title="Projects : {project-client/item} {$project-number}-{$project-title}">
+		<xsl:value-of select="project-client/item"/>
 		<xsl:text> </xsl:text>
 		<xsl:value-of select="$project-number"/>
 	</a>
 </xsl:template>
 
 <xsl:template name="link-to-code-number">
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="client-name" select="/data/client-names/entry[@handle=$client-handle]/fields/client-name"/>
-	<xsl:param name="project-title" select="fields/project-title"/>
+	<xsl:param name="client-handle" select="project-client/item/@entry-handle"/>
+	<xsl:param name="client-name" select="/data/client-names/entry[@handle=$client-handle]/client-name"/>
+	<xsl:param name="project-title" select="project-title"/>
 	<xsl:param name="project-number" select="@handle"/>
 	<a href="{$root}/projects/{$client-handle}/" title="Projects : {$client-name}">
-		<xsl:value-of select="fields/project-client/item"/>
+		<xsl:value-of select="project-client/item"/>
 	</a>
 	<xsl:text> : </xsl:text>
-	<a href="{$root}/projects/{$client-handle}/{$project-number}/" title="Projects : {fields/project-client/item} {$project-number}-{$project-title}">
+	<a href="{$root}/projects/{$client-handle}/{$project-number}/" title="Projects : {project-client/item} {$project-number}-{$project-title}">
 		<xsl:value-of select="$project-number"/>
 	</a>
 </xsl:template>
 
 <xsl:template name="link-to-code">
-	<xsl:param name="client-handle" select="fields/project-client/item/@entry-handle"/>
-	<xsl:param name="client-name" select="/data/client-names/entry[@handle=$client-handle]/fields/client-name"/>
-	<xsl:param name="project-title" select="fields/project-title"/>
+	<xsl:param name="client-handle" select="client/item/@handle"/>
+	<xsl:param name="client-name" select="/data/client-names/entry[@handle=$client-handle]/client-name"/>
+	<xsl:param name="project-title" select="title"/>
 	<a href="{$root}/projects/{$client-handle}/" title="Projects : {$client-name}">
-		<xsl:value-of select="fields/project-client/item"/>
+		<xsl:value-of select="client/item"/>
 	</a>
 </xsl:template>
 
 <xsl:template name="link-to-client-code">
-	<a href="{$root}/projects/{@handle}/" title="Projects : {fields/client-name}">
-		<xsl:value-of select="fields/client-code"/>
+	<a href="{$root}/projects/{@handle}/" title="Projects : {client-name}">
+		<xsl:value-of select="client-code"/>
 	</a>
 </xsl:template>
 
 <xsl:template name="link-to-project-item">
-	<xsl:param name="client-handle" select="fields/client/item/@entry-handle"/>
-	<xsl:param name="client-code" select="fields/client/item/span"/>
-	<xsl:param name="client-name" select="/data/client-name/entry[@handle = $client-code]/fields/client-name"/>
-	<xsl:param name="project-number" select="fields/project/item"/>
-	<xsl:param name="project-item-number" select="fields/item-number"/>
-	<xsl:param name="project-item" select="fields/project-item"/>
+	<xsl:param name="client-handle" select="client/item/@entry-handle"/>
+	<xsl:param name="client-code" select="client/item/span"/>
+	<xsl:param name="client-name" select="/data/client-name/entry[@handle = $client-code]/client-name"/>
+	<xsl:param name="project-number" select="project/item"/>
+	<xsl:param name="project-item-number" select="item-number"/>
+	<xsl:param name="project-item" select="project-item"/>
 	<a href="{$root}/projects/item/{$client-handle}/{$project-number}/{$project-item-number}/" title="Project Items : {$project-item-number}-{$project-item}">
 		<xsl:value-of select="$project-item-number"/>
 		<xsl:text> - </xsl:text>
