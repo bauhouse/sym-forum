@@ -1093,19 +1093,25 @@ td.notification a:hover {
 
 /* member page
 ----------------------------------------------- */
-#header img {
-	float: left;
-	margin: 10px 25px 10px 10px;
+#member-header {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	margin-top: 2em;
 }
-#header h2 {
+#member-header img {
+	float: left;
+	margin: 10px 20px 10px 0;
+}
+#member-header h2 {
 	font-size: 23px;
 	padding-top: 5px;
 	line-height: 60px;
 }
-#header h2#owner {
+#member-header h2#owner {
 	line-height: inherit;
 }
-#header h2 em {
+#member-header h2 em {
 	font-style: normal;
 	font-size: 20px;
 	font-weight: 400;
@@ -1123,7 +1129,7 @@ td.notification a:hover {
 	border: none;
 }
 #member-details {
-	clear: both;
+	margin-bottom: 1em;
 }
 #member-details dt {
 	float: left;
@@ -1132,6 +1138,7 @@ td.notification a:hover {
 }
 #member-details dd {
 	padding: 1em 14em;
+	border-bottom: 1px solid #eee;
 }
 
 
