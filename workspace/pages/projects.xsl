@@ -45,7 +45,7 @@
 					</xsl:when>
 					<xsl:when test="$project">
 						<xsl:text> : </xsl:text>
-						<xsl:for-each select="$page-datasource[number/@handle=$project]">
+						<xsl:for-each select="project/entry">
 							<xsl:call-template name="link-to-code-number"/>
 						</xsl:for-each>
 					</xsl:when>
@@ -216,7 +216,7 @@
 						<div class="colA">
 							<div id="entries">
 								<div class="entry">
-									<xsl:for-each select="projects/entry[@handle=$project]">
+									<xsl:for-each select="project/entry">
 										<p class="entry-data">
 											<xsl:call-template name="link-to-project-number"/>
 										</p>
@@ -245,9 +245,9 @@
 												</p>
 											</xsl:if>
 											<p class="entry-info"><span>Project Status </span>
-												<xsl:value-of select="project-status"/>
+												<xsl:value-of select="status"/>
 											</p>
-											<xsl:if test="$owner-logged-in='true' or $admin-logged-in='true'">
+											<xsl:if test="$logged-in='true' and $member-info/role='Administrator'">
 												<p class="entry-info"><span>Symphony </span>
 													<a href="{$root}/symphony/?page=/publish/section/edit/&amp;_sid=2&amp;id={@id}">
 														Edit Project
@@ -321,13 +321,13 @@
 			<xsl:call-template name="link-to-code"/>
 		</td>
 		<td class="link">
-			<a href="{$root}/{$current-page}/project/{$client-handle}/{$project-number}/" 
+			<a href="{$root}/{$current-page}/{$client-handle}/{$project-number}/"
 				title="Projects : {$client-code}{$project-number}-{$project-title}">
 				<xsl:value-of select="$project-number"/>
 			</a>
 		</td>
 		<td class="link">
-			<a href="{$root}/{$current-page}/project/{$client-handle}/{$project-number}/" 
+			<a href="{$root}/{$current-page}/{$client-handle}/{$project-number}/"
 				title="Projects : {$client-code}{$project-number}-{$project-title}">
 				<xsl:value-of select="$project-title"/>
 			</a>
@@ -366,7 +366,7 @@
 
 <xsl:template name="link-to-client-name">
 	<xsl:param name="client-handle" select="client/item/@handle"/>
-	<xsl:param name="client-name" select="/data/client-names/entry[client-code/@handle=$client-handle]/name"/>
+	<xsl:param name="client-name" select="/data/client-names/entry[code/@handle=$client-handle]/name"/>
 	<a href="{$root}/clients/{$client-handle}/" title="Clients : {$client-name}">
 		<xsl:value-of select="$client-name"/>
 	</a>
@@ -382,11 +382,10 @@
 
 <xsl:template name="link-to-project-title">
 	<xsl:param name="client-handle" select="client/item/@handle"/>
-	<xsl:param name="project-title" select="project-title"/>
-	<xsl:param name="project-number" select="@handle"/>
-	<a href="{$root}/projects/project/{$client-handle}/{$project-number}/" title="Projects : {project-client/item} {@handle}-{$project-title}">
-		<xsl:value-of select="project-client/item"/>
-		<xsl:text> </xsl:text>
+	<xsl:param name="project-title" select="title"/>
+	<xsl:param name="project-number" select="number"/>
+	<a href="{$root}/projects/{$client-handle}/{$project-number}/" title="Projects : {client/item}{number}-{$project-title}">
+		<xsl:value-of select="client/item"/>
 		<xsl:value-of select="$project-number"/>
 		<xsl:text> - </xsl:text>
 		<xsl:value-of select="$project-title"/>
@@ -395,11 +394,10 @@
 
 <xsl:template name="link-to-project-number">
 	<xsl:param name="client-handle" select="client/item/@handle"/>
-	<xsl:param name="project-title" select="project-title"/>
-	<xsl:param name="project-number" select="@handle"/>
-	<a href="{$root}/projects/project/{$client-handle}/{$project-number}/" title="Projects : {project-client/item} {$project-number}-{$project-title}">
-		<xsl:value-of select="project-client/item"/>
-		<xsl:text> </xsl:text>
+	<xsl:param name="project-title" select="title"/>
+	<xsl:param name="project-number" select="number"/>
+	<a href="{$root}/projects/{$client-handle}/{$project-number}/" title="Projects : {client/item}{$project-number}-{$project-title}">
+		<xsl:value-of select="client/item"/>
 		<xsl:value-of select="$project-number"/>
 	</a>
 </xsl:template>
