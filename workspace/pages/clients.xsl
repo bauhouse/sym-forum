@@ -10,7 +10,7 @@
 			<p class="login-info"><xsl:copy-of select="$login-info"/></p>
 			<p>
 				<a href="{$root}/{$current-page}/"><xsl:value-of select="$page-title"/></a>
-				<xsl:if test="($client)">
+				<xsl:if test="$client">
 					<xsl:text> : </xsl:text>
 					<xsl:for-each select="clients/entry[code/@handle=$client]">
 						<a href="{$root}/{$current-page}/{code/@handle}/">
@@ -52,7 +52,7 @@
 											</a>
 										</td>
 										<xsl:choose>
-											<xsl:when test="(website-url)">
+											<xsl:when test="website-url">
 												<td class="link">
 													<a href="http://{website-url}" title="View website: {website-url}">
 														<xsl:value-of select="website-url"/>
@@ -62,9 +62,9 @@
 											<xsl:otherwise><td></td></xsl:otherwise>
 										</xsl:choose>
 										<xsl:choose>
-											<xsl:when test="(primary-contact)">
+											<xsl:when test="primary-contact">
 												<xsl:choose>
-													<xsl:when test="(email)">
+													<xsl:when test="email">
 														<td class="link">
 															<a href="mailto:{email}" title="Send email to {email}">
 																<xsl:value-of select="primary-contact"/>
@@ -117,7 +117,7 @@
 													<xsl:value-of select="name"/>
 												</a>
 											</h2>
-											<xsl:if test="(client-description)">
+											<xsl:if test="client-description">
 												<xsl:copy-of select="client-description"/>
 											</xsl:if>
 											<xsl:if test="type">
@@ -129,19 +129,19 @@
 												<p class="entry-info">
 													<span>Main Contact </span>
 													<xsl:choose>
-														<xsl:when test="(email) and not(job-title)">
+														<xsl:when test="email and not(job-title)">
 															<a href="mailto:{email}" title="Send email to {email}">
 																<xsl:value-of select="primary-contact"/>
 															</a>
 														</xsl:when>
-														<xsl:when test="(email) and (job-title)">
+														<xsl:when test="email and (job-title)">
 															<a href="mailto:{email}" title="Send email to {email}">
 																<xsl:value-of select="primary-contact"/>
 															</a>
 															<xsl:text> | </xsl:text>
 															<xsl:value-of select="job-title"/>
 														</xsl:when>
-														<xsl:when test="not(email) and (job-title)">
+														<xsl:when test="not(email) and job-title">
 															<xsl:value-of select="primary-contact"/>
 															<xsl:text> | </xsl:text>
 															<xsl:value-of select="job-title"/>
@@ -152,7 +152,7 @@
 													</xsl:choose>
 												</p>
 											</xsl:if>
-											<xsl:if test="(email)">
+											<xsl:if test="email">
 												<p class="entry-info">
 													<span>Email </span>
 													<a href="mailto:{email}" title="Send email to {email}">
@@ -160,7 +160,7 @@
 													</a>
 												</p>
 											</xsl:if>
-											<xsl:if test="(website-url)">
+											<xsl:if test="website-url">
 												<p class="entry-info">
 													<span>Website </span>
 													<a href="http://{website-url}" title="View website: {website-url}">
@@ -168,21 +168,21 @@
 													</a>
 												</p>
 											</xsl:if>
-											<xsl:if test="(cell)">
+											<xsl:if test="cell">
 												<p class="entry-info"><span>Cell </span><xsl:value-of select="cell"/></p>
 											</xsl:if>
-											<xsl:if test="(phone)">
+											<xsl:if test="phone">
 												<p class="entry-info"><span>Phone </span><xsl:value-of select="phone"/></p>
 											</xsl:if>
-											<xsl:if test="(fax)">
+											<xsl:if test="fax">
 												<p class="entry-info"><span>Fax </span><xsl:value-of select="fax"/></p>
 											</xsl:if>
-											<xsl:if test="(address)">
+											<xsl:if test="address">
 												<p class="entry-info"><span>Address </span>
 													<xsl:value-of select="address"/>
 												</p>
 											</xsl:if>
-											<xsl:if test="(city)">
+											<xsl:if test="city">
 												<p class="entry-info"><span>City </span>
 													<xsl:value-of select="city"/>
 													<xsl:text> </xsl:text>
