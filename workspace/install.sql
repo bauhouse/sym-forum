@@ -1400,10 +1400,10 @@ INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (4, 5, 4);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (14, 6, 11);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (7, 7, 5);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (10, 42, 6);
-INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (11, 43, 7);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (11, 43, 8);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (12, 44, 9);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (13, 45, 10);
-INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (15, 46, 8);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (15, 46, 7);
 
 -- *** STRUCTURE: `tbl_entries_data_28` ***
 DROP TABLE IF EXISTS `tbl_entries_data_28`;
@@ -2849,7 +2849,7 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (24, NULL, 'Login', 'login', NULL, NULL, 'navigation', NULL, 23);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (25, NULL, 'Overview', 'overview', NULL, NULL, 'navigation', NULL, 24);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (26, NULL, 'Clients', 'clients', NULL, 'client', 'clients,navigation', NULL, 25);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (27, NULL, 'Projects', 'projects', NULL, 'client/project/filter/sort', 'client_names,navigation,projects', NULL, 26);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (27, NULL, 'Projects', 'projects', NULL, 'client/project/filter/sort', 'client,client_names,navigation,project,projects', NULL, 26);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (28, NULL, 'Timesheet', 'timesheet', NULL, 'page/client/project/entry', 'navigation', NULL, 27);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (29, NULL, 'Brands', 'brands', NULL, 'brand/type/category/asset', 'navigation', NULL, 28);
 
