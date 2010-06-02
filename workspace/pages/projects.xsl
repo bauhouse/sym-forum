@@ -224,7 +224,7 @@
 											<h2>
 												<xsl:call-template name="link-to-project-title"/>
 											</h2>
-											<xsl:if test="(project-description)">
+											<xsl:if test="project-description">
 												<xsl:copy-of select="project-description"/>
 											</xsl:if>
 											<p class="entry-info"><span>Client </span>
@@ -236,7 +236,7 @@
 													<xsl:with-param name="format" select="'x M Y'"/>
 												</xsl:call-template>
 											</p>
-											<xsl:if test="(due-date)">
+											<xsl:if test="due-date">
 												<p class="entry-info"><span>Due Date </span>
 													<xsl:call-template name="format-date">
 														<xsl:with-param name="date" select="due-date"/>
