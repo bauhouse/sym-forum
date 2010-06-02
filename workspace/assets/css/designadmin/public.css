@@ -525,6 +525,10 @@ Layout
 	margin: 0 0 0 214px;
 	}
 
+#brand-panel .body,
+#brand-content .body {
+	padding-top: .6em;
+}
 
 /* body styles
 ----------------------------------------------- */
