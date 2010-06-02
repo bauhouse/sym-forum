@@ -12,7 +12,8 @@
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name'
+				'name',
+				'code'
 		);
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
@@ -28,7 +29,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-06-02T13:29:08+00:00');	
+					 'release-date' => '2010-06-02T13:46:20+00:00');	
 		}
 		
 		public function getSource(){
