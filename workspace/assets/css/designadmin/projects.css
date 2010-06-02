@@ -842,7 +842,7 @@ img.right {
 ----------------------------------------------- */
 .lists { 
 	font-size:1em;
-	line-height:1.4em;
+/*	line-height:1.4em; */
 	}
 .colA .lists {
 	padding-right:.6em;
