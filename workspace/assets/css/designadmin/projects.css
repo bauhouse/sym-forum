@@ -3,9 +3,9 @@
 Projects Styles
 -----------------------------------------------
 Domain7 Projects
-file:		projects.domain7.local/workspace/assets/css/projects.css
+file:		workspace/assets/css/designadmin/projects.css
 author:		Stephen Bau
-date:		20 September 2007
+date:		2 June 2010
 ----------------------------------------------- */
 
 
@@ -246,18 +246,18 @@ body.projects #content {
 	line-height: 2.5em;
 	padding: 0 1em;
 	color:#000;
-	background: #ddd url("../img/shadow_tab_off.gif") center bottom repeat-x;
+	background: #ddd url("img/shadow_tab_off.gif") center bottom repeat-x;
 	border: 0;
 	}
 #site-menu li a:hover {
 	color:#900;
-	background: #eee url("../img/shadow_tab_over.gif") center bottom repeat-x;
+	background: #eee url("img/shadow_tab_over.gif") center bottom repeat-x;
 	}
 #site-menu li a:active,
 #site-menu li a.active,
 #site-menu li a.active:hover {
 	color:#2A8CC8;
-	background:#fff url("../img/shadow_tab_active.gif") center bottom repeat-x;
+	background:#fff url("img/shadow_tab_active.gif") center bottom repeat-x;
 	}
 
 
@@ -302,13 +302,13 @@ body.projects #content {
 #sectionmenu li a:hover {
 	color:#000;
 	line-height: 1.3em;
-	background: #eee url("../img/arrowred.gif") no-repeat right center;
+	background: #eee url("img/arrowred.gif") no-repeat right center;
 	}
 #sectionmenu li a:active,
 #sectionmenu li a.active {
 	color:#2A8CC8;
 	line-height: 1.3em;
-	background: #fff url("../img/arrowred.gif") no-repeat right center;
+	background: #fff url("img/arrowred.gif") no-repeat right center;
 	}
 
 
@@ -370,7 +370,7 @@ body.projects #content {
 	float:left;
 	width:216px;
 	height:215px;
-	background: url("../img/thumbs_grid_215.gif") left top no-repeat;
+	background: url("img/thumbs_grid_215.gif") left top no-repeat;
 	}
 #sectionthumbs h3 {
 	display:none;
@@ -403,7 +403,7 @@ body.projects #content {
 #sectionthumbs a:visited img.thumb-off {display:block;}
 #sectionthumbs a.current:visited img.thumb-off {display:none;}
 
-* html #sectionthumbs a:hover {background: url("../img/thumbs_grid_215.gif") left top no-repeat;} /* ie win hovers won't work without this rule */
+* html #sectionthumbs a:hover {background: url("img/thumbs_grid_215.gif") left top no-repeat;} /* ie win hovers won't work without this rule */
 
 #sectionthumbs a:hover img.thumb-over {display:block; filter:alpha(opacity=50); -moz-opacity: 0.5; opacity: 0.5;}
 #sectionthumbs a.current:hover img.thumb-over {display:block; filter:alpha(opacity=100); -moz-opacity: 1; opacity: 1;}
@@ -864,33 +864,33 @@ img.right {
 	margin-bottom:10px;
 	}
 .lists ul.posts li {
-	list-style-image:url("../img/a_post.gif");
+	list-style-image:url("img/a_post.gif");
 	}
 .lists ul.categories li {
-	list-style-image:url("../img/a_category.gif");
+	list-style-image:url("img/a_category.gif");
 }
 .lists ul.client-list li {
-	list-style-image:url("../img/a_client.gif");
+	list-style-image:url("img/a_client.gif");
 }
 .lists ul.project-list li {
-	list-style-image:url("../img/a_project.gif");
+	list-style-image:url("img/a_project.gif");
 }
 .lists ul.entries-list li {
-	list-style-image:url("../img/a_post.gif");
+	list-style-image:url("img/a_post.gif");
 	}
 .lists ul.links li {
-	list-style-image:url("../img/a_link_arrow.gif");
+	list-style-image:url("img/a_link_arrow.gif");
 }
 .lists ul.file-download-list li {
-	list-style-image:url("../img/a_download.gif");
+	list-style-image:url("img/a_download.gif");
 	}
 .lists ul.feeds li {
-	list-style-image:url("../img/a_feed.gif");
+	list-style-image:url("img/a_feed.gif");
 }
 .lists ul.categories li.subcategory {
 	list-style-image:none;
 	padding-left:15px;
-	background:url("../img/a_subcategory.gif") left 3px no-repeat;
+	background:url("img/a_subcategory.gif") left 3px no-repeat;
 }
 .lists ul {
 	margin-bottom:15px;
@@ -1032,14 +1032,14 @@ form input#submit {
 	}
 form p.success {
 	color: #6cc33c;
-	background: #e2e4db url("../img/icon-tick.gif") left center no-repeat;
+	background: #e2e4db url("img/icon-tick.gif") left center no-repeat;
 	font-size: 99%;
 	margin: 0 0 9px;
 	padding-left: 24px;
 	}
 form p.error {
 	color: #ff4242;
-	background: #e2e4db url("../img/icon-cross.gif") left center no-repeat;
+	background: #e2e4db url("img/icon-cross.gif") left center no-repeat;
 	font-size: 99%;
 	margin: 0 0 9px;
 	padding-left: 24px;
@@ -1058,7 +1058,7 @@ dl.listing dt {
 	float: left;
 	}
 dl.listing dd {
-	background: url("../img/arrowred.gif") left 0.5em no-repeat;
+	background: url("img/arrowred.gif") left 0.5em no-repeat;
 	padding-left: 15px;
 	margin: 0 0 10px 110px;
 	}
