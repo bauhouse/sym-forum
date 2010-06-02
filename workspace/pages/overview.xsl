@@ -91,16 +91,16 @@
 	<xsl:param name="month" select="substring($date, 6, 2)"/>
 	<xsl:param name="day" select="substring($date, 9, 2)"/>
 	<xsl:param name="timesheet-entry-date">
-		<xsl:call-template name="get-formatted-date">
-			<xsl:with-param name="date" select="date"/>
-			<xsl:with-param name="format-type" select="'mixed'"/>
+		<xsl:call-template name="format-date">
+			<xsl:with-param name="date" select="start-time"/>
+			<xsl:with-param name="format" select="'x m Y'"/>
 		</xsl:call-template>
 	</xsl:param>
 	<xsl:param name="client-handle" select="client/item/@handle"/>
-	<xsl:param name="project-number" select="fields/project/item"/>
-	<a href="{$root}/timesheet/entry/{$client-handle}/{$project-number}/{@handle}/" 
-		title="Entry {@handle} | {$timesheet-entry-date} | {client/item} {project/item} | {function/item} | {hours} hr(s)">
-		<xsl:value-of select="description"/>
+	<xsl:param name="project-number" select="project/item/@id"/>
+	<a href="{$root}/timesheet/ticket/entry/{$client-handle}/{$project-number}/{@id}/"
+		title="Entry {number} | {$timesheet-entry-date} | {client/item}{$project-number} | {function/item} | {hours} hr(s)">
+		<xsl:value-of select="title"/>
 	</a>
 </xsl:template>
 

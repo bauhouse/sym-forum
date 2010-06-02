@@ -682,9 +682,10 @@ CREATE TABLE `tbl_entries_data_118` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_118` ***
+INSERT INTO `tbl_entries_data_118` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 47, 'rebuild-designadmin-in-symphony-208rc3', 'Rebuild DesignAdmin in Symphony 2.0.8RC3');
 
 -- *** STRUCTURE: `tbl_entries_data_119` ***
 DROP TABLE IF EXISTS `tbl_entries_data_119`;
@@ -696,9 +697,10 @@ CREATE TABLE `tbl_entries_data_119` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_119` ***
+INSERT INTO `tbl_entries_data_119` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 47, 'Porting templates created in Symphony 1.7.01', '<p>Porting templates created in Symphony 1.7.01</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_12` ***
 DROP TABLE IF EXISTS `tbl_entries_data_12`;
@@ -725,9 +727,10 @@ CREATE TABLE `tbl_entries_data_120` (
   `value` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_120` ***
+INSERT INTO `tbl_entries_data_120` (`id`, `entry_id`, `value`) VALUES (4, 47, 47);
 
 -- *** STRUCTURE: `tbl_entries_data_121` ***
 DROP TABLE IF EXISTS `tbl_entries_data_121`;
@@ -738,9 +741,10 @@ CREATE TABLE `tbl_entries_data_121` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_121` ***
+INSERT INTO `tbl_entries_data_121` (`id`, `entry_id`, `relation_id`) VALUES (4, 47, 15);
 
 -- *** STRUCTURE: `tbl_entries_data_122` ***
 DROP TABLE IF EXISTS `tbl_entries_data_122`;
@@ -751,9 +755,10 @@ CREATE TABLE `tbl_entries_data_122` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_122` ***
+INSERT INTO `tbl_entries_data_122` (`id`, `entry_id`, `relation_id`) VALUES (4, 47, 16);
 
 -- *** STRUCTURE: `tbl_entries_data_123` ***
 DROP TABLE IF EXISTS `tbl_entries_data_123`;
@@ -764,9 +769,10 @@ CREATE TABLE `tbl_entries_data_123` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_123` ***
+INSERT INTO `tbl_entries_data_123` (`id`, `entry_id`, `relation_id`) VALUES (4, 47, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_124` ***
 DROP TABLE IF EXISTS `tbl_entries_data_124`;
@@ -777,9 +783,10 @@ CREATE TABLE `tbl_entries_data_124` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_124` ***
+INSERT INTO `tbl_entries_data_124` (`id`, `entry_id`, `relation_id`) VALUES (4, 47, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_125` ***
 DROP TABLE IF EXISTS `tbl_entries_data_125`;
@@ -790,9 +797,10 @@ CREATE TABLE `tbl_entries_data_125` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_125` ***
+INSERT INTO `tbl_entries_data_125` (`id`, `entry_id`, `relation_id`) VALUES (4, 47, 32);
 
 -- *** STRUCTURE: `tbl_entries_data_126` ***
 DROP TABLE IF EXISTS `tbl_entries_data_126`;
@@ -805,9 +813,10 @@ CREATE TABLE `tbl_entries_data_126` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_126` ***
+INSERT INTO `tbl_entries_data_126` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (4, 47, '2010-06-02T09:30:00-07:00', 1275496200, 1275496200);
 
 -- *** STRUCTURE: `tbl_entries_data_127` ***
 DROP TABLE IF EXISTS `tbl_entries_data_127`;
@@ -820,9 +829,10 @@ CREATE TABLE `tbl_entries_data_127` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_127` ***
+INSERT INTO `tbl_entries_data_127` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (4, 47, '2010-06-02T11:24:00-07:00', 1275503040, 1275503040);
 
 -- *** STRUCTURE: `tbl_entries_data_128` ***
 DROP TABLE IF EXISTS `tbl_entries_data_128`;
@@ -835,9 +845,10 @@ CREATE TABLE `tbl_entries_data_128` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_128` ***
+INSERT INTO `tbl_entries_data_128` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 47, 8, 8);
 
 -- *** STRUCTURE: `tbl_entries_data_129` ***
 DROP TABLE IF EXISTS `tbl_entries_data_129`;
@@ -848,9 +859,10 @@ CREATE TABLE `tbl_entries_data_129` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_129` ***
+INSERT INTO `tbl_entries_data_129` (`id`, `entry_id`, `value`) VALUES (4, 47, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_13` ***
 DROP TABLE IF EXISTS `tbl_entries_data_13`;
@@ -878,9 +890,10 @@ CREATE TABLE `tbl_entries_data_130` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_130` ***
+INSERT INTO `tbl_entries_data_130` (`id`, `entry_id`, `relation_id`) VALUES (4, 47, 8);
 
 -- *** STRUCTURE: `tbl_entries_data_131` ***
 DROP TABLE IF EXISTS `tbl_entries_data_131`;
@@ -968,20 +981,20 @@ CREATE TABLE `tbl_entries_data_135` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_135` ***
 INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 26, 'project-management', 'Project Management');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 27, 'client-brief', 'Client Brief');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 28, 'creative-brief', 'Creative Brief');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (18, 27, 'art-direction', 'Art Direction');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (17, 28, 'meeting', 'Meeting');
 INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 29, 'analysis', 'Analysis');
 INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 30, 'strategy', 'Strategy');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 31, 'preliminary-concepts', 'Preliminary Concepts');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 32, 'comprehensive-layouts', 'Comprehensive Layouts');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (14, 31, 'design', 'Design');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (16, 32, 'prototyping', 'Prototyping');
 INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 33, 'development', 'Development');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 34, 'content-integration', 'Content Integration');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (12, 35, 'test-and-deploy', 'Test & Deploy');
-INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (13, 36, 'evaluate-results', 'Evaluate Results');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (15, 34, 'copywriting', 'Copywriting');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (20, 35, 'deploying', 'Deploying');
+INSERT INTO `tbl_entries_data_135` (`id`, `entry_id`, `handle`, `value`) VALUES (19, 36, 'testing', 'Testing');
 
 -- *** STRUCTURE: `tbl_entries_data_136` ***
 DROP TABLE IF EXISTS `tbl_entries_data_136`;
@@ -993,20 +1006,20 @@ CREATE TABLE `tbl_entries_data_136` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_136` ***
 INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 26, 'Managing the process and scheduling phases and tasks to meet the design objectives', '<p>Managing the process and scheduling phases and tasks to meet the design objectives</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 27, 'Initial discussions regarding the details and scope of the project', '<p>Initial discussions regarding the details and scope of the project</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 28, 'Initial project assessment, proposed creative direction and timeline', '<p>Initial project assessment, proposed creative direction and timeline</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (18, 27, 'Overseeing the creative direction of design concepts and comprehensive layouts', '<p>Overseeing the creative direction of design concepts and comprehensive layouts</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (17, 28, 'Initial project assessment, proposed creative direction and timeline', '<p>Initial project assessment, proposed creative direction and timeline</p>\n');
 INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 29, 'Information gathering and indepth analysis of the project requirements', '<p>Information gathering and indepth analysis of the project requirements</p>\n');
 INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 30, 'Assess the best means to convey the message and build the brand', '<p>Assess the best means to convey the message and build the brand</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 31, 'Explore possible solutions to the design problem', '<p>Explore possible solutions to the design problem</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 32, 'Establish design direction and refine layouts and design details', '<p>Establish design direction and refine layouts and design details</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 31, 'Explore possible solutions to the design problem', '<p>Explore possible solutions to the design problem</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (16, 32, 'HTML/CSS layouts and design', '<p>HTML/CSS layouts and design</p>\n');
 INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 33, 'Using the right tools to build the application, identity or branding message', '<p>Using the right tools to build the application, identity or branding message</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 34, 'Building the final product to the highest possible standards', '<p>Building the final product to the highest possible standards</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 35, 'Deploying sites and distributing media', '<p>Deploying sites and distributing media</p>\n');
-INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 36, 'Assess the results of the project in fulfilling the design objectives', '<p>Assess the results of the project in fulfilling the design objectives</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (15, 34, 'Building the final product to the highest possible standards', '<p>Building the final product to the highest possible standards</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (20, 35, 'Deploying sites and distributing media', '<p>Deploying sites and distributing media</p>\n');
+INSERT INTO `tbl_entries_data_136` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (19, 36, 'Assess the results of the project in fulfilling the design objectives', '<p>Assess the results of the project in fulfilling the design objectives</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_137` ***
 DROP TABLE IF EXISTS `tbl_entries_data_137`;
@@ -1017,20 +1030,20 @@ CREATE TABLE `tbl_entries_data_137` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_137` ***
 INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (1, 26, 24);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (2, 27, 21);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (3, 28, 21);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (18, 27, 23);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (17, 28, 21);
 INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (4, 29, 22);
 INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (5, 30, 22);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (8, 31, 23);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (9, 32, 23);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (14, 31, 23);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (16, 32, 23);
 INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (10, 33, 24);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (11, 34, 24);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (12, 35, 25);
-INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (13, 36, 25);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (15, 34, 24);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (20, 35, 25);
+INSERT INTO `tbl_entries_data_137` (`id`, `entry_id`, `relation_id`) VALUES (19, 36, 25);
 
 -- *** STRUCTURE: `tbl_entries_data_138` ***
 DROP TABLE IF EXISTS `tbl_entries_data_138`;
@@ -1041,20 +1054,20 @@ CREATE TABLE `tbl_entries_data_138` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_138` ***
 INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (1, 26, 1);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (2, 27, 2);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (3, 28, 3);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (4, 29, 4);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (5, 30, 5);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (8, 31, 6);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (9, 32, 7);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (18, 27, 5);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (17, 28, 2);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (4, 29, 3);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (5, 30, 4);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (14, 31, 6);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (16, 32, 7);
 INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (10, 33, 8);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (11, 34, 9);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (12, 35, 10);
-INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (13, 36, 11);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (15, 34, 9);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (20, 35, 10);
+INSERT INTO `tbl_entries_data_138` (`id`, `entry_id`, `value`) VALUES (19, 36, 11);
 
 -- *** STRUCTURE: `tbl_entries_data_139` ***
 DROP TABLE IF EXISTS `tbl_entries_data_139`;
@@ -2616,6 +2629,7 @@ INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `cr
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (44, 4, 1, '2010-06-01 11:59:18', '2010-06-01 18:59:18');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (45, 4, 1, '2010-06-01 12:10:57', '2010-06-01 19:10:57');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (46, 4, 1, '2010-06-01 13:48:11', '2010-06-01 20:48:11');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (47, 17, 1, '2010-06-02 09:32:26', '2010-06-02 16:32:26');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -2847,10 +2861,10 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (22, 20, 'Week', 'week', 'calendar', 'year/month/day/section/event', 'navigation', 'login', 6);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (23, 20, 'Day', 'day', 'calendar', 'year/month/day/section/event', 'navigation', 'login', 7);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (24, NULL, 'Login', 'login', NULL, NULL, 'navigation', NULL, 23);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (25, NULL, 'Overview', 'overview', NULL, NULL, 'client_names,navigation,project_titles', NULL, 24);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (25, NULL, 'Overview', 'overview', NULL, NULL, 'client_names,navigation,project_titles,timesheet_recent', NULL, 24);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (26, NULL, 'Clients', 'clients', NULL, 'client', 'clients,navigation', NULL, 25);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (27, NULL, 'Projects', 'projects', NULL, 'client/project/filter/sort', 'client,client_names,navigation,project,projects', NULL, 26);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (28, NULL, 'Timesheet', 'timesheet', NULL, 'page/client/project/entry', 'navigation', NULL, 27);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (28, NULL, 'Timesheet', 'timesheet', NULL, 'filter/page/client/project/entry', 'client_names,navigation,project_titles,timesheet_entry,timesheet_pages,timesheet_recent', NULL, 27);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (29, NULL, 'Brands', 'brands', NULL, 'brand/type/category/asset', 'navigation', NULL, 28);
 
 -- *** DATA: `tbl_pages_types` ***
@@ -2878,7 +2892,7 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (16, 'Tasks', 'tasks', 15, NULL, 'asc', 'no', 'Projects');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (17, 'Tickets', 'tickets', 16, NULL, 'asc', 'no', 'Projects');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (18, 'Phases', 'phases', 18, 134, 'asc', 'no', 'Projects');
-INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (19, 'Functions', 'functions', 19, NULL, 'asc', 'no', 'Projects');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (19, 'Functions', 'functions', 19, 138, 'asc', 'no', 'Projects');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (20, 'Project Types', 'project-types', 17, NULL, 'asc', 'no', 'Projects');
 
 -- *** DATA: `tbl_sections_association` ***
