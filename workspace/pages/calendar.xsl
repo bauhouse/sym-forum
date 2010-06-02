@@ -6,6 +6,7 @@
 <xsl:import href="../utilities/calendar-master.xsl"/>
 
 <xsl:param name="calendar-xml" select="document('../xml/calendar.xml')"/>
+<xsl:param name="holidays-xml" select="document('../xml/holidays.xml')"/>
 
 <xsl:template match="data">	
 	<xsl:param name="is-today">
@@ -548,7 +549,7 @@
 		</xsl:choose>
 	</xsl:param>
 	<xsl:param name="is-holiday">
-		<xsl:for-each select="iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day][not(rrule/item/@class='byday') and rrule/item[@class='freq']='yearly']">
+		<xsl:for-each select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day][not(rrule/item/@class='byday') and rrule/item[@class='freq']='yearly']">
 			<xsl:if test="substring(dtstart,5) = $this-month-day">1</xsl:if>
 		</xsl:for-each>
 	</xsl:param>
@@ -573,7 +574,7 @@
 				</xsl:if>
             	<span><a href="{$root}/calendar/{$year}/{$month}/{$day-dd}/"><xsl:value-of select="$day-int"/></a></span>
             	<xsl:if test="$is-holiday = 1">
-            		<p class="holiday"><xsl:value-of select="iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
+            		<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
             	</xsl:if>
             </td>
         </xsl:when>

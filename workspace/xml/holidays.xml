@@ -1,0 +1,295 @@
+<iCalendar>
+	<vcalendar version="2.0" x-wr-calname="Holidays" prodid="-//Apple Computer\, Inc//iCal 2.0//EN" x-wr-relcalid="EC7545B7-4F3E-4339-99F7-7EABF10CC71D" x-wr-timezone="America/Vancouver" calscale="GREGORIAN" method="PUBLISH">
+		<vevent>
+			<dtstart value="date">20021226</dtstart>
+			<dtend value="date">20021227</dtend>
+			<summary>Boxing Day</summary>
+			<uid>28D02380-F52B-49D2-AACA-70A808BC36E1</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">12</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020616</dtstart>
+			<dtend value="date">20020617</dtend>
+			<summary>Natiional Public Service Week</summary>
+			<uid>757A2A1D-AED1-4373-8367-517850F34817</uid>
+			<dtstamp>20020917T175459Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">6</item>
+				<item class="byday">3su</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020520</dtstart>
+			<dtend value="date">20020521</dtend>
+			<summary>Victoria Day</summary>
+			<uid>D27122FB-8484-4454-A67F-6CB1664112CF</uid>
+			<dtstamp>20020917T175455Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20030421</dtstart>
+			<dtend value="date">20030422</dtend>
+			<summary>Easter Monday</summary>
+			<uid>F5A66C42-C52B-4906-98D3-41DBA4F61C08</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20030420</dtstart>
+			<dtend value="date">20030421</dtend>
+			<summary>Easter</summary>
+			<uid>5A64771D-E38E-41B6-BD5A-3E9CDF287925</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020428</dtstart>
+			<dtend value="date">20020429</dtend>
+			<summary>Day of Mourning for Persons Killed or Injured in the Workplace</summary>
+			<uid>00098084-70CC-41F4-8FD6-C0E27E47263C</uid>
+			<dtstamp>20020917T175458Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">4</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020401</dtstart>
+			<dtend value="date">20020402</dtend>
+			<summary>Easter Monday</summary>
+			<uid>98A1C03F-9B1E-4B08-910C-90800180AD35</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20040411</dtstart>
+			<dtend value="date">20040412</dtend>
+			<summary>Easter</summary>
+			<uid>5019967B-134D-4106-994E-DB228FE5BE83</uid>
+			<dtstamp>20020917T175458Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20021111</dtstart>
+			<dtend value="date">20021112</dtend>
+			<summary>Remembrance Day</summary>
+			<uid>46A96CCB-3082-46B9-8CC8-10C99FCE657F</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">11</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020101</dtstart>
+			<dtend value="date">20020102</dtend>
+			<summary>New Year's Day</summary>
+			<uid>435FF7FD-0EAF-4841-9D22-101467415C28</uid>
+			<dtstamp>20020917T175455Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">1</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020512</dtstart>
+			<dtend value="date">20020513</dtend>
+			<summary>Mother's Day</summary>
+			<uid>003CC521-576F-4C36-84D1-809757229CA1</uid>
+			<dtstamp>20020917T175458Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">5</item>
+				<item class="byday">2su</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20021031</dtstart>
+			<dtend value="date">20021101</dtend>
+			<summary>Halloween</summary>
+			<uid>DB5F0B17-C7D2-426D-A006-7C84CA4AA5E9</uid>
+			<dtstamp>20020917T175459Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">10</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20021014</dtstart>
+			<dtend value="date">20021015</dtend>
+			<summary>Thanksgiving Day</summary>
+			<uid>92D4646F-64C9-44EA-B8F4-DCC1B373AC4A</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">10</item>
+				<item class="byday">2mo</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020214</dtstart>
+			<dtend value="date">20020215</dtend>
+			<summary>Valentine's Day</summary>
+			<uid>5EC775C5-E4DC-49BF-95F5-F9BB30D047DB</uid>
+			<dtstamp>20020917T175458Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">2</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20040524</dtstart>
+			<dtend value="date">20040525</dtend>
+			<summary>Victoria Day</summary>
+			<uid>E779575A-59A7-41DD-BBAD-EB66C6EF7A41</uid>
+			<dtstamp>20020917T175455Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020329</dtstart>
+			<dtend value="date">20020330</dtend>
+			<summary>Good Friday</summary>
+			<uid>DB46FA9B-125B-4453-B45D-0882D7EE5A59</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20030215</dtstart>
+			<dtend value="date">20030216</dtend>
+			<summary>Alberta Family Day</summary>
+			<uid>4C0C46A0-3882-434E-A501-28BA07378F95</uid>
+			<dtstamp>20020917T175458Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">2</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020805</dtstart>
+			<dtend value="date">20020806</dtend>
+			<summary>Civic or Provincial Holidays</summary>
+			<uid>4273A015-B0F9-4C7F-A13E-AA43A3B8C601</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">8</item>
+				<item class="byday">1mo</item>
+			</rrule>
+			<description>In Halifax Nova Scotia, this holiday varies from year to year. In all other parts of Nova Scotia it falls on the first Monday in August. In Prince Edward Island, this holiday is declared by proclamation. It is usually declared on the first Monday of August.</description>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020616</dtstart>
+			<dtend value="date">20020617</dtend>
+			<summary>Father's Day</summary>
+			<uid>F044C2F2-EBC0-412C-8FAB-F2B18E159E3C</uid>
+			<dtstamp>20020917T175459Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">6</item>
+				<item class="byday">3su</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20021225</dtstart>
+			<dtend value="date">20021226</dtend>
+			<summary>Christmas Day</summary>
+			<uid>2AB324B5-5F1A-4984-A525-F4A91B59FB2C</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">12</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020701</dtstart>
+			<dtend value="date">20020702</dtend>
+			<summary>Canada Day</summary>
+			<uid>551571B5-4079-4CAA-BF72-095B78F835CE</uid>
+			<dtstamp>20020917T175455Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">7</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20030418</dtstart>
+			<dtend value="date">20030419</dtend>
+			<summary>Good Friday</summary>
+			<uid>8B5BC459-4EEB-487D-BFC7-63D3F92A9539</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20050523</dtstart>
+			<dtend value="date">20050524</dtend>
+			<summary>Victoria Day</summary>
+			<uid>ED29F34C-7908-4DA3-96CC-9811FF4A3310</uid>
+			<dtstamp>20020917T175455Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020805</dtstart>
+			<dtend value="date">20020806</dtend>
+			<summary>British Columbia Day</summary>
+			<uid>4F8E8326-A54E-45CB-BD80-BF519D472737</uid>
+			<dtstamp>20020917T175458Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">8</item>
+				<item class="byday">1mo</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020331</dtstart>
+			<dtend value="date">20020401</dtend>
+			<summary>Easter</summary>
+			<uid>0F3F0659-B44E-4521-96FA-AE5E97EC1427</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20020902</dtstart>
+			<dtend value="date">20020903</dtend>
+			<summary>Labour Day</summary>
+			<uid>E51FB775-27C2-4DE3-8706-CE19231D4456</uid>
+			<dtstamp>20020917T175456Z</dtstamp>
+			<rrule>
+				<item class="freq">yearly</item>
+				<item class="interval">1</item>
+				<item class="bymonth">9</item>
+				<item class="byday">1mo</item>
+			</rrule>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20040412</dtstart>
+			<dtend value="date">20040413</dtend>
+			<summary>Easter Monday</summary>
+			<uid>A7298FA8-1513-4729-93EA-F9795CA581E9</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20030519</dtstart>
+			<dtend value="date">20030520</dtend>
+			<summary>Victoria Day</summary>
+			<uid>93F9D06C-705B-44BC-9860-8549370E5E0F</uid>
+			<dtstamp>20020917T175455Z</dtstamp>
+		</vevent>
+		<vevent>
+			<dtstart value="date">20040409</dtstart>
+			<dtend value="date">20040410</dtend>
+			<summary>Good Friday</summary>
+			<uid>68156DFC-02F2-4D4B-9C81-BE8511625418</uid>
+			<dtstamp>20020917T175457Z</dtstamp>
+		</vevent>
+	</vcalendar>
+</iCalendar>
