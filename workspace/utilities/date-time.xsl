@@ -215,8 +215,8 @@ d/n/y t => 21/09/81 6:30pm
       <xsl:value-of select="concat(':',$minute)"/>
 
       <xsl:choose>
-        <xsl:when test="$hour &lt; 12">am</xsl:when>
-        <xsl:otherwise>pm</xsl:otherwise>
+        <xsl:when test="$hour &lt; 12"> am</xsl:when>
+        <xsl:otherwise> pm</xsl:otherwise>
       </xsl:choose>
     </xsl:when>
   </xsl:choose>
