@@ -87,10 +87,10 @@
 							<tfoot>
 								<tr>
 									<td colspan="7" class="admin-links">
-										<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=1">
+										<a href="{$root}/symphony/publish/clients/new/">
 											New Client
 										</a>
-										| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=1">
+										| <a href="{$root}/symphony/publish/clients/">
 											List Clients
 										</a>
 									</td>
@@ -195,13 +195,13 @@
 											</xsl:if>
 											<xsl:if test="$logged-in='true'">
 												<p class="entry-info"><span>Symphony </span>
-													<a href="{$root}/symphony/?page=/publish/section/edit/&amp;_sid=1&amp;id={@id}">
+													<a href="{$root}/symphony/publish/clients/edit/{@id}/">
 														Edit Client
 													</a>
-													| <a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=1">
-														Create New
+													| <a href="{$root}/symphony/publish/clients/new/">
+														New Client
 													</a>
-													| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=1">
+													| <a href="{$root}/symphony/publish/clients">
 														List Clients
 													</a>
 												</p>
@@ -215,10 +215,10 @@
 							<div class="lists">
 								<h3>Client List</h3>
 								<p class="admin-links">
-									<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=1">
+									<a href="{$root}/symphony/publish/clients/new/">
 										New Client
 									</a>
-									| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=1">
+									| <a href="{$root}/symphony/publish/clients/">
 										List Clients
 									</a>
 								</p>

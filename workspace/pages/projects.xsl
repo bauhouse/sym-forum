@@ -188,10 +188,10 @@
 							<tfoot>
 								<tr>
 									<td colspan="8" class="admin-links">
-										<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=2">
+										<a href="{$root}/symphony/publish/projects/new/">
 											New Project
 										</a>
-										| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=2">
+										| <a href="{$root}/symphony/publish/projects/">
 											List Projects
 										</a>
 									</td>
@@ -249,13 +249,13 @@
 											</p>
 											<xsl:if test="$logged-in='true' and $member-info/role='Administrator'">
 												<p class="entry-info"><span>Symphony </span>
-													<a href="{$root}/symphony/?page=/publish/section/edit/&amp;_sid=2&amp;id={@id}">
+													<a href="{$root}/symphony/publish/projects/edit/{@id}/">
 														Edit Project
 													</a>
-													| <a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=2">
-														Create New
+													| <a href="{$root}/symphony/publish/projects/new/">
+														New Project
 													</a>
-													| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=2">
+													| <a href="{$root}/symphony/publish/projects/">
 														List Projects
 													</a>
 												</p>
@@ -269,10 +269,10 @@
 							<div class="lists">
 								<h3>Projects</h3>
 								<p class="admin-links">
-									<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=2">
+									<a href="{$root}/symphony/publish/projects/new/">
 										New Project
 									</a>
-									| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=2">
+									| <a href="{$root}/symphony/publish/projects/">
 										List Projects
 									</a>
 								</p>
@@ -284,13 +284,13 @@
 								</ul>
 							</div>
 							<div class="lists">
-								<h3>Project Items</h3>
+								<h3>Tickets</h3>
 								<p class="admin-links">
-									<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=14">
-										New Project Item
+									<a href="{$root}/symphony/publish/tickets/new/">
+										New Ticket
 									</a>
-									| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=14">
-										List Project Items
+									| <a href="{$root}/symphony/publish/tickets/">
+										List Tickets
 									</a>
 								</p>
 								<ul class="entries-list">

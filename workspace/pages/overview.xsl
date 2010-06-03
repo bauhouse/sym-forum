@@ -17,7 +17,7 @@
 							<a href="{$root}/symphony/publish/clients/new/">
 								New Client
 							</a>
-							| <a href="{$root}/symphony/publish/clients">
+							| <a href="{$root}/symphony/publish/clients/">
 								List Clients
 							</a>
 						</p>

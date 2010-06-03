@@ -337,14 +337,14 @@
 												</p>
 												<xsl:if test="$logged-in='true' and $member-info/role='Administrator'">
 													<p class="entry-info"><span>Symphony </span>
-														<a href="{$root}/symphony/?page=/publish/section/edit/&amp;_sid=5&amp;id={@id}">
-															Edit Entry
+														<a href="{$root}/symphony/publish/tickets/edit/{@id}/">
+															Edit Ticket
 														</a>
-														| <a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=5">
-															Create New
+														| <a href="{$root}/symphony/publish/tickets/new/">
+															Create Ticket
 														</a>
-														| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=5">
-															List Entries
+														| <a href="{$root}/symphony/publish/tickets/">
+															List Tickets
 														</a>
 													</p>
 												</xsl:if>
@@ -356,11 +356,11 @@
 									<div class="lists">
 										<h3>Recent Entries</h3>
 										<p class="admin-links">
-											<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=5">
-												New Entry
+											<a href="{$root}/symphony/publish/tickets/new/">
+												New Ticket
 											</a>
-											| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=5">
-												List Entries
+											| <a href="{$root}/symphony/publish/tickets/">
+												List Tickets
 											</a>
 										</p>
 										<ul class="entries-list">
