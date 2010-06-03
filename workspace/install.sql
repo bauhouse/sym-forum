@@ -22,15 +22,15 @@ CREATE TABLE `tbl_fields_checkbox` (
   `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_checkbox` ***
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (28, 9, 'off', 'Send me email when there is important news.');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (2, 15, 'off', 'Pin discussion');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (3, 16, 'off', 'Close this discussion');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (18, 28, 'on', NULL);
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (15, 38, 'off', NULL);
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (16, 39, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (30, 38, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (31, 39, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (11, 48, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (12, 49, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (14, 64, 'off', NULL);
@@ -45,13 +45,13 @@ CREATE TABLE `tbl_fields_date` (
   `pre_populate` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_date` ***
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (1, 12, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (2, 14, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (11, 19, 'yes');
-INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (10, 37, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (64, 37, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (7, 47, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (8, 60, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (9, 69, 'yes');
@@ -69,7 +69,7 @@ CREATE TABLE `tbl_fields_input` (
   `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=254 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_input` ***
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (185, 1, NULL);
@@ -80,8 +80,8 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (189, 7, N
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (6, 10, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (34, 21, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (35, 23, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (29, 29, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (30, 30, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (228, 29, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (229, 30, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (19, 40, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (20, 42, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (194, 50, NULL);
@@ -114,11 +114,11 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (163, 128,
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (184, 131, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (176, 135, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (178, 140, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (199, 142, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (213, 145, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (214, 147, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (215, 150, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (216, 156, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (219, 142, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (250, 145, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (251, 147, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (252, 150, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (253, 156, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (217, 157, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (218, 159, NULL);
 
@@ -249,14 +249,14 @@ CREATE TABLE `tbl_fields_selectbox_link` (
   `limit` int(4) unsigned NOT NULL DEFAULT '20',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=204 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=240 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_selectbox_link` ***
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (20, 18, 'no', 10, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (21, 26, 'no', 50, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (16, 33, 'no', 21, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (17, 34, 'no', 1, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (18, 35, 'no', 54, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (213, 33, 'no', 21, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (214, 34, 'no', 1, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (215, 35, 'no', 54, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (11, 41, 'no', 52, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (12, 45, 'no', 54, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (14, 61, 'no', 29, 20);
@@ -279,11 +279,11 @@ INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selec
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (160, 137, 'no', 131, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (175, 139, 'no', 131, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (183, 90, 'yes', 140, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (185, 143, 'no', 71, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (199, 146, 'no', 142, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (200, 151, 'no', 142, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (201, 152, 'no', 157, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (202, 153, 'no', 159, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (204, 143, 'no', 104, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (236, 146, 'no', 142, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (239, 151, 'no', 145, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (237, 152, 'no', 157, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (238, 153, 'no', 159, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (203, 160, 'no', 157, 20);
 
 -- *** STRUCTURE: `tbl_fields_systemid` ***
@@ -307,10 +307,10 @@ CREATE TABLE `tbl_fields_taglist` (
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`),
   KEY `pre_populate_source` (`pre_populate_source`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_taglist` ***
-INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (5, 36, NULL, 'existing');
+INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (6, 36, NULL, 'existing');
 INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (4, 46, NULL, 'existing');
 
 -- *** STRUCTURE: `tbl_fields_textarea` ***
@@ -322,14 +322,13 @@ CREATE TABLE `tbl_fields_textarea` (
   `size` int(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=134 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_textarea` ***
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (26, 17, 'markdown_with_purifier', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (28, 24, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (29, 25, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (22, 31, 'markdown_extra_with_smartypants', 6);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (23, 32, 'markdown_extra_with_smartypants', 18);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (120, 31, 'markdown_extra_with_smartypants', 6);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (15, 43, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (16, 44, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (96, 51, 'markdown_extra_with_smartypants', 15);
@@ -339,6 +338,7 @@ INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (19, 63, 'markdown_with_purifier', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (20, 68, NULL, 9);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (21, 70, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (121, 32, 'markdown_extra_with_smartypants', 18);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (49, 75, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (101, 95, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (92, 105, 'markdown_extra_with_smartypants', 20);
@@ -349,9 +349,9 @@ INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (91, 132, NULL, 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (83, 136, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (85, 141, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (102, 144, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (111, 148, 'markdown_extra_with_smartypants', 6);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (112, 149, 'markdown_extra_with_smartypants', 8);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (115, 144, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (132, 148, 'markdown_extra_with_smartypants', 6);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (133, 149, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (113, 158, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (114, 161, 'markdown_extra_with_smartypants', 15);
 
@@ -378,11 +378,11 @@ CREATE TABLE `tbl_fields_upload` (
   `validator` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_upload` ***
-INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (5, 154, '/workspace/assets/images', '/\\.(?:bmp|gif|jpe?g|png)$/i');
-INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (6, 155, '/workspace', '/\\.(?:doc|pdf|rtf|txt)$/i');
+INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (21, 154, '/workspace/assets/images', '/\\.(?:bmp|gif|jpe?g|png)$/i');
+INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (22, 155, '/workspace', '/\\.(?:doc|pdf|rtf|txt)$/i');
 
 -- *** STRUCTURE: `tbl_entries_data_1` ***
 DROP TABLE IF EXISTS `tbl_entries_data_1`;
@@ -488,10 +488,11 @@ CREATE TABLE `tbl_entries_data_104` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_104` ***
 INSERT INTO `tbl_entries_data_104` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 15, 'abc', 'ABC');
+INSERT INTO `tbl_entries_data_104` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 63, 'sym', 'SYM');
 
 -- *** STRUCTURE: `tbl_entries_data_105` ***
 DROP TABLE IF EXISTS `tbl_entries_data_105`;
@@ -1169,9 +1170,10 @@ CREATE TABLE `tbl_entries_data_142` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_142` ***
+INSERT INTO `tbl_entries_data_142` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 64, 'symphony-cms', 'Symphony CMS');
 
 -- *** STRUCTURE: `tbl_entries_data_143` ***
 DROP TABLE IF EXISTS `tbl_entries_data_143`;
@@ -1182,9 +1184,10 @@ CREATE TABLE `tbl_entries_data_143` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_143` ***
+INSERT INTO `tbl_entries_data_143` (`id`, `entry_id`, `relation_id`) VALUES (1, 64, 63);
 
 -- *** STRUCTURE: `tbl_entries_data_144` ***
 DROP TABLE IF EXISTS `tbl_entries_data_144`;
@@ -1196,9 +1199,10 @@ CREATE TABLE `tbl_entries_data_144` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_144` ***
+INSERT INTO `tbl_entries_data_144` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 64, 'XSLT-powered open source content management system', '<p>XSLT-powered open source content management system</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_145` ***
 DROP TABLE IF EXISTS `tbl_entries_data_145`;
@@ -1211,9 +1215,14 @@ CREATE TABLE `tbl_entries_data_145` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_145` ***
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 65, 'symphony-cms-colours', 'Symphony CMS Colours');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 66, 'the-symphony-cms-brand', 'The Symphony CMS Brand');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 69, 'typography', 'Typography');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 70, 'symphony-cms-logo', 'Symphony CMS Logo');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 71, 'symphony-logo-black', 'symphony-logo_black');
 
 -- *** STRUCTURE: `tbl_entries_data_146` ***
 DROP TABLE IF EXISTS `tbl_entries_data_146`;
@@ -1224,9 +1233,14 @@ CREATE TABLE `tbl_entries_data_146` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_146` ***
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 64);
 
 -- *** STRUCTURE: `tbl_entries_data_147` ***
 DROP TABLE IF EXISTS `tbl_entries_data_147`;
@@ -1239,9 +1253,13 @@ CREATE TABLE `tbl_entries_data_147` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_147` ***
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 65, 'colors-used-throughout-the-brand-identity', 'Colors used throughout the brand identity');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 66, 'an-introduction-to-the-symphony-cms-identity-design', 'An Introduction to the Symphony CMS Identity Design');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 70, 'logo', 'Logo');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 71, 'two-colour', 'Two Colour');
 
 -- *** STRUCTURE: `tbl_entries_data_148` ***
 DROP TABLE IF EXISTS `tbl_entries_data_148`;
@@ -1253,9 +1271,14 @@ CREATE TABLE `tbl_entries_data_148` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_148` ***
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 65, 'These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.', '<p>These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 69, 'Typography is a vital part of the identity system. Each typeface has its own character and evokes a different emotional and intellectual response.', '<p>Typography is a vital part of the identity system. Each typeface has its own character and evokes a different emotional and intellectual response.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 70, 'The Eagle West Cranes logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Eagle West is becoming a brand that is recognized around the world for its services and products.', '<p>The Eagle West Cranes logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Eagle West is becoming a brand that is recognized around the world for its services and products.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 71, 'This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.', '<p>This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 66, '#### About Symphony\r\n\r\n[Symphony](http://symphony-cms.com/) is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.\r\n', '<h4>About Symphony</h4>\n\n<p><a href=\"http://symphony-cms.com/\">Symphony</a> is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_149` ***
 DROP TABLE IF EXISTS `tbl_entries_data_149`;
@@ -1267,9 +1290,14 @@ CREATE TABLE `tbl_entries_data_149` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_149` ***
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 65, 'For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. \r\n\r\nIt is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).', '<p>For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. </p>\n\n<p>It is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 69, '#### Print Materials\r\n\r\nAll Corporate Stationery use a typeface family called DIN Mittelschrift, which is based on the German industry standard (\"Deutsche Industrie Norm\") for signage on the Autobahn.\r\n\r\nDIN has a clunky functionalism and a modern character that is highly legible for a geometric sans serif typeface.\r\n\r\nDIN is the supporting text family for all printed materials, including stationery.\r\n\r\n#### Web Type\r\n\r\nType on the web is limited to fonts that tend to be installed on computer systems as part of the most popular operating systems.\r\n\r\nWhere fonts are limited to standard libraries, Helvetica and Arial provide suitable complements or replacements for DIN on the web for headlines and text.', '<h4>Print Materials</h4>\n\n<p>All Corporate Stationery use a typeface family called DIN Mittelschrift, which is based on the German industry standard (&#8220;Deutsche Industrie Norm&#8221;) for signage on the Autobahn.</p>\n\n<p>DIN has a clunky functionalism and a modern character that is highly legible for a geometric sans serif typeface.</p>\n\n<p>DIN is the supporting text family for all printed materials, including stationery.</p>\n\n<h4>Web Type</h4>\n\n<p>Type on the web is limited to fonts that tend to be installed on computer systems as part of the most popular operating systems.</p>\n\n<p>Where fonts are limited to standard libraries, Helvetica and Arial provide suitable complements or replacements for DIN on the web for headlines and text.</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 70, 'Logos for each division of Eagle West have been packaged as individual [ZIP](http://en.wikipedia.org/wiki/ZIP_%28file_format%29) files. Contained within each ZIP file are the following file formats: [AI](http://en.wikipedia.org/wiki/Adobe_Illustrator) (Adobe Illustrator Version 8), [EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript), [JPEG](http://en.wikipedia.org/wiki/Jpeg), [PDF](http://en.wikipedia.org/wiki/Pdf), [PNG](http://en.wikipedia.org/wiki/Png). These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files\r\n\r\nNote: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).', '<p>Logos for each division of Eagle West have been packaged as individual <a href=\"http://en.wikipedia.org/wiki/ZIP_%28file_format%29\">ZIP</a> files. Contained within each ZIP file are the following file formats: <a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a> (Adobe Illustrator Version 8), <a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>, <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a>, <a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>, <a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>. These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files</p>\n\n<p>Note: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 71, NULL, NULL);
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 66, '#### Designed to do things your way\r\n\r\nSymphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.\r\n\r\n#### Powered by XML and XSLT\r\n\r\nSymphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.\r\n\r\nSymphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.\r\n\r\n#### Symphony Resources\r\n\r\nThe Symphony [community forum](http://symphony-cms.com/discuss/) is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.', '<h4>Designed to do things your way</h4>\n\n<p>Symphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.</p>\n\n<h4>Powered by XML and XSLT</h4>\n\n<p>Symphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.</p>\n\n<p>Symphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.</p>\n\n<h4>Symphony Resources</h4>\n\n<p>The Symphony <a href=\"http://symphony-cms.com/discuss/\">community forum</a> is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_15` ***
 DROP TABLE IF EXISTS `tbl_entries_data_15`;
@@ -1310,9 +1338,14 @@ CREATE TABLE `tbl_entries_data_151` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_151` ***
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 70);
 
 -- *** STRUCTURE: `tbl_entries_data_152` ***
 DROP TABLE IF EXISTS `tbl_entries_data_152`;
@@ -1323,9 +1356,14 @@ CREATE TABLE `tbl_entries_data_152` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_152` ***
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 49);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 51);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 49);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, 48);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 48);
 
 -- *** STRUCTURE: `tbl_entries_data_153` ***
 DROP TABLE IF EXISTS `tbl_entries_data_153`;
@@ -1336,9 +1374,14 @@ CREATE TABLE `tbl_entries_data_153` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_153` ***
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 58);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 61);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 57);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, 53);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 53);
 
 -- *** STRUCTURE: `tbl_entries_data_154` ***
 DROP TABLE IF EXISTS `tbl_entries_data_154`;
@@ -1843,9 +1886,11 @@ CREATE TABLE `tbl_entries_data_29` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_29` ***
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 67, 'brand-identity', 'Brand Identity');
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 68, 'logo-usage-guidelines', 'Logo Usage Guidelines');
 
 -- *** STRUCTURE: `tbl_entries_data_3` ***
 DROP TABLE IF EXISTS `tbl_entries_data_3`;
@@ -1888,9 +1933,11 @@ CREATE TABLE `tbl_entries_data_31` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_31` ***
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 67, 'The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.', '<p>The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.</p>\n');
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 68, 'The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.', '<p>The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_32` ***
 DROP TABLE IF EXISTS `tbl_entries_data_32`;
@@ -1902,9 +1949,11 @@ CREATE TABLE `tbl_entries_data_32` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_32` ***
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 67, 'By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.\r\n\r\nWhat follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.', '<p>By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.</p>\n\n<p>What follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.</p>\n');
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 68, '#### Print Reproduction and Signs\r\n\r\nWhen supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator ([AI](http://en.wikipedia.org/wiki/Adobe_Illustrator)) and Encapsulated PostScript ([EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript)) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.\r\n\r\nSigns are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.\r\n\r\n#### Desktop Applications\r\n\r\nFor Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.\r\n\r\nThe Joint Photographic Experts Group created the [JPEG](http://en.wikipedia.org/wiki/Jpeg) format as a standard compression format for photographs. The Portable Network Graphics ([PNG](http://en.wikipedia.org/wiki/Png)) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.\r\n\r\n#### Web Content\r\n\r\nFor internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.\r\n\r\nh4. Cross-Platform Viewing and Printing\r\n\r\nThe Portable Document Format ([PDF](http://en.wikipedia.org/wiki/Pdf)) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.', '<h4>Print Reproduction and Signs</h4>\n\n<p>When supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator (<a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a>) and Encapsulated PostScript (<a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.</p>\n\n<p>Signs are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.</p>\n\n<h4>Desktop Applications</h4>\n\n<p>For Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.</p>\n\n<p>The Joint Photographic Experts Group created the <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a> format as a standard compression format for photographs. The Portable Network Graphics (<a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.</p>\n\n<h4>Web Content</h4>\n\n<p>For internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.</p>\n\n<p>h4. Cross-Platform Viewing and Printing</p>\n\n<p>The Portable Document Format (<a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_33` ***
 DROP TABLE IF EXISTS `tbl_entries_data_33`;
@@ -1915,9 +1964,11 @@ CREATE TABLE `tbl_entries_data_33` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_33` ***
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (1, 67, 46);
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (2, 68, 46);
 
 -- *** STRUCTURE: `tbl_entries_data_34` ***
 DROP TABLE IF EXISTS `tbl_entries_data_34`;
@@ -1928,9 +1979,11 @@ CREATE TABLE `tbl_entries_data_34` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_34` ***
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (1, 67, NULL);
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (2, 68, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_35` ***
 DROP TABLE IF EXISTS `tbl_entries_data_35`;
@@ -1941,9 +1994,11 @@ CREATE TABLE `tbl_entries_data_35` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_35` ***
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (1, 67, NULL);
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (2, 68, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_36` ***
 DROP TABLE IF EXISTS `tbl_entries_data_36`;
@@ -1971,9 +2026,11 @@ CREATE TABLE `tbl_entries_data_37` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_37` ***
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (1, 67, '2010-06-03T11:01:00-07:00', 1275588060, 1275588060);
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (2, 68, '2010-06-03T11:02:00-07:00', 1275588120, 1275588120);
 
 -- *** STRUCTURE: `tbl_entries_data_38` ***
 DROP TABLE IF EXISTS `tbl_entries_data_38`;
@@ -1984,9 +2041,11 @@ CREATE TABLE `tbl_entries_data_38` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_38` ***
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (1, 67, 'yes');
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (2, 68, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_39` ***
 DROP TABLE IF EXISTS `tbl_entries_data_39`;
@@ -1997,9 +2056,11 @@ CREATE TABLE `tbl_entries_data_39` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_39` ***
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (1, 67, 'no');
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (2, 68, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_4` ***
 DROP TABLE IF EXISTS `tbl_entries_data_4`;
@@ -2535,10 +2596,11 @@ CREATE TABLE `tbl_entries_data_71` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_71` ***
 INSERT INTO `tbl_entries_data_71` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 15, 'abc-company-incorporated', 'ABC Company Incorporated');
+INSERT INTO `tbl_entries_data_71` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 63, 'symphony-cms', 'Symphony CMS');
 
 -- *** STRUCTURE: `tbl_entries_data_73` ***
 DROP TABLE IF EXISTS `tbl_entries_data_73`;
@@ -2551,10 +2613,11 @@ CREATE TABLE `tbl_entries_data_73` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_73` ***
 INSERT INTO `tbl_entries_data_73` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 15, 'advertising', 'Advertising');
+INSERT INTO `tbl_entries_data_73` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 63, 'web-development', 'Web Development');
 
 -- *** STRUCTURE: `tbl_entries_data_74` ***
 DROP TABLE IF EXISTS `tbl_entries_data_74`;
@@ -2567,10 +2630,11 @@ CREATE TABLE `tbl_entries_data_74` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_74` ***
 INSERT INTO `tbl_entries_data_74` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 15, 'active', 'Active');
+INSERT INTO `tbl_entries_data_74` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 63, 'active', 'Active');
 
 -- *** STRUCTURE: `tbl_entries_data_75` ***
 DROP TABLE IF EXISTS `tbl_entries_data_75`;
@@ -2582,10 +2646,11 @@ CREATE TABLE `tbl_entries_data_75` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_75` ***
 INSERT INTO `tbl_entries_data_75` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 15, NULL, NULL);
+INSERT INTO `tbl_entries_data_75` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 63, NULL, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_76` ***
 DROP TABLE IF EXISTS `tbl_entries_data_76`;
@@ -2598,10 +2663,11 @@ CREATE TABLE `tbl_entries_data_76` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_76` ***
 INSERT INTO `tbl_entries_data_76` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'http-wwwexamplecom', 'http://www.example.com');
+INSERT INTO `tbl_entries_data_76` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 63, 'http-symphony-cmscom', 'http://symphony-cms.com');
 
 -- *** STRUCTURE: `tbl_entries_data_77` ***
 DROP TABLE IF EXISTS `tbl_entries_data_77`;
@@ -2627,10 +2693,11 @@ CREATE TABLE `tbl_entries_data_78` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_78` ***
 INSERT INTO `tbl_entries_data_78` (`id`, `entry_id`, `relation_id`) VALUES (4, 15, NULL);
+INSERT INTO `tbl_entries_data_78` (`id`, `entry_id`, `relation_id`) VALUES (7, 63, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_79` ***
 DROP TABLE IF EXISTS `tbl_entries_data_79`;
@@ -2643,10 +2710,11 @@ CREATE TABLE `tbl_entries_data_79` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_79` ***
 INSERT INTO `tbl_entries_data_79` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'john-smith', 'John Smith');
+INSERT INTO `tbl_entries_data_79` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 63, 'allen-chang', 'Allen Chang');
 
 -- *** STRUCTURE: `tbl_entries_data_8` ***
 DROP TABLE IF EXISTS `tbl_entries_data_8`;
@@ -3035,6 +3103,15 @@ INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `cr
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (60, 24, 1, '2010-06-03 08:10:43', '2010-06-03 15:10:43');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (61, 24, 1, '2010-06-03 08:11:49', '2010-06-03 15:11:49');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (62, 24, 1, '2010-06-03 08:13:18', '2010-06-03 15:13:18');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (63, 13, 1, '2010-06-03 10:05:53', '2010-06-03 17:05:53');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (64, 21, 1, '2010-06-03 10:07:02', '2010-06-03 17:07:02');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (65, 22, 1, '2010-06-03 10:30:27', '2010-06-03 17:30:27');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (66, 22, 1, '2010-06-03 10:57:49', '2010-06-03 17:57:49');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (67, 5, 1, '2010-06-03 11:02:27', '2010-06-03 18:02:27');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (68, 5, 1, '2010-06-03 11:04:58', '2010-06-03 18:04:58');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (69, 22, 1, '2010-06-03 11:10:05', '2010-06-03 18:10:05');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (70, 22, 1, '2010-06-03 11:18:29', '2010-06-03 18:18:29');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (71, 22, 1, '2010-06-03 11:20:32', '2010-06-03 18:20:32');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -3133,9 +3210,9 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (30, 'Heading', 'heading', 'input', 5, 'no', 1, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (31, 'Description', 'description', 'textarea', 5, 'yes', 2, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (32, 'Body', 'body', 'textarea', 5, 'yes', 3, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (33, 'Section', 'section', 'selectbox_link', 5, 'yes', 4, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (33, 'Section', 'section', 'selectbox_link', 5, 'no', 4, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (34, 'Author', 'author', 'selectbox_link', 5, 'no', 5, 'sidebar', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (35, 'Categories', 'categories', 'selectbox_link', 5, 'yes', 6, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (35, 'Categories', 'categories', 'selectbox_link', 5, 'no', 6, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (36, 'Tags', 'tags', 'taglist', 5, 'no', 7, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (37, 'Date', 'date', 'date', 5, 'no', 8, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (38, 'Publish', 'publish', 'checkbox', 5, 'no', 9, 'sidebar', 'yes');
@@ -3244,14 +3321,14 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (143, 'Client', 'client', 'selectbox_link', 21, 'no', 1, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (144, 'Description', 'description', 'textarea', 21, 'no', 2, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (145, 'Asset', 'asset', 'input', 22, 'yes', 0, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (146, 'Brand', 'brand', 'selectbox_link', 22, 'yes', 1, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (147, 'Description', 'description', 'input', 22, 'no', 2, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (148, 'Overview', 'overview', 'textarea', 22, 'no', 3, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (149, 'Body', 'body', 'textarea', 22, 'yes', 4, 'sidebar', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (150, 'URL', 'url', 'input', 22, 'no', 5, 'sidebar', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (151, 'Parent Asset', 'parent-asset', 'selectbox_link', 22, 'no', 6, 'sidebar', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (152, 'Asset Type', 'asset-type', 'selectbox_link', 22, 'no', 7, 'sidebar', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (153, 'Asset Category', 'asset-category', 'selectbox_link', 22, 'yes', 8, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (146, 'Brand', 'brand', 'selectbox_link', 22, 'yes', 1, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (147, 'Description', 'description', 'input', 22, 'no', 5, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (148, 'Overview', 'overview', 'textarea', 22, 'no', 6, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (149, 'Body', 'body', 'textarea', 22, 'no', 7, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (150, 'URL', 'url', 'input', 22, 'no', 8, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (151, 'Parent Asset', 'parent-asset', 'selectbox_link', 22, 'no', 4, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (152, 'Asset Type', 'asset-type', 'selectbox_link', 22, 'no', 2, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (153, 'Asset Category', 'asset-category', 'selectbox_link', 22, 'no', 3, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (154, 'Image', 'image', 'upload', 22, 'no', 9, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (155, 'File', 'file', 'upload', 22, 'no', 10, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (156, 'File Formats', 'file-formats', 'input', 22, 'no', 11, 'sidebar', 'no');
@@ -3292,7 +3369,7 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (26, NULL, 'Clients', 'clients', NULL, 'client', 'clients,navigation', NULL, 25);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (27, NULL, 'Projects', 'projects', NULL, 'client/project/filter/sort', 'client,client_names,navigation,project,projects', NULL, 26);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (28, NULL, 'Timesheet', 'timesheet', NULL, 'filter/page/client/project/entry', 'client_names,navigation,project_titles,timesheet_entry,timesheet_pages,timesheet_recent', NULL, 27);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (29, NULL, 'Brands', 'brands', NULL, 'brand/type/category/asset', 'navigation', NULL, 28);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (29, NULL, 'Brands', 'brands', NULL, 'brand/type/category/asset', 'brand_assets,brands,brands_entries,navigation', NULL, 28);
 
 -- *** DATA: `tbl_pages_types` ***
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (9, 16, 'index');
@@ -3329,9 +3406,9 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 -- *** DATA: `tbl_sections_association` ***
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (20, 2, 10, 3, 18, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (21, 7, 50, 4, 26, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (16, 4, 21, 5, 33, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (17, 1, 1, 5, 34, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (18, 9, 54, 5, 35, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (212, 4, 21, 5, 33, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (213, 1, 1, 5, 34, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (214, 9, 54, 5, 35, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (11, 8, 52, 6, 41, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (12, 9, 54, 6, 45, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (14, 5, 29, 10, 61, 'no');
@@ -3342,7 +3419,7 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (183, 1, 1, 14, 91, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (172, 13, 104, 15, 97, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (173, 14, 96, 15, 98, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (184, 13, 71, 21, 143, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (203, 13, 104, 21, 143, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (113, 13, 104, 16, 114, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (114, 14, 96, 16, 115, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (115, 15, 103, 16, 116, 'no');
@@ -3355,10 +3432,10 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (171, 20, 140, 18, 133, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (159, 18, 131, 19, 137, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (174, 18, 131, 15, 139, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (198, 21, 142, 22, 146, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (199, 21, 142, 22, 151, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (200, 23, 157, 22, 152, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (201, 24, 159, 22, 153, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (235, 21, 142, 22, 146, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (238, 22, 145, 22, 151, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (236, 23, 157, 22, 152, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (237, 24, 159, 22, 153, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (202, 23, 157, 24, 160, 'no');
 
 -- *** DATA: `tbl_forum_read_discussions` ***
