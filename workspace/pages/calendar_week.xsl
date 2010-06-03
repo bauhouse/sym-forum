@@ -588,6 +588,12 @@
 						<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
 					</xsl:if>
 				</xsl:if>
+				<xsl:for-each select="/data/tickets/year[@value=$this-year]/month[@value=$this-month]/entry[substring(start-time,9) = $this-day][substring($time,1,2) = substring(start-time/@time,1,2)]">
+					<p>
+						<xsl:call-template name="link-to-timesheet-entry"/>
+						(<xsl:value-of select="hours"/>)
+					</p>
+				</xsl:for-each>
 			</td>
 		</xsl:when>
 	</xsl:choose>
@@ -889,6 +895,33 @@
 			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 1" />
 		</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="link-to-timesheet-entry">
+	<xsl:param name="timesheet-entry-date">
+		<xsl:call-template name="format-date">
+			<xsl:with-param name="date" select="start-time"/>
+			<xsl:with-param name="format" select="'x m Y'"/>
+		</xsl:call-template>
+	</xsl:param>
+	<xsl:param name="client-handle" select="client/item/@handle"/>
+	<xsl:param name="project-number" select="project/item/@id"/>
+	<a href="{$root}/timesheet/ticket/entry/{$client-handle}/{$project-number}/{@id}/"
+		title="Entry {@id} | {$timesheet-entry-date} | {client/item}{$project-number} | {function/item} | {hours} hr(s)">
+		<xsl:value-of select="title"/>
+	</a>
+</xsl:template>
+
+<xsl:template name="total-timesheet-hours">
+	<xsl:param name="date" select="$today"/>
+	<xsl:param name="year" select="substring($date,1,4)"/>
+	<xsl:param name="month" select="substring($date,6,2)"/>
+	<xsl:param name="day" select="substring($date,9,2)"/>
+	<xsl:param name="node-set" select="/data/tickets/year[@value=$this-year]/month[@value=$this-month]/entry[substring(start-time,9) = $day]/hours"/>
+	<xsl:param name="total" select="sum($node-set)"/>
+	<xsl:if test="$total &gt; 0">
+		<xsl:value-of select="$total"/>
+	</xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>
