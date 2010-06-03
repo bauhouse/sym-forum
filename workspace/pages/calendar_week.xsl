@@ -583,33 +583,40 @@
 		<!-- Current Month -->
 		<xsl:when test="$index &gt; $start - 1">
 			<td>
+
+		        <!-- Selected Day -->
 				<xsl:if test="$day-int = $day">
 					<xsl:attribute name="class">current</xsl:attribute>
 				</xsl:if>
+
+		        <!-- Today -->
 				<xsl:if test="$is-today = 1">
 					<xsl:attribute name="id">today</xsl:attribute>
 				</xsl:if>
+
+		        <!-- Days of the Week -->
 				<xsl:if test="$day-format = 'days'">
 					<span><a href="{$root}/calendar/week/{$year}/{$month}/{$day-dd}/"><xsl:value-of select="$day-int"/></a></span>
 					<xsl:if test="$is-holiday = 1">
 						<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
 					</xsl:if>
 				</xsl:if>
-            	<xsl:if test="$day-format = 'totals' and $total-hours-for-day &gt; 0">
-					<p>Total Hours: <xsl:value-of select="$total-hours-for-day"/></p>
-				</xsl:if>
+
+		        <!-- Hours of the Day -->
 				<xsl:for-each select="/data/tickets/year[@value=$this-year]/month[@value=$this-month]/entry[substring(start-time,9) = $this-day][substring($time,1,2) = substring(start-time/@time,1,2)]">
 					<p>
 						<xsl:call-template name="link-to-timesheet-entry"/>
 						(<xsl:value-of select="hours"/>)
 					</p>
 				</xsl:for-each>
+
+		        <!-- Timesheet Totals -->
+            	<xsl:if test="$day-format = 'totals' and $total-hours-for-day &gt; 0">
+					<p>Total Hours: <xsl:value-of select="$total-hours-for-day"/></p>
+				</xsl:if>
 			</td>
 		</xsl:when>
 	</xsl:choose>
-
-	<!-- End of choose statement for calendar content -->
-
 	<xsl:if test="$counter &gt; $index">
 		<xsl:call-template name="days">
 			<xsl:with-param name="year" select="$year"/>

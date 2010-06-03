@@ -553,26 +553,41 @@
 			<xsl:if test="substring(dtstart,5) = $this-month-day">1</xsl:if>
 		</xsl:for-each>
 	</xsl:param>
+
+	<!-- Define what get's displayed in the calendar cells here -->
+
     <xsl:choose>
+
+        <!-- Previous Month -->
         <xsl:when test="$index &lt; $start">
             <td class="previous-month-day">
             	<span><a href="{$root}/calendar/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
             </td>
         </xsl:when>
+
+        <!-- Next Month -->
         <xsl:when test="$day-int &gt; $count">
             <td class="next-month-day">
             	<span><a href="{$root}/calendar/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
             </td>
         </xsl:when>
+
+        <!-- Current Month -->
         <xsl:when test="$index &gt; $start - 1">
             <td>
+
+		        <!-- Selected Day -->
 				<xsl:if test="$day-int = $day">
 					<xsl:attribute name="class">current</xsl:attribute>
 				</xsl:if>
+
+		        <!-- Today -->
 				<xsl:if test="$is-today = 1">
 					<xsl:attribute name="id">today</xsl:attribute>
 				</xsl:if>
             	<span><a href="{$root}/calendar/{$year}/{$month}/{$day-dd}/"><xsl:value-of select="$day-int"/></a></span>
+
+		        <!-- Holidays -->
             	<xsl:if test="$is-holiday = 1">
             		<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
             	</xsl:if>
