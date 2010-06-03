@@ -14,10 +14,10 @@
 					<div class="lists">
 						<h3>Clients</h3>
 						<p class="admin-links">
-							<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=1">
+							<a href="{$root}/symphony/publish/clients/new/">
 								New Client
 							</a>
-							| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=1">
+							| <a href="{$root}/symphony/publish/clients">
 								List Clients
 							</a>
 						</p>
@@ -33,10 +33,10 @@
 					<div class="lists">
 						<h3>Projects</h3>
 						<p class="admin-links">
-							<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=2">
+							<a href="{$root}/symphony/publish/projects/new/">
 								New Project
 							</a>
-							| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=2">
+							| <a href="{$root}/symphony/publish/projects/">
 								List Projects
 							</a>
 						</p>
@@ -52,11 +52,11 @@
 					<div class="lists">
 						<h3>Timesheet</h3>
 						<p class="admin-links">
-							<a href="{$root}/symphony/?page=/publish/section/new/&amp;_sid=5">
-								New Entry
+							<a href="{$root}/symphony/publish/tickets/new/">
+								New Ticket
 							</a>
-							| <a href="{$root}/symphony/?page=/publish/section/&amp;_sid=5">
-								List Entries
+							| <a href="{$root}/symphony/publish/tickets/">
+								List Tickets
 							</a>
 						</p>
 						<ul class="entries-list">
