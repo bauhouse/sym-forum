@@ -43,39 +43,39 @@
 			</xsl:when>
 		</xsl:choose>
 	</xsl:param>
-    <xsl:param name="day">
-    	<xsl:choose>
-    		<xsl:when test="not($year) or $year='today'">
-    			<xsl:value-of select="substring($date,9,2)"/>
-    		</xsl:when>
-    		<xsl:otherwise>
-    			<xsl:value-of select="format-number($day,'00')"/>
-    		</xsl:otherwise>
-    	</xsl:choose>
-    </xsl:param>
-    <xsl:param name="month">
-    	<xsl:choose>
-    		<xsl:when test="not($year) or $year='today'">
-    			<xsl:value-of select="substring($date,6,2)"/>
-    		</xsl:when>
-    		<xsl:when test="not($month) and $year!='today'">
-    			<xsl:value-of select="'01'"/>
-    		</xsl:when>
-    		<xsl:otherwise>
-    			<xsl:value-of select="format-number($month,'00')"/>
-    		</xsl:otherwise>
-    	</xsl:choose>
-    </xsl:param>
-    <xsl:param name="year">
-    	<xsl:choose>
-    		<xsl:when test="not($year) or $year='today'">
-    			<xsl:value-of select="substring($date,1,4)"/>
-    		</xsl:when>
-    		<xsl:otherwise>
-    			<xsl:value-of select="format-number($year,'0000')"/>
-    		</xsl:otherwise>
-    	</xsl:choose>
-    </xsl:param>
+	<xsl:param name="day">
+		<xsl:choose>
+			<xsl:when test="not($year) or $year='today'">
+				<xsl:value-of select="substring($date,9,2)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="format-number($day,'00')"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:param>
+	<xsl:param name="month">
+		<xsl:choose>
+			<xsl:when test="not($year) or $year='today'">
+				<xsl:value-of select="substring($date,6,2)"/>
+			</xsl:when>
+			<xsl:when test="not($month) and $year!='today'">
+				<xsl:value-of select="'01'"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="format-number($month,'00')"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:param>
+	<xsl:param name="year">
+		<xsl:choose>
+			<xsl:when test="not($year) or $year='today'">
+				<xsl:value-of select="substring($date,1,4)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="format-number($year,'0000')"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:param>
 	<xsl:param name="month-days">
 		<xsl:call-template name="month-days">
 			<xsl:with-param name="year" select="$year"/>
@@ -344,10 +344,10 @@
 </xsl:template>
 
 <xsl:template name="calendar-month">
-    <xsl:param name="year" select="$year"/>
-    <xsl:param name="month" select="$month"/>
-    <xsl:param name="day" select="$day"/>
-    <xsl:param name="weekday-format"/>
+	<xsl:param name="year" select="$year"/>
+	<xsl:param name="month" select="$month"/>
+	<xsl:param name="day" select="$day"/>
+	<xsl:param name="weekday-format"/>
 	<table summary="calendar">
 		<thead>
 			<tr>
@@ -398,7 +398,7 @@
 	<xsl:param name="year" select="'2007'"/>
 	<xsl:param name="month" select="'07'"/>
 	<xsl:param name="day" select="'24'"/>
-    <xsl:param name="date" select="concat($year,'-',$month,'-',$day)"/>
+	<xsl:param name="date" select="concat($year,'-',$month,'-',$day)"/>
 	<xsl:param name="first-day-of-the-month" select="concat($year,'-',$month,'-01')"/>
 	<xsl:param name="leap-year">
 		<xsl:call-template name="is-leap-year">
@@ -449,16 +449,16 @@
 	<xsl:param name="year" select="'2007'"/>
 	<xsl:param name="month" select="'07'"/>
 	<xsl:param name="day" select="'24'"/>
-    <xsl:param name="index" select="1"/>
-    <tr>
-        <xsl:call-template name="days">
+	<xsl:param name="index" select="1"/>
+	<tr>
+		<xsl:call-template name="days">
 			<xsl:with-param name="year" select="$year"/>
 			<xsl:with-param name="month" select="$month"/>
 			<xsl:with-param name="day" select="$day"/>
-            <xsl:with-param name="index" select="$index"/>
-            <xsl:with-param name="counter" select="$index + 6"/>
-        </xsl:call-template>
-    </tr>
+			<xsl:with-param name="index" select="$index"/>
+			<xsl:with-param name="counter" select="$index + 6"/>
+		</xsl:call-template>
+	</tr>
 </xsl:template>
 
 <!-- Called by week -->
@@ -519,30 +519,30 @@
 		</xsl:call-template>
 	</xsl:param>
 
-    <xsl:param name="index" select="1"/>
-    <xsl:param name="counter" select="1"/>
-    <xsl:param name="day-int" select="$index - $start + 1"/>
-    <xsl:param name="day-dd" select="format-number($day-int,'00')"/>
-    <xsl:param name="previous-day" select="$previous-month-days + $day-int"/>
-    <xsl:param name="next-day" select="format-number($day-int - $month-days,'00')"/>
-    <xsl:param name="this-date">
-    	<xsl:choose>
-    		<xsl:when test="$day-int &gt; 0 and $day-int &lt;= $month-days">
-    			<xsl:value-of select="concat($year,'-',$month,'-',$day-dd)"/>
-    		</xsl:when>
-    		<xsl:when test="$day-int &lt; 1">
-    			<xsl:value-of select="concat($previous-month-year,'-',$previous-month,'-',$previous-day)"/>
-    		</xsl:when>
-    		<xsl:when test="$day-int &gt; $month-days">
-    			<xsl:value-of select="concat($next-month-year,'-',$next-month,'-',$next-day)"/>
-    		</xsl:when>
-    	</xsl:choose>
-    </xsl:param>
-    <xsl:param name="this-year" select="substring($this-date,1,4)"/>
-    <xsl:param name="this-month" select="substring($this-date,6,2)"/>
-    <xsl:param name="this-day" select="substring($this-date,9,2)"/>
-    <xsl:param name="this-day-int" select="format-number($this-day,'0')"/>
-    <xsl:param name="this-month-day" select="substring(translate($this-date, '-', ''),5)"/>
+	<xsl:param name="index" select="1"/>
+	<xsl:param name="counter" select="1"/>
+	<xsl:param name="day-int" select="$index - $start + 1"/>
+	<xsl:param name="day-dd" select="format-number($day-int,'00')"/>
+	<xsl:param name="previous-day" select="$previous-month-days + $day-int"/>
+	<xsl:param name="next-day" select="format-number($day-int - $month-days,'00')"/>
+	<xsl:param name="this-date">
+		<xsl:choose>
+			<xsl:when test="$day-int &gt; 0 and $day-int &lt;= $month-days">
+				<xsl:value-of select="concat($year,'-',$month,'-',$day-dd)"/>
+			</xsl:when>
+			<xsl:when test="$day-int &lt; 1">
+				<xsl:value-of select="concat($previous-month-year,'-',$previous-month,'-',$previous-day)"/>
+			</xsl:when>
+			<xsl:when test="$day-int &gt; $month-days">
+				<xsl:value-of select="concat($next-month-year,'-',$next-month,'-',$next-day)"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:param>
+	<xsl:param name="this-year" select="substring($this-date,1,4)"/>
+	<xsl:param name="this-month" select="substring($this-date,6,2)"/>
+	<xsl:param name="this-day" select="substring($this-date,9,2)"/>
+	<xsl:param name="this-day-int" select="format-number($this-day,'0')"/>
+	<xsl:param name="this-month-day" select="substring(translate($this-date, '-', ''),5)"/>
 	<xsl:param name="is-today">
 		<xsl:choose>
 			<xsl:when test="$this-date = $today">1</xsl:when>
@@ -563,44 +563,44 @@
 
 	<!-- Define what get's displayed in the calendar cells here -->
 
-    <xsl:choose>
+	<xsl:choose>
 
-        <!-- Previous Month -->
-        <xsl:when test="$index &lt; $start">
-            <td class="previous-month-day">
-            	<span><a href="{$root}/calendar/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
-            </td>
-        </xsl:when>
+		<!-- Previous Month -->
+		<xsl:when test="$index &lt; $start">
+			<td class="previous-month-day">
+				<span><a href="{$root}/calendar/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
+			</td>
+		</xsl:when>
 
-        <!-- Next Month -->
-        <xsl:when test="$day-int &gt; $count">
-            <td class="next-month-day">
-            	<span><a href="{$root}/calendar/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
-            </td>
-        </xsl:when>
+		<!-- Next Month -->
+		<xsl:when test="$day-int &gt; $count">
+			<td class="next-month-day">
+				<span><a href="{$root}/calendar/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
+			</td>
+		</xsl:when>
 
-        <!-- Current Month -->
-        <xsl:when test="$index &gt; $start - 1">
-            <td>
+		<!-- Current Month -->
+		<xsl:when test="$index &gt; $start - 1">
+			<td>
 
-		        <!-- Selected Day -->
+				<!-- Selected Day -->
 				<xsl:if test="$day-int = $day">
 					<xsl:attribute name="class">current</xsl:attribute>
 				</xsl:if>
 
-		        <!-- Today -->
+				<!-- Today -->
 				<xsl:if test="$is-today = 1">
 					<xsl:attribute name="id">today</xsl:attribute>
 				</xsl:if>
-            	<span><a href="{$root}/calendar/{$year}/{$month}/{$day-dd}/"><xsl:value-of select="$day-int"/></a></span>
+				<span><a href="{$root}/calendar/{$year}/{$month}/{$day-dd}/"><xsl:value-of select="$day-int"/></a></span>
 
-		        <!-- Holidays -->
-            	<xsl:if test="$is-holiday = 1">
-            		<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
-            	</xsl:if>
+				<!-- Holidays -->
+				<xsl:if test="$is-holiday = 1">
+					<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
+				</xsl:if>
 
-		        <!-- Timesheet Totals -->
-            	<xsl:if test="$total-hours-for-day &gt; 0">
+				<!-- Timesheet Totals -->
+				<xsl:if test="$total-hours-for-day &gt; 0">
 					<p>
 						<a href="{$root}/calendar/week/{$this-year}/{$this-month}/{$this-day}/">
 							<xsl:value-of select="$total-hours-for-day"/>
@@ -611,18 +611,18 @@
 						</a>
 					</p>
 				</xsl:if>
-            </td>
-        </xsl:when>
-    </xsl:choose>
-    <xsl:if test="$counter &gt; $index">
-        <xsl:call-template name="days">
+			</td>
+		</xsl:when>
+	</xsl:choose>
+	<xsl:if test="$counter &gt; $index">
+		<xsl:call-template name="days">
 			<xsl:with-param name="year" select="$year"/>
 			<xsl:with-param name="month" select="$month"/>
 			<xsl:with-param name="day" select="$day"/>
-            <xsl:with-param name="index" select="$index + 1"/>
-            <xsl:with-param name="counter" select="$counter"/>
-        </xsl:call-template>
-    </xsl:if>
+			<xsl:with-param name="index" select="$index + 1"/>
+			<xsl:with-param name="counter" select="$counter"/>
+		</xsl:call-template>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template name="month-days">
@@ -826,28 +826,26 @@
 		</xsl:call-template>
 	</xsl:param>
 	<xsl:param name="days">
-	   <xsl:choose>
-		  <xsl:when test="$leap and $month > 2">
+		<xsl:choose>
+			<xsl:when test="$leap and $month > 2">
 			 <xsl:value-of select="$month-days + $day + 1" />
-		  </xsl:when>
-		  <xsl:otherwise>
+			</xsl:when>
+			<xsl:otherwise>
 			 <xsl:value-of select="$month-days + $day" />
-		  </xsl:otherwise>
-	   </xsl:choose>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:param>
 	<xsl:param name="y-1" select="$year - 1" />
 	<xsl:param name="day-of-week" 
-				  select="(($y-1 + floor($y-1 div 4) -
-						   floor($y-1 div 100) + floor($y-1 div 400) +
-						   $days) 
-						   mod 7) + 1" />
+		select="(($y-1 + floor($y-1 div 4) - floor($y-1 div 100) +
+			floor($y-1 div 400) + $days) mod 7) + 1" />
 	<xsl:choose>
-	   <xsl:when test="($day - $day-of-week) mod 7">
-		  <xsl:value-of select="floor(($day - $day-of-week) div 7) + 2" />
-	   </xsl:when>
-	   <xsl:otherwise>
-		  <xsl:value-of select="floor(($day - $day-of-week) div 7) + 1" />
-	   </xsl:otherwise>
+		<xsl:when test="($day - $day-of-week) mod 7">
+			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 2" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 1" />
+		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
 

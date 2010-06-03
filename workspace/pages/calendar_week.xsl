@@ -902,8 +902,8 @@
 	</xsl:param>
 	<xsl:param name="y-1" select="$year - 1" />
 	<xsl:param name="day-of-week" 
-			select="(($y-1 + floor($y-1 div 4) - floor($y-1 div 100) + 
-				floor($y-1 div 400) + $days) mod 7) + 1" />
+		select="(($y-1 + floor($y-1 div 4) - floor($y-1 div 100) +
+			floor($y-1 div 400) + $days) mod 7) + 1" />
 	<xsl:choose>
 		<xsl:when test="($day - $day-of-week) mod 7">
 			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 2" />
