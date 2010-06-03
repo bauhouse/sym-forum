@@ -593,45 +593,62 @@
 </xsl:template>
 
 <xsl:template name="calendar-week-hours">
-	<xsl:param name="minutes" select="'00'"/>
-	<xsl:param name="am-pm" select="'AM'"/>
+	<xsl:param name="year" select="'2007'"/>
+	<xsl:param name="month" select="'07'"/>
+	<xsl:param name="day" select="'24'"/>
+    <xsl:param name="minutes" select="'00'"/>
+    <xsl:param name="am-pm" select="'AM'"/>
 	<xsl:param name="count" select="0"/>
-	<xsl:param name="hour">
-		<xsl:choose>
-			<xsl:when test="$count = 0">12</xsl:when>
-			<xsl:otherwise><xsl:value-of select="$count"/></xsl:otherwise>
-		</xsl:choose>
-	</xsl:param>
+    <xsl:param name="hour" select="$count"/>
+    <xsl:param name="time" select="concat(format-number($hour,'00'),':',$minutes)"/>
+    <xsl:param name="formatted-time">
+    	<xsl:call-template name="format-time">
+    		<xsl:with-param name="time" select="$time"/>
+    		<xsl:with-param name="format" select="'t'"/>
+    	</xsl:call-template>
+    </xsl:param>
 	<tr class="hour-row">
-		<td class="hour"><xsl:value-of select="concat($hour,':',$minutes,' ',$am-pm)"/></td>
+		<td class="hour"><xsl:value-of select="$formatted-time"/></td>
 		<xsl:call-template name="week">
 			<xsl:with-param name="year" select="$year"/>
 			<xsl:with-param name="month" select="$month"/>
 			<xsl:with-param name="day" select="$day"/>
 			<xsl:with-param name="day-format" select="'hours'"/>
+			<xsl:with-param name="time" select="$time"/>
 		</xsl:call-template>
 	</tr>
-	<xsl:if test="$count &lt; 11 and $am-pm = 'AM'">
-		<xsl:call-template name="calendar-week-hours">
+    <xsl:if test="$count &lt; 23">
+        <xsl:call-template name="calendar-week-hours">
+			<xsl:with-param name="year" select="$year"/>
+			<xsl:with-param name="month" select="$month"/>
+			<xsl:with-param name="day" select="$day"/>
 			<xsl:with-param name="minutes" select="$minutes"/>
 			<xsl:with-param name="am-pm" select="$am-pm"/>
-			<xsl:with-param name="count" select="$count + 1"/>
+            <xsl:with-param name="count" select="$count + 1"/>
+        </xsl:call-template>
+    </xsl:if>
+    <xsl:if test="$count = 23">
+        <xsl:call-template name="calendar-week-timesheet-totals">
+			<xsl:with-param name="year" select="$year"/>
+			<xsl:with-param name="month" select="$month"/>
+			<xsl:with-param name="day" select="$day"/>
+        </xsl:call-template>
+    </xsl:if>
+</xsl:template>
+
+<xsl:template name="calendar-week-timesheet-totals">
+	<xsl:param name="year" select="'2007'"/>
+	<xsl:param name="month" select="'07'"/>
+	<xsl:param name="day" select="'24'"/>
+	<tr class="hour-row">
+		<td class="hour totals">Total Hours</td>
+		<xsl:call-template name="week">
+			<xsl:with-param name="year" select="$year"/>
+			<xsl:with-param name="month" select="$month"/>
+			<xsl:with-param name="day" select="$day"/>
+			<xsl:with-param name="day-format" select="'totals'"/>
 		</xsl:call-template>
-	</xsl:if>
-	<xsl:if test="$count = 11 and $am-pm = 'AM'">
-		<xsl:call-template name="calendar-week-hours">
-			<xsl:with-param name="minutes" select="$minutes"/>
-			<xsl:with-param name="am-pm" select="'PM'"/>
-			<xsl:with-param name="count" select="0"/>
-		</xsl:call-template>
-	</xsl:if>
-	<xsl:if test="$count &lt; 11 and $am-pm = 'PM'">
-		<xsl:call-template name="calendar-week-hours">
-			<xsl:with-param name="minutes" select="$minutes"/>
-			<xsl:with-param name="am-pm" select="$am-pm"/>
-			<xsl:with-param name="count" select="$count + 1"/>
-		</xsl:call-template>
-	</xsl:if>
+	</tr>
 </xsl:template>
 
 <xsl:template name="month-days">
