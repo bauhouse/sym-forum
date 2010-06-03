@@ -934,7 +934,7 @@
 	<xsl:param name="year" select="substring($date,1,4)"/>
 	<xsl:param name="month" select="substring($date,6,2)"/>
 	<xsl:param name="day" select="substring($date,9,2)"/>
-	<xsl:param name="node-set" select="/data/tickets/year[@value=$this-year]/month[@value=$this-month]/entry[substring(start-time,9) = $day]/hours"/>
+	<xsl:param name="node-set" select="/data/tickets/year[@value=$year]/month[@value=$month]/entry[substring(start-time,9) = $day]/hours"/>
 	<xsl:param name="total" select="sum($node-set)"/>
 	<xsl:if test="$total &gt; 0">
 		<xsl:value-of select="$total"/>
