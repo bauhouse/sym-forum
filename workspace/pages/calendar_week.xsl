@@ -366,7 +366,7 @@
 					<xsl:with-param name="month" select="$month"/>
 					<xsl:with-param name="day" select="$day"/>
 				</xsl:call-template>
-			  </tr>
+				 </tr>
 			<xsl:call-template name="calendar-week-hours">
 				<xsl:with-param name="year" select="$year"/>
 				<xsl:with-param name="month" select="$month"/>
@@ -569,7 +569,7 @@
 				<xsl:if test="$is-today = 1">
 					<xsl:attribute name="id">today</xsl:attribute>
 				</xsl:if>
-            	<xsl:if test="$day-format = 'days'">
+				<xsl:if test="$day-format = 'days'">
 					<span><a href="{$root}/calendar/week/{$year}/{$month}/{$day-dd}/"><xsl:value-of select="$day-int"/></a></span>
 					<xsl:if test="$is-holiday = 1">
 						<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
@@ -596,17 +596,17 @@
 	<xsl:param name="year" select="'2007'"/>
 	<xsl:param name="month" select="'07'"/>
 	<xsl:param name="day" select="'24'"/>
-    <xsl:param name="minutes" select="'00'"/>
-    <xsl:param name="am-pm" select="'AM'"/>
+	<xsl:param name="minutes" select="'00'"/>
+	<xsl:param name="am-pm" select="'AM'"/>
 	<xsl:param name="count" select="0"/>
-    <xsl:param name="hour" select="$count"/>
-    <xsl:param name="time" select="concat(format-number($hour,'00'),':',$minutes)"/>
-    <xsl:param name="formatted-time">
-    	<xsl:call-template name="format-time">
-    		<xsl:with-param name="time" select="$time"/>
-    		<xsl:with-param name="format" select="'t'"/>
-    	</xsl:call-template>
-    </xsl:param>
+	<xsl:param name="hour" select="$count"/>
+	<xsl:param name="time" select="concat(format-number($hour,'00'),':',$minutes)"/>
+	<xsl:param name="formatted-time">
+		<xsl:call-template name="format-time">
+			<xsl:with-param name="time" select="$time"/>
+			<xsl:with-param name="format" select="'t'"/>
+		</xsl:call-template>
+	</xsl:param>
 	<tr class="hour-row">
 		<td class="hour"><xsl:value-of select="$formatted-time"/></td>
 		<xsl:call-template name="week">
@@ -617,23 +617,23 @@
 			<xsl:with-param name="time" select="$time"/>
 		</xsl:call-template>
 	</tr>
-    <xsl:if test="$count &lt; 23">
-        <xsl:call-template name="calendar-week-hours">
+	<xsl:if test="$count &lt; 23">
+		<xsl:call-template name="calendar-week-hours">
 			<xsl:with-param name="year" select="$year"/>
 			<xsl:with-param name="month" select="$month"/>
 			<xsl:with-param name="day" select="$day"/>
 			<xsl:with-param name="minutes" select="$minutes"/>
 			<xsl:with-param name="am-pm" select="$am-pm"/>
-            <xsl:with-param name="count" select="$count + 1"/>
-        </xsl:call-template>
-    </xsl:if>
-    <xsl:if test="$count = 23">
-        <xsl:call-template name="calendar-week-timesheet-totals">
+			<xsl:with-param name="count" select="$count + 1"/>
+		</xsl:call-template>
+	</xsl:if>
+	<xsl:if test="$count = 23">
+		<xsl:call-template name="calendar-week-timesheet-totals">
 			<xsl:with-param name="year" select="$year"/>
 			<xsl:with-param name="month" select="$month"/>
 			<xsl:with-param name="day" select="$day"/>
-        </xsl:call-template>
-    </xsl:if>
+		</xsl:call-template>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template name="calendar-week-timesheet-totals">
@@ -863,10 +863,8 @@
 	</xsl:param>
 	<xsl:param name="y-1" select="$year - 1" />
 	<xsl:param name="day-of-week" 
-				  select="(($y-1 + floor($y-1 div 4) -
-							 floor($y-1 div 100) + floor($y-1 div 400) +
-							 $days)
-							 mod 7) + 1" />
+			select="(($y-1 + floor($y-1 div 4) - floor($y-1 div 100) + 
+				floor($y-1 div 400) + $days) mod 7) + 1" />
 	<xsl:choose>
 		<xsl:when test="($day - $day-of-week) mod 7">
 			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 2" />
