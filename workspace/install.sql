@@ -69,7 +69,7 @@ CREATE TABLE `tbl_fields_input` (
   `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=218 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_input` ***
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (185, 1, NULL);
@@ -120,7 +120,7 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (214, 147,
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (215, 150, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (216, 156, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (217, 157, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (212, 159, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (218, 159, NULL);
 
 -- *** STRUCTURE: `tbl_fields_member` ***
 DROP TABLE IF EXISTS `tbl_fields_member`;
@@ -181,13 +181,14 @@ CREATE TABLE `tbl_fields_order_entries` (
   `hide` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`id`),
   UNIQUE KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_fields_order_entries` ***
 INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (4, 27, NULL, 'no');
 INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (12, 134, NULL, 'yes');
 INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (10, 138, NULL, 'yes');
 INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (13, 162, NULL, 'no');
+INSERT INTO `tbl_fields_order_entries` (`id`, `field_id`, `force_sort`, `hide`) VALUES (14, 163, NULL, 'no');
 
 -- *** STRUCTURE: `tbl_fields_pages` ***
 DROP TABLE IF EXISTS `tbl_fields_pages`;
@@ -248,7 +249,7 @@ CREATE TABLE `tbl_fields_selectbox_link` (
   `limit` int(4) unsigned NOT NULL DEFAULT '20',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=203 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=204 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_selectbox_link` ***
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (20, 18, 'no', 10, 20);
@@ -283,7 +284,7 @@ INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selec
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (200, 151, 'no', 142, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (201, 152, 'no', 157, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (202, 153, 'no', 159, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (198, 160, 'no', 157, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (203, 160, 'no', 157, 20);
 
 -- *** STRUCTURE: `tbl_fields_systemid` ***
 DROP TABLE IF EXISTS `tbl_fields_systemid`;
@@ -321,7 +322,7 @@ CREATE TABLE `tbl_fields_textarea` (
   `size` int(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=114 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_textarea` ***
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (26, 17, 'markdown_with_purifier', 15);
@@ -352,7 +353,7 @@ INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (111, 148, 'markdown_extra_with_smartypants', 6);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (112, 149, 'markdown_extra_with_smartypants', 8);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (113, 158, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (110, 161, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (114, 161, 'markdown_extra_with_smartypants', 15);
 
 -- *** STRUCTURE: `tbl_fields_uniqueinput` ***
 DROP TABLE IF EXISTS `tbl_fields_uniqueinput`;
@@ -1438,9 +1439,19 @@ CREATE TABLE `tbl_entries_data_159` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_159` ***
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 53, 'logos', 'Logos');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 54, 'symbol', 'Symbol');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 55, 'logotype', 'Logotype');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 56, 'signatures', 'Signatures');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 57, 'typography', 'Typography');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 58, 'colours', 'Colours');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 59, 'stationery', 'Stationery');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 60, 'identity-guidelines', 'Identity Guidelines');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 61, 'overview', 'Overview');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 62, 'wordmark', 'Wordmark');
 
 -- *** STRUCTURE: `tbl_entries_data_16` ***
 DROP TABLE IF EXISTS `tbl_entries_data_16`;
@@ -1466,9 +1477,19 @@ CREATE TABLE `tbl_entries_data_160` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_160` ***
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (1, 53, 48);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (2, 54, 48);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (3, 55, 48);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (4, 56, 48);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (5, 57, 49);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (6, 58, 49);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (7, 59, 50);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (8, 60, 50);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (9, 61, 51);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (10, 62, 48);
 
 -- *** STRUCTURE: `tbl_entries_data_161` ***
 DROP TABLE IF EXISTS `tbl_entries_data_161`;
@@ -1480,9 +1501,19 @@ CREATE TABLE `tbl_entries_data_161` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_161` ***
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 53, 'The visual elements of a brand identity', '<p>The visual elements of a brand identity</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 54, 'The image or icon element of the visual identity', '<p>The image or icon element of the visual identity</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 55, 'The typographic elements of a visual identity', '<p>The typographic elements of a visual identity</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 56, 'A logo format that combines the symbol and logotype', '<p>A logo format that combines the symbol and logotype</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 57, 'Type families chosen for use throughout the identity program', '<p>Type families chosen for use throughout the identity program</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 58, 'Colour palette to be used throughout the identity program', '<p>Colour palette to be used throughout the identity program</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 59, 'Letterhead, Business Card, Envelopes and related forms of business communications', '<p>Letterhead, Business Card, Envelopes and related forms of business communications</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 60, 'A document that provides standards and guidelines for using brand assets', '<p>A document that provides standards and guidelines for using brand assets</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 61, 'Overviews and text content for online identity assets and guidelines', '<p>Overviews and text content for online identity assets and guidelines</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 62, 'The verbal elements of a visual identity', '<p>The verbal elements of a visual identity</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_162` ***
 DROP TABLE IF EXISTS `tbl_entries_data_162`;
@@ -1493,9 +1524,37 @@ CREATE TABLE `tbl_entries_data_162` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_162` ***
+INSERT INTO `tbl_entries_data_162` (`id`, `entry_id`, `value`) VALUES (1, 49, 2);
+INSERT INTO `tbl_entries_data_162` (`id`, `entry_id`, `value`) VALUES (2, 48, 1);
+INSERT INTO `tbl_entries_data_162` (`id`, `entry_id`, `value`) VALUES (3, 50, 3);
+INSERT INTO `tbl_entries_data_162` (`id`, `entry_id`, `value`) VALUES (4, 51, 4);
+INSERT INTO `tbl_entries_data_162` (`id`, `entry_id`, `value`) VALUES (5, 52, 5);
+
+-- *** STRUCTURE: `tbl_entries_data_163` ***
+DROP TABLE IF EXISTS `tbl_entries_data_163`;
+CREATE TABLE `tbl_entries_data_163` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` double DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_163` ***
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (1, 53, 1);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (2, 54, 2);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (3, 55, 3);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (4, 62, 4);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (5, 56, 5);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (6, 57, 6);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (7, 58, 7);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (8, 59, 8);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (9, 60, 9);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (10, 61, 10);
 
 -- *** STRUCTURE: `tbl_entries_data_17` ***
 DROP TABLE IF EXISTS `tbl_entries_data_17`;
@@ -2966,6 +3025,16 @@ INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `cr
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (50, 23, 1, '2010-06-03 07:54:44', '2010-06-03 14:54:44');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (51, 23, 1, '2010-06-03 07:55:07', '2010-06-03 14:55:07');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (52, 23, 1, '2010-06-03 07:55:26', '2010-06-03 14:55:26');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (53, 24, 1, '2010-06-03 08:05:32', '2010-06-03 15:05:32');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (54, 24, 1, '2010-06-03 08:06:15', '2010-06-03 15:06:15');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (55, 24, 1, '2010-06-03 08:07:14', '2010-06-03 15:07:14');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (56, 24, 1, '2010-06-03 08:07:51', '2010-06-03 15:07:51');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (57, 24, 1, '2010-06-03 08:08:46', '2010-06-03 15:08:46');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (58, 24, 1, '2010-06-03 08:09:15', '2010-06-03 15:09:15');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (59, 24, 1, '2010-06-03 08:09:48', '2010-06-03 15:09:48');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (60, 24, 1, '2010-06-03 08:10:43', '2010-06-03 15:10:43');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (61, 24, 1, '2010-06-03 08:11:49', '2010-06-03 15:11:49');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (62, 24, 1, '2010-06-03 08:13:18', '2010-06-03 15:13:18');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -3192,6 +3261,7 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (160, 'Asset Type', 'asset-type', 'selectbox_link', 24, 'no', 1, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (161, 'Description', 'description', 'textarea', 24, 'yes', 2, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (162, 'Sort', 'sort', 'order_entries', 23, 'no', 2, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (163, 'Sort', 'sort', 'order_entries', 24, 'no', 3, 'main', 'yes');
 
 -- *** DATA: `tbl_pages` ***
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', 'forum_discussions,forum_read_discussions,navigation,search_comments,whosonline', 'forum_utilities', 3);
@@ -3253,8 +3323,8 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (20, 'Project Types', 'project-types', 17, NULL, 'asc', 'no', 'Projects');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (21, 'Brands', 'brands', 20, NULL, 'asc', 'no', 'Assets');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (22, 'Brand Assets', 'brand-assets', 21, NULL, 'asc', 'no', 'Assets');
-INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (23, 'Asset Types', 'asset-types', 22, 157, 'desc', 'no', 'Assets');
-INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (24, 'Asset Categories', 'asset-categories', 23, NULL, 'asc', 'no', 'Assets');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (23, 'Asset Types', 'asset-types', 22, 162, 'asc', 'no', 'Assets');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (24, 'Asset Categories', 'asset-categories', 23, 163, 'asc', 'no', 'Assets');
 
 -- *** DATA: `tbl_sections_association` ***
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (20, 2, 10, 3, 18, 'no');
@@ -3289,7 +3359,7 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (199, 21, 142, 22, 151, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (200, 23, 157, 22, 152, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (201, 24, 159, 22, 153, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (197, 23, 157, 24, 160, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (202, 23, 157, 24, 160, 'no');
 
 -- *** DATA: `tbl_forum_read_discussions` ***
 INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (1, 8, 9, 1275320433, 1);
