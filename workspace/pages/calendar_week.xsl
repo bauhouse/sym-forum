@@ -550,17 +550,30 @@
 			<xsl:if test="substring(dtstart,5) = $this-month-day">1</xsl:if>
 		</xsl:for-each>
 	</xsl:param>
+
+	<!-- Define what get's displayed in the calendar cells here -->
+
 	<xsl:choose>
+
+		<!-- Previous Month -->
 		<xsl:when test="$index &lt; $start">
 			<td class="previous-month-day">
-				<span><a href="{$root}/calendar/week/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
+				<xsl:if test="$day-format = 'days'">
+					<span><a href="{$root}/calendar/week/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
+				</xsl:if>
 			</td>
 		</xsl:when>
+
+		<!-- Next Month -->
 		<xsl:when test="$day-int &gt; $count">
 			<td class="next-month-day">
-				<span><a href="{$root}/calendar/week/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
+				<xsl:if test="$day-format = 'days'">
+					<span><a href="{$root}/calendar/week/{$this-year}/{$this-month}/{$this-day}/"><xsl:value-of select="$this-day-int"/></a></span>
+				</xsl:if>
 			</td>
 		</xsl:when>
+
+		<!-- Current Month -->
 		<xsl:when test="$index &gt; $start - 1">
 			<td>
 				<xsl:if test="$day-int = $day">
@@ -578,6 +591,9 @@
 			</td>
 		</xsl:when>
 	</xsl:choose>
+
+	<!-- End of choose statement for calendar content -->
+
 	<xsl:if test="$counter &gt; $index">
 		<xsl:call-template name="days">
 			<xsl:with-param name="year" select="$year"/>
