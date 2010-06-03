@@ -110,7 +110,9 @@
 							<div id="entries">
 								<div class="entry">
 									<xsl:for-each select="clients/entry[code/@handle=$client]">
-										<p class="entry-data"><xsl:value-of select="client-code"/></p>
+										<p class="entry-data">
+											<a href="{$root}/clients/{code/@handle}/"><xsl:value-of select="code"/></a>
+										</p>
 										<div class="entry-body">
 											<h2>
 												<a href="{$root}/clients/{code/@handle}/">
