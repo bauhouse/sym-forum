@@ -54,8 +54,8 @@
 										<xsl:choose>
 											<xsl:when test="website-url">
 												<td class="link">
-													<a href="http://{website-url}" title="View website: {website-url}">
-														<xsl:value-of select="website-url"/>
+													<a href="{website-url}" title="View website: {website-url}">
+														<xsl:value-of select="substring-after(website-url,'http://')"/>
 													</a>
 												</td>
 											</xsl:when>
@@ -165,8 +165,8 @@
 											<xsl:if test="website-url">
 												<p class="entry-info">
 													<span>Website </span>
-													<a href="http://{website-url}" title="View website: {website-url}">
-														<xsl:value-of select="website-url"/>
+													<a href="{website-url}" title="View website: {website-url}">
+														<xsl:value-of select="substring-after(website-url,'http://')"/>
 													</a>
 												</p>
 											</xsl:if>
