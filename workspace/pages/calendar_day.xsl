@@ -7,6 +7,7 @@
 <xsl:import href="../utilities/calendar-master.xsl"/>
 
 <xsl:param name="calendar-xml" select="document('../xml/calendar.xml')"/>
+<xsl:param name="holidays-xml" select="document('../xml/holidays.xml')"/>
 
 <xsl:template match="data">	
 	<xsl:param name="is-today">
@@ -341,13 +342,13 @@
 </xsl:template>
 
 <xsl:template name="calendar-day">
-    <xsl:param name="year" select="$year"/>
-    <xsl:param name="month" select="$month"/>
-    <xsl:param name="day" select="$day"/>
+	<xsl:param name="year" select="$year"/>
+	<xsl:param name="month" select="$month"/>
+	<xsl:param name="day" select="$day"/>
 	<xsl:param name="date" select="concat($year,'-',$month,'-',$day)"/>
-    <xsl:param name="this-month-day" select="substring(translate($date, '-', ''),5)"/>
+	<xsl:param name="this-month-day" select="substring(translate($date, '-', ''),5)"/>
 	<xsl:param name="is-holiday">
-		<xsl:for-each select="iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day][not(rrule/item/@class='byday') and rrule/item[@class='freq']='yearly']">
+		<xsl:for-each select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day][not(rrule/item/@class='byday') and rrule/item[@class='freq']='yearly']">
 			<xsl:if test="substring(dtstart,5) = $this-month-day">1</xsl:if>
 		</xsl:for-each>
 	</xsl:param>
@@ -357,7 +358,7 @@
 				<th>
 					<xsl:if test="$is-holiday = 1">
 						<xsl:attribute name="class">holiday</xsl:attribute>
-						<xsl:value-of select="iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/>
+						<xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/>
 					</xsl:if>
 				</th>
 				<th>
@@ -373,46 +374,69 @@
 			</tr>
 		</thead>
 		<tbody>
-			<xsl:call-template name="calendar-day-hours"/>
+			<xsl:call-template name="calendar-day-hours">
+				<xsl:with-param name="year" select="$year"/>
+				<xsl:with-param name="month" select="$month"/>
+				<xsl:with-param name="day" select="$day"/>
+			</xsl:call-template>
 		</tbody>
 	</table>
 </xsl:template>
 
 <xsl:template name="calendar-day-hours">
-    <xsl:param name="minutes" select="'00'"/>
-    <xsl:param name="am-pm" select="'AM'"/>
+	<xsl:param name="year" select="$year"/>
+	<xsl:param name="month" select="$month"/>
+	<xsl:param name="day" select="$day"/>
+	<xsl:param name="minutes" select="'00'"/>
+	<xsl:param name="am-pm" select="'AM'"/>
 	<xsl:param name="count" select="0"/>
-    <xsl:param name="hour">
-    	<xsl:choose>
-    		<xsl:when test="$count = 0">12</xsl:when>
-    		<xsl:otherwise><xsl:value-of select="$count"/></xsl:otherwise>
-    	</xsl:choose>
-    </xsl:param>
-	<tr>
-		<td class="hour"><xsl:value-of select="concat($hour,':',$minutes,' ',$am-pm)"/></td>
-		<td></td>
+	<xsl:param name="hour" select="$count"/>
+	<xsl:param name="time" select="concat(format-number($hour,'00'),':',$minutes)"/>
+	<xsl:param name="formatted-time">
+		<xsl:call-template name="format-time">
+			<xsl:with-param name="time" select="$time"/>
+			<xsl:with-param name="format" select="'t'"/>
+		</xsl:call-template>
+	</xsl:param>
+	<xsl:param name="total-hours-for-day">
+		<xsl:call-template name="total-timesheet-hours">
+			<xsl:with-param name="year" select="$year"/>
+			<xsl:with-param name="month" select="$month"/>
+			<xsl:with-param name="day" select="$day"/>
+		</xsl:call-template>
+	</xsl:param>
+	<tr class="hour-row">
+		<td class="hour"><xsl:value-of select="$formatted-time"/></td>
+		<td>
+			<!-- Hours of the Day -->
+			<xsl:for-each select="/data/tickets/year[@value=$year]/month[@value=$month]/entry[substring(start-time,9) = $day][substring($time,1,2) = substring(start-time/@time,1,2)]">
+				<p>
+					<xsl:call-template name="link-to-timesheet-entry"/>
+					(<xsl:value-of select="hours"/>)
+				</p>
+			</xsl:for-each>
+		</td>
 	</tr>
-    <xsl:if test="$count &lt; 11 and $am-pm = 'AM'">
-        <xsl:call-template name="calendar-day-hours">
+	<xsl:if test="$count &lt; 23">
+		<xsl:call-template name="calendar-day-hours">
+			<xsl:with-param name="year" select="$year"/>
+			<xsl:with-param name="month" select="$month"/>
+			<xsl:with-param name="day" select="$day"/>
 			<xsl:with-param name="minutes" select="$minutes"/>
 			<xsl:with-param name="am-pm" select="$am-pm"/>
-            <xsl:with-param name="count" select="$count + 1"/>
-        </xsl:call-template>
-    </xsl:if>
-    <xsl:if test="$count = 11 and $am-pm = 'AM'">
-        <xsl:call-template name="calendar-day-hours">
-			<xsl:with-param name="minutes" select="$minutes"/>
-			<xsl:with-param name="am-pm" select="'PM'"/>
-            <xsl:with-param name="count" select="0"/>
-        </xsl:call-template>
-    </xsl:if>
-    <xsl:if test="$count &lt; 11 and $am-pm = 'PM'">
-        <xsl:call-template name="calendar-day-hours">
-			<xsl:with-param name="minutes" select="$minutes"/>
-			<xsl:with-param name="am-pm" select="$am-pm"/>
-            <xsl:with-param name="count" select="$count + 1"/>
-        </xsl:call-template>
-    </xsl:if>
+			<xsl:with-param name="count" select="$count + 1"/>
+		</xsl:call-template>
+	</xsl:if>
+	<xsl:if test="$count = 23">
+		<tr class="hour-row">
+			<td class="hour totals">Total Hours</td>
+			<td>
+				<xsl:if test="$total-hours-for-day &gt; 0">
+					<p>Total Hours: <xsl:value-of select="$total-hours-for-day"/></p>
+				</xsl:if>
+			</td>
+		</tr>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template name="month-days">
@@ -683,29 +707,55 @@
 		</xsl:call-template>
 	</xsl:param>
 	<xsl:param name="days">
-	   <xsl:choose>
-		  <xsl:when test="$leap and $month > 2">
-			 <xsl:value-of select="$month-days + $day + 1" />
-		  </xsl:when>
-		  <xsl:otherwise>
-			 <xsl:value-of select="$month-days + $day" />
-		  </xsl:otherwise>
-	   </xsl:choose>
+		<xsl:choose>
+			<xsl:when test="$leap and $month > 2">
+				<xsl:value-of select="$month-days + $day + 1" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$month-days + $day" />
+			</xsl:otherwise>
+	</xsl:choose>
 	</xsl:param>
 	<xsl:param name="y-1" select="$year - 1" />
 	<xsl:param name="day-of-week" 
-				  select="(($y-1 + floor($y-1 div 4) -
-						   floor($y-1 div 100) + floor($y-1 div 400) +
-						   $days) 
-						   mod 7) + 1" />
+			select="(($y-1 + floor($y-1 div 4) -
+					floor($y-1 div 100) + floor($y-1 div 400) +
+					$days) mod 7) + 1" />
 	<xsl:choose>
-	   <xsl:when test="($day - $day-of-week) mod 7">
-		  <xsl:value-of select="floor(($day - $day-of-week) div 7) + 2" />
-	   </xsl:when>
-	   <xsl:otherwise>
-		  <xsl:value-of select="floor(($day - $day-of-week) div 7) + 1" />
-	   </xsl:otherwise>
+		<xsl:when test="($day - $day-of-week) mod 7">
+			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 2" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="floor(($day - $day-of-week) div 7) + 1" />
+		</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="link-to-timesheet-entry">
+	<xsl:param name="timesheet-entry-date">
+		<xsl:call-template name="format-date">
+			<xsl:with-param name="date" select="start-time"/>
+			<xsl:with-param name="format" select="'x m Y'"/>
+		</xsl:call-template>
+	</xsl:param>
+	<xsl:param name="client-handle" select="client/item/@handle"/>
+	<xsl:param name="project-number" select="project/item/@id"/>
+	<a href="{$root}/timesheet/ticket/entry/{$client-handle}/{$project-number}/{@id}/"
+		title="Entry {@id} | {$timesheet-entry-date} | {client/item}{$project-number} | {function/item} | {hours} hr(s)">
+		<xsl:value-of select="title"/>
+	</a>
+</xsl:template>
+
+<xsl:template name="total-timesheet-hours">
+	<xsl:param name="date" select="concat($year,'-',$month,'-',$day)"/>
+	<xsl:param name="year" select="substring($date,1,4)"/>
+	<xsl:param name="month" select="substring($date,6,2)"/>
+	<xsl:param name="day" select="substring($date,9,2)"/>
+	<xsl:param name="node-set" select="/data/tickets/year[@value=$year]/month[@value=$month]/entry[substring(start-time,9) = $day]/hours"/>
+	<xsl:param name="total" select="sum($node-set)"/>
+	<xsl:if test="$total &gt; 0">
+		<xsl:value-of select="$total"/>
+	</xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>

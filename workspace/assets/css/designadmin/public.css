@@ -1446,6 +1446,9 @@ h3.failure {
 	padding:.6em 1em .3em 0;
 	width:90%;
 	}
+.calendar-day table tbody tr td p {
+	margin-top: 0;
+	}
 .calendar-day table tbody tr td.hour {
 	width:10%;
 	text-align:right;

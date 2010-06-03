@@ -553,6 +553,13 @@
 			<xsl:if test="substring(dtstart,5) = $this-month-day">1</xsl:if>
 		</xsl:for-each>
 	</xsl:param>
+	<xsl:param name="total-hours-for-day">
+		<xsl:call-template name="total-timesheet-hours">
+			<xsl:with-param name="year" select="$year"/>
+			<xsl:with-param name="month" select="$month"/>
+			<xsl:with-param name="day" select="$this-day"/>
+		</xsl:call-template>
+	</xsl:param>
 
 	<!-- Define what get's displayed in the calendar cells here -->
 
@@ -591,6 +598,19 @@
             	<xsl:if test="$is-holiday = 1">
             		<p class="holiday"><xsl:value-of select="$holidays-xml/iCalendar/vcalendar[@x-wr-calname='Holidays']/vevent[substring(dtstart,5) = $this-month-day]/summary"/></p>
             	</xsl:if>
+
+		        <!-- Timesheet Totals -->
+            	<xsl:if test="$total-hours-for-day &gt; 0">
+					<p>
+						<a href="{$root}/calendar/week/{$this-year}/{$this-month}/{$this-day}/">
+							<xsl:value-of select="$total-hours-for-day"/>
+							<xsl:choose>
+								<xsl:when test="$total-hours-for-day &gt; 1"> Hours</xsl:when>
+								<xsl:otherwise> Hour</xsl:otherwise>
+							</xsl:choose>
+						</a>
+					</p>
+				</xsl:if>
             </td>
         </xsl:when>
     </xsl:choose>
@@ -856,6 +876,18 @@
 		</xsl:when>
 		<xsl:otherwise>0</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="total-timesheet-hours">
+	<xsl:param name="date" select="$today"/>
+	<xsl:param name="year" select="substring($date,1,4)"/>
+	<xsl:param name="month" select="substring($date,6,2)"/>
+	<xsl:param name="day" select="substring($date,9,2)"/>
+	<xsl:param name="node-set" select="/data/tickets/year[@value=$year]/month[@value=$month]/entry[substring(start-time,9) = $day]/hours"/>
+	<xsl:param name="total" select="sum($node-set)"/>
+	<xsl:if test="$total &gt; 0">
+		<xsl:value-of select="$total"/>
+	</xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>
