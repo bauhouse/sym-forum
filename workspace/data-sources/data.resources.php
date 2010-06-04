@@ -2,32 +2,25 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 	
-	Class datasourcebrands_entries extends Datasource{
+	Class datasourceresources extends Datasource{
 		
-		public $dsParamROOTELEMENT = 'brands-entries';
+		public $dsParamROOTELEMENT = 'resources';
 		public $dsParamORDER = 'desc';
 		public $dsParamLIMIT = '20';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:date';
+		public $dsParamSORT = 'system:id';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 		public $dsParamFILTERS = array(
-				'33' => 'brands',
+				'41' => '19',
+				'48' => 'yes',
 		);
 		
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
-				'heading',
-				'description: formatted',
-				'body: formatted',
-				'section',
-				'author',
-				'categories',
-				'tags',
-				'date',
-				'publish',
-				'enable-comments'
+				'url',
+				'description: formatted'
 		);
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
@@ -37,17 +30,17 @@
 		
 		public function about(){
 			return array(
-					 'name' => 'Brands Entries',
+					 'name' => 'Resources',
 					 'author' => array(
 							'name' => 'Stephen Bau',
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-06-03T16:58:11+00:00');	
+					 'release-date' => '2010-06-04T03:18:30+00:00');	
 		}
 		
 		public function getSource(){
-			return '5';
+			return '6';
 		}
 		
 		public function allowEditorToParse(){

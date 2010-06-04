@@ -22,17 +22,17 @@ CREATE TABLE `tbl_fields_checkbox` (
   `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_checkbox` ***
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (28, 9, 'off', 'Send me email when there is important news.');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (2, 15, 'off', 'Pin discussion');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (3, 16, 'off', 'Close this discussion');
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (18, 28, 'on', NULL);
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (30, 38, 'off', NULL);
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (31, 39, 'off', NULL);
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (11, 48, 'off', NULL);
-INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (12, 49, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (32, 38, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (33, 39, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (36, 48, 'off', NULL);
+INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (37, 49, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (14, 64, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (29, 117, 'off', NULL);
 INSERT INTO `tbl_fields_checkbox` (`id`, `field_id`, `default_state`, `description`) VALUES (23, 129, 'off', NULL);
@@ -45,14 +45,14 @@ CREATE TABLE `tbl_fields_date` (
   `pre_populate` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_date` ***
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (1, 12, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (2, 14, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (11, 19, 'yes');
-INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (64, 37, 'yes');
-INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (7, 47, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (65, 37, 'yes');
+INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (67, 47, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (8, 60, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (9, 69, 'yes');
 INSERT INTO `tbl_fields_date` (`id`, `field_id`, `pre_populate`) VALUES (62, 92, 'yes');
@@ -69,7 +69,7 @@ CREATE TABLE `tbl_fields_input` (
   `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=254 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=261 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_input` ***
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (185, 1, NULL);
@@ -80,13 +80,13 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (189, 7, N
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (6, 10, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (34, 21, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (35, 23, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (228, 29, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (229, 30, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (19, 40, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (20, 42, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (255, 29, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (256, 30, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (259, 40, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (260, 42, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (194, 50, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (195, 52, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (196, 54, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (254, 54, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (23, 57, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (24, 58, '/^\\w(?:\\.?[\\w%+-]+)*@\\w(?:[\\w-]*\\.)+?[a-z]{2,}$/i');
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (25, 59, '/^[^\\s:\\/?#]+:(?:\\/{2,3})?[^\\s.\\/?#]+(?:\\.[^\\s.\\/?#]+)*(?:\\/[^\\s?#]*\\??[^\\s?#]*(#[^\\s#]*)?)?$/');
@@ -249,16 +249,16 @@ CREATE TABLE `tbl_fields_selectbox_link` (
   `limit` int(4) unsigned NOT NULL DEFAULT '20',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=240 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=247 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_selectbox_link` ***
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (20, 18, 'no', 10, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (21, 26, 'no', 50, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (213, 33, 'no', 21, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (214, 34, 'no', 1, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (215, 35, 'no', 54, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (11, 41, 'no', 52, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (12, 45, 'no', 54, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (241, 33, 'no', 21, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (240, 34, 'no', 1, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (242, 35, 'no', 54, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (245, 41, 'no', 52, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (246, 45, 'no', 54, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (14, 61, 'no', 29, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (15, 62, 'no', 40, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (92, 78, 'yes', 1, 20);
@@ -307,11 +307,11 @@ CREATE TABLE `tbl_fields_taglist` (
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`),
   KEY `pre_populate_source` (`pre_populate_source`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_taglist` ***
-INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (6, 36, NULL, 'existing');
-INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (4, 46, NULL, 'existing');
+INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (7, 36, NULL, 'existing');
+INSERT INTO `tbl_fields_taglist` (`id`, `field_id`, `validator`, `pre_populate_source`) VALUES (9, 46, NULL, 'existing');
 
 -- *** STRUCTURE: `tbl_fields_textarea` ***
 DROP TABLE IF EXISTS `tbl_fields_textarea`;
@@ -322,23 +322,23 @@ CREATE TABLE `tbl_fields_textarea` (
   `size` int(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=134 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_textarea` ***
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (26, 17, 'markdown_with_purifier', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (28, 24, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (29, 25, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (120, 31, 'markdown_extra_with_smartypants', 6);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (15, 43, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (16, 44, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (136, 31, 'markdown_extra_with_smartypants', 6);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (137, 32, 'markdown_extra_with_smartypants', 18);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (140, 43, 'markdown_extra_with_smartypants', 6);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (141, 44, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (96, 51, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (97, 53, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (98, 55, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (99, 56, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (134, 55, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (135, 56, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (19, 63, 'markdown_with_purifier', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (20, 68, NULL, 9);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (21, 70, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (121, 32, 'markdown_extra_with_smartypants', 18);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (49, 75, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (101, 95, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (92, 105, 'markdown_extra_with_smartypants', 20);
@@ -488,11 +488,12 @@ CREATE TABLE `tbl_entries_data_104` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_104` ***
 INSERT INTO `tbl_entries_data_104` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 15, 'abc', 'ABC');
 INSERT INTO `tbl_entries_data_104` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 63, 'sym', 'SYM');
+INSERT INTO `tbl_entries_data_104` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 72, 'bau', 'BAU');
 
 -- *** STRUCTURE: `tbl_entries_data_105` ***
 DROP TABLE IF EXISTS `tbl_entries_data_105`;
@@ -705,10 +706,11 @@ CREATE TABLE `tbl_entries_data_118` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_118` ***
-INSERT INTO `tbl_entries_data_118` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 47, 'rebuild-designadmin-in-symphony-208rc3', 'Rebuild DesignAdmin in Symphony 2.0.8RC3');
+INSERT INTO `tbl_entries_data_118` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 47, 'rebuild-designadmin-in-symphony-208rc3', 'Rebuild DesignAdmin in Symphony 2.0.8RC3');
+INSERT INTO `tbl_entries_data_118` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 74, 'create-brands-section', 'Create Brands section');
 
 -- *** STRUCTURE: `tbl_entries_data_119` ***
 DROP TABLE IF EXISTS `tbl_entries_data_119`;
@@ -720,10 +722,11 @@ CREATE TABLE `tbl_entries_data_119` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_119` ***
-INSERT INTO `tbl_entries_data_119` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 47, 'Porting templates created in Symphony 1.7.01', '<p>Porting templates created in Symphony 1.7.01</p>\n');
+INSERT INTO `tbl_entries_data_119` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 47, 'Porting templates created in Symphony 1.7.01', '<p>Porting templates created in Symphony 1.7.01</p>\n');
+INSERT INTO `tbl_entries_data_119` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 74, 'Create Brands sections and fields. Create data sources. Modify Brands page template to reference the correct XML nodes. Refactor code to work with a single page template.', '<p>Create Brands sections and fields. Create data sources. Modify Brands page template to reference the correct XML nodes. Refactor code to work with a single page template.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_12` ***
 DROP TABLE IF EXISTS `tbl_entries_data_12`;
@@ -750,10 +753,11 @@ CREATE TABLE `tbl_entries_data_120` (
   `value` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_120` ***
-INSERT INTO `tbl_entries_data_120` (`id`, `entry_id`, `value`) VALUES (6, 47, 47);
+INSERT INTO `tbl_entries_data_120` (`id`, `entry_id`, `value`) VALUES (8, 47, 47);
+INSERT INTO `tbl_entries_data_120` (`id`, `entry_id`, `value`) VALUES (7, 74, 74);
 
 -- *** STRUCTURE: `tbl_entries_data_121` ***
 DROP TABLE IF EXISTS `tbl_entries_data_121`;
@@ -764,10 +768,11 @@ CREATE TABLE `tbl_entries_data_121` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_121` ***
-INSERT INTO `tbl_entries_data_121` (`id`, `entry_id`, `relation_id`) VALUES (6, 47, 15);
+INSERT INTO `tbl_entries_data_121` (`id`, `entry_id`, `relation_id`) VALUES (8, 47, 72);
+INSERT INTO `tbl_entries_data_121` (`id`, `entry_id`, `relation_id`) VALUES (7, 74, 63);
 
 -- *** STRUCTURE: `tbl_entries_data_122` ***
 DROP TABLE IF EXISTS `tbl_entries_data_122`;
@@ -778,10 +783,11 @@ CREATE TABLE `tbl_entries_data_122` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_122` ***
-INSERT INTO `tbl_entries_data_122` (`id`, `entry_id`, `relation_id`) VALUES (6, 47, 16);
+INSERT INTO `tbl_entries_data_122` (`id`, `entry_id`, `relation_id`) VALUES (8, 47, 73);
+INSERT INTO `tbl_entries_data_122` (`id`, `entry_id`, `relation_id`) VALUES (7, 74, 73);
 
 -- *** STRUCTURE: `tbl_entries_data_123` ***
 DROP TABLE IF EXISTS `tbl_entries_data_123`;
@@ -792,10 +798,11 @@ CREATE TABLE `tbl_entries_data_123` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_123` ***
-INSERT INTO `tbl_entries_data_123` (`id`, `entry_id`, `relation_id`) VALUES (6, 47, NULL);
+INSERT INTO `tbl_entries_data_123` (`id`, `entry_id`, `relation_id`) VALUES (8, 47, NULL);
+INSERT INTO `tbl_entries_data_123` (`id`, `entry_id`, `relation_id`) VALUES (7, 74, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_124` ***
 DROP TABLE IF EXISTS `tbl_entries_data_124`;
@@ -806,10 +813,11 @@ CREATE TABLE `tbl_entries_data_124` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_124` ***
-INSERT INTO `tbl_entries_data_124` (`id`, `entry_id`, `relation_id`) VALUES (6, 47, NULL);
+INSERT INTO `tbl_entries_data_124` (`id`, `entry_id`, `relation_id`) VALUES (8, 47, NULL);
+INSERT INTO `tbl_entries_data_124` (`id`, `entry_id`, `relation_id`) VALUES (7, 74, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_125` ***
 DROP TABLE IF EXISTS `tbl_entries_data_125`;
@@ -820,10 +828,11 @@ CREATE TABLE `tbl_entries_data_125` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_125` ***
-INSERT INTO `tbl_entries_data_125` (`id`, `entry_id`, `relation_id`) VALUES (6, 47, 32);
+INSERT INTO `tbl_entries_data_125` (`id`, `entry_id`, `relation_id`) VALUES (8, 47, 32);
+INSERT INTO `tbl_entries_data_125` (`id`, `entry_id`, `relation_id`) VALUES (7, 74, 33);
 
 -- *** STRUCTURE: `tbl_entries_data_126` ***
 DROP TABLE IF EXISTS `tbl_entries_data_126`;
@@ -836,10 +845,11 @@ CREATE TABLE `tbl_entries_data_126` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_126` ***
-INSERT INTO `tbl_entries_data_126` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 47, '2010-06-02T09:30:00-07:00', 1275496200, 1275496200);
+INSERT INTO `tbl_entries_data_126` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (8, 47, '2010-06-02T09:30:00-07:00', 1275496200, 1275496200);
+INSERT INTO `tbl_entries_data_126` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (7, 74, '2010-06-03T07:01:00-07:00', 1275573660, 1275573660);
 
 -- *** STRUCTURE: `tbl_entries_data_127` ***
 DROP TABLE IF EXISTS `tbl_entries_data_127`;
@@ -852,10 +862,11 @@ CREATE TABLE `tbl_entries_data_127` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_127` ***
-INSERT INTO `tbl_entries_data_127` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 47, '2010-06-02T11:24:00-07:00', 1275503040, 1275503040);
+INSERT INTO `tbl_entries_data_127` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (8, 47, '2010-06-02T11:24:00-07:00', 1275503040, 1275503040);
+INSERT INTO `tbl_entries_data_127` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (7, 74, '2010-06-03T12:15:00-07:00', 1275592500, 1275592500);
 
 -- *** STRUCTURE: `tbl_entries_data_128` ***
 DROP TABLE IF EXISTS `tbl_entries_data_128`;
@@ -868,10 +879,11 @@ CREATE TABLE `tbl_entries_data_128` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_128` ***
-INSERT INTO `tbl_entries_data_128` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 47, 8, 8);
+INSERT INTO `tbl_entries_data_128` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 47, 8, 8);
+INSERT INTO `tbl_entries_data_128` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 74, 525, 5.25);
 
 -- *** STRUCTURE: `tbl_entries_data_129` ***
 DROP TABLE IF EXISTS `tbl_entries_data_129`;
@@ -882,10 +894,11 @@ CREATE TABLE `tbl_entries_data_129` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_129` ***
-INSERT INTO `tbl_entries_data_129` (`id`, `entry_id`, `value`) VALUES (6, 47, 'no');
+INSERT INTO `tbl_entries_data_129` (`id`, `entry_id`, `value`) VALUES (8, 47, 'no');
+INSERT INTO `tbl_entries_data_129` (`id`, `entry_id`, `value`) VALUES (7, 74, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_13` ***
 DROP TABLE IF EXISTS `tbl_entries_data_13`;
@@ -913,10 +926,11 @@ CREATE TABLE `tbl_entries_data_130` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_130` ***
-INSERT INTO `tbl_entries_data_130` (`id`, `entry_id`, `relation_id`) VALUES (6, 47, 8);
+INSERT INTO `tbl_entries_data_130` (`id`, `entry_id`, `relation_id`) VALUES (8, 47, 8);
+INSERT INTO `tbl_entries_data_130` (`id`, `entry_id`, `relation_id`) VALUES (7, 74, 8);
 
 -- *** STRUCTURE: `tbl_entries_data_131` ***
 DROP TABLE IF EXISTS `tbl_entries_data_131`;
@@ -1215,14 +1229,16 @@ CREATE TABLE `tbl_entries_data_145` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_145` ***
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 65, 'symphony-cms-colours', 'Symphony CMS Colours');
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 66, 'the-symphony-cms-brand', 'The Symphony CMS Brand');
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 69, 'typography', 'Typography');
-INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 70, 'symphony-cms-logo', 'Symphony CMS Logo');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (12, 70, 'symphony-cms-logo', 'Symphony CMS Logo');
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 71, 'symphony-logo-black', 'symphony-logo_black');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (13, 75, 'brand-identity', 'Brand Identity');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (14, 76, 'logo-usage-guidelines', 'Logo Usage Guidelines');
 
 -- *** STRUCTURE: `tbl_entries_data_146` ***
 DROP TABLE IF EXISTS `tbl_entries_data_146`;
@@ -1233,14 +1249,16 @@ CREATE TABLE `tbl_entries_data_146` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_146` ***
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 64);
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 64);
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 64);
-INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, 64);
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, 64);
 
 -- *** STRUCTURE: `tbl_entries_data_147` ***
 DROP TABLE IF EXISTS `tbl_entries_data_147`;
@@ -1253,12 +1271,12 @@ CREATE TABLE `tbl_entries_data_147` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_147` ***
 INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 65, 'colors-used-throughout-the-brand-identity', 'Colors used throughout the brand identity');
 INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 66, 'an-introduction-to-the-symphony-cms-identity-design', 'An Introduction to the Symphony CMS Identity Design');
-INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 70, 'logo', 'Logo');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 70, 'logo', 'Logo');
 INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 71, 'two-colour', 'Two Colour');
 
 -- *** STRUCTURE: `tbl_entries_data_148` ***
@@ -1271,14 +1289,16 @@ CREATE TABLE `tbl_entries_data_148` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_148` ***
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 65, 'These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.', '<p>These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.</p>\n');
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 69, 'Typography is a vital part of the identity system. Each typeface has its own character and evokes a different emotional and intellectual response.', '<p>Typography is a vital part of the identity system. Each typeface has its own character and evokes a different emotional and intellectual response.</p>\n');
-INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 70, 'The Eagle West Cranes logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Eagle West is becoming a brand that is recognized around the world for its services and products.', '<p>The Eagle West Cranes logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Eagle West is becoming a brand that is recognized around the world for its services and products.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 70, 'The Symphony CMS logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Symphony CMS is becoming recognized around the world for its commitment to bringing the power of XSLT to the open source web development community.', '<p>The Symphony CMS logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Symphony CMS is becoming recognized around the world for its commitment to bringing the power of XSLT to the open source web development community.</p>\n');
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 71, 'This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.', '<p>This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.</p>\n');
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 66, '#### About Symphony\r\n\r\n[Symphony](http://symphony-cms.com/) is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.\r\n', '<h4>About Symphony</h4>\n\n<p><a href=\"http://symphony-cms.com/\">Symphony</a> is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 75, 'The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.', '<p>The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 76, 'The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.', '<p>The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_149` ***
 DROP TABLE IF EXISTS `tbl_entries_data_149`;
@@ -1290,14 +1310,16 @@ CREATE TABLE `tbl_entries_data_149` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_149` ***
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 65, 'For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. \r\n\r\nIt is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).', '<p>For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. </p>\n\n<p>It is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).</p>\n');
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 69, '#### Print Materials\r\n\r\nAll Corporate Stationery use a typeface family called DIN Mittelschrift, which is based on the German industry standard (\"Deutsche Industrie Norm\") for signage on the Autobahn.\r\n\r\nDIN has a clunky functionalism and a modern character that is highly legible for a geometric sans serif typeface.\r\n\r\nDIN is the supporting text family for all printed materials, including stationery.\r\n\r\n#### Web Type\r\n\r\nType on the web is limited to fonts that tend to be installed on computer systems as part of the most popular operating systems.\r\n\r\nWhere fonts are limited to standard libraries, Helvetica and Arial provide suitable complements or replacements for DIN on the web for headlines and text.', '<h4>Print Materials</h4>\n\n<p>All Corporate Stationery use a typeface family called DIN Mittelschrift, which is based on the German industry standard (&#8220;Deutsche Industrie Norm&#8221;) for signage on the Autobahn.</p>\n\n<p>DIN has a clunky functionalism and a modern character that is highly legible for a geometric sans serif typeface.</p>\n\n<p>DIN is the supporting text family for all printed materials, including stationery.</p>\n\n<h4>Web Type</h4>\n\n<p>Type on the web is limited to fonts that tend to be installed on computer systems as part of the most popular operating systems.</p>\n\n<p>Where fonts are limited to standard libraries, Helvetica and Arial provide suitable complements or replacements for DIN on the web for headlines and text.</p>\n');
-INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 70, 'Logos for each division of Eagle West have been packaged as individual [ZIP](http://en.wikipedia.org/wiki/ZIP_%28file_format%29) files. Contained within each ZIP file are the following file formats: [AI](http://en.wikipedia.org/wiki/Adobe_Illustrator) (Adobe Illustrator Version 8), [EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript), [JPEG](http://en.wikipedia.org/wiki/Jpeg), [PDF](http://en.wikipedia.org/wiki/Pdf), [PNG](http://en.wikipedia.org/wiki/Png). These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files\r\n\r\nNote: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).', '<p>Logos for each division of Eagle West have been packaged as individual <a href=\"http://en.wikipedia.org/wiki/ZIP_%28file_format%29\">ZIP</a> files. Contained within each ZIP file are the following file formats: <a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a> (Adobe Illustrator Version 8), <a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>, <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a>, <a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>, <a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>. These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files</p>\n\n<p>Note: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 70, 'Logos for each division of Eagle West have been packaged as individual [ZIP](http://en.wikipedia.org/wiki/ZIP_%28file_format%29) files. Contained within each ZIP file are the following file formats: [AI](http://en.wikipedia.org/wiki/Adobe_Illustrator) (Adobe Illustrator Version 8), [EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript), [JPEG](http://en.wikipedia.org/wiki/Jpeg), [PDF](http://en.wikipedia.org/wiki/Pdf), [PNG](http://en.wikipedia.org/wiki/Png). These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files\r\n\r\nNote: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).', '<p>Logos for each division of Eagle West have been packaged as individual <a href=\"http://en.wikipedia.org/wiki/ZIP_%28file_format%29\">ZIP</a> files. Contained within each ZIP file are the following file formats: <a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a> (Adobe Illustrator Version 8), <a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>, <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a>, <a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>, <a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>. These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files</p>\n\n<p>Note: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).</p>\n');
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 71, NULL, NULL);
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 66, '#### Designed to do things your way\r\n\r\nSymphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.\r\n\r\n#### Powered by XML and XSLT\r\n\r\nSymphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.\r\n\r\nSymphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.\r\n\r\n#### Symphony Resources\r\n\r\nThe Symphony [community forum](http://symphony-cms.com/discuss/) is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.', '<h4>Designed to do things your way</h4>\n\n<p>Symphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.</p>\n\n<h4>Powered by XML and XSLT</h4>\n\n<p>Symphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.</p>\n\n<p>Symphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.</p>\n\n<h4>Symphony Resources</h4>\n\n<p>The Symphony <a href=\"http://symphony-cms.com/discuss/\">community forum</a> is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 75, 'By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.\r\n\r\nWhat follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.', '<p>By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.</p>\n\n<p>What follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 76, '#### Print Reproduction and Signs\r\n\r\nWhen supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator ([AI](http://en.wikipedia.org/wiki/Adobe_Illustrator)) and Encapsulated PostScript ([EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript)) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.\r\n\r\nSigns are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.\r\n\r\n#### Desktop Applications\r\n\r\nFor Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.\r\n\r\nThe Joint Photographic Experts Group created the [JPEG](http://en.wikipedia.org/wiki/Jpeg) format as a standard compression format for photographs. The Portable Network Graphics ([PNG](http://en.wikipedia.org/wiki/Png)) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.\r\n\r\n#### Web Content\r\n\r\nFor internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.\r\n\r\n#### Cross-Platform Viewing and Printing\r\n\r\nThe Portable Document Format ([PDF](http://en.wikipedia.org/wiki/Pdf)) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.', '<h4>Print Reproduction and Signs</h4>\n\n<p>When supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator (<a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a>) and Encapsulated PostScript (<a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.</p>\n\n<p>Signs are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.</p>\n\n<h4>Desktop Applications</h4>\n\n<p>For Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.</p>\n\n<p>The Joint Photographic Experts Group created the <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a> format as a standard compression format for photographs. The Portable Network Graphics (<a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.</p>\n\n<h4>Web Content</h4>\n\n<p>For internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.</p>\n\n<h4>Cross-Platform Viewing and Printing</h4>\n\n<p>The Portable Document Format (<a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_15` ***
 DROP TABLE IF EXISTS `tbl_entries_data_15`;
@@ -1338,14 +1360,16 @@ CREATE TABLE `tbl_entries_data_151` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_151` ***
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, NULL);
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, NULL);
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, NULL);
-INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, NULL);
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 70);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_152` ***
 DROP TABLE IF EXISTS `tbl_entries_data_152`;
@@ -1356,14 +1380,16 @@ CREATE TABLE `tbl_entries_data_152` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_152` ***
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 49);
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 51);
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 49);
-INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, 48);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, 48);
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 48);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, 51);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, 51);
 
 -- *** STRUCTURE: `tbl_entries_data_153` ***
 DROP TABLE IF EXISTS `tbl_entries_data_153`;
@@ -1374,14 +1400,16 @@ CREATE TABLE `tbl_entries_data_153` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_153` ***
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 58);
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 61);
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 57);
-INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (5, 70, 53);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, 53);
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 53);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, 60);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, 60);
 
 -- *** STRUCTURE: `tbl_entries_data_154` ***
 DROP TABLE IF EXISTS `tbl_entries_data_154`;
@@ -1693,11 +1721,11 @@ CREATE TABLE `tbl_entries_data_21` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_21` ***
-INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 2, 'home', 'Home');
-INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 3, 'about', 'About');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (17, 2, 'home', 'Home');
+INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (18, 3, 'about', 'About');
 INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 4, 'journal', 'Journal');
 INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 5, 'forum', 'Forum');
 INSERT INTO `tbl_entries_data_21` (`id`, `entry_id`, `handle`, `value`) VALUES (14, 6, 'calendar', 'Calendar');
@@ -1720,11 +1748,11 @@ CREATE TABLE `tbl_entries_data_22` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `page_id` (`page_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_22` ***
-INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (8, 2, 16, 'Home', 'home');
-INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (9, 3, 17, 'About', 'about');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (17, 2, 16, 'Home', 'home');
+INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (18, 3, 17, 'About', 'about');
 INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (3, 4, 19, 'Journal', 'journal');
 INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (4, 5, 1, 'Forum', 'forum');
 INSERT INTO `tbl_entries_data_22` (`id`, `entry_id`, `page_id`, `title`, `handle`) VALUES (14, 6, 20, 'Calendar', 'calendar');
@@ -1746,12 +1774,12 @@ CREATE TABLE `tbl_entries_data_23` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_23` ***
 INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 7, 'send-us-a-message', 'Send us a message');
-INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 2, 'take-me-home', 'Take Me Home');
-INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 3, 'what-its-all-about', 'What It\'s All About');
+INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 3, 'reworking-the-tools-of-industry', 'Reworking the Tools of Industry');
+INSERT INTO `tbl_entries_data_23` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 2, 'a-swiss-army-knife-for-the-design-business', 'A Swiss Army Knife for the Design Business');
 
 -- *** STRUCTURE: `tbl_entries_data_24` ***
 DROP TABLE IF EXISTS `tbl_entries_data_24`;
@@ -1763,11 +1791,10 @@ CREATE TABLE `tbl_entries_data_24` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_24` ***
-INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 2, NULL, NULL);
-INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 3, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (18, 3, '####Using Technology To Meet the Needs of Business\r\n\r\nThe Design Administration is a group of designers who live on the edge of creative vision, entrepreneurial ingenuity and technological innovation.\r\n\r\nWell, no, actually, it\'s just me. But it could be.\r\n', '<h4>Using Technology To Meet the Needs of Business</h4>\n\n<p>The Design Administration is a group of designers who live on the edge of creative vision, entrepreneurial ingenuity and technological innovation.</p>\n\n<p>Well, no, actually, it&#8217;s just me. But it could be.</p>\n');
 INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 4, NULL, NULL);
 INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 5, NULL, NULL);
 INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 6, NULL, NULL);
@@ -1777,6 +1804,7 @@ INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`)
 INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 44, NULL, NULL);
 INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 45, NULL, NULL);
 INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (15, 46, NULL, NULL);
+INSERT INTO `tbl_entries_data_24` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (17, 2, '#### Why So Many Tools When One Will Do?\r\n\r\nAs a designer, I am used to looking for solutions to problems. One of the solutions that has eluded me has been a tool that masters the problem of managing my own business efficiently and effectively, using the very technologies that have helped to me to help my clients to effectively communicate with their own colleagues and customers.\r\n', '<h4>Why So Many Tools When One Will Do?</h4>\n\n<p>As a designer, I am used to looking for solutions to problems. One of the solutions that has eluded me has been a tool that masters the problem of managing my own business efficiently and effectively, using the very technologies that have helped to me to help my clients to effectively communicate with their own colleagues and customers.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_25` ***
 DROP TABLE IF EXISTS `tbl_entries_data_25`;
@@ -1788,11 +1816,10 @@ CREATE TABLE `tbl_entries_data_25` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_25` ***
-INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 2, NULL, NULL);
-INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 3, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (18, 3, '####Bringing Good to Life\r\n\r\nWhat is the ideal work environment? What sort of endeavour provides the perfect mix of social interaction, collaborative teamwork, challenging and inspiring work, and a meaningful and fulfilling vocation? How can success in the workplace transform social structures and encourage harmonious relationships within our communities, our nation, our world? The Design Administration is enlisting a task force of designers to infuse the design industry with a meaning and purpose that goes far beyond the bottom line. Design is intrinsically enmeshed with economics, as business is its primary patron. However, everyone who uses a product is also a patron. As both consumers and creators of products, if the objects of our desire extended beyond physical goods to everything that is good, how different would our world be?\r\n\r\nThere is the moral good and there is the pragmatically beneficial. I suppose I\'ll take the low road at this point. In the search for the best tools to run a business, there appears to be little that meets my requirements. I don\'t want something that is bloated with unnecessary or poorly implemented features, with a bloated price tag to match. I don\'t want a tool that meets certain requirements well but leaves a hole for other applications to fill, especially when the monthly fee for each service that is required begins to exceed what my budget comfortably allows. Plus, the need for multiple applications leads to a duplication of efforts in maintaining several fragmented solutions to the single problem of efficiently running a business. \r\n\r\n####What Good is This Site?\r\n\r\nWell, I suppose that\'s a matter of opinion, but for me, it\'s a proving ground for the development of a system that helps me as a brand, advertising, print and web designer to manage clients, projects, tasks, schedules, timesheets, assets, finances and taxes in order to establish a better working relationship with colleagues and customers. So, I am building a single application that I can use, and which I would like to offer to others as a solution to the frustrations of any jack-of-all-trades-master-of-none-learn-by-doing-build-it-yourself-freelance-graphic-design-consultant-sole-proprietor-inhouse-branding-and-corporate-communications-specialist-information-architect-web-programmer-interface-designer.', '<h4>Bringing Good to Life</h4>\n\n<p>What is the ideal work environment? What sort of endeavour provides the perfect mix of social interaction, collaborative teamwork, challenging and inspiring work, and a meaningful and fulfilling vocation? How can success in the workplace transform social structures and encourage harmonious relationships within our communities, our nation, our world? The Design Administration is enlisting a task force of designers to infuse the design industry with a meaning and purpose that goes far beyond the bottom line. Design is intrinsically enmeshed with economics, as business is its primary patron. However, everyone who uses a product is also a patron. As both consumers and creators of products, if the objects of our desire extended beyond physical goods to everything that is good, how different would our world be?</p>\n\n<p>There is the moral good and there is the pragmatically beneficial. I suppose I&#8217;ll take the low road at this point. In the search for the best tools to run a business, there appears to be little that meets my requirements. I don&#8217;t want something that is bloated with unnecessary or poorly implemented features, with a bloated price tag to match. I don&#8217;t want a tool that meets certain requirements well but leaves a hole for other applications to fill, especially when the monthly fee for each service that is required begins to exceed what my budget comfortably allows. Plus, the need for multiple applications leads to a duplication of efforts in maintaining several fragmented solutions to the single problem of efficiently running a business. </p>\n\n<h4>What Good is This Site?</h4>\n\n<p>Well, I suppose that&#8217;s a matter of opinion, but for me, it&#8217;s a proving ground for the development of a system that helps me as a brand, advertising, print and web designer to manage clients, projects, tasks, schedules, timesheets, assets, finances and taxes in order to establish a better working relationship with colleagues and customers. So, I am building a single application that I can use, and which I would like to offer to others as a solution to the frustrations of any jack-of-all-trades-master-of-none-learn-by-doing-build-it-yourself-freelance-graphic-design-consultant-sole-proprietor-inhouse-branding-and-corporate-communications-specialist-information-architect-web-programmer-interface-designer.</p>\n');
 INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 4, NULL, NULL);
 INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 5, NULL, NULL);
 INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 6, NULL, NULL);
@@ -1802,6 +1829,7 @@ INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`)
 INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 44, NULL, NULL);
 INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 45, NULL, NULL);
 INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (15, 46, NULL, NULL);
+INSERT INTO `tbl_entries_data_25` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (17, 2, 'To be sure, solutions exist in a vast array. However, my standards are high and my budget is low. And very few solutions offer everything I might want or need. The trend is to focus on a particular functionality or a specific niche market. I am a generalist, so my requirements are broad.\r\n\r\nThis site is about my search for the Holy Grail: the all-in-one Design Business Administration tool. Is it even possible to find such a thing? If anyone has any leads, please let me know. Until then, this is what I want and this is what I am building, with a web publishing system called [Symphony](http://www.symphony21.com/).', '<p>To be sure, solutions exist in a vast array. However, my standards are high and my budget is low. And very few solutions offer everything I might want or need. The trend is to focus on a particular functionality or a specific niche market. I am a generalist, so my requirements are broad.</p>\n\n<p>This site is about my search for the Holy Grail: the all-in-one Design Business Administration tool. Is it even possible to find such a thing? If anyone has any leads, please let me know. Until then, this is what I want and this is what I am building, with a web publishing system called <a href=\"http://www.symphony21.com/\">Symphony</a>.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_26` ***
 DROP TABLE IF EXISTS `tbl_entries_data_26`;
@@ -1812,11 +1840,11 @@ CREATE TABLE `tbl_entries_data_26` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_26` ***
-INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (8, 2, 1);
-INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (9, 3, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (17, 2, 1);
+INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (18, 3, 1);
 INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (3, 4, 1);
 INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (4, 5, 1);
 INSERT INTO `tbl_entries_data_26` (`id`, `entry_id`, `relation_id`) VALUES (14, 6, 41);
@@ -1836,11 +1864,11 @@ CREATE TABLE `tbl_entries_data_27` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_27` ***
-INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (8, 2, 1);
-INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (9, 3, 2);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (17, 2, 1);
+INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (18, 3, 2);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (3, 4, 3);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (4, 5, 4);
 INSERT INTO `tbl_entries_data_27` (`id`, `entry_id`, `value`) VALUES (14, 6, 11);
@@ -1860,11 +1888,11 @@ CREATE TABLE `tbl_entries_data_28` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_28` ***
-INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (8, 2, 'yes');
-INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (9, 3, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (17, 2, 'yes');
+INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (18, 3, 'yes');
 INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (3, 4, 'yes');
 INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (4, 5, 'yes');
 INSERT INTO `tbl_entries_data_28` (`id`, `entry_id`, `value`) VALUES (14, 6, 'yes');
@@ -1886,11 +1914,14 @@ CREATE TABLE `tbl_entries_data_29` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_29` ***
-INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 67, 'brand-identity', 'Brand Identity');
-INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 68, 'logo-usage-guidelines', 'Logo Usage Guidelines');
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 67, 'the-seeds-of-an-idea', 'The Seeds of an Idea');
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 68, 'a-project-management-tool', 'A Project Management Tool');
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 81, 'an-xslt-calendar', 'An XSLT Calendar');
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 82, 'calendar-formats', 'Calendar Formats');
+INSERT INTO `tbl_entries_data_29` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 83, 'xslt-transformation-of-ics-to-xml', 'XSLT Transformation of ICS to XML');
 
 -- *** STRUCTURE: `tbl_entries_data_3` ***
 DROP TABLE IF EXISTS `tbl_entries_data_3`;
@@ -1919,9 +1950,14 @@ CREATE TABLE `tbl_entries_data_30` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_30` ***
+INSERT INTO `tbl_entries_data_30` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 67, 'necessity-is-the-mother-of-invention', 'Necessity is the Mother of Invention ');
+INSERT INTO `tbl_entries_data_30` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 68, 'not-another-project-management-application', 'Not another project management application!');
+INSERT INTO `tbl_entries_data_30` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 81, 'the-first-step-in-building-a-design-administration-application', 'The First Step in Building a Design Administration Application');
+INSERT INTO `tbl_entries_data_30` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 82, 'in-search-of-an-xml-calendar-format', 'In Search of an XML Calendar Format ');
+INSERT INTO `tbl_entries_data_30` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 83, 'an-xslt-template-to-convert-icalendar-files-to-xcalendar-files', 'An XSLT Template to Convert iCalendar Files to xCalendar Files');
 
 -- *** STRUCTURE: `tbl_entries_data_31` ***
 DROP TABLE IF EXISTS `tbl_entries_data_31`;
@@ -1933,11 +1969,14 @@ CREATE TABLE `tbl_entries_data_31` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_31` ***
-INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 67, 'The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.', '<p>The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.</p>\n');
-INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 68, 'The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.', '<p>The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.</p>\n');
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 68, '####Yes, another one\r\n\r\nWhile in search of tools that could simplify the administration of my design business, I found that software would force me to work a certain way, depending on what I was working on. Duplication of data entry was the biggest frustration. For a freelance business, it would be ideal to enter data once and be able to view information in many forms without having to switch from one application to another.\r\n', '<h4>Yes, another one</h4>\n\n<p>While in search of tools that could simplify the administration of my design business, I found that software would force me to work a certain way, depending on what I was working on. Duplication of data entry was the biggest frustration. For a freelance business, it would be ideal to enter data once and be able to view information in many forms without having to switch from one application to another.</p>\n');
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 67, 'For close to fifteen years, I have been searching for a way to run a design business that helps me work better, but also works the way I want it to. I still haven\'t found what I\'m looking for, so I\'m building it. But not without the help of a very talented crew of web application developers, [Twentyone Degrees](http://21degrees.com.au/).', '<p>For close to fifteen years, I have been searching for a way to run a design business that helps me work better, but also works the way I want it to. I still haven&#8217;t found what I&#8217;m looking for, so I&#8217;m building it. But not without the help of a very talented crew of web application developers, <a href=\"http://21degrees.com.au/\">Twentyone Degrees</a>.</p>\n');
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 81, 'To develop a design business administration application, it is essential to be able to keep track of time, schedule appointments, process phases and deadlines. This means that a calendar will be one of the first requirements.', '<p>To develop a design business administration application, it is essential to be able to keep track of time, schedule appointments, process phases and deadlines. This means that a calendar will be one of the first requirements.</p>\n');
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 82, 'The most popular calendar format appears to be the ICS format used by [Apple\'s iCal](http://www.apple.com/macosx/features/ical/). Unfortunately, this format is not an XML format. To be able to use this data within Symphony or with XSLT it would be helpful to be able to convert the data into a useful format. However, I was disappointed to find out that the standard for ICS files is not XML format. Apple Developer Connection points to [Perl and PHP scripts that can convert ICS to XML](http://developer.apple.com/internet/appleapplications/icalendarfiles.html). Strangely, I did not find any XSLT templates. I probably did not search hard enough. Most likely, XSLT is not the first place people turn to for string manipulation.', '<p>The most popular calendar format appears to be the ICS format used by <a href=\"http://www.apple.com/macosx/features/ical/\">Apple&#8217;s iCal</a>. Unfortunately, this format is not an XML format. To be able to use this data within Symphony or with XSLT it would be helpful to be able to convert the data into a useful format. However, I was disappointed to find out that the standard for ICS files is not XML format. Apple Developer Connection points to <a href=\"http://developer.apple.com/internet/appleapplications/icalendarfiles.html\">Perl and PHP scripts that can convert ICS to XML</a>. Strangely, I did not find any XSLT templates. I probably did not search hard enough. Most likely, XSLT is not the first place people turn to for string manipulation.</p>\n');
+INSERT INTO `tbl_entries_data_31` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 83, 'I wanted to find an XSLT template that would be able to parse an iCalendar ICS file into an XML format that would work well with the calendar application I had built with XSLT and Symphony. What I found was an XSLT template that converted XML to ICS. I found nothing that was able to reverse the process. So I created an XSLT template that can convert ICS to the [xCalendar](http://www.w3.org/2001/sw/Europe/200210/calendar/vocab_usecases.html#ical) format.', '<p>I wanted to find an XSLT template that would be able to parse an iCalendar ICS file into an XML format that would work well with the calendar application I had built with XSLT and Symphony. What I found was an XSLT template that converted XML to ICS. I found nothing that was able to reverse the process. So I created an XSLT template that can convert ICS to the <a href=\"http://www.w3.org/2001/sw/Europe/200210/calendar/vocab_usecases.html#ical\">xCalendar</a> format.</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_32` ***
 DROP TABLE IF EXISTS `tbl_entries_data_32`;
@@ -1949,11 +1988,14 @@ CREATE TABLE `tbl_entries_data_32` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_32` ***
-INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 67, 'By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.\r\n\r\nWhat follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.', '<p>By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.</p>\n\n<p>What follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.</p>\n');
-INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 68, '#### Print Reproduction and Signs\r\n\r\nWhen supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator ([AI](http://en.wikipedia.org/wiki/Adobe_Illustrator)) and Encapsulated PostScript ([EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript)) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.\r\n\r\nSigns are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.\r\n\r\n#### Desktop Applications\r\n\r\nFor Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.\r\n\r\nThe Joint Photographic Experts Group created the [JPEG](http://en.wikipedia.org/wiki/Jpeg) format as a standard compression format for photographs. The Portable Network Graphics ([PNG](http://en.wikipedia.org/wiki/Png)) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.\r\n\r\n#### Web Content\r\n\r\nFor internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.\r\n\r\nh4. Cross-Platform Viewing and Printing\r\n\r\nThe Portable Document Format ([PDF](http://en.wikipedia.org/wiki/Pdf)) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.', '<h4>Print Reproduction and Signs</h4>\n\n<p>When supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator (<a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a>) and Encapsulated PostScript (<a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.</p>\n\n<p>Signs are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.</p>\n\n<h4>Desktop Applications</h4>\n\n<p>For Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.</p>\n\n<p>The Joint Photographic Experts Group created the <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a> format as a standard compression format for photographs. The Portable Network Graphics (<a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.</p>\n\n<h4>Web Content</h4>\n\n<p>For internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.</p>\n\n<p>h4. Cross-Platform Viewing and Printing</p>\n\n<p>The Portable Document Format (<a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.</p>\n');
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 68, 'I found that this was not easily feasible ... until Symphony came along. Since the introduction of sections and custom fields that could be configured according to the needs of the Symphony developer, specifically section links (a feature that I requested), I have been thinking about how this feature might be used to build a project management system.\r\n\r\nI am in the process of building a project management system that uses Symphony to keep track of clients, projects and timesheets. Eventually, I want it to do everything, because I am tired of switching between several applications (desktop and web) that don\'t work together and force me to duplicate my efforts. This is a long-term project, but I am trying to solve problems I have had with running my business since I started it 16 years ago. I have never found a system that does what I need, so I am building it myself - necessity being the mother of invention.\r\n\r\nIt will be a design business administration system built on the Symphony framework that will track clients, projects, timesheets, estimates, invoices, bookkeeping and accounting reports, tax filing, as well as serve as a client login area to allow basecamp style project management, except with the ability to display work in progress according to project phase, with individual entries for each concept, with commenting enabled for each entry. Once an identity system has been developed, it can then be rolled out within the same system, to display an online corporate identity standards manual and provide a means of distributing logo file formats available for download.', '<p>I found that this was not easily feasible &#8230; until Symphony came along. Since the introduction of sections and custom fields that could be configured according to the needs of the Symphony developer, specifically section links (a feature that I requested), I have been thinking about how this feature might be used to build a project management system.</p>\n\n<p>I am in the process of building a project management system that uses Symphony to keep track of clients, projects and timesheets. Eventually, I want it to do everything, because I am tired of switching between several applications (desktop and web) that don&#8217;t work together and force me to duplicate my efforts. This is a long-term project, but I am trying to solve problems I have had with running my business since I started it 16 years ago. I have never found a system that does what I need, so I am building it myself - necessity being the mother of invention.</p>\n\n<p>It will be a design business administration system built on the Symphony framework that will track clients, projects, timesheets, estimates, invoices, bookkeeping and accounting reports, tax filing, as well as serve as a client login area to allow basecamp style project management, except with the ability to display work in progress according to project phase, with individual entries for each concept, with commenting enabled for each entry. Once an identity system has been developed, it can then be rolled out within the same system, to display an online corporate identity standards manual and provide a means of distributing logo file formats available for download.</p>\n');
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 81, 'Now, we could generate calendars with JavaScript and use cookies to maintain persistent selections from one page to another. With Symphony, neither of those is necessary. Let\'s let the server do the work, with XML and XSLT to produce calendar views with XHTML. Thankfully, many have done a lot of the hard work of getting a calendar to work in XSLT. There are date and time libraries available from the [XSLT Standard Library](http://xsltsl.sourceforge.net/). It is also possible to glean templates that perform date and time functions from [EXSLT.org](http://www.exslt.org/).\r\n\r\nI took a look at a couple other calendar examples that I might be able to adapt, but both are dependent on external xslt libraries or functions, which is why I passed on them to begin with: trying to avoid any dependencies on external libraries. [XSLT Cookbook: Creating a HTML Calendar](http://www.the-wabe.com/notebook/xslt-calendar) depends on the the [EXSLT.org](http://www.exslt.org/) date-time extensions. The other is [A Calendar, using the XSelerator\'s datetime library](http://www.topxml.com/code/default.asp?p=3&id=v20020711152545). In the end, I chose to use the work of [Muhammad Athar Parvez](http://incrementaldevelopment.com/) on an XSL stylesheet that generates a single calendar month: [Parvez\'s Wing of the Gallery of Stupid XSL and XSLT Tricks](http://incrementaldevelopment.com/xsltrick/parvez/).\r\n\r\nNote: there is an interesting calendar FAQ on the issues of dates and calendars compiled by Claus Tøndering, [Frequently Asked Questions about Calendars](http://www.tondering.dk/claus/calendar.html).\r\n\r\nI started in Symphony with a static XML data source:\r\n\r\n	<calendar>\r\n		<year>\r\n			<month value=\"1\" days=\"31\">January</month>\r\n			<month value=\"2\" days=\"28\" leap-year-days=\"29\">February</month>\r\n			<month value=\"3\" days=\"31\">March</month>\r\n			<month value=\"4\" days=\"30\">April</month>\r\n			<month value=\"5\" days=\"31\">May</month>\r\n			<month value=\"6\" days=\"30\">June</month>\r\n			<month value=\"7\" days=\"31\">July</month>\r\n			<month value=\"8\" days=\"31\">August</month>\r\n			<month value=\"9\" days=\"30\">September</month>\r\n			<month value=\"10\" days=\"31\">October</month>\r\n			<month value=\"11\" days=\"30\">November</month>\r\n			<month value=\"12\" days=\"31\">December</month>\r\n		</year>\r\n	</calendar>\r\n\r\nThe rest of the application is a CSS file and four XSLT templates that display the four calendar views: year, month, week and day. View the [calendar](http://designadmin.com/calendar/) to see the results of this work, which extends the work of Parvez to include the additional views, navigation with persistent dates, and hours for the week and day views.', '<p>Now, we could generate calendars with JavaScript and use cookies to maintain persistent selections from one page to another. With Symphony, neither of those is necessary. Let&#8217;s let the server do the work, with XML and XSLT to produce calendar views with XHTML. Thankfully, many have done a lot of the hard work of getting a calendar to work in XSLT. There are date and time libraries available from the <a href=\"http://xsltsl.sourceforge.net/\">XSLT Standard Library</a>. It is also possible to glean templates that perform date and time functions from <a href=\"http://www.exslt.org/\">EXSLT.org</a>.</p>\n\n<p>I took a look at a couple other calendar examples that I might be able to adapt, but both are dependent on external xslt libraries or functions, which is why I passed on them to begin with: trying to avoid any dependencies on external libraries. <a href=\"http://www.the-wabe.com/notebook/xslt-calendar\">XSLT Cookbook: Creating a HTML Calendar</a> depends on the the <a href=\"http://www.exslt.org/\">EXSLT.org</a> date-time extensions. The other is <a href=\"http://www.topxml.com/code/default.asp?p=3&amp;id=v20020711152545\">A Calendar, using the XSelerator&#8217;s datetime library</a>. In the end, I chose to use the work of <a href=\"http://incrementaldevelopment.com/\">Muhammad Athar Parvez</a> on an XSL stylesheet that generates a single calendar month: <a href=\"http://incrementaldevelopment.com/xsltrick/parvez/\">Parvez&#8217;s Wing of the Gallery of Stupid XSL and XSLT Tricks</a>.</p>\n\n<p>Note: there is an interesting calendar FAQ on the issues of dates and calendars compiled by Claus Tøndering, <a href=\"http://www.tondering.dk/claus/calendar.html\">Frequently Asked Questions about Calendars</a>.</p>\n\n<p>I started in Symphony with a static XML data source:</p>\n\n<pre><code>&lt;calendar&gt;\n    &lt;year&gt;\n        &lt;month value=\"1\" days=\"31\"&gt;January&lt;/month&gt;\n        &lt;month value=\"2\" days=\"28\" leap-year-days=\"29\"&gt;February&lt;/month&gt;\n        &lt;month value=\"3\" days=\"31\"&gt;March&lt;/month&gt;\n        &lt;month value=\"4\" days=\"30\"&gt;April&lt;/month&gt;\n        &lt;month value=\"5\" days=\"31\"&gt;May&lt;/month&gt;\n        &lt;month value=\"6\" days=\"30\"&gt;June&lt;/month&gt;\n        &lt;month value=\"7\" days=\"31\"&gt;July&lt;/month&gt;\n        &lt;month value=\"8\" days=\"31\"&gt;August&lt;/month&gt;\n        &lt;month value=\"9\" days=\"30\"&gt;September&lt;/month&gt;\n        &lt;month value=\"10\" days=\"31\"&gt;October&lt;/month&gt;\n        &lt;month value=\"11\" days=\"30\"&gt;November&lt;/month&gt;\n        &lt;month value=\"12\" days=\"31\"&gt;December&lt;/month&gt;\n    &lt;/year&gt;\n&lt;/calendar&gt;\n</code></pre>\n\n<p>The rest of the application is a CSS file and four XSLT templates that display the four calendar views: year, month, week and day. View the <a href=\"http://designadmin.com/calendar/\">calendar</a> to see the results of this work, which extends the work of Parvez to include the additional views, navigation with persistent dates, and hours for the week and day views.</p>\n');
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 67, '####The Idea Began with an Application\r\n\r\nWhy build something that already exists? Because I have high standards. I want control over the design and functionality, so that I don\'t have to wait for the next release to work the way I envision the process. I enjoy the details, maybe too much. I become immersed in them and lose the big picture. Probably more of a weakness than a strength. But it also helps me to do what I do.\r\n\r\nIn search of the right tool to build sites that worked well with web standards, I found one that had the potential to revolutionize content management and templating systems. The application was built on W3C standards, XML, XPath and XSLT. It is the web publishing system we know as [Symphony](http://21degrees.com.au/products/symphony/). It does away with proprietary templating systems that do not allow for portability from one scripting language to another.\r\n\r\nThe merits of using XML / XSLT are stated well on the [Overture Forum](http://overture21.com/forum/comments.php?DiscussionID=1302#CommentBody_9568):\r\n\r\n> Once you have a system down with XML / XSLT (be it with symphony or your own homegrown solution [as is my case with the company I work for]) maintenance and adding features is a lot faster than with the traditional \'what everyone else is doing\' methods with php. The initial overhead from the development and planning stages is more expensive but in the long run it makes life so much simpler. And it future proofs the applications you write. If you handle a lot of the logic in the XSL then if you decide that php is too slow for your application then you can essentially write a C based application that produces the same XML that your php app did and you don\'t have to make any changes to your front end logic. Portability is a cinch then. One of the many reasons I love symphony. I can port most of my symphony XSL to my own content management system and have the same exact results...\r\n> \r\n> That type of portability is non-existent in other solutions...\r\n\r\nWhile Symphony 1.5 was in [beta](http://overture21.com/forum/comments.php?DiscussionID=411), during the time when Symphony was still being licensed, I started building my design portfolio website, [bauhouse.ca](http://bauhouse.ca/), to showcase what was possible with Symphony. After that experience, I was hooked. The potential was huge, and the development team was extremely responsive to any questions, offering help, code samples and development services as well as application features and enhancements which found their way into the steady stream of releases since the [Symphony 1.5 public release](http://overture21.com/forum/comments.php?DiscussionID=457), which made the application free for anyone to use.\r\n\r\n####A Design Business Administration System\r\n\r\nWith the introduction of Campfire Services, I started to develop some thoughts around the idea of using Symphony as the hub for several business functions. The discussions I had with the Twentyone Degrees development team in September 2006 started something like this:\r\n\r\n> One of the first Campfire Services that I would be interested in developing would be some sort of front end login system for my clients. It would simply be a private area for clients to view a list of ongoing projects and to be able to view conceptual proofs and submit comments. Each client would have a code (ABC) and each job would have a number (1234).\r\n> \r\n> The next stage would be to add the ability to define objectives, establish processes, schedule projects, track time, manage customers and communicate with them through e-mail, both in text and HTML, and on forums.\r\n> \r\n> Then, as I grow my business into what I envision, I would want to tie this into an accounting system, with the ability to generate estimates, invoices, and financial statements, track credit card payments for typeface designs that I would offer for sale on my site, and manage members, sales and billings for subscriptions to print and online magazines.\r\n> \r\n> If I could have exactly what I wish for, it would be something similar to what ProActive Software, in New Zealand, has developed as a project management solution. I took their product, [ProWorkFlow](http://www.proworkflow.com/), for a test drive, and I loved what they had created. The issues I had with it were its reliance on ColdFusion, the lack of an ability to modify the look of the site to match my brand, and the subscription cost per user. I could modify colours and add a logo, but beyond this, I would not be able to customize the interface. For instance, add an area for displaying conceptual work for clients, with the ability to add comments. The cost is actually fairly reasonable, but ideally, I would like a custom solution.\r\n> \r\n> Another product that I have been looking at is from [Marketcircle](http://marketcircle.com/), called Daylite. They also have another product called Billings. I love the look of their applications and have been very tempted to purchase licenses for their software. I also love the idea that they are built specifically for Mac OS X from the ground up. But that is also one of their limitations. They are not cross-platform compatible, though they can be synced with mobile systems. Another problem is the proprietary database used by the software. Also, as far as I know, the features of Billings are separate from the functionality of Daylite. But I want both in one solution. And, ideally, I would want a web-based solution that looks like a desktop application and works just as fast.\r\n> \r\n> In trying to solve the problems of running my business, I find that I have to cobble together a process that relies on software, both desktop and web-based, that solves each specific problem, then work them together into something that gets the job done, however inefficiently, given the repetition of certain tasks.\r\n> \r\n> Instead, I have been looking for a single platform on which to build the entire process. I think Symphony is it. The first step, then, would be to set up the front end login system for my clients, which is my first priority: better communication with my clients. Then, I would want to build each of the additional modules or components onto this.\r\n> \r\n> It\'s all pretty ambitious, I know. But I am taking a long-term view of things. It also sounds as if you have solved a lot of these problems already with Conductor. I am very interested in seeing how this might work for me as well in trying to build a business involving identity, print, web and type design (with a view to eventually grow into industrial design and architecture -- a very long-term view).\r\n\r\nVery ambitious indeed. It\'s a dream, but maybe I\'ll get there one day. In the meantime, I am enjoying the process of building out these ideas, one piece at a time. Organization and business sense are one of the first things I need. They don\'t come easily. But Symphony is helping.\r\n\r\n####My Symphony Feature Request\r\n\r\nAs I started thinking about how I could use Symphony, I realized I would need some additional features. [I asked for them](http://overture21.com/forum/comments.php?DiscussionID=453) and [the Symphony Team delivered](http://overture21.com/forum/comments.php?DiscussionID=668). It went something like this:\r\n\r\n> It would be great to be able to cross-reference data between sections. If I was able to create a categories section and use those same categories as select box options within other sections, it would alleviate the challenge of having to manually modify the options for several sections that would access that same list of categories.\r\n\r\n> So, rather than listing options for the custom field, I could provide XSLT code that indicates a particular range of values from an XML node set in the categories datasource.\r\n\r\nThen, I went on to explain how this might work for building websites.\r\n\r\n> I could theoretically (since I haven\'t tried this) create static pages and menus for an entire site from a single master template using four sections: Sections, Categories, Entries, Pages. The master template would have a URL Schema of /section/category/entry/page/. Rather than using the default navigation data source, I could create a `Sections` section where each entry represents the first level in the hierarchy. This section could contain at least two custom fields:\r\n> \r\n> ### Sections\r\n> * Section Title\r\n> * Section Description\r\n> \r\n> Then, I could create other sections and custom fields:\r\n> \r\n> ### Categories\r\n> * Category Title\r\n> * Category Description\r\n> * Section (this custom field would be a select box listing the Sections by Section Title)\r\n> \r\n> ### Entries\r\n> * Entry Title\r\n> * Entry Body\r\n> * Category (this custom field would be a select box listing the Categories by Category Title)\r\n> \r\n> ### Pages\r\n> * Page Number\r\n> * Page Title\r\n> * Page Body\r\n> * Entry (this custom field would be a select box listing the Entries by Entry Title)\r\n> \r\n> With some creative XSLT templating, a single master template should be able to generate all menus and content dynamically without the Author ever having to touch any of the Structure or Blueprints areas of the admin, which should be restricted to Administrative users. However, all this depends on the custom field being dynamically generated by the primary custom field of another section (or, if possible, any custom field from another section). This is probably possible to accomplish now, though the custom field would have to be a Text Input field and the user would have to type the data rather than choosing it from a pull down menu. The ability to restrict choices, though, would be important to keep the site from getting broken because of user error.\r\n> \r\n> Also, it would be very easy to bring back a much more powerful version of the version 1.1 Categories as you described in the [Subcategories](http://overture21.com/forum/comments.php?DiscussionID=434) thread.\r\n> \r\n> Does this sort of structure make sense as far as building a site with four levels of hierarchy?\r\n\r\nIt could also be used for building a client login / project management system.\r\n\r\n> ### Clients / Projects / Phases / Tasks / Entries\r\n\r\n	<html>\r\n		<head>\r\n			<title>Clients / Projects / Phases / Tasks / Entries</title>\r\n		</head>\r\n		<body>\r\n			<ul class=\"clients\">\r\n				<li class=\"client\">Client ABC\r\n					<ul class=\"projects\">\r\n						<li class=\"project\">Project 1234\r\n							<ul class=\"phases\">\r\n								<li class=\"phase\">Phase 1: Define Objectives\r\n									<ul class=\"tasks\">\r\n										<li class=\"task\">Client Brief\r\n											<ul class=\"timesheet\">\r\n												<li class=\"entry\">Entry Title\r\n													<ul class=\"entry-data\">\r\n														<li class=\"date\">2006-10-26</li>\r\n														<li class=\"start-time\">1:00 pm</li>\r\n														<li class=\"stop-time\">2:15 pm</li>\r\n														<li class=\"hours\">1.25</li>\r\n														<li class=\"rate\">75</li>\r\n														<li class=\"amount\">93.75</li>\r\n														<li class=\"username\">User Name</li>\r\n														<li class=\"description\">Description</li>\r\n														<li class=\"notes\">Notes</li>\r\n													</ul>\r\n												</li>\r\n											</ul>\r\n										</li>\r\n										<li class=\"task\">Creative Brief</li>\r\n									</ul>\r\n								</li>\r\n								<li class=\"phase\">Phase 2: Research\r\n									<ul class=\"tasks\">\r\n										<li class=\"task\">Research</li>\r\n										<li class=\"task\">Concept Development</li>\r\n									</ul>\r\n								</li>\r\n								<li class=\"phase\">Phase 3: Design\r\n									<ul class=\"tasks\">\r\n										<li class=\"task\">Preliminary Concepts</li>\r\n										<li class=\"task\">Concept Review</li>\r\n										<li class=\"task\">Concept Refinements</li>\r\n										<li class=\"task\">Concept Approval</li>\r\n									</ul>\r\n								</li>\r\n								<li class=\"phase\">Phase 4: Production\r\n									<ul class=\"tasks\">\r\n										<li class=\"task\">Design Production</li>\r\n										<li class=\"task\">Prepress</li>\r\n										<li class=\"task\">Final Proofs for Approval</li>\r\n									</ul>\r\n								</li>\r\n								<li class=\"phase\">Phase 5: Print\r\n									<ul class=\"tasks\">\r\n										<li class=\"task\">Deliver Files</li>\r\n										<li class=\"task\">Print Supervision</li>\r\n										<li class=\"task\">Delivery</li>\r\n									</ul>\r\n								</li>\r\n							</ul>\r\n						</li>\r\n					</ul>\r\n				</li>\r\n			</ul>\r\n		</body>\r\n	</html>\r\n\r\n> Dependencies might be built in which would require warnings that by deleting a client, all related projects and entries will be deleted, but Tasks and Phases could be global. So the actual structure would be more like:\r\n\r\n    / Clients / Projects / Entries /\r\n\r\n> where the Entries section would have one required custom field for Task, which would be related to a particular Phase.\r\n\r\n> Does this make sense, or is this trying to do too much with Symphony, when there are tools like [Basecamp](http://www.basecamphq.com/), [Harvest](http://www.getharvest.com/) or [ProWorkFlow](http://www.proworkflow.com/)?\r\n\r\nWhy build something like this in Symphony? Because of today\'s announcement that Symphony 1.8 will enable the application to build other applications. The first proof of concept is the financial application that Twentyone Degrees is currently using for their inhouse operations. To find out more, visit Allen Chang\'s blog on the latest news and resources for developing XSLT templates for the Symphony web publishing system, [Chaotic Pattern](http://chaoticpattern.com/), and listen to the [podcast interview](http://chaoticpattern.com/article/interview-with-the-big-noob/) with Brad Smith and Ryan Sims from [The Big Noob](http://www.thebignoob.com/).', '<h4>The Idea Began with an Application</h4>\n\n<p>Why build something that already exists? Because I have high standards. I want control over the design and functionality, so that I don&#8217;t have to wait for the next release to work the way I envision the process. I enjoy the details, maybe too much. I become immersed in them and lose the big picture. Probably more of a weakness than a strength. But it also helps me to do what I do.</p>\n\n<p>In search of the right tool to build sites that worked well with web standards, I found one that had the potential to revolutionize content management and templating systems. The application was built on W3C standards, XML, XPath and XSLT. It is the web publishing system we know as <a href=\"http://21degrees.com.au/products/symphony/\">Symphony</a>. It does away with proprietary templating systems that do not allow for portability from one scripting language to another.</p>\n\n<p>The merits of using XML / XSLT are stated well on the <a href=\"http://overture21.com/forum/comments.php?DiscussionID=1302#CommentBody_9568\">Overture Forum</a>:</p>\n\n<blockquote>\n  <p>Once you have a system down with XML / XSLT (be it with symphony or your own homegrown solution [as is my case with the company I work for]) maintenance and adding features is a lot faster than with the traditional &#8216;what everyone else is doing&#8217; methods with php. The initial overhead from the development and planning stages is more expensive but in the long run it makes life so much simpler. And it future proofs the applications you write. If you handle a lot of the logic in the XSL then if you decide that php is too slow for your application then you can essentially write a C based application that produces the same XML that your php app did and you don&#8217;t have to make any changes to your front end logic. Portability is a cinch then. One of the many reasons I love symphony. I can port most of my symphony XSL to my own content management system and have the same exact results&#8230;</p>\n  \n  <p>That type of portability is non-existent in other solutions&#8230;</p>\n</blockquote>\n\n<p>While Symphony 1.5 was in <a href=\"http://overture21.com/forum/comments.php?DiscussionID=411\">beta</a>, during the time when Symphony was still being licensed, I started building my design portfolio website, <a href=\"http://bauhouse.ca/\">bauhouse.ca</a>, to showcase what was possible with Symphony. After that experience, I was hooked. The potential was huge, and the development team was extremely responsive to any questions, offering help, code samples and development services as well as application features and enhancements which found their way into the steady stream of releases since the <a href=\"http://overture21.com/forum/comments.php?DiscussionID=457\">Symphony 1.5 public release</a>, which made the application free for anyone to use.</p>\n\n<h4>A Design Business Administration System</h4>\n\n<p>With the introduction of Campfire Services, I started to develop some thoughts around the idea of using Symphony as the hub for several business functions. The discussions I had with the Twentyone Degrees development team in September 2006 started something like this:</p>\n\n<blockquote>\n  <p>One of the first Campfire Services that I would be interested in developing would be some sort of front end login system for my clients. It would simply be a private area for clients to view a list of ongoing projects and to be able to view conceptual proofs and submit comments. Each client would have a code (ABC) and each job would have a number (1234).</p>\n  \n  <p>The next stage would be to add the ability to define objectives, establish processes, schedule projects, track time, manage customers and communicate with them through e-mail, both in text and HTML, and on forums.</p>\n  \n  <p>Then, as I grow my business into what I envision, I would want to tie this into an accounting system, with the ability to generate estimates, invoices, and financial statements, track credit card payments for typeface designs that I would offer for sale on my site, and manage members, sales and billings for subscriptions to print and online magazines.</p>\n  \n  <p>If I could have exactly what I wish for, it would be something similar to what ProActive Software, in New Zealand, has developed as a project management solution. I took their product, <a href=\"http://www.proworkflow.com/\">ProWorkFlow</a>, for a test drive, and I loved what they had created. The issues I had with it were its reliance on ColdFusion, the lack of an ability to modify the look of the site to match my brand, and the subscription cost per user. I could modify colours and add a logo, but beyond this, I would not be able to customize the interface. For instance, add an area for displaying conceptual work for clients, with the ability to add comments. The cost is actually fairly reasonable, but ideally, I would like a custom solution.</p>\n  \n  <p>Another product that I have been looking at is from <a href=\"http://marketcircle.com/\">Marketcircle</a>, called Daylite. They also have another product called Billings. I love the look of their applications and have been very tempted to purchase licenses for their software. I also love the idea that they are built specifically for Mac OS X from the ground up. But that is also one of their limitations. They are not cross-platform compatible, though they can be synced with mobile systems. Another problem is the proprietary database used by the software. Also, as far as I know, the features of Billings are separate from the functionality of Daylite. But I want both in one solution. And, ideally, I would want a web-based solution that looks like a desktop application and works just as fast.</p>\n  \n  <p>In trying to solve the problems of running my business, I find that I have to cobble together a process that relies on software, both desktop and web-based, that solves each specific problem, then work them together into something that gets the job done, however inefficiently, given the repetition of certain tasks.</p>\n  \n  <p>Instead, I have been looking for a single platform on which to build the entire process. I think Symphony is it. The first step, then, would be to set up the front end login system for my clients, which is my first priority: better communication with my clients. Then, I would want to build each of the additional modules or components onto this.</p>\n  \n  <p>It&#8217;s all pretty ambitious, I know. But I am taking a long-term view of things. It also sounds as if you have solved a lot of these problems already with Conductor. I am very interested in seeing how this might work for me as well in trying to build a business involving identity, print, web and type design (with a view to eventually grow into industrial design and architecture &#8212; a very long-term view).</p>\n</blockquote>\n\n<p>Very ambitious indeed. It&#8217;s a dream, but maybe I&#8217;ll get there one day. In the meantime, I am enjoying the process of building out these ideas, one piece at a time. Organization and business sense are one of the first things I need. They don&#8217;t come easily. But Symphony is helping.</p>\n\n<h4>My Symphony Feature Request</h4>\n\n<p>As I started thinking about how I could use Symphony, I realized I would need some additional features. <a href=\"http://overture21.com/forum/comments.php?DiscussionID=453\">I asked for them</a> and <a href=\"http://overture21.com/forum/comments.php?DiscussionID=668\">the Symphony Team delivered</a>. It went something like this:</p>\n\n<blockquote>\n  <p>It would be great to be able to cross-reference data between sections. If I was able to create a categories section and use those same categories as select box options within other sections, it would alleviate the challenge of having to manually modify the options for several sections that would access that same list of categories.</p>\n  \n  <p>So, rather than listing options for the custom field, I could provide XSLT code that indicates a particular range of values from an XML node set in the categories datasource.</p>\n</blockquote>\n\n<p>Then, I went on to explain how this might work for building websites.</p>\n\n<blockquote>\n  <p>I could theoretically (since I haven&#8217;t tried this) create static pages and menus for an entire site from a single master template using four sections: Sections, Categories, Entries, Pages. The master template would have a URL Schema of /section/category/entry/page/. Rather than using the default navigation data source, I could create a <code>Sections</code> section where each entry represents the first level in the hierarchy. This section could contain at least two custom fields:</p>\n  \n  <h3>Sections</h3>\n  \n  <ul>\n  <li>Section Title</li>\n  <li>Section Description</li>\n  </ul>\n  \n  <p>Then, I could create other sections and custom fields:</p>\n  \n  <h3>Categories</h3>\n  \n  <ul>\n  <li>Category Title</li>\n  <li>Category Description</li>\n  <li>Section (this custom field would be a select box listing the Sections by Section Title)</li>\n  </ul>\n  \n  <h3>Entries</h3>\n  \n  <ul>\n  <li>Entry Title</li>\n  <li>Entry Body</li>\n  <li>Category (this custom field would be a select box listing the Categories by Category Title)</li>\n  </ul>\n  \n  <h3>Pages</h3>\n  \n  <ul>\n  <li>Page Number</li>\n  <li>Page Title</li>\n  <li>Page Body</li>\n  <li>Entry (this custom field would be a select box listing the Entries by Entry Title)</li>\n  </ul>\n  \n  <p>With some creative XSLT templating, a single master template should be able to generate all menus and content dynamically without the Author ever having to touch any of the Structure or Blueprints areas of the admin, which should be restricted to Administrative users. However, all this depends on the custom field being dynamically generated by the primary custom field of another section (or, if possible, any custom field from another section). This is probably possible to accomplish now, though the custom field would have to be a Text Input field and the user would have to type the data rather than choosing it from a pull down menu. The ability to restrict choices, though, would be important to keep the site from getting broken because of user error.</p>\n  \n  <p>Also, it would be very easy to bring back a much more powerful version of the version 1.1 Categories as you described in the <a href=\"http://overture21.com/forum/comments.php?DiscussionID=434\">Subcategories</a> thread.</p>\n  \n  <p>Does this sort of structure make sense as far as building a site with four levels of hierarchy?</p>\n</blockquote>\n\n<p>It could also be used for building a client login / project management system.</p>\n\n<blockquote>\n  <h3>Clients / Projects / Phases / Tasks / Entries</h3>\n</blockquote>\n\n<pre><code>&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Clients / Projects / Phases / Tasks / Entries&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;ul class=\"clients\"&gt;\n            &lt;li class=\"client\"&gt;Client ABC\n                &lt;ul class=\"projects\"&gt;\n                    &lt;li class=\"project\"&gt;Project 1234\n                        &lt;ul class=\"phases\"&gt;\n                            &lt;li class=\"phase\"&gt;Phase 1: Define Objectives\n                                &lt;ul class=\"tasks\"&gt;\n                                    &lt;li class=\"task\"&gt;Client Brief\n                                        &lt;ul class=\"timesheet\"&gt;\n                                            &lt;li class=\"entry\"&gt;Entry Title\n                                                &lt;ul class=\"entry-data\"&gt;\n                                                    &lt;li class=\"date\"&gt;2006-10-26&lt;/li&gt;\n                                                    &lt;li class=\"start-time\"&gt;1:00 pm&lt;/li&gt;\n                                                    &lt;li class=\"stop-time\"&gt;2:15 pm&lt;/li&gt;\n                                                    &lt;li class=\"hours\"&gt;1.25&lt;/li&gt;\n                                                    &lt;li class=\"rate\"&gt;75&lt;/li&gt;\n                                                    &lt;li class=\"amount\"&gt;93.75&lt;/li&gt;\n                                                    &lt;li class=\"username\"&gt;User Name&lt;/li&gt;\n                                                    &lt;li class=\"description\"&gt;Description&lt;/li&gt;\n                                                    &lt;li class=\"notes\"&gt;Notes&lt;/li&gt;\n                                                &lt;/ul&gt;\n                                            &lt;/li&gt;\n                                        &lt;/ul&gt;\n                                    &lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Creative Brief&lt;/li&gt;\n                                &lt;/ul&gt;\n                            &lt;/li&gt;\n                            &lt;li class=\"phase\"&gt;Phase 2: Research\n                                &lt;ul class=\"tasks\"&gt;\n                                    &lt;li class=\"task\"&gt;Research&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Concept Development&lt;/li&gt;\n                                &lt;/ul&gt;\n                            &lt;/li&gt;\n                            &lt;li class=\"phase\"&gt;Phase 3: Design\n                                &lt;ul class=\"tasks\"&gt;\n                                    &lt;li class=\"task\"&gt;Preliminary Concepts&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Concept Review&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Concept Refinements&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Concept Approval&lt;/li&gt;\n                                &lt;/ul&gt;\n                            &lt;/li&gt;\n                            &lt;li class=\"phase\"&gt;Phase 4: Production\n                                &lt;ul class=\"tasks\"&gt;\n                                    &lt;li class=\"task\"&gt;Design Production&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Prepress&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Final Proofs for Approval&lt;/li&gt;\n                                &lt;/ul&gt;\n                            &lt;/li&gt;\n                            &lt;li class=\"phase\"&gt;Phase 5: Print\n                                &lt;ul class=\"tasks\"&gt;\n                                    &lt;li class=\"task\"&gt;Deliver Files&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Print Supervision&lt;/li&gt;\n                                    &lt;li class=\"task\"&gt;Delivery&lt;/li&gt;\n                                &lt;/ul&gt;\n                            &lt;/li&gt;\n                        &lt;/ul&gt;\n                    &lt;/li&gt;\n                &lt;/ul&gt;\n            &lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n</code></pre>\n\n<blockquote>\n  <p>Dependencies might be built in which would require warnings that by deleting a client, all related projects and entries will be deleted, but Tasks and Phases could be global. So the actual structure would be more like:</p>\n</blockquote>\n\n<pre><code>/ Clients / Projects / Entries /\n</code></pre>\n\n<blockquote>\n  <p>where the Entries section would have one required custom field for Task, which would be related to a particular Phase.</p>\n  \n  <p>Does this make sense, or is this trying to do too much with Symphony, when there are tools like <a href=\"http://www.basecamphq.com/\">Basecamp</a>, <a href=\"http://www.getharvest.com/\">Harvest</a> or <a href=\"http://www.proworkflow.com/\">ProWorkFlow</a>?</p>\n</blockquote>\n\n<p>Why build something like this in Symphony? Because of today&#8217;s announcement that Symphony 1.8 will enable the application to build other applications. The first proof of concept is the financial application that Twentyone Degrees is currently using for their inhouse operations. To find out more, visit Allen Chang&#8217;s blog on the latest news and resources for developing XSLT templates for the Symphony web publishing system, <a href=\"http://chaoticpattern.com/\">Chaotic Pattern</a>, and listen to the <a href=\"http://chaoticpattern.com/article/interview-with-the-big-noob/\">podcast interview</a> with Brad Smith and Ryan Sims from <a href=\"http://www.thebignoob.com/\">The Big Noob</a>.</p>\n');
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 82, 'I have created an XSLT template that parses the standard ICS format and transforms it into XHTML. Here is the code that parses the properties of the ICS file into a list of properties that can be displayed in XHTML. Feed the $ical-data-raw parameter with ICS data and you will get XHTML formatted properties.\r\n\r\n	<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\r\n	\r\n	<xsl:output\r\n		method=\"xml\" \r\n		doctype-public=\"-//W3C//DTD XHTML 1.0 Strict//EN\" \r\n		doctype-system=\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\r\n		omit-xml-declaration=\"yes\"\r\n		encoding=\"UTF-8\" \r\n		indent=\"yes\" />\r\n	\r\n	<xsl:variable name=\"ical-data\" select=\"/data/vcalendar\"/>\r\n	<xsl:variable name=\"input-data\" select=\"normalize-space(/data/vcalendar)\"/>\r\n	<xsl:variable name=\"ical-events\">\r\n		<xsl:value-of select=\"concat(\'BEGIN:VEVENT \',substring-before(substring-after($ical-data,\'BEGIN:VEVENT\'),\'END:VCALENDAR\'))\"/>\r\n	</xsl:variable>\r\n	\r\n	<xsl:template match=\"/\">\r\n	\r\n		<h1>XSL Transform iCalendar ICS to XHTML</h1>\r\n	\r\n		<h2>iCalendar Source file</h2>\r\n		<p><xsl:value-of select=\"$ical-data\"/></p>\r\n	\r\n	\r\n	\r\n		<h2>iCalendar Data with Normalized Spaces</h2>\r\n		<p><xsl:value-of select=\"$input-data\"/></p>\r\n	\r\n		<h2>iCalendar Events</h2>\r\n		<p><xsl:value-of select=\"$ical-events\"/></p>\r\n	\r\n		<h2>Properties as XHTML</h2>\r\n		<ul>\r\n			<xsl:call-template name=\"properties\"/>\r\n		</ul>\r\n	\r\n	</xsl:template>\r\n	\r\n	<xsl:template name=\"property\">\r\n		<xsl:param name=\"input\" select=\"$input-data\"/>\r\n		<xsl:param name=\"property\" select=\"substring-before($input,\':\')\"/>\r\n		<xsl:param name=\"string-after-property\" select=\"substring-after($input,\':\')\"/>\r\n		<xsl:param name=\"next-string\" select=\"substring-before($string-after-property,\':\')\"/>\r\n		<xsl:param name=\"reverse-next-string\">\r\n			<xsl:call-template name=\"reverse\">\r\n				<xsl:with-param name=\"input\" select=\"$next-string\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"reverse-next-property\" select=\"substring-before($reverse-next-string,\' \')\"/>\r\n		<xsl:param name=\"next-property\">\r\n			<xsl:call-template name=\"reverse\">\r\n				<xsl:with-param name=\"input\" select=\"substring-before($reverse-next-string,\' \')\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"value\" select=\"substring-before($next-string, concat(\' \',$next-property))\"/>\r\n		<xsl:param name=\"remaining-string\" select=\"substring-after($string-after-property,concat($value,\' \'))\"/>\r\n		<li>Property: <xsl:value-of select=\"$property\"/></li>\r\n		<li>Next String: <xsl:value-of select=\"$next-string\"/></li>\r\n		<li>Reverse Next String: <xsl:value-of select=\"$reverse-next-string\"/></li>\r\n		<li>Reverse Next Property: <xsl:value-of select=\"$reverse-next-property\"/></li>\r\n		<li>Next Property: <xsl:value-of select=\"$next-property\"/></li>\r\n		<li>Value: <xsl:value-of select=\"$value\"/></li>\r\n		<li>Remaining String: <xsl:value-of select=\"$remaining-string\"/></li>\r\n	\r\n		<p><xsl:value-of select=\"$property\"/>: <xsl:value-of select=\"$value\"/></p>\r\n		<xsl:call-template name=\"next-property\">\r\n			<xsl:with-param name=\"input\" select=\"$remaining-string\"/>\r\n		</xsl:call-template>\r\n	</xsl:template>\r\n	\r\n	<xsl:template name=\"properties\">\r\n		<xsl:param name=\"input\" select=\"$input-data\"/>\r\n		<xsl:param name=\"property\" select=\"substring-before($input,\':\')\"/>\r\n		<xsl:param name=\"string-after-property\" select=\"substring-after($input,\':\')\"/>\r\n		<xsl:param name=\"next-string\" select=\"substring-before($string-after-property,\':\')\"/>\r\n		<xsl:param name=\"reverse-next-string\">\r\n			<xsl:call-template name=\"reverse\">\r\n				<xsl:with-param name=\"input\" select=\"$next-string\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"reverse-next-property\" select=\"substring-before($reverse-next-string,\' \')\"/>\r\n		<xsl:param name=\"next-property\">\r\n			<xsl:call-template name=\"reverse\">\r\n				<xsl:with-param name=\"input\" select=\"substring-before($reverse-next-string,\' \')\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"value\">\r\n			<xsl:choose>\r\n				<xsl:when test=\"$next-property != \'\'\">\r\n					<xsl:value-of select=\"substring-before($next-string, concat(\' \',$next-property))\"/>\r\n				</xsl:when>\r\n				<xsl:otherwise>\r\n					<xsl:value-of select=\"$string-after-property\"/>\r\n				</xsl:otherwise>\r\n			</xsl:choose>\r\n		</xsl:param>\r\n		<xsl:param name=\"remaining-string\" select=\"substring-after($string-after-property,concat($value,\' \'))\"/>\r\n	\r\n		<p><xsl:value-of select=\"$property\"/>: <xsl:value-of select=\"$value\"/></p>\r\n		<xsl:if test=\"$remaining-string != \'\'\">\r\n			<xsl:call-template name=\"properties\">\r\n				<xsl:with-param name=\"input\" select=\"$remaining-string\"/>\r\n			</xsl:call-template>\r\n		</xsl:if>\r\n	</xsl:template>\r\n	\r\n	<xsl:template name=\"reverse\">\r\n		<xsl:param name=\"input\"/>\r\n		<xsl:variable name=\"length\" select=\"string-length($input)\"/>\r\n		<xsl:choose>\r\n			<xsl:when test=\"$length &lt; 2\">\r\n				<xsl:value-of select=\"$input\"/>\r\n			</xsl:when>		\r\n			<xsl:when test=\"$length = 2\">\r\n				<xsl:value-of select=\"substring($input,2,1)\"/>\r\n				<xsl:value-of select=\"substring($input,1,1)\"/>\r\n			</xsl:when>		\r\n			<xsl:otherwise>\r\n				<xsl:variable name=\"middle\" select=\"floor($length div 2)\"/>\r\n				<xsl:call-template name=\"reverse\">\r\n					<xsl:with-param name=\"input\" select=\"substring($input,$middle + 1,$middle + 1)\"/>\r\n				</xsl:call-template>\r\n				<xsl:call-template name=\"reverse\">\r\n					<xsl:with-param name=\"input\" select=\"substring($input,1,$middle)\"/>\r\n				</xsl:call-template>\r\n			</xsl:otherwise>		\r\n		</xsl:choose>\r\n	</xsl:template>\r\n\r\n	</xsl:stylesheet>\r\n\r\nI have completed building the [XSLT templates](http://designadmin.com/journal/2007/07/29/xslt-transformation-of-ics-to-xml/) that can output [xCalendar](http://www.w3.org/2001/sw/Europe/200210/calendar/vocab_usecases.html#ical). It should be a trivial matter to adjust the templates to output the [hCalendar](http://microformats.org/wiki/hcalendar) format as well (see also the W3C presentation on [Semantic Web Data Integration with hCalendar and GRDDL](http://www.w3.org/2002/12/cal/mash/slides). This will allow iCal files to be easily parsed to test the ability of the [XSLT Calendar](http://designadmin.com/journal/2007/07/27/an-xslt-calendar/) to be able to display iCal information.\r\n\r\nThe xCalendar format will be most useful as an XML data source for building XHTML pages.\r\n\r\n\r\n	<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n	<!DOCTYPE iCalendar PUBLIC \"-//IETF//DTD XCAL/iCalendar XML//EN\"\r\n	\"http://www.ietf.org/internet-drafts/draft-ietf-calsch-many-xcal-01.txt\">\r\n	\r\n	<iCalendar>\r\n		<vcalendar method=\"PUBLISH\"\r\n			version=\"2.0\"\r\n			prodid=\"-//HandGen//NONSGML vGen v1.0//EN\">\r\n			<vevent>\r\n				<uid>19981116T150000@cal10.host.com</uid>\r\n				<dtstamp>19981116T145958Z</dtstamp>\r\n				<summary>Project XYZ Review</summary>\r\n				<location>Conference Room 23A</location>\r\n				<dtstart>19981116T163000Z</dtstart>\r\n				<dtend>19981116T190000Z</dtend>\r\n				<categories>\r\n					<item>Appointment</item>\r\n				</categories>\r\n			</vevent>\r\n		</vcalendar>\r\n	</iCalendar>', '<p>I have created an XSLT template that parses the standard ICS format and transforms it into XHTML. Here is the code that parses the properties of the ICS file into a list of properties that can be displayed in XHTML. Feed the $ical-data-raw parameter with ICS data and you will get XHTML formatted properties.</p>\n\n<pre><code>&lt;xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"&gt;\n\n&lt;xsl:output\n    method=\"xml\" \n    doctype-public=\"-//W3C//DTD XHTML 1.0 Strict//EN\" \n    doctype-system=\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\n    omit-xml-declaration=\"yes\"\n    encoding=\"UTF-8\" \n    indent=\"yes\" /&gt;\n\n&lt;xsl:variable name=\"ical-data\" select=\"/data/vcalendar\"/&gt;\n&lt;xsl:variable name=\"input-data\" select=\"normalize-space(/data/vcalendar)\"/&gt;\n&lt;xsl:variable name=\"ical-events\"&gt;\n    &lt;xsl:value-of select=\"concat(\'BEGIN:VEVENT \',substring-before(substring-after($ical-data,\'BEGIN:VEVENT\'),\'END:VCALENDAR\'))\"/&gt;\n&lt;/xsl:variable&gt;\n\n&lt;xsl:template match=\"/\"&gt;\n\n    &lt;h1&gt;XSL Transform iCalendar ICS to XHTML&lt;/h1&gt;\n\n    &lt;h2&gt;iCalendar Source file&lt;/h2&gt;\n    &lt;p&gt;&lt;xsl:value-of select=\"$ical-data\"/&gt;&lt;/p&gt;\n\n\n\n    &lt;h2&gt;iCalendar Data with Normalized Spaces&lt;/h2&gt;\n    &lt;p&gt;&lt;xsl:value-of select=\"$input-data\"/&gt;&lt;/p&gt;\n\n    &lt;h2&gt;iCalendar Events&lt;/h2&gt;\n    &lt;p&gt;&lt;xsl:value-of select=\"$ical-events\"/&gt;&lt;/p&gt;\n\n    &lt;h2&gt;Properties as XHTML&lt;/h2&gt;\n    &lt;ul&gt;\n        &lt;xsl:call-template name=\"properties\"/&gt;\n    &lt;/ul&gt;\n\n&lt;/xsl:template&gt;\n\n&lt;xsl:template name=\"property\"&gt;\n    &lt;xsl:param name=\"input\" select=\"$input-data\"/&gt;\n    &lt;xsl:param name=\"property\" select=\"substring-before($input,\':\')\"/&gt;\n    &lt;xsl:param name=\"string-after-property\" select=\"substring-after($input,\':\')\"/&gt;\n    &lt;xsl:param name=\"next-string\" select=\"substring-before($string-after-property,\':\')\"/&gt;\n    &lt;xsl:param name=\"reverse-next-string\"&gt;\n        &lt;xsl:call-template name=\"reverse\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$next-string\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"reverse-next-property\" select=\"substring-before($reverse-next-string,\' \')\"/&gt;\n    &lt;xsl:param name=\"next-property\"&gt;\n        &lt;xsl:call-template name=\"reverse\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"substring-before($reverse-next-string,\' \')\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"value\" select=\"substring-before($next-string, concat(\' \',$next-property))\"/&gt;\n    &lt;xsl:param name=\"remaining-string\" select=\"substring-after($string-after-property,concat($value,\' \'))\"/&gt;\n    &lt;li&gt;Property: &lt;xsl:value-of select=\"$property\"/&gt;&lt;/li&gt;\n    &lt;li&gt;Next String: &lt;xsl:value-of select=\"$next-string\"/&gt;&lt;/li&gt;\n    &lt;li&gt;Reverse Next String: &lt;xsl:value-of select=\"$reverse-next-string\"/&gt;&lt;/li&gt;\n    &lt;li&gt;Reverse Next Property: &lt;xsl:value-of select=\"$reverse-next-property\"/&gt;&lt;/li&gt;\n    &lt;li&gt;Next Property: &lt;xsl:value-of select=\"$next-property\"/&gt;&lt;/li&gt;\n    &lt;li&gt;Value: &lt;xsl:value-of select=\"$value\"/&gt;&lt;/li&gt;\n    &lt;li&gt;Remaining String: &lt;xsl:value-of select=\"$remaining-string\"/&gt;&lt;/li&gt;\n\n    &lt;p&gt;&lt;xsl:value-of select=\"$property\"/&gt;: &lt;xsl:value-of select=\"$value\"/&gt;&lt;/p&gt;\n    &lt;xsl:call-template name=\"next-property\"&gt;\n        &lt;xsl:with-param name=\"input\" select=\"$remaining-string\"/&gt;\n    &lt;/xsl:call-template&gt;\n&lt;/xsl:template&gt;\n\n&lt;xsl:template name=\"properties\"&gt;\n    &lt;xsl:param name=\"input\" select=\"$input-data\"/&gt;\n    &lt;xsl:param name=\"property\" select=\"substring-before($input,\':\')\"/&gt;\n    &lt;xsl:param name=\"string-after-property\" select=\"substring-after($input,\':\')\"/&gt;\n    &lt;xsl:param name=\"next-string\" select=\"substring-before($string-after-property,\':\')\"/&gt;\n    &lt;xsl:param name=\"reverse-next-string\"&gt;\n        &lt;xsl:call-template name=\"reverse\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$next-string\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"reverse-next-property\" select=\"substring-before($reverse-next-string,\' \')\"/&gt;\n    &lt;xsl:param name=\"next-property\"&gt;\n        &lt;xsl:call-template name=\"reverse\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"substring-before($reverse-next-string,\' \')\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"value\"&gt;\n        &lt;xsl:choose&gt;\n            &lt;xsl:when test=\"$next-property != \'\'\"&gt;\n                &lt;xsl:value-of select=\"substring-before($next-string, concat(\' \',$next-property))\"/&gt;\n            &lt;/xsl:when&gt;\n            &lt;xsl:otherwise&gt;\n                &lt;xsl:value-of select=\"$string-after-property\"/&gt;\n            &lt;/xsl:otherwise&gt;\n        &lt;/xsl:choose&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"remaining-string\" select=\"substring-after($string-after-property,concat($value,\' \'))\"/&gt;\n\n    &lt;p&gt;&lt;xsl:value-of select=\"$property\"/&gt;: &lt;xsl:value-of select=\"$value\"/&gt;&lt;/p&gt;\n    &lt;xsl:if test=\"$remaining-string != \'\'\"&gt;\n        &lt;xsl:call-template name=\"properties\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$remaining-string\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:if&gt;\n&lt;/xsl:template&gt;\n\n&lt;xsl:template name=\"reverse\"&gt;\n    &lt;xsl:param name=\"input\"/&gt;\n    &lt;xsl:variable name=\"length\" select=\"string-length($input)\"/&gt;\n    &lt;xsl:choose&gt;\n        &lt;xsl:when test=\"$length &amp;lt; 2\"&gt;\n            &lt;xsl:value-of select=\"$input\"/&gt;\n        &lt;/xsl:when&gt;     \n        &lt;xsl:when test=\"$length = 2\"&gt;\n            &lt;xsl:value-of select=\"substring($input,2,1)\"/&gt;\n            &lt;xsl:value-of select=\"substring($input,1,1)\"/&gt;\n        &lt;/xsl:when&gt;     \n        &lt;xsl:otherwise&gt;\n            &lt;xsl:variable name=\"middle\" select=\"floor($length div 2)\"/&gt;\n            &lt;xsl:call-template name=\"reverse\"&gt;\n                &lt;xsl:with-param name=\"input\" select=\"substring($input,$middle + 1,$middle + 1)\"/&gt;\n            &lt;/xsl:call-template&gt;\n            &lt;xsl:call-template name=\"reverse\"&gt;\n                &lt;xsl:with-param name=\"input\" select=\"substring($input,1,$middle)\"/&gt;\n            &lt;/xsl:call-template&gt;\n        &lt;/xsl:otherwise&gt;        \n    &lt;/xsl:choose&gt;\n&lt;/xsl:template&gt;\n\n&lt;/xsl:stylesheet&gt;\n</code></pre>\n\n<p>I have completed building the <a href=\"http://designadmin.com/journal/2007/07/29/xslt-transformation-of-ics-to-xml/\">XSLT templates</a> that can output <a href=\"http://www.w3.org/2001/sw/Europe/200210/calendar/vocab_usecases.html#ical\">xCalendar</a>. It should be a trivial matter to adjust the templates to output the <a href=\"http://microformats.org/wiki/hcalendar\">hCalendar</a> format as well (see also the W3C presentation on <a href=\"http://www.w3.org/2002/12/cal/mash/slides\">Semantic Web Data Integration with hCalendar and GRDDL</a>. This will allow iCal files to be easily parsed to test the ability of the <a href=\"http://designadmin.com/journal/2007/07/27/an-xslt-calendar/\">XSLT Calendar</a> to be able to display iCal information.</p>\n\n<p>The xCalendar format will be most useful as an XML data source for building XHTML pages.</p>\n\n<pre><code>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;!DOCTYPE iCalendar PUBLIC \"-//IETF//DTD XCAL/iCalendar XML//EN\"\n\"http://www.ietf.org/internet-drafts/draft-ietf-calsch-many-xcal-01.txt\"&gt;\n\n&lt;iCalendar&gt;\n    &lt;vcalendar method=\"PUBLISH\"\n        version=\"2.0\"\n        prodid=\"-//HandGen//NONSGML vGen v1.0//EN\"&gt;\n        &lt;vevent&gt;\n            &lt;uid&gt;19981116T150000@cal10.host.com&lt;/uid&gt;\n            &lt;dtstamp&gt;19981116T145958Z&lt;/dtstamp&gt;\n            &lt;summary&gt;Project XYZ Review&lt;/summary&gt;\n            &lt;location&gt;Conference Room 23A&lt;/location&gt;\n            &lt;dtstart&gt;19981116T163000Z&lt;/dtstart&gt;\n            &lt;dtend&gt;19981116T190000Z&lt;/dtend&gt;\n            &lt;categories&gt;\n                &lt;item&gt;Appointment&lt;/item&gt;\n            &lt;/categories&gt;\n        &lt;/vevent&gt;\n    &lt;/vcalendar&gt;\n&lt;/iCalendar&gt;\n</code></pre>\n');
+INSERT INTO `tbl_entries_data_32` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 83, 'There is one minor problem that I couldn\'t get past, which was to create XML elements for the values of those properties that have multiple values, such as the `rrule` or `category` elements. I developed the following template with the help of Marc Liyanage\'s [TextXSLT](http://www.entropy.ch/software/macosx/#testxslt) application.\r\n\r\n	<?xml version=\"1.0\" encoding=\"utf-8\" ?>\r\n	<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\r\n		\r\n	<xsl:output\r\n		method=\"xml\" \r\n		doctype-public=\"-//W3C//DTD XHTML 1.0 Strict//EN\" \r\n		doctype-system=\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\r\n		omit-xml-declaration=\"yes\"\r\n		encoding=\"UTF-8\" \r\n		indent=\"yes\" />\r\n	\r\n	<xsl:param name=\"ical-data-raw\" select=\"/data/vcalendar\"/>\r\n	<xsl:param name=\"ical-data\" select=\"normalize-space($ical-data-raw)\"/>\r\n	<xsl:param name=\"ical-properties\" select=\"substring-before($ical-data,\' BEGIN:VEVENT\')\"/>\r\n	<xsl:param name=\"ical-events\">\r\n	<xsl:value-of select=\"concat(\'BEGIN:VEVENT \',substring-before(substring-after($ical-data,\'BEGIN:VEVENT \'),\' END:VCALENDAR\'))\"/>\r\n	</xsl:param>\r\n		\r\n	<xsl:template match=\"/\">\r\n		\r\n		<h1>XSL Transformation of iCalendar ICS format to XHTML</h1>\r\n	\r\n		<h2>Individual iCalendar Events</h2>\r\n	\r\n		<h3>iCalendar to xCalendar XSL Transformation</h3>\r\n		<xsl:call-template name=\"xcal-calendar\">\r\n			<xsl:with-param name=\"input\" select=\"$ical-properties\"/>\r\n			<xsl:with-param name=\"type\" select=\"\'calendar\'\"/>\r\n			<xsl:with-param name=\"output-format\" select=\"\'xcalendar\'\"/>\r\n		</xsl:call-template>\r\n		\r\n	</xsl:template>\r\n	\r\n	<xsl:template name=\"xcal-calendar\">\r\n		<xsl:param name=\"input\"/>\r\n		<xsl:param name=\"type\" select=\"\'event\'\"/>\r\n		<xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/>\r\n		<xsl:param name=\"ical-properties-data\" select=\"$input\"/>\r\n		<xsl:param name=\"remaining-event-data\" select=\"substring-after($input, $ical-properties-data)\"/>\r\n		<xsl:choose>\r\n			<xsl:when test=\"$output-format = \'xcalendar\'\">\r\n				<iCalendar>\r\n					<vcalendar>\r\n						<xsl:call-template name=\"properties\">\r\n							<xsl:with-param name=\"input\" select=\"$ical-properties-data\"/>\r\n							<xsl:with-param name=\"type\" select=\"$type\"/>\r\n							<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n						</xsl:call-template>\r\n						<xsl:call-template name=\"xcal-events\">\r\n							<xsl:with-param name=\"input\" select=\"$ical-events\"/>\r\n							<xsl:with-param name=\"type\" select=\"\'event\'\"/>\r\n							<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n						</xsl:call-template>\r\n					</vcalendar>\r\n				</iCalendar>\r\n			</xsl:when>\r\n			<xsl:when test=\"$output-format = \'xcalendar-encoded\'\">\r\n				<code><pre>\r\n				<xsl:text>&lt;iCalendar&gt;&#xd;</xsl:text>\r\n				<xsl:text>&lt;vcalendar&#xd;</xsl:text>\r\n				<xsl:call-template name=\"properties\">\r\n					<xsl:with-param name=\"input\" select=\"$ical-properties-data\"/>\r\n					<xsl:with-param name=\"type\" select=\"$type\"/>\r\n					<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n				</xsl:call-template>\r\n				<xsl:text>&gt;&#xd;</xsl:text>\r\n				<xsl:call-template name=\"xcal-events\">\r\n					<xsl:with-param name=\"input\" select=\"$ical-events\"/>\r\n					<xsl:with-param name=\"type\" select=\"\'event\'\"/>\r\n					<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n				</xsl:call-template>\r\n				<xsl:text>&lt;/vcalendar&gt;&#xd;</xsl:text>\r\n				<xsl:text>&lt;/iCalendar&gt;&#xd;</xsl:text>\r\n				</pre></code>\r\n			</xsl:when>\r\n		</xsl:choose>\r\n		<xsl:if test=\"$remaining-event-data != \'\'\">\r\n			<xsl:call-template name=\"xcal-calendar\">\r\n				<xsl:with-param name=\"input\" select=\"$remaining-event-data\"/>\r\n				<xsl:with-param name=\"type\" select=\"$type\"/>\r\n				<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n			</xsl:call-template>\r\n		</xsl:if>\r\n	</xsl:template>\r\n	\r\n	<xsl:template name=\"xcal-events\">\r\n		<xsl:param name=\"input\"/>\r\n		<xsl:param name=\"type\" select=\"\'event\'\"/>\r\n		<xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/>\r\n		<xsl:param name=\"ical-event-data\" select=\"concat(\'BEGIN:VEVENT \',substring-before(substring-after($input,\'BEGIN:VEVENT \'),\' END:VEVENT\'),\' END:VEVENT\')\"/>\r\n		<xsl:param name=\"remaining-event-data\" select=\"substring-after($input, $ical-event-data)\"/>\r\n		<xsl:choose>\r\n			<xsl:when test=\"$output-format = \'xcalendar\'\">\r\n				<vevent>\r\n					<xsl:call-template name=\"properties\">\r\n						<xsl:with-param name=\"input\" select=\"$ical-event-data\"/>\r\n						<xsl:with-param name=\"type\" select=\"$type\"/>\r\n						<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n					</xsl:call-template>\r\n				</vevent>\r\n			</xsl:when>\r\n			<xsl:when test=\"$output-format = \'xcalendar-encoded\'\">\r\n				<xsl:text>&#x9;&lt;vevent&gt;&#xd;</xsl:text>\r\n					<xsl:call-template name=\"properties\">\r\n						<xsl:with-param name=\"input\" select=\"$ical-event-data\"/>\r\n						<xsl:with-param name=\"type\" select=\"$type\"/>\r\n						<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n					</xsl:call-template>\r\n				<xsl:text>&#x9;&lt;/vevent&gt;&#xd;</xsl:text>\r\n			</xsl:when>\r\n			<xsl:when test=\"$output-format = \'hcalendar\'\">\r\n			</xsl:when>\r\n		</xsl:choose>\r\n		<xsl:if test=\"$remaining-event-data != \'\'\">\r\n			<xsl:call-template name=\"xcal-events\">\r\n				<xsl:with-param name=\"input\" select=\"$remaining-event-data\"/>\r\n				<xsl:with-param name=\"type\" select=\"$type\"/>\r\n				<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n			</xsl:call-template>\r\n		</xsl:if>\r\n	</xsl:template>\r\n	\r\n	<xsl:template name=\"properties\">\r\n		<xsl:param name=\"input\" select=\"$ical-data\"/>\r\n		<xsl:param name=\"type\" select=\"\'event\'\"/>\r\n		<xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/>\r\n		<xsl:param name=\"property-and-attribute-caps\" select=\"substring-before($input,\':\')\"/>\r\n		<xsl:param name=\"property-and-attribute\" select=\"translate($property-and-attribute-caps,\'ABCDEFGHIJKLMNOPQRSTUVWXYZ\',\'abcdefghijklmnopqrstuvwxyz\')\"/>\r\n		<xsl:param name=\"property\">\r\n			<xsl:choose>\r\n				<xsl:when test=\"contains($property-and-attribute,\';\')\">\r\n					<xsl:value-of select=\"substring-before($property-and-attribute,\';\')\"/>\r\n				</xsl:when>\r\n				<xsl:otherwise>\r\n					<xsl:value-of select=\"$property-and-attribute\"/>\r\n				</xsl:otherwise>\r\n			</xsl:choose>\r\n		</xsl:param>\r\n		<xsl:param name=\"property-attribute\" select=\"substring-after($property-and-attribute,\';\')\"/>\r\n		<xsl:param name=\"property-attribute-name\" select=\"substring-before($property-attribute,\'=\')\"/>\r\n		<xsl:param name=\"property-attribute-value\" select=\"substring-after($property-attribute,\'=\')\"/>\r\n		<xsl:param name=\"string-after-property\" select=\"substring-after($input,\':\')\"/>\r\n		<xsl:param name=\"next-string\" select=\"substring-before($string-after-property,\':\')\"/>\r\n		<xsl:param name=\"reverse-next-string\">\r\n			<xsl:call-template name=\"reverse\">\r\n				<xsl:with-param name=\"input\" select=\"$next-string\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"reverse-next-property\" select=\"substring-before($reverse-next-string,\' \')\"/>\r\n		<xsl:param name=\"next-property\">\r\n			<xsl:call-template name=\"reverse\">\r\n				<xsl:with-param name=\"input\" select=\"substring-before($reverse-next-string,\' \')\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"string-before-next-property\" select=\"substring-before($next-string, concat(\' \',$next-property))\"/>\r\n		<xsl:param name=\"plural-values\" select=\"contains($string-before-next-property,\';\')\"/>\r\n		<xsl:param name=\"multiple-items\">\r\n			<xsl:if test=\"$plural-values\">\r\n				<xsl:value-of select=\"translate($string-before-next-property,\'ABCDEFGHIJKLMNOPQRSTUVWXYZ\',\'abcdefghijklmnopqrstuvwxyz\')\"/>\r\n			</xsl:if>\r\n		</xsl:param>\r\n		<xsl:param name=\"items\">\r\n			<xsl:call-template name=\"items\">\r\n				<xsl:with-param name=\"input\" select=\"$multiple-items\"/>\r\n				<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n			</xsl:call-template>\r\n		</xsl:param>\r\n		<xsl:param name=\"value\">\r\n			<xsl:choose>\r\n				<xsl:when test=\"$next-property != \'\' and contains($string-before-next-property,\';\') and $output-format = \'xcalendar-encoded\'\">\r\n					<xsl:value-of select=\"$items\"/>\r\n				</xsl:when>\r\n				<xsl:when test=\"$next-property != \'\'\">\r\n					<xsl:value-of select=\"$string-before-next-property\"/>\r\n				</xsl:when>\r\n				<xsl:otherwise>\r\n					<xsl:value-of select=\"$string-after-property\"/>\r\n				</xsl:otherwise>\r\n			</xsl:choose>\r\n		</xsl:param>\r\n		<xsl:param name=\"remaining-string\" select=\"substring-after($string-after-property,concat($value,\' \'))\"/>\r\n		<xsl:if test=\"$property != \'begin\' and $property != \'end\'\">\r\n			<xsl:choose>\r\n				<xsl:when test=\"$type = \'event\'\">\r\n					<xsl:choose>\r\n						<xsl:when test=\"$output-format = \'xcalendar\'\">\r\n							<xsl:choose>\r\n								<xsl:when test=\"$property-attribute-name = \'value\'\">\r\n									<xsl:element name=\"{$property}\">\r\n										<xsl:attribute name=\"{$property-attribute-name}\"><xsl:value-of select=\"$property-attribute-value\"/></xsl:attribute>\r\n										<xsl:value-of select=\"$value\"/>\r\n									</xsl:element>\r\n								</xsl:when>\r\n								<xsl:when test=\"$plural-values and $output-format = \'xcalendar\'\">\r\n									<xsl:element name=\"{$property}\">\r\n										<xsl:copy-of select=\"$items\"/>\r\n									</xsl:element>\r\n								</xsl:when>\r\n								<xsl:otherwise>\r\n									<xsl:element name=\"{$property}\">\r\n										<xsl:value-of select=\"$value\"/>\r\n									</xsl:element>\r\n								</xsl:otherwise>\r\n							</xsl:choose>\r\n						</xsl:when>\r\n						<xsl:when test=\"$output-format = \'xcalendar-encoded\'\">\r\n							<xsl:choose>\r\n								<xsl:when test=\"$property-attribute-name = \'value\'\">\r\n									<xsl:text>&#x9;&#x9;&lt;</xsl:text>\r\n									<xsl:value-of select=\"$property\"/>\r\n									<xsl:text> </xsl:text>\r\n									<xsl:value-of select=\"$property-attribute-name\"/>\r\n									<xsl:text>=\"</xsl:text>\r\n									<xsl:value-of select=\"$property-attribute-value\"/>\r\n									<xsl:text>\"&gt;</xsl:text>\r\n									<xsl:value-of select=\"$value\"/>\r\n									<xsl:text>&lt;/</xsl:text>\r\n									<xsl:value-of select=\"$property\"/>\r\n									<xsl:text>&gt;&#xd;</xsl:text>\r\n								</xsl:when>\r\n								<xsl:otherwise>\r\n									<xsl:text>&#x9;&#x9;&lt;</xsl:text>\r\n									<xsl:value-of select=\"$property\"/>\r\n									<xsl:text>&gt;</xsl:text>\r\n									<xsl:value-of select=\"$value\"/>\r\n									<xsl:text>&lt;/</xsl:text>\r\n									<xsl:value-of select=\"$property\"/>\r\n									<xsl:text>&gt;&#xd;</xsl:text>\r\n								</xsl:otherwise>\r\n							</xsl:choose>\r\n						</xsl:when>\r\n					</xsl:choose>\r\n				</xsl:when>\r\n				<xsl:when test=\"$type = \'calendar\'\">\r\n					<xsl:choose>\r\n						<xsl:when test=\"$output-format = \'xcalendar\'\">\r\n							<xsl:attribute name=\"{$property}\"><xsl:value-of select=\"$value\"/></xsl:attribute>\r\n						</xsl:when>\r\n						<xsl:when test=\"$output-format = \'xcalendar-encoded\'\">\r\n							<xsl:text>&#x9;</xsl:text>\r\n							<xsl:value-of select=\"$property\"/>\r\n							<xsl:text>=\"</xsl:text>\r\n							<xsl:value-of select=\"$value\"/>\r\n							<xsl:text>\"</xsl:text>\r\n						</xsl:when>\r\n					</xsl:choose>\r\n				</xsl:when>\r\n			</xsl:choose>\r\n		</xsl:if>\r\n		<xsl:if test=\"$remaining-string != \'\'\">\r\n			<xsl:if test=\"$property != \'begin\' and $property != \'end\' and $output-format = \'xcalendar-encoded\' and $type = \'calendar\'\">\r\n				<xsl:text>&#xd;</xsl:text>\r\n			</xsl:if>\r\n			<xsl:call-template name=\"properties\">\r\n				<xsl:with-param name=\"input\" select=\"$remaining-string\"/>\r\n				<xsl:with-param name=\"type\" select=\"$type\"/>\r\n				<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n			</xsl:call-template>\r\n		</xsl:if>\r\n	</xsl:template>\r\n	\r\n	\r\n	<xsl:template name=\"items\">\r\n		<xsl:param name=\"input\"/>\r\n		<xsl:param name=\"items\" select=\"$input\"/>\r\n		<xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/>\r\n		<xsl:param name=\"delimiter\" select=\"\';\'\"/>\r\n		<xsl:param name=\"item-and-value\">\r\n			<xsl:choose>\r\n				<xsl:when test=\"contains($items,$delimiter)\">\r\n					<xsl:value-of select=\"substring-before($items,$delimiter)\"/>\r\n				</xsl:when>\r\n				<xsl:otherwise>\r\n					<xsl:value-of select=\"$items\"/>\r\n				</xsl:otherwise>\r\n			</xsl:choose>\r\n		</xsl:param>\r\n		<xsl:param name=\"remaining-items\" select=\"substring-after($items,$delimiter)\"/>\r\n		<xsl:param name=\"item\" select=\"substring-before($item-and-value,\'=\')\"/>\r\n		<xsl:param name=\"value\" select=\"substring-after($item-and-value,\'=\')\"/>\r\n		<xsl:choose>\r\n			<xsl:when test=\"$output-format = \'xcalendar\'\">\r\n				<item class=\"{$item}\">\r\n					<xsl:value-of select=\"$value\"/>\r\n				</item>\r\n			</xsl:when>\r\n			<xsl:when test=\"$output-format = \'xcalendar-encoded\'\">\r\n				<xsl:text>&#xd;&#x9;&#x9;&#x9;&lt;</xsl:text>\r\n				<xsl:value-of select=\"$item\"/>\r\n				<xsl:text>&gt;</xsl:text>\r\n				<xsl:value-of select=\"$value\"/>\r\n				<xsl:text>&lt;/</xsl:text>\r\n				<xsl:value-of select=\"$item\"/>\r\n				<xsl:text>&gt;</xsl:text>\r\n			</xsl:when>\r\n		</xsl:choose>\r\n		<xsl:if test=\"$remaining-items != \'\'\">\r\n			<xsl:call-template name=\"items\">\r\n				<xsl:with-param name=\"input\" select=\"$remaining-items\"/>\r\n				<xsl:with-param name=\"output-format\" select=\"$output-format\"/>\r\n			</xsl:call-template>\r\n		</xsl:if>\r\n		<xsl:if test=\"$remaining-items = \'\'\">\r\n			<xsl:text>&#xd;&#x9;&#x9;</xsl:text>\r\n		</xsl:if>\r\n	</xsl:template>\r\n	\r\n	\r\n	<xsl:template name=\"reverse\">\r\n		<xsl:param name=\"input\"/>\r\n		<xsl:variable name=\"length\" select=\"string-length($input)\"/>\r\n		<xsl:choose>\r\n			<xsl:when test=\"$length &lt; 2\">\r\n				<xsl:value-of select=\"$input\"/>\r\n			</xsl:when>		\r\n			<xsl:when test=\"$length = 2\">\r\n				<xsl:value-of select=\"substring($input,2,1)\"/>\r\n				<xsl:value-of select=\"substring($input,1,1)\"/>\r\n			</xsl:when>		\r\n			<xsl:otherwise>\r\n				<xsl:variable name=\"middle\" select=\"floor($length div 2)\"/>\r\n				<xsl:call-template name=\"reverse\">\r\n					<xsl:with-param name=\"input\" select=\"substring($input,$middle + 1,$middle + 1)\"/>\r\n				</xsl:call-template>\r\n				<xsl:call-template name=\"reverse\">\r\n					<xsl:with-param name=\"input\" select=\"substring($input,1,$middle)\"/>\r\n				</xsl:call-template>\r\n			</xsl:otherwise>		\r\n		</xsl:choose>\r\n	</xsl:template>\r\n	\r\n	</xsl:stylesheet>', '<p>There is one minor problem that I couldn&#8217;t get past, which was to create XML elements for the values of those properties that have multiple values, such as the <code>rrule</code> or <code>category</code> elements. I developed the following template with the help of Marc Liyanage&#8217;s <a href=\"http://www.entropy.ch/software/macosx/#testxslt\">TextXSLT</a> application.</p>\n\n<pre><code>&lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&gt;\n&lt;xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"&gt;\n\n&lt;xsl:output\n    method=\"xml\" \n    doctype-public=\"-//W3C//DTD XHTML 1.0 Strict//EN\" \n    doctype-system=\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\n    omit-xml-declaration=\"yes\"\n    encoding=\"UTF-8\" \n    indent=\"yes\" /&gt;\n\n&lt;xsl:param name=\"ical-data-raw\" select=\"/data/vcalendar\"/&gt;\n&lt;xsl:param name=\"ical-data\" select=\"normalize-space($ical-data-raw)\"/&gt;\n&lt;xsl:param name=\"ical-properties\" select=\"substring-before($ical-data,\' BEGIN:VEVENT\')\"/&gt;\n&lt;xsl:param name=\"ical-events\"&gt;\n&lt;xsl:value-of select=\"concat(\'BEGIN:VEVENT \',substring-before(substring-after($ical-data,\'BEGIN:VEVENT \'),\' END:VCALENDAR\'))\"/&gt;\n&lt;/xsl:param&gt;\n\n&lt;xsl:template match=\"/\"&gt;\n\n    &lt;h1&gt;XSL Transformation of iCalendar ICS format to XHTML&lt;/h1&gt;\n\n    &lt;h2&gt;Individual iCalendar Events&lt;/h2&gt;\n\n    &lt;h3&gt;iCalendar to xCalendar XSL Transformation&lt;/h3&gt;\n    &lt;xsl:call-template name=\"xcal-calendar\"&gt;\n        &lt;xsl:with-param name=\"input\" select=\"$ical-properties\"/&gt;\n        &lt;xsl:with-param name=\"type\" select=\"\'calendar\'\"/&gt;\n        &lt;xsl:with-param name=\"output-format\" select=\"\'xcalendar\'\"/&gt;\n    &lt;/xsl:call-template&gt;\n\n&lt;/xsl:template&gt;\n\n&lt;xsl:template name=\"xcal-calendar\"&gt;\n    &lt;xsl:param name=\"input\"/&gt;\n    &lt;xsl:param name=\"type\" select=\"\'event\'\"/&gt;\n    &lt;xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/&gt;\n    &lt;xsl:param name=\"ical-properties-data\" select=\"$input\"/&gt;\n    &lt;xsl:param name=\"remaining-event-data\" select=\"substring-after($input, $ical-properties-data)\"/&gt;\n    &lt;xsl:choose&gt;\n        &lt;xsl:when test=\"$output-format = \'xcalendar\'\"&gt;\n            &lt;iCalendar&gt;\n                &lt;vcalendar&gt;\n                    &lt;xsl:call-template name=\"properties\"&gt;\n                        &lt;xsl:with-param name=\"input\" select=\"$ical-properties-data\"/&gt;\n                        &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n                        &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n                    &lt;/xsl:call-template&gt;\n                    &lt;xsl:call-template name=\"xcal-events\"&gt;\n                        &lt;xsl:with-param name=\"input\" select=\"$ical-events\"/&gt;\n                        &lt;xsl:with-param name=\"type\" select=\"\'event\'\"/&gt;\n                        &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n                    &lt;/xsl:call-template&gt;\n                &lt;/vcalendar&gt;\n            &lt;/iCalendar&gt;\n        &lt;/xsl:when&gt;\n        &lt;xsl:when test=\"$output-format = \'xcalendar-encoded\'\"&gt;\n            &lt;code&gt;&lt;pre&gt;\n            &lt;xsl:text&gt;&amp;lt;iCalendar&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n            &lt;xsl:text&gt;&amp;lt;vcalendar&amp;#xd;&lt;/xsl:text&gt;\n            &lt;xsl:call-template name=\"properties\"&gt;\n                &lt;xsl:with-param name=\"input\" select=\"$ical-properties-data\"/&gt;\n                &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n                &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n            &lt;/xsl:call-template&gt;\n            &lt;xsl:text&gt;&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n            &lt;xsl:call-template name=\"xcal-events\"&gt;\n                &lt;xsl:with-param name=\"input\" select=\"$ical-events\"/&gt;\n                &lt;xsl:with-param name=\"type\" select=\"\'event\'\"/&gt;\n                &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n            &lt;/xsl:call-template&gt;\n            &lt;xsl:text&gt;&amp;lt;/vcalendar&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n            &lt;xsl:text&gt;&amp;lt;/iCalendar&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n            &lt;/pre&gt;&lt;/code&gt;\n        &lt;/xsl:when&gt;\n    &lt;/xsl:choose&gt;\n    &lt;xsl:if test=\"$remaining-event-data != \'\'\"&gt;\n        &lt;xsl:call-template name=\"xcal-calendar\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$remaining-event-data\"/&gt;\n            &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n            &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:if&gt;\n&lt;/xsl:template&gt;\n\n&lt;xsl:template name=\"xcal-events\"&gt;\n    &lt;xsl:param name=\"input\"/&gt;\n    &lt;xsl:param name=\"type\" select=\"\'event\'\"/&gt;\n    &lt;xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/&gt;\n    &lt;xsl:param name=\"ical-event-data\" select=\"concat(\'BEGIN:VEVENT \',substring-before(substring-after($input,\'BEGIN:VEVENT \'),\' END:VEVENT\'),\' END:VEVENT\')\"/&gt;\n    &lt;xsl:param name=\"remaining-event-data\" select=\"substring-after($input, $ical-event-data)\"/&gt;\n    &lt;xsl:choose&gt;\n        &lt;xsl:when test=\"$output-format = \'xcalendar\'\"&gt;\n            &lt;vevent&gt;\n                &lt;xsl:call-template name=\"properties\"&gt;\n                    &lt;xsl:with-param name=\"input\" select=\"$ical-event-data\"/&gt;\n                    &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n                    &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n                &lt;/xsl:call-template&gt;\n            &lt;/vevent&gt;\n        &lt;/xsl:when&gt;\n        &lt;xsl:when test=\"$output-format = \'xcalendar-encoded\'\"&gt;\n            &lt;xsl:text&gt;&amp;#x9;&amp;lt;vevent&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n                &lt;xsl:call-template name=\"properties\"&gt;\n                    &lt;xsl:with-param name=\"input\" select=\"$ical-event-data\"/&gt;\n                    &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n                    &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n                &lt;/xsl:call-template&gt;\n            &lt;xsl:text&gt;&amp;#x9;&amp;lt;/vevent&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n        &lt;/xsl:when&gt;\n        &lt;xsl:when test=\"$output-format = \'hcalendar\'\"&gt;\n        &lt;/xsl:when&gt;\n    &lt;/xsl:choose&gt;\n    &lt;xsl:if test=\"$remaining-event-data != \'\'\"&gt;\n        &lt;xsl:call-template name=\"xcal-events\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$remaining-event-data\"/&gt;\n            &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n            &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:if&gt;\n&lt;/xsl:template&gt;\n\n&lt;xsl:template name=\"properties\"&gt;\n    &lt;xsl:param name=\"input\" select=\"$ical-data\"/&gt;\n    &lt;xsl:param name=\"type\" select=\"\'event\'\"/&gt;\n    &lt;xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/&gt;\n    &lt;xsl:param name=\"property-and-attribute-caps\" select=\"substring-before($input,\':\')\"/&gt;\n    &lt;xsl:param name=\"property-and-attribute\" select=\"translate($property-and-attribute-caps,\'ABCDEFGHIJKLMNOPQRSTUVWXYZ\',\'abcdefghijklmnopqrstuvwxyz\')\"/&gt;\n    &lt;xsl:param name=\"property\"&gt;\n        &lt;xsl:choose&gt;\n            &lt;xsl:when test=\"contains($property-and-attribute,\';\')\"&gt;\n                &lt;xsl:value-of select=\"substring-before($property-and-attribute,\';\')\"/&gt;\n            &lt;/xsl:when&gt;\n            &lt;xsl:otherwise&gt;\n                &lt;xsl:value-of select=\"$property-and-attribute\"/&gt;\n            &lt;/xsl:otherwise&gt;\n        &lt;/xsl:choose&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"property-attribute\" select=\"substring-after($property-and-attribute,\';\')\"/&gt;\n    &lt;xsl:param name=\"property-attribute-name\" select=\"substring-before($property-attribute,\'=\')\"/&gt;\n    &lt;xsl:param name=\"property-attribute-value\" select=\"substring-after($property-attribute,\'=\')\"/&gt;\n    &lt;xsl:param name=\"string-after-property\" select=\"substring-after($input,\':\')\"/&gt;\n    &lt;xsl:param name=\"next-string\" select=\"substring-before($string-after-property,\':\')\"/&gt;\n    &lt;xsl:param name=\"reverse-next-string\"&gt;\n        &lt;xsl:call-template name=\"reverse\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$next-string\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"reverse-next-property\" select=\"substring-before($reverse-next-string,\' \')\"/&gt;\n    &lt;xsl:param name=\"next-property\"&gt;\n        &lt;xsl:call-template name=\"reverse\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"substring-before($reverse-next-string,\' \')\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"string-before-next-property\" select=\"substring-before($next-string, concat(\' \',$next-property))\"/&gt;\n    &lt;xsl:param name=\"plural-values\" select=\"contains($string-before-next-property,\';\')\"/&gt;\n    &lt;xsl:param name=\"multiple-items\"&gt;\n        &lt;xsl:if test=\"$plural-values\"&gt;\n            &lt;xsl:value-of select=\"translate($string-before-next-property,\'ABCDEFGHIJKLMNOPQRSTUVWXYZ\',\'abcdefghijklmnopqrstuvwxyz\')\"/&gt;\n        &lt;/xsl:if&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"items\"&gt;\n        &lt;xsl:call-template name=\"items\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$multiple-items\"/&gt;\n            &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"value\"&gt;\n        &lt;xsl:choose&gt;\n            &lt;xsl:when test=\"$next-property != \'\' and contains($string-before-next-property,\';\') and $output-format = \'xcalendar-encoded\'\"&gt;\n                &lt;xsl:value-of select=\"$items\"/&gt;\n            &lt;/xsl:when&gt;\n            &lt;xsl:when test=\"$next-property != \'\'\"&gt;\n                &lt;xsl:value-of select=\"$string-before-next-property\"/&gt;\n            &lt;/xsl:when&gt;\n            &lt;xsl:otherwise&gt;\n                &lt;xsl:value-of select=\"$string-after-property\"/&gt;\n            &lt;/xsl:otherwise&gt;\n        &lt;/xsl:choose&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"remaining-string\" select=\"substring-after($string-after-property,concat($value,\' \'))\"/&gt;\n    &lt;xsl:if test=\"$property != \'begin\' and $property != \'end\'\"&gt;\n        &lt;xsl:choose&gt;\n            &lt;xsl:when test=\"$type = \'event\'\"&gt;\n                &lt;xsl:choose&gt;\n                    &lt;xsl:when test=\"$output-format = \'xcalendar\'\"&gt;\n                        &lt;xsl:choose&gt;\n                            &lt;xsl:when test=\"$property-attribute-name = \'value\'\"&gt;\n                                &lt;xsl:element name=\"{$property}\"&gt;\n                                    &lt;xsl:attribute name=\"{$property-attribute-name}\"&gt;&lt;xsl:value-of select=\"$property-attribute-value\"/&gt;&lt;/xsl:attribute&gt;\n                                    &lt;xsl:value-of select=\"$value\"/&gt;\n                                &lt;/xsl:element&gt;\n                            &lt;/xsl:when&gt;\n                            &lt;xsl:when test=\"$plural-values and $output-format = \'xcalendar\'\"&gt;\n                                &lt;xsl:element name=\"{$property}\"&gt;\n                                    &lt;xsl:copy-of select=\"$items\"/&gt;\n                                &lt;/xsl:element&gt;\n                            &lt;/xsl:when&gt;\n                            &lt;xsl:otherwise&gt;\n                                &lt;xsl:element name=\"{$property}\"&gt;\n                                    &lt;xsl:value-of select=\"$value\"/&gt;\n                                &lt;/xsl:element&gt;\n                            &lt;/xsl:otherwise&gt;\n                        &lt;/xsl:choose&gt;\n                    &lt;/xsl:when&gt;\n                    &lt;xsl:when test=\"$output-format = \'xcalendar-encoded\'\"&gt;\n                        &lt;xsl:choose&gt;\n                            &lt;xsl:when test=\"$property-attribute-name = \'value\'\"&gt;\n                                &lt;xsl:text&gt;&amp;#x9;&amp;#x9;&amp;lt;&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$property\"/&gt;\n                                &lt;xsl:text&gt; &lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$property-attribute-name\"/&gt;\n                                &lt;xsl:text&gt;=\"&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$property-attribute-value\"/&gt;\n                                &lt;xsl:text&gt;\"&amp;gt;&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$value\"/&gt;\n                                &lt;xsl:text&gt;&amp;lt;/&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$property\"/&gt;\n                                &lt;xsl:text&gt;&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n                            &lt;/xsl:when&gt;\n                            &lt;xsl:otherwise&gt;\n                                &lt;xsl:text&gt;&amp;#x9;&amp;#x9;&amp;lt;&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$property\"/&gt;\n                                &lt;xsl:text&gt;&amp;gt;&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$value\"/&gt;\n                                &lt;xsl:text&gt;&amp;lt;/&lt;/xsl:text&gt;\n                                &lt;xsl:value-of select=\"$property\"/&gt;\n                                &lt;xsl:text&gt;&amp;gt;&amp;#xd;&lt;/xsl:text&gt;\n                            &lt;/xsl:otherwise&gt;\n                        &lt;/xsl:choose&gt;\n                    &lt;/xsl:when&gt;\n                &lt;/xsl:choose&gt;\n            &lt;/xsl:when&gt;\n            &lt;xsl:when test=\"$type = \'calendar\'\"&gt;\n                &lt;xsl:choose&gt;\n                    &lt;xsl:when test=\"$output-format = \'xcalendar\'\"&gt;\n                        &lt;xsl:attribute name=\"{$property}\"&gt;&lt;xsl:value-of select=\"$value\"/&gt;&lt;/xsl:attribute&gt;\n                    &lt;/xsl:when&gt;\n                    &lt;xsl:when test=\"$output-format = \'xcalendar-encoded\'\"&gt;\n                        &lt;xsl:text&gt;&amp;#x9;&lt;/xsl:text&gt;\n                        &lt;xsl:value-of select=\"$property\"/&gt;\n                        &lt;xsl:text&gt;=\"&lt;/xsl:text&gt;\n                        &lt;xsl:value-of select=\"$value\"/&gt;\n                        &lt;xsl:text&gt;\"&lt;/xsl:text&gt;\n                    &lt;/xsl:when&gt;\n                &lt;/xsl:choose&gt;\n            &lt;/xsl:when&gt;\n        &lt;/xsl:choose&gt;\n    &lt;/xsl:if&gt;\n    &lt;xsl:if test=\"$remaining-string != \'\'\"&gt;\n        &lt;xsl:if test=\"$property != \'begin\' and $property != \'end\' and $output-format = \'xcalendar-encoded\' and $type = \'calendar\'\"&gt;\n            &lt;xsl:text&gt;&amp;#xd;&lt;/xsl:text&gt;\n        &lt;/xsl:if&gt;\n        &lt;xsl:call-template name=\"properties\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$remaining-string\"/&gt;\n            &lt;xsl:with-param name=\"type\" select=\"$type\"/&gt;\n            &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:if&gt;\n&lt;/xsl:template&gt;\n\n\n&lt;xsl:template name=\"items\"&gt;\n    &lt;xsl:param name=\"input\"/&gt;\n    &lt;xsl:param name=\"items\" select=\"$input\"/&gt;\n    &lt;xsl:param name=\"output-format\" select=\"\'xcalendar\'\"/&gt;\n    &lt;xsl:param name=\"delimiter\" select=\"\';\'\"/&gt;\n    &lt;xsl:param name=\"item-and-value\"&gt;\n        &lt;xsl:choose&gt;\n            &lt;xsl:when test=\"contains($items,$delimiter)\"&gt;\n                &lt;xsl:value-of select=\"substring-before($items,$delimiter)\"/&gt;\n            &lt;/xsl:when&gt;\n            &lt;xsl:otherwise&gt;\n                &lt;xsl:value-of select=\"$items\"/&gt;\n            &lt;/xsl:otherwise&gt;\n        &lt;/xsl:choose&gt;\n    &lt;/xsl:param&gt;\n    &lt;xsl:param name=\"remaining-items\" select=\"substring-after($items,$delimiter)\"/&gt;\n    &lt;xsl:param name=\"item\" select=\"substring-before($item-and-value,\'=\')\"/&gt;\n    &lt;xsl:param name=\"value\" select=\"substring-after($item-and-value,\'=\')\"/&gt;\n    &lt;xsl:choose&gt;\n        &lt;xsl:when test=\"$output-format = \'xcalendar\'\"&gt;\n            &lt;item class=\"{$item}\"&gt;\n                &lt;xsl:value-of select=\"$value\"/&gt;\n            &lt;/item&gt;\n        &lt;/xsl:when&gt;\n        &lt;xsl:when test=\"$output-format = \'xcalendar-encoded\'\"&gt;\n            &lt;xsl:text&gt;&amp;#xd;&amp;#x9;&amp;#x9;&amp;#x9;&amp;lt;&lt;/xsl:text&gt;\n            &lt;xsl:value-of select=\"$item\"/&gt;\n            &lt;xsl:text&gt;&amp;gt;&lt;/xsl:text&gt;\n            &lt;xsl:value-of select=\"$value\"/&gt;\n            &lt;xsl:text&gt;&amp;lt;/&lt;/xsl:text&gt;\n            &lt;xsl:value-of select=\"$item\"/&gt;\n            &lt;xsl:text&gt;&amp;gt;&lt;/xsl:text&gt;\n        &lt;/xsl:when&gt;\n    &lt;/xsl:choose&gt;\n    &lt;xsl:if test=\"$remaining-items != \'\'\"&gt;\n        &lt;xsl:call-template name=\"items\"&gt;\n            &lt;xsl:with-param name=\"input\" select=\"$remaining-items\"/&gt;\n            &lt;xsl:with-param name=\"output-format\" select=\"$output-format\"/&gt;\n        &lt;/xsl:call-template&gt;\n    &lt;/xsl:if&gt;\n    &lt;xsl:if test=\"$remaining-items = \'\'\"&gt;\n        &lt;xsl:text&gt;&amp;#xd;&amp;#x9;&amp;#x9;&lt;/xsl:text&gt;\n    &lt;/xsl:if&gt;\n&lt;/xsl:template&gt;\n\n\n&lt;xsl:template name=\"reverse\"&gt;\n    &lt;xsl:param name=\"input\"/&gt;\n    &lt;xsl:variable name=\"length\" select=\"string-length($input)\"/&gt;\n    &lt;xsl:choose&gt;\n        &lt;xsl:when test=\"$length &amp;lt; 2\"&gt;\n            &lt;xsl:value-of select=\"$input\"/&gt;\n        &lt;/xsl:when&gt;     \n        &lt;xsl:when test=\"$length = 2\"&gt;\n            &lt;xsl:value-of select=\"substring($input,2,1)\"/&gt;\n            &lt;xsl:value-of select=\"substring($input,1,1)\"/&gt;\n        &lt;/xsl:when&gt;     \n        &lt;xsl:otherwise&gt;\n            &lt;xsl:variable name=\"middle\" select=\"floor($length div 2)\"/&gt;\n            &lt;xsl:call-template name=\"reverse\"&gt;\n                &lt;xsl:with-param name=\"input\" select=\"substring($input,$middle + 1,$middle + 1)\"/&gt;\n            &lt;/xsl:call-template&gt;\n            &lt;xsl:call-template name=\"reverse\"&gt;\n                &lt;xsl:with-param name=\"input\" select=\"substring($input,1,$middle)\"/&gt;\n            &lt;/xsl:call-template&gt;\n        &lt;/xsl:otherwise&gt;        \n    &lt;/xsl:choose&gt;\n&lt;/xsl:template&gt;\n\n&lt;/xsl:stylesheet&gt;\n</code></pre>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_33` ***
 DROP TABLE IF EXISTS `tbl_entries_data_33`;
@@ -1964,11 +2006,14 @@ CREATE TABLE `tbl_entries_data_33` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_33` ***
-INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (1, 67, 46);
-INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (2, 68, 46);
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (4, 67, 4);
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (6, 68, 4);
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (7, 81, 4);
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (8, 82, 4);
+INSERT INTO `tbl_entries_data_33` (`id`, `entry_id`, `relation_id`) VALUES (10, 83, 4);
 
 -- *** STRUCTURE: `tbl_entries_data_34` ***
 DROP TABLE IF EXISTS `tbl_entries_data_34`;
@@ -1979,11 +2024,14 @@ CREATE TABLE `tbl_entries_data_34` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_34` ***
-INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (1, 67, NULL);
-INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (2, 68, NULL);
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (4, 67, 8);
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (6, 68, 8);
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (7, 81, 8);
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (8, 82, 8);
+INSERT INTO `tbl_entries_data_34` (`id`, `entry_id`, `relation_id`) VALUES (10, 83, 8);
 
 -- *** STRUCTURE: `tbl_entries_data_35` ***
 DROP TABLE IF EXISTS `tbl_entries_data_35`;
@@ -1994,11 +2042,14 @@ CREATE TABLE `tbl_entries_data_35` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_35` ***
-INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (1, 67, NULL);
-INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (2, 68, NULL);
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (4, 67, 78);
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (6, 68, 78);
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (7, 81, 78);
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (8, 82, 78);
+INSERT INTO `tbl_entries_data_35` (`id`, `entry_id`, `relation_id`) VALUES (10, 83, 78);
 
 -- *** STRUCTURE: `tbl_entries_data_36` ***
 DROP TABLE IF EXISTS `tbl_entries_data_36`;
@@ -2026,11 +2077,14 @@ CREATE TABLE `tbl_entries_data_37` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_37` ***
-INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (1, 67, '2010-06-03T11:01:00-07:00', 1275588060, 1275588060);
-INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (2, 68, '2010-06-03T11:02:00-07:00', 1275588120, 1275588120);
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (4, 67, '2007-06-28T22:31:00-07:00', 1183095060, 1183095060);
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (6, 68, '2007-06-28T23:46:00-07:00', 1183099560, 1183099560);
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (7, 81, '2007-07-27T00:00:00-07:00', 1185519600, 1185519600);
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (8, 82, '2007-07-28T17:14:00-07:00', 1185668040, 1185668040);
+INSERT INTO `tbl_entries_data_37` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (10, 83, '2007-07-29T09:56:00-07:00', 1185728160, 1185728160);
 
 -- *** STRUCTURE: `tbl_entries_data_38` ***
 DROP TABLE IF EXISTS `tbl_entries_data_38`;
@@ -2041,11 +2095,14 @@ CREATE TABLE `tbl_entries_data_38` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_38` ***
-INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (1, 67, 'yes');
-INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (2, 68, 'no');
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (4, 67, 'yes');
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (6, 68, 'yes');
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (7, 81, 'yes');
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (8, 82, 'yes');
+INSERT INTO `tbl_entries_data_38` (`id`, `entry_id`, `value`) VALUES (10, 83, 'yes');
 
 -- *** STRUCTURE: `tbl_entries_data_39` ***
 DROP TABLE IF EXISTS `tbl_entries_data_39`;
@@ -2056,11 +2113,14 @@ CREATE TABLE `tbl_entries_data_39` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_39` ***
-INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (1, 67, 'no');
-INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (2, 68, 'no');
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (4, 67, 'no');
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (6, 68, 'no');
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (7, 81, 'no');
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (8, 82, 'no');
+INSERT INTO `tbl_entries_data_39` (`id`, `entry_id`, `value`) VALUES (10, 83, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_4` ***
 DROP TABLE IF EXISTS `tbl_entries_data_4`;
@@ -2091,9 +2151,11 @@ CREATE TABLE `tbl_entries_data_40` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_40` ***
+INSERT INTO `tbl_entries_data_40` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 84, 'a-list-apart', 'A List Apart');
+INSERT INTO `tbl_entries_data_40` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 85, 'colorschemer', 'ColorSchemer');
 
 -- *** STRUCTURE: `tbl_entries_data_41` ***
 DROP TABLE IF EXISTS `tbl_entries_data_41`;
@@ -2104,9 +2166,11 @@ CREATE TABLE `tbl_entries_data_41` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_41` ***
+INSERT INTO `tbl_entries_data_41` (`id`, `entry_id`, `relation_id`) VALUES (2, 84, 20);
+INSERT INTO `tbl_entries_data_41` (`id`, `entry_id`, `relation_id`) VALUES (3, 85, 19);
 
 -- *** STRUCTURE: `tbl_entries_data_42` ***
 DROP TABLE IF EXISTS `tbl_entries_data_42`;
@@ -2119,9 +2183,11 @@ CREATE TABLE `tbl_entries_data_42` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_42` ***
+INSERT INTO `tbl_entries_data_42` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 84, 'http-wwwalistapartcom', 'http://www.alistapart.com/');
+INSERT INTO `tbl_entries_data_42` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 85, 'http-wwwcolorschemercom', 'http://www.colorschemer.com/');
 
 -- *** STRUCTURE: `tbl_entries_data_43` ***
 DROP TABLE IF EXISTS `tbl_entries_data_43`;
@@ -2133,9 +2199,11 @@ CREATE TABLE `tbl_entries_data_43` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_43` ***
+INSERT INTO `tbl_entries_data_43` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 84, 'Jefferey Zeldman\'s online publication \"For people who make websites\"', '<p>Jefferey Zeldman&#8217;s online publication &#8220;For people who make websites&#8221;</p>\n');
+INSERT INTO `tbl_entries_data_43` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 85, 'Professional color matching application and color scheme gallery', '<p>Professional color matching application and color scheme gallery</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_44` ***
 DROP TABLE IF EXISTS `tbl_entries_data_44`;
@@ -2147,9 +2215,11 @@ CREATE TABLE `tbl_entries_data_44` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_44` ***
+INSERT INTO `tbl_entries_data_44` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 84, 'A List Apart Magazine explores the design, development, and meaning of web content, with a special focus on web standards and best practices.', '<p>A List Apart Magazine explores the design, development, and meaning of web content, with a special focus on web standards and best practices.</p>\n');
+INSERT INTO `tbl_entries_data_44` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 85, NULL, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_45` ***
 DROP TABLE IF EXISTS `tbl_entries_data_45`;
@@ -2160,9 +2230,11 @@ CREATE TABLE `tbl_entries_data_45` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_45` ***
+INSERT INTO `tbl_entries_data_45` (`id`, `entry_id`, `relation_id`) VALUES (2, 84, NULL);
+INSERT INTO `tbl_entries_data_45` (`id`, `entry_id`, `relation_id`) VALUES (3, 85, 78);
 
 -- *** STRUCTURE: `tbl_entries_data_46` ***
 DROP TABLE IF EXISTS `tbl_entries_data_46`;
@@ -2190,9 +2262,11 @@ CREATE TABLE `tbl_entries_data_47` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_47` ***
+INSERT INTO `tbl_entries_data_47` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (2, 84, '2010-06-03T20:09:00-07:00', 1275620940, 1275620940);
+INSERT INTO `tbl_entries_data_47` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (3, 85, '2010-06-03T20:18:00-07:00', 1275621480, 1275621480);
 
 -- *** STRUCTURE: `tbl_entries_data_48` ***
 DROP TABLE IF EXISTS `tbl_entries_data_48`;
@@ -2203,9 +2277,11 @@ CREATE TABLE `tbl_entries_data_48` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_48` ***
+INSERT INTO `tbl_entries_data_48` (`id`, `entry_id`, `value`) VALUES (2, 84, 'yes');
+INSERT INTO `tbl_entries_data_48` (`id`, `entry_id`, `value`) VALUES (3, 85, 'yes');
 
 -- *** STRUCTURE: `tbl_entries_data_49` ***
 DROP TABLE IF EXISTS `tbl_entries_data_49`;
@@ -2216,9 +2292,11 @@ CREATE TABLE `tbl_entries_data_49` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_49` ***
+INSERT INTO `tbl_entries_data_49` (`id`, `entry_id`, `value`) VALUES (2, 84, 'no');
+INSERT INTO `tbl_entries_data_49` (`id`, `entry_id`, `value`) VALUES (3, 85, 'no');
 
 -- *** STRUCTURE: `tbl_entries_data_5` ***
 DROP TABLE IF EXISTS `tbl_entries_data_5`;
@@ -2279,13 +2357,14 @@ CREATE TABLE `tbl_entries_data_52` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_52` ***
 INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (12, 17, 'tools', 'Tools');
 INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 18, 'files', 'Files');
 INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (13, 19, 'resources', 'Resources');
-INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 20, 'sites', 'Sites');
+INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (14, 20, 'sites', 'Sites');
+INSERT INTO `tbl_entries_data_52` (`id`, `entry_id`, `handle`, `value`) VALUES (15, 77, 'books', 'Books');
 
 -- *** STRUCTURE: `tbl_entries_data_53` ***
 DROP TABLE IF EXISTS `tbl_entries_data_53`;
@@ -2297,13 +2376,14 @@ CREATE TABLE `tbl_entries_data_53` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_53` ***
 INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 17, 'Noteworthy applications and tools of the trade', '<p>Noteworthy applications and tools of the trade</p>\n');
 INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (10, 18, 'Images and downloads', '<p>Images and downloads</p>\n');
 INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 19, 'Interesting articles', '<p>Interesting articles</p>\n');
-INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 20, 'Sites we like to frequent', '<p>Sites we like to frequent</p>\n');
+INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 20, 'The sites I like to frequent', '<p>The sites I like to frequent</p>\n');
+INSERT INTO `tbl_entries_data_53` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (15, 77, 'A bibliographical reference or book review', '<p>A bibliographical reference or book review</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_54` ***
 DROP TABLE IF EXISTS `tbl_entries_data_54`;
@@ -2316,9 +2396,12 @@ CREATE TABLE `tbl_entries_data_54` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_54` ***
+INSERT INTO `tbl_entries_data_54` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 78, 'applications', 'Applications');
+INSERT INTO `tbl_entries_data_54` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 79, 'life', 'Life');
+INSERT INTO `tbl_entries_data_54` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 80, 'typography', 'Typography');
 
 -- *** STRUCTURE: `tbl_entries_data_55` ***
 DROP TABLE IF EXISTS `tbl_entries_data_55`;
@@ -2330,9 +2413,12 @@ CREATE TABLE `tbl_entries_data_55` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_55` ***
+INSERT INTO `tbl_entries_data_55` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 78, 'The tools that make our lives work', '<p>The tools that make our lives work</p>\n');
+INSERT INTO `tbl_entries_data_55` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 79, 'There is life beyond work', '<p>There is life beyond work</p>\n');
+INSERT INTO `tbl_entries_data_55` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 80, 'The art of type design and layout', '<p>The art of type design and layout</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_56` ***
 DROP TABLE IF EXISTS `tbl_entries_data_56`;
@@ -2344,9 +2430,12 @@ CREATE TABLE `tbl_entries_data_56` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_56` ***
+INSERT INTO `tbl_entries_data_56` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 78, NULL, NULL);
+INSERT INTO `tbl_entries_data_56` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 79, NULL, NULL);
+INSERT INTO `tbl_entries_data_56` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 80, NULL, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_57` ***
 DROP TABLE IF EXISTS `tbl_entries_data_57`;
@@ -2596,11 +2685,12 @@ CREATE TABLE `tbl_entries_data_71` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_71` ***
 INSERT INTO `tbl_entries_data_71` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 15, 'abc-company-incorporated', 'ABC Company Incorporated');
 INSERT INTO `tbl_entries_data_71` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 63, 'symphony-cms', 'Symphony CMS');
+INSERT INTO `tbl_entries_data_71` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 72, 'bauhouse-design', 'Bauhouse Design');
 
 -- *** STRUCTURE: `tbl_entries_data_73` ***
 DROP TABLE IF EXISTS `tbl_entries_data_73`;
@@ -2613,11 +2703,12 @@ CREATE TABLE `tbl_entries_data_73` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_73` ***
 INSERT INTO `tbl_entries_data_73` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 15, 'advertising', 'Advertising');
 INSERT INTO `tbl_entries_data_73` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 63, 'web-development', 'Web Development');
+INSERT INTO `tbl_entries_data_73` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 72, 'design', 'Design');
 
 -- *** STRUCTURE: `tbl_entries_data_74` ***
 DROP TABLE IF EXISTS `tbl_entries_data_74`;
@@ -2630,11 +2721,12 @@ CREATE TABLE `tbl_entries_data_74` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_74` ***
 INSERT INTO `tbl_entries_data_74` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 15, 'active', 'Active');
 INSERT INTO `tbl_entries_data_74` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 63, 'active', 'Active');
+INSERT INTO `tbl_entries_data_74` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 72, 'active', 'Active');
 
 -- *** STRUCTURE: `tbl_entries_data_75` ***
 DROP TABLE IF EXISTS `tbl_entries_data_75`;
@@ -2646,11 +2738,12 @@ CREATE TABLE `tbl_entries_data_75` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_75` ***
 INSERT INTO `tbl_entries_data_75` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 15, NULL, NULL);
 INSERT INTO `tbl_entries_data_75` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 63, NULL, NULL);
+INSERT INTO `tbl_entries_data_75` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 72, NULL, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_76` ***
 DROP TABLE IF EXISTS `tbl_entries_data_76`;
@@ -2663,11 +2756,12 @@ CREATE TABLE `tbl_entries_data_76` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_76` ***
 INSERT INTO `tbl_entries_data_76` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'http-wwwexamplecom', 'http://www.example.com');
 INSERT INTO `tbl_entries_data_76` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 63, 'http-symphony-cmscom', 'http://symphony-cms.com');
+INSERT INTO `tbl_entries_data_76` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 72, 'http-bauhouseca', 'http://bauhouse.ca');
 
 -- *** STRUCTURE: `tbl_entries_data_77` ***
 DROP TABLE IF EXISTS `tbl_entries_data_77`;
@@ -2693,11 +2787,12 @@ CREATE TABLE `tbl_entries_data_78` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_78` ***
 INSERT INTO `tbl_entries_data_78` (`id`, `entry_id`, `relation_id`) VALUES (4, 15, NULL);
 INSERT INTO `tbl_entries_data_78` (`id`, `entry_id`, `relation_id`) VALUES (7, 63, NULL);
+INSERT INTO `tbl_entries_data_78` (`id`, `entry_id`, `relation_id`) VALUES (8, 72, 8);
 
 -- *** STRUCTURE: `tbl_entries_data_79` ***
 DROP TABLE IF EXISTS `tbl_entries_data_79`;
@@ -2710,11 +2805,12 @@ CREATE TABLE `tbl_entries_data_79` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_79` ***
 INSERT INTO `tbl_entries_data_79` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 15, 'john-smith', 'John Smith');
 INSERT INTO `tbl_entries_data_79` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 63, 'allen-chang', 'Allen Chang');
+INSERT INTO `tbl_entries_data_79` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 72, 'stephen-bau', 'Stephen Bau');
 
 -- *** STRUCTURE: `tbl_entries_data_8` ***
 DROP TABLE IF EXISTS `tbl_entries_data_8`;
@@ -2855,10 +2951,11 @@ CREATE TABLE `tbl_entries_data_87` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_87` ***
 INSERT INTO `tbl_entries_data_87` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 16, 'abc-company-website', 'ABC Company Website');
+INSERT INTO `tbl_entries_data_87` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 73, 'designadmin', 'DesignAdmin');
 
 -- *** STRUCTURE: `tbl_entries_data_88` ***
 DROP TABLE IF EXISTS `tbl_entries_data_88`;
@@ -2869,10 +2966,11 @@ CREATE TABLE `tbl_entries_data_88` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_88` ***
 INSERT INTO `tbl_entries_data_88` (`id`, `entry_id`, `relation_id`) VALUES (8, 16, 15);
+INSERT INTO `tbl_entries_data_88` (`id`, `entry_id`, `relation_id`) VALUES (9, 73, 72);
 
 -- *** STRUCTURE: `tbl_entries_data_89` ***
 DROP TABLE IF EXISTS `tbl_entries_data_89`;
@@ -2882,10 +2980,11 @@ CREATE TABLE `tbl_entries_data_89` (
   `value` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_89` ***
 INSERT INTO `tbl_entries_data_89` (`id`, `entry_id`, `value`) VALUES (8, 16, 16);
+INSERT INTO `tbl_entries_data_89` (`id`, `entry_id`, `value`) VALUES (9, 73, 73);
 
 -- *** STRUCTURE: `tbl_entries_data_9` ***
 DROP TABLE IF EXISTS `tbl_entries_data_9`;
@@ -2912,13 +3011,14 @@ CREATE TABLE `tbl_entries_data_90` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_90` ***
 INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (23, 16, 40);
 INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (22, 16, 39);
 INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (21, 16, 38);
 INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (20, 16, 37);
+INSERT INTO `tbl_entries_data_90` (`id`, `entry_id`, `relation_id`) VALUES (24, 73, 39);
 
 -- *** STRUCTURE: `tbl_entries_data_91` ***
 DROP TABLE IF EXISTS `tbl_entries_data_91`;
@@ -2929,10 +3029,11 @@ CREATE TABLE `tbl_entries_data_91` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_91` ***
 INSERT INTO `tbl_entries_data_91` (`id`, `entry_id`, `relation_id`) VALUES (8, 16, 8);
+INSERT INTO `tbl_entries_data_91` (`id`, `entry_id`, `relation_id`) VALUES (9, 73, 8);
 
 -- *** STRUCTURE: `tbl_entries_data_92` ***
 DROP TABLE IF EXISTS `tbl_entries_data_92`;
@@ -2945,10 +3046,11 @@ CREATE TABLE `tbl_entries_data_92` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_92` ***
 INSERT INTO `tbl_entries_data_92` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (8, 16, '2010-05-31T23:26:00-07:00', 1275373560, 1275373560);
+INSERT INTO `tbl_entries_data_92` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (9, 73, '2010-06-03T17:56:00-07:00', 1275612960, 1275612960);
 
 -- *** STRUCTURE: `tbl_entries_data_93` ***
 DROP TABLE IF EXISTS `tbl_entries_data_93`;
@@ -2961,10 +3063,11 @@ CREATE TABLE `tbl_entries_data_93` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_93` ***
 INSERT INTO `tbl_entries_data_93` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (8, 16, '2010-06-12T00:00:00-07:00', 1276326000, 1276326000);
+INSERT INTO `tbl_entries_data_93` (`id`, `entry_id`, `value`, `local`, `gmt`) VALUES (9, 73, NULL, NULL, NULL);
 
 -- *** STRUCTURE: `tbl_entries_data_94` ***
 DROP TABLE IF EXISTS `tbl_entries_data_94`;
@@ -2977,10 +3080,11 @@ CREATE TABLE `tbl_entries_data_94` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_94` ***
 INSERT INTO `tbl_entries_data_94` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 16, 'created', 'Created');
+INSERT INTO `tbl_entries_data_94` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 73, 'in-progress', 'In Progress');
 
 -- *** STRUCTURE: `tbl_entries_data_95` ***
 DROP TABLE IF EXISTS `tbl_entries_data_95`;
@@ -2992,10 +3096,11 @@ CREATE TABLE `tbl_entries_data_95` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_95` ***
 INSERT INTO `tbl_entries_data_95` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 16, NULL, NULL);
+INSERT INTO `tbl_entries_data_95` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 73, 'A project management system built in Symphony CMS 2.0', '<p>A project management system built in Symphony CMS 2.0</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_96` ***
 DROP TABLE IF EXISTS `tbl_entries_data_96`;
@@ -3009,10 +3114,11 @@ CREATE TABLE `tbl_entries_data_96` (
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`),
   FULLTEXT KEY `value_formatted` (`value_formatted`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_96` ***
 INSERT INTO `tbl_entries_data_96` (`id`, `entry_id`, `handle`, `value`, `value_formatted`) VALUES (8, 16, 'abc16', 'ABC16', 'ABC16');
+INSERT INTO `tbl_entries_data_96` (`id`, `entry_id`, `handle`, `value`, `value_formatted`) VALUES (9, 73, 'bau73', 'BAU73', 'BAU73');
 
 -- *** STRUCTURE: `tbl_entries_data_97` ***
 DROP TABLE IF EXISTS `tbl_entries_data_97`;
@@ -3112,6 +3218,20 @@ INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `cr
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (69, 22, 1, '2010-06-03 11:10:05', '2010-06-03 18:10:05');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (70, 22, 1, '2010-06-03 11:18:29', '2010-06-03 18:18:29');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (71, 22, 1, '2010-06-03 11:20:32', '2010-06-03 18:20:32');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (72, 13, 1, '2010-06-03 17:56:19', '2010-06-04 00:56:19');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (73, 14, 1, '2010-06-03 17:57:45', '2010-06-04 00:57:45');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (74, 17, 1, '2010-06-03 18:05:20', '2010-06-04 01:05:20');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (75, 22, 1, '2010-06-03 18:15:58', '2010-06-04 01:15:58');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (76, 22, 1, '2010-06-03 18:21:47', '2010-06-04 01:21:47');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (77, 8, 1, '2010-06-03 18:42:24', '2010-06-04 01:42:24');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (78, 9, 1, '2010-06-03 18:44:20', '2010-06-04 01:44:20');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (79, 9, 1, '2010-06-03 18:44:57', '2010-06-04 01:44:57');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (80, 9, 1, '2010-06-03 18:45:19', '2010-06-04 01:45:19');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (81, 5, 1, '2010-06-03 18:55:43', '2010-06-04 01:55:43');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (82, 5, 1, '2010-06-03 19:57:56', '2010-06-04 02:57:56');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (83, 5, 1, '2010-06-03 19:59:16', '2010-06-04 02:59:16');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (84, 6, 1, '2010-06-03 20:10:10', '2010-06-04 03:10:10');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (85, 6, 1, '2010-06-03 20:19:40', '2010-06-04 03:19:40');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -3210,19 +3330,19 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (30, 'Heading', 'heading', 'input', 5, 'no', 1, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (31, 'Description', 'description', 'textarea', 5, 'yes', 2, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (32, 'Body', 'body', 'textarea', 5, 'yes', 3, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (33, 'Section', 'section', 'selectbox_link', 5, 'no', 4, 'sidebar', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (34, 'Author', 'author', 'selectbox_link', 5, 'no', 5, 'sidebar', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (33, 'Section', 'section', 'selectbox_link', 5, 'no', 5, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (34, 'Author', 'author', 'selectbox_link', 5, 'no', 4, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (35, 'Categories', 'categories', 'selectbox_link', 5, 'no', 6, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (36, 'Tags', 'tags', 'taglist', 5, 'no', 7, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (37, 'Date', 'date', 'date', 5, 'no', 8, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (38, 'Publish', 'publish', 'checkbox', 5, 'no', 9, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (39, 'Enable Comments', 'enable-comments', 'checkbox', 5, 'no', 10, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (40, 'Title', 'title', 'input', 6, 'yes', 0, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (41, 'Type', 'type', 'selectbox_link', 6, 'no', 1, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (41, 'Type', 'type', 'selectbox_link', 6, 'no', 1, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (42, 'URL', 'url', 'input', 6, 'no', 2, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (43, 'Description', 'description', 'textarea', 6, 'yes', 3, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (44, 'Body', 'body', 'textarea', 6, 'yes', 4, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (45, 'Category', 'category', 'selectbox_link', 6, 'yes', 5, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (43, 'Description', 'description', 'textarea', 6, 'no', 3, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (44, 'Body', 'body', 'textarea', 6, 'no', 4, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (45, 'Category', 'category', 'selectbox_link', 6, 'no', 5, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (46, 'Tags', 'tags', 'taglist', 6, 'no', 6, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (47, 'Date', 'date', 'date', 6, 'no', 7, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (48, 'Publish', 'publish', 'checkbox', 6, 'no', 8, 'sidebar', 'yes');
@@ -3232,8 +3352,8 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (52, 'Title', 'title', 'input', 8, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (53, 'Description', 'description', 'textarea', 8, 'no', 1, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (54, 'Title', 'title', 'input', 9, 'yes', 0, 'main', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (55, 'Description', 'description', 'textarea', 9, 'yes', 1, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (56, 'Body', 'body', 'textarea', 9, 'yes', 2, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (55, 'Description', 'description', 'textarea', 9, 'no', 1, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (56, 'Body', 'body', 'textarea', 9, 'no', 2, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (57, 'Author', 'author', 'input', 10, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (58, 'Email', 'email', 'input', 10, 'no', 1, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (59, 'Website', 'website', 'input', 10, 'no', 2, 'main', 'yes');
@@ -3356,10 +3476,10 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (13, 8, 'Change Password', 'change-pass', 'forum/members', NULL, 'navigation,whosonline', 'members_change_password', 20);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (14, NULL, 'Forbidden', 'forbidden', NULL, NULL, 'whosonline', NULL, 21);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (15, NULL, 'Page Not Found', 'page-not-found', NULL, NULL, 'navigation,whosonline', NULL, 22);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (16, NULL, 'Home', 'home', NULL, 'section', 'bookmarks,entries,navigation,section,sites', 'login', 0);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (17, NULL, 'About', 'about', NULL, 'section', 'bookmarks,entries,navigation,section,sites', 'login', 1);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (18, NULL, 'Contact', 'contact', NULL, 'entry/section', 'bookmarks,entries,navigation,section,sites', 'login', 8);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (19, NULL, 'Journal', 'journal', NULL, 'year/month/day/entry/item/section', 'bookmarks,entries,journal_entry,journal_excerpts,navigation,section,sites', 'login', 2);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (16, NULL, 'Home', 'home', NULL, 'section', 'resources,entries,navigation,section,sites', 'login', 0);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (17, NULL, 'About', 'about', NULL, 'section', 'resources,entries,navigation,section,sites', 'login', 1);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (18, NULL, 'Contact', 'contact', NULL, 'entry/section', 'resources,entries,navigation,section,sites', 'login', 8);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (19, NULL, 'Journal', 'journal', NULL, 'year/month/day/entry/item/section', 'resources,entries,journal_archives,journal_entry,journal_excerpts,navigation,section,sites', 'login', 2);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (20, NULL, 'Calendar', 'calendar', NULL, 'year/month/day/section/event', 'navigation,tickets', 'login', 4);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (21, 20, 'Year', 'year', 'calendar', 'year/month/day/section/event', 'navigation', 'login', 5);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (22, 20, 'Week', 'week', 'calendar', 'year/month/day/section/event', 'navigation,tickets', 'login', 6);
@@ -3369,7 +3489,7 @@ INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `d
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (26, NULL, 'Clients', 'clients', NULL, 'client', 'clients,navigation', NULL, 25);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (27, NULL, 'Projects', 'projects', NULL, 'client/project/filter/sort', 'client,client_names,navigation,project,projects', NULL, 26);
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (28, NULL, 'Timesheet', 'timesheet', NULL, 'filter/page/client/project/entry', 'client_names,navigation,project_titles,timesheet_entry,timesheet_pages,timesheet_recent', NULL, 27);
-INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (29, NULL, 'Brands', 'brands', NULL, 'brand/type/category/asset', 'brand_assets,brands,brands_entries,navigation', NULL, 28);
+INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (29, NULL, 'Brands', 'brands', NULL, 'brand/type/category/asset', 'brand_assets,brands,navigation', NULL, 28);
 
 -- *** DATA: `tbl_pages_types` ***
 INSERT INTO `tbl_pages_types` (`id`, `page_id`, `type`) VALUES (9, 16, 'index');
@@ -3382,7 +3502,7 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (2, 'Discussions', 'discussions', 10, NULL, 'asc', 'no', 'Forum');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (3, 'Comments', 'comments', 11, NULL, 'asc', 'no', 'Forum');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (4, 'Sections', 'sections', 1, 27, 'asc', 'no', 'Content');
-INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (5, 'Entries', 'entries', 2, NULL, 'asc', 'no', 'Content');
+INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (5, 'Entries', 'entries', 2, 37, 'asc', 'no', 'Content');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (6, 'Items', 'items', 3, NULL, 'asc', 'no', 'Content');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (7, 'Menus', 'menus', 0, NULL, 'asc', 'no', 'Content');
 INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`) VALUES (8, 'Types', 'types', 4, NULL, 'asc', 'no', 'Content');
@@ -3406,11 +3526,11 @@ INSERT INTO `tbl_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, 
 -- *** DATA: `tbl_sections_association` ***
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (20, 2, 10, 3, 18, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (21, 7, 50, 4, 26, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (212, 4, 21, 5, 33, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (213, 1, 1, 5, 34, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (214, 9, 54, 5, 35, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (11, 8, 52, 6, 41, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (12, 9, 54, 6, 45, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (240, 4, 21, 5, 33, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (239, 1, 1, 5, 34, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (241, 9, 54, 5, 35, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (244, 8, 52, 6, 41, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (245, 9, 54, 6, 45, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (14, 5, 29, 10, 61, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (15, 6, 40, 10, 62, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (91, 1, 1, 13, 78, 'no');
@@ -3440,7 +3560,7 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 
 -- *** DATA: `tbl_forum_read_discussions` ***
 INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (1, 8, 9, 1275320433, 1);
-INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (2, 8, 11, 1275449236, 1);
+INSERT INTO `tbl_forum_read_discussions` (`id`, `member_id`, `discussion_id`, `last_viewed`, `comments`) VALUES (2, 8, 11, 1275612829, 1);
 
 -- *** DATA: `tbl_members_codes` ***
 INSERT INTO `tbl_members_codes` (`member_id`, `code`, `expiry`) VALUES (14, '07460078ecd74cf1de37391659ce638f', 1275369856);

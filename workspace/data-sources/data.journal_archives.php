@@ -2,24 +2,31 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 	
-	Class datasourcebookmarks extends Datasource{
+	Class datasourcejournal_archives extends Datasource{
 		
-		public $dsParamROOTELEMENT = 'bookmarks';
+		public $dsParamROOTELEMENT = 'journal-archives';
 		public $dsParamORDER = 'desc';
 		public $dsParamLIMIT = '20';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
-		public $dsParamSTARTPAGE = '1';
+		public $dsParamREQUIREDPARAM = '$year';
+		public $dsParamSORT = 'date';
+		public $dsParamSTARTPAGE = '{$entry}';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 		public $dsParamFILTERS = array(
-				'41' => 'bookmarks',
-				'48' => 'yes',
+				'37' => '{$year}-{$month}',
+				'38' => 'yes',
 		);
 		
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
-				'url'
+				'heading',
+				'description: formatted',
+				'section',
+				'author',
+				'categories',
+				'tags',
+				'date'
 		);
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
@@ -29,17 +36,17 @@
 		
 		public function about(){
 			return array(
-					 'name' => 'Bookmarks',
+					 'name' => 'Journal Archives',
 					 'author' => array(
 							'name' => 'Stephen Bau',
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-05-30T18:42:25+00:00');	
+					 'release-date' => '2010-06-04T02:50:16+00:00');	
 		}
 		
 		public function getSource(){
-			return '6';
+			return '5';
 		}
 		
 		public function allowEditorToParse(){

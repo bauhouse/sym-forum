@@ -13,8 +13,7 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 		public $dsParamFILTERS = array(
-				'20' => '9',
-				'41' => 'sites',
+				'41' => '20',
 				'48' => 'yes',
 		);
 		
@@ -37,7 +36,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-05-30T18:51:57+00:00');	
+					 'release-date' => '2010-06-04T03:18:08+00:00');	
 		}
 		
 		public function getSource(){

@@ -8,7 +8,7 @@
 		public $dsParamORDER = 'asc';
 		public $dsParamLIMIT = '20';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'asset';
+		public $dsParamSORT = 'system:id';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
@@ -19,13 +19,13 @@
 		public $dsParamINCLUDEDELEMENTS = array(
 				'asset',
 				'brand',
+				'asset-type',
+				'asset-category',
+				'parent-asset',
 				'description',
 				'overview: formatted',
 				'body: formatted',
 				'url',
-				'parent-asset',
-				'asset-type',
-				'asset-category',
 				'image',
 				'file',
 				'file-formats'
@@ -44,7 +44,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-06-03T16:51:44+00:00');	
+					 'release-date' => '2010-06-04T01:29:51+00:00');	
 		}
 		
 		public function getSource(){

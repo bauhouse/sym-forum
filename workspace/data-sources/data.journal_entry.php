@@ -6,8 +6,9 @@
 		
 		public $dsParamROOTELEMENT = 'journal-entry';
 		public $dsParamORDER = 'desc';
-		public $dsParamLIMIT = '20';
+		public $dsParamLIMIT = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$entry';
 		public $dsParamSORT = 'system:id';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -43,7 +44,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-05-30T18:45:46+00:00');	
+					 'release-date' => '2010-06-04T02:45:54+00:00');	
 		}
 		
 		public function getSource(){

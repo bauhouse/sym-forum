@@ -9,7 +9,7 @@
 		public $dsParamLIMIT = '8';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
-		public $dsParamSTARTPAGE = '1';
+		public $dsParamSTARTPAGE = '{$year}';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 		public $dsParamFILTERS = array(
@@ -40,7 +40,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-05-30T18:46:47+00:00');	
+					 'release-date' => '2010-06-04T02:48:00+00:00');	
 		}
 		
 		public function getSource(){

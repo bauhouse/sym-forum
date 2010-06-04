@@ -36,7 +36,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-05-30T18:43:17+00:00');	
+					 'release-date' => '2010-06-04T02:01:47+00:00');	
 		}
 		
 		public function getSource(){
