@@ -134,7 +134,7 @@
 			<div class="body lists">
 				<h2>Links</h2>
 				<xsl:call-template name="list-sites"/>
-				<xsl:call-template name="list-bookmarks"/>
+				<xsl:call-template name="list-resources"/>
 			</div>
 		</div>
 	</div>
@@ -156,7 +156,7 @@
 	<ul class="categories">
 		<xsl:for-each select="/data/entries/year/month">
 			<li>
-				<a href="{$root}/journal/archive/{../@value}/{@value}/">
+				<a href="{$root}/journal/{../@value}/{@value}/">
 					<xsl:call-template name="format-month">
 						<xsl:with-param name="month" select="@value"/>
 						<xsl:with-param name="format" select="'M'"/>
@@ -186,10 +186,10 @@
 	</ul>
 </xsl:template>
 
-<xsl:template name="list-bookmarks">
-	<h3>Bookmarks</h3>
+<xsl:template name="list-resources">
+	<h3>Resources</h3>
 	<ul class="links">
-		<xsl:for-each select="data/bookmarks/entry">
+		<xsl:for-each select="data/resources/entry">
 			<li>
 				<a href="{url}" title="{description/p}"><xsl:value-of select="title"/></a>
 			</li>
