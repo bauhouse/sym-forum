@@ -5,10 +5,10 @@
 	Class datasourceclients extends Datasource{
 		
 		public $dsParamROOTELEMENT = 'clients';
-		public $dsParamORDER = 'desc';
+		public $dsParamORDER = 'asc';
 		public $dsParamLIMIT = '20';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'name';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -32,7 +32,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-06-01T21:29:29+00:00');	
+					 'release-date' => '2010-06-04T01:00:07+00:00');	
 		}
 		
 		public function getSource(){
