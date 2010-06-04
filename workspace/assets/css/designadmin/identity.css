@@ -133,3 +133,58 @@ date:		20 August 2007
 #branding-content p.ad-specs {
 	margin:0;
 	}
+
+
+/*
+-----------------------------------------------
+Swatches
+----------------------------------------------- */
+.swatch {
+	float: left;
+	text-align: center;
+	margin-left: 0;
+	margin-right: 6px;
+	margin-bottom: 12px;
+}
+.swatch a {
+	display: block;
+	border: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ddd;
+	background: #f9f9f9;
+	color: #333;
+}
+.swatch span {
+	display: block;
+	width: 66px;
+	height: 66px;
+	text-indent: -9999em;
+}
+.swatch strong {
+	display: block;
+	padding: 3px 0;
+	font-weight: normal;
+}
+
+
+/*
+-----------------------------------------------
+Box Shadows: http://css3please.com/ 
+----------------------------------------------- */
+.swatch a,
+.box_shadow {
+	-moz-box-shadow: 0px 0px 4px #ccc; /* FF3.5+ */
+	-webkit-box-shadow: 0px 0px 4px #ccc; /* Saf3.0+, Chrome */
+	box-shadow: 0px 0px 4px #ccc; /* Opera 10.5, IE 9.0 */
+	filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0px, OffY=0px, Color='#cccccc'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0px, OffY=0px, Color='#cccccc')"; /* IE8 */
+}
+.swatch a:hover {
+	background-color: #fff;
+	-moz-box-shadow: 0px 0px 4px #2A8CC8; /* FF3.5+ */
+	-webkit-box-shadow: 0px 0px 4px #2A8CC8; /* Saf3.0+, Chrome */
+	box-shadow: 0px 0px 4px #2A8CC8; /* Opera 10.5, IE 9.0 */
+	filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0px, OffY=0px, Color='#2A8CC8'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0px, OffY=0px, Color='#2A8CC8')"; /* IE8 */
+}
+

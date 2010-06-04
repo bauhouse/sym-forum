@@ -99,8 +99,8 @@
 								<h2><xsl:value-of select="$brand-name"/></h2>
 								<h3><xsl:value-of select="asset"/></h3>
 								<xsl:copy-of select="description/*"/>
-								<xsl:if test="image/item/path">
-									<img src="{$root}/{image/item/path}" alt="{brand} {asset}"/>
+								<xsl:if test="image/filename">
+									<img src="{$workspace}{image/@path}/{image/filename}" alt="{brand} {asset}"/>
 								</xsl:if>
 								<xsl:if test="overview">
 									<xsl:copy-of select="overview/*"/>
@@ -108,7 +108,7 @@
 								<xsl:if test="body">
 									<xsl:copy-of select="body/*"/>
 								</xsl:if>
-								<xsl:for-each select="/data/brand-assets/entry[parent-asset/@handle = $asset]">
+								<xsl:for-each select="/data/brand-assets/entry[parent-asset/item/@handle = $asset]">
 									<xsl:call-template name="logo-and-details"/>
 								</xsl:for-each>
 							</xsl:when>
@@ -127,42 +127,24 @@
 								<xsl:if test="body">
 									<xsl:copy-of select="body/*"/>
 								</xsl:if>
-								<xsl:if test="image/item/path">
-									<img src="{$root}/{image/item/path}" alt="{brand} {asset}"/>
+								<xsl:if test="image/filename">
+									<img src="{$workspace}{image/@path}/{image/filename}" alt="{brand} {asset}"/>
 								</xsl:if>
-								<xsl:for-each select="/data/brand-assets/entry[parent-asset/@handle = $asset]">
-									<div class="color">
-										<xsl:if test="image/item/path">
-											<a href="{$root}/{$current-page}/{$brand}/{$type}/{$category}/{@handle}/" title="{description}">
-												<img src="{$root}/{image/item/path}" alt="{brand/item} {asset}"/>
-											</a>
-										</xsl:if>
-										<xsl:if test="body">
-											<xsl:copy-of select="body/*"/>
-										</xsl:if>
-									</div>
+								<xsl:for-each select="/data/brand-assets/entry[parent-asset/item/@handle = $asset]">
+									<xsl:call-template name="color"/>
 								</xsl:for-each>
 							</xsl:when>
 							<xsl:when test="parent-asset and $category = 'colors'">
 								<h2><xsl:value-of select="$brand-name"/></h2>
 								<h3><xsl:value-of select="asset"/></h3>
-								<div class="color">
-									<xsl:if test="image/item/path">
-										<a href="{$root}/{$current-page}/{$brand}/{$type}/{$category}/{@handle}/" title="{description}">
-											<img src="{$root}/{image/item/path}" alt="{brand/item} {asset}"/>
-										</a>
-									</xsl:if>
-									<xsl:if test="body">
-										<xsl:copy-of select="body/*"/>
-									</xsl:if>
-								</div>
+								<xsl:call-template name="color"/>
 							</xsl:when>
 							<xsl:when test="not(parent-asset) and $category != 'colors'">
 								<h2><xsl:value-of select="$brand-name"/></h2>
 								<h3><xsl:value-of select="asset"/></h3>
 								<xsl:copy-of select="description/*"/>
-								<xsl:if test="image/item/path">
-									<img src="{$root}/{image/item/path}" alt="{brand} {asset}"/>
+								<xsl:if test="image/filename">
+									<img src="{$workspace}{image/@path}/{image/filename}" alt="{brand} {asset}"/>
 								</xsl:if>
 								<xsl:if test="overview">
 									<xsl:copy-of select="overview/*"/>
@@ -172,8 +154,8 @@
 								</xsl:if>
 								<xsl:for-each select="/data/brand-assets/entry[parent-asset/@handle = $asset]">
 									<h4><xsl:value-of select="parent-asset"/> &#8211; <xsl:value-of select="description"/></h4>
-									<xsl:if test="image/item/path">
-										<img src="{$root}/{image/item/path}" alt="{brand/item} {asset}"/>
+									<xsl:if test="image/filename">
+										<img src="{$workspace}{image/@path}/{image/filename}" alt="{brand/item} {asset}"/>
 									</xsl:if>
 									<xsl:if test="overview">
 										<xsl:copy-of select="overview/*"/>
@@ -184,8 +166,8 @@
 								<h2><xsl:value-of select="$brand-name"/></h2>
 								<h3><xsl:value-of select="parent-asset"/></h3>
 								<h4><xsl:value-of select="parent-asset"/> &#8211; <xsl:value-of select="description"/></h4>
-								<xsl:if test="image/item/path">
-									<img src="{$root}/{image/item/path}" alt="{brand/item} {asset}"/>
+								<xsl:if test="image/filename">
+									<img src="{$workspace}{image/@path}/{image/filename}" alt="{brand/item} {asset}"/>
 								</xsl:if>
 								<xsl:if test="overview">
 									<xsl:copy-of select="overview/*"/>
@@ -200,9 +182,10 @@
 					<xsl:for-each select="brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = $type and asset/@handle = $category]">
 						<h2><xsl:value-of select="$brand-name"/></h2>
 						<h3><xsl:value-of select="asset"/></h3>
-						<xsl:if test="image/item/path">
-							<p><img class="brand-identity" src="{$root}/{image/item/path}" alt="{asset}"/></p>
+						<xsl:if test="image/filename">
+							<p><img class="brand-identity" src="{$workspace}{image/@path}/{image/filename}" alt="{asset}"/></p>
 						</xsl:if>
+						<xsl:copy-of select="overview/*"/>
 						<xsl:copy-of select="description/*"/>
 						<xsl:copy-of select="body/*"/>
 					</xsl:for-each>
@@ -220,6 +203,7 @@
 					<xsl:if test="$type = 'guidelines'">
 						<xsl:for-each select="brands-entries/entry">
 							<h3><xsl:value-of select="title"/></h3>
+							<xsl:copy-of select="overview/*"/>
 							<xsl:copy-of select="description/*"/>
 							<xsl:copy-of select="body/*"/>
 						</xsl:for-each>
@@ -236,13 +220,14 @@
 						</h2>
 						<xsl:for-each select="/data/brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = 'guidelines']">
 							<h3><xsl:value-of select="asset"/></h3>
-							<xsl:if test="image/item/path">
+							<xsl:if test="image/filename">
 								<p>
 									<a href="{$root}/brands/{brand/item/@handle}/" title="{$brand-name} Brand Identity">
-										<img class="brand-identity" src="{$root}/{image/item/path}" alt="{asset}"/>
+										<img class="brand-identity" src="{$workspace}{image/@path}/{image/filename}" alt="{asset}"/>
 									</a>
 								</p>
 							</xsl:if>
+							<xsl:copy-of select="overview/*"/>
 							<xsl:copy-of select="description/*"/>
 							<xsl:copy-of select="body/*"/>
 						</xsl:for-each>
@@ -330,9 +315,9 @@
 	<xsl:param name="asset-category" select="asset-category/item/@handle"/>
 	<xsl:param name="parent-asset" select="parent-asset"/>
 	<xsl:param name="asset-handle" select="asset/@handle"/>
-	<xsl:if test="$brand-assets[parent-asset = $parent-asset]">
+	<xsl:if test="$brand-assets[parent-asset/item = $parent-asset]">
 		<ul class="documents">
-			<xsl:for-each select="$brand-assets[parent-asset = $parent-asset]">
+			<xsl:for-each select="$brand-assets[parent-asset/item = $parent-asset]">
 				<xsl:call-template name="brand-asset-child">
 					<xsl:with-param name="brand-assets" select="$brand-assets"/>
 				</xsl:call-template>
@@ -352,15 +337,15 @@
 		<xsl:if test="$asset-handle = $asset">
 			<xsl:attribute name="class">current</xsl:attribute>
 		</xsl:if>
-		<a href="{$root}/brands/{$brand}/{$asset-type}/{$asset-category}/{$asset-handle}/" title="{$parent-asset} - {description}">
+		<a href="{$root}/brands/{$brand}/{$asset-type}/{$asset-category}/{$asset-handle}/" title="{$parent-asset/item} - {description}">
 			<xsl:value-of select="description"/>
 		</a>
 	</li>
 </xsl:template>
 
 <xsl:template name="logo-and-details">
-	<div class="logo narrow">
-		<xsl:if test="image/item/path">
+	<div class="logo">
+		<xsl:if test="image/filename">
 			<a href="#">
 				<xsl:choose>
 					<xsl:when test="contains(description, 'White') and description != 'Black and White'">
@@ -370,10 +355,10 @@
 						<xsl:attribute name="class">logo-preview</xsl:attribute>
 					</xsl:otherwise>
 				</xsl:choose>
-				<img src="{$root}/{image/item/path}" alt="{brand/item} {asset}"/>
+				<img src="{$workspace}{image/@path}/{image/filename}" alt="{brand/item} {asset}"/>
 			</a>
 		</xsl:if>
-		<div class="logo-details">
+		<div class="logo-details" style="margin-left: {image/meta/@width + 40}px">
 			<h5><xsl:value-of select="parent-asset"/> &#8211; <xsl:value-of select="description"/></h5>
 			<xsl:if test="overview">
 				<xsl:copy-of select="overview/*"/>
@@ -382,7 +367,10 @@
 				<xsl:copy-of select="body/*"/>
 			</xsl:if>
 		</div>
-		<p class="logo-format"><strong>File Name: </strong><xsl:value-of select="asset"/>
+		<p class="logo-format"><strong>File Name:</strong>
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="image/filename"/>
+			<!-- xsl:value-of select="asset"/>
 			<xsl:for-each select="file-formats/item/@handle">
 				<xsl:text> | .</xsl:text>
 				<xsl:choose>
@@ -394,8 +382,28 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
-			<xsl:text> |</xsl:text>
+			<xsl:text> |</xsl:text -->
 		</p>
+	</div>
+</xsl:template>
+
+<xsl:template name="color">
+	<xsl:param name="hex-color" select="color"/>
+	<xsl:param name="color-name" select="asset"/>
+	<div class="color">
+		<p class="swatch">
+			<a id="{$hex-color}" name="{$hex-color}">
+				<span class="color-name" style="background-color: {$hex-color};" title="{$color-name}">
+					<xsl:value-of select="$color-name"/>
+				</span>
+				<strong>
+					<xsl:value-of select="$hex-color"/>
+				</strong>
+			</a>
+		</p>
+		<xsl:if test="body">
+			<xsl:copy-of select="body/*"/>
+		</xsl:if>
 	</div>
 </xsl:template>
 

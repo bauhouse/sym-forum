@@ -26,6 +26,7 @@
 				'overview: formatted',
 				'body: formatted',
 				'url',
+				'color',
 				'image',
 				'file',
 				'file-formats'
@@ -44,7 +45,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-06-04T01:29:51+00:00');	
+					 'release-date' => '2010-06-04T17:44:17+00:00');	
 		}
 		
 		public function getSource(){

@@ -69,7 +69,7 @@ CREATE TABLE `tbl_fields_input` (
   `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=261 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=268 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_input` ***
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (185, 1, NULL);
@@ -115,12 +115,12 @@ INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (184, 131,
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (176, 135, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (178, 140, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (219, 142, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (250, 145, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (251, 147, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (252, 150, NULL);
-INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (253, 156, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (264, 145, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (265, 147, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (266, 150, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (217, 157, NULL);
 INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (218, 159, NULL);
+INSERT INTO `tbl_fields_input` (`id`, `field_id`, `validator`) VALUES (267, 165, NULL);
 
 -- *** STRUCTURE: `tbl_fields_member` ***
 DROP TABLE IF EXISTS `tbl_fields_member`;
@@ -230,7 +230,7 @@ CREATE TABLE `tbl_fields_select` (
   `dynamic_options` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_select` ***
 INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (33, 73, 'no', 'Advertising, Design, Architecture, Construction, Ecommerce, Education, Engineering, Financial Services, Hospitality, Industry, Land Development, Manufacturing, Marketing, Non-Profit, Printing, Real Estate, Tourism, Web Development, Web Services', NULL);
@@ -238,6 +238,7 @@ INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `
 INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (59, 94, 'no', 'Created, In Progress, On Hold, Completed, Invoiced, Cancelled', NULL);
 INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (55, 100, 'no', 'Non-Billable, Project, Contract, Service', NULL);
 INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (56, 110, 'no', 'In Progress, Pending, On Hold, Completed, Invoiced, Cancelled', NULL);
+INSERT INTO `tbl_fields_select` (`id`, `field_id`, `allow_multiple_selection`, `static_options`, `dynamic_options`) VALUES (61, 164, 'yes', 'DOC, EPS, JPG, PDF, PNG, RTF, TXT', NULL);
 
 -- *** STRUCTURE: `tbl_fields_selectbox_link` ***
 DROP TABLE IF EXISTS `tbl_fields_selectbox_link`;
@@ -249,7 +250,7 @@ CREATE TABLE `tbl_fields_selectbox_link` (
   `limit` int(4) unsigned NOT NULL DEFAULT '20',
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=247 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=255 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_selectbox_link` ***
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (20, 18, 'no', 10, 20);
@@ -280,10 +281,10 @@ INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selec
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (175, 139, 'no', 131, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (183, 90, 'yes', 140, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (204, 143, 'no', 104, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (236, 146, 'no', 142, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (239, 151, 'no', 145, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (237, 152, 'no', 157, 20);
-INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (238, 153, 'no', 159, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (251, 146, 'no', 142, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (254, 151, 'no', 145, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (252, 152, 'no', 157, 20);
+INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (253, 153, 'no', 159, 20);
 INSERT INTO `tbl_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `related_field_id`, `limit`) VALUES (203, 160, 'no', 157, 20);
 
 -- *** STRUCTURE: `tbl_fields_systemid` ***
@@ -322,7 +323,7 @@ CREATE TABLE `tbl_fields_textarea` (
   `size` int(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=146 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_textarea` ***
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (26, 17, 'markdown_with_purifier', 15);
@@ -350,8 +351,8 @@ INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (83, 136, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (85, 141, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (115, 144, 'markdown_extra_with_smartypants', 15);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (132, 148, 'markdown_extra_with_smartypants', 6);
-INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (133, 149, 'markdown_extra_with_smartypants', 15);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (144, 148, 'markdown_extra_with_smartypants', 6);
+INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (145, 149, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (113, 158, 'markdown_extra_with_smartypants', 15);
 INSERT INTO `tbl_fields_textarea` (`id`, `field_id`, `formatter`, `size`) VALUES (114, 161, 'markdown_extra_with_smartypants', 15);
 
@@ -378,11 +379,11 @@ CREATE TABLE `tbl_fields_upload` (
   `validator` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- *** DATA: `tbl_fields_upload` ***
-INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (21, 154, '/workspace/assets/images', '/\\.(?:bmp|gif|jpe?g|png)$/i');
-INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (22, 155, '/workspace', '/\\.(?:doc|pdf|rtf|txt)$/i');
+INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (25, 154, '/workspace/assets/images', '/\\.(?:bmp|gif|jpe?g|png)$/i');
+INSERT INTO `tbl_fields_upload` (`id`, `field_id`, `destination`, `validator`) VALUES (26, 155, '/workspace', '/\\.(?:doc|eps|jpg|pdf|png|rtf|txt)$/i');
 
 -- *** STRUCTURE: `tbl_entries_data_1` ***
 DROP TABLE IF EXISTS `tbl_entries_data_1`;
@@ -1229,16 +1230,19 @@ CREATE TABLE `tbl_entries_data_145` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_145` ***
-INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 65, 'symphony-cms-colours', 'Symphony CMS Colours');
-INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 66, 'the-symphony-cms-brand', 'The Symphony CMS Brand');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (31, 65, 'symphony-cms-colors', 'Symphony CMS Colors');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (36, 66, 'the-symphony-cms-brand', 'The Symphony CMS Brand');
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 69, 'typography', 'Typography');
-INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (12, 70, 'symphony-cms-logo', 'Symphony CMS Logo');
-INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 71, 'symphony-logo-black', 'symphony-logo_black');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (37, 70, 'symphony-cms-logo', 'Symphony CMS Logo');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (19, 71, 'symphony-logo-png', 'Symphony Logo - PNG');
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (13, 75, 'brand-identity', 'Brand Identity');
 INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (14, 76, 'logo-usage-guidelines', 'Logo Usage Guidelines');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (21, 86, 'symphony-logo-jpeg', 'Symphony Logo - JPEG');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (33, 87, 'symphony-grey', 'Symphony Grey');
+INSERT INTO `tbl_entries_data_145` (`id`, `entry_id`, `handle`, `value`) VALUES (32, 88, 'symphony-magenta', 'Symphony Magenta');
 
 -- *** STRUCTURE: `tbl_entries_data_146` ***
 DROP TABLE IF EXISTS `tbl_entries_data_146`;
@@ -1249,16 +1253,19 @@ CREATE TABLE `tbl_entries_data_146` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_146` ***
-INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 64);
-INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (31, 65, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (36, 66, 64);
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 64);
-INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, 64);
-INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (37, 70, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (19, 71, 64);
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, 64);
 INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (21, 86, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (33, 87, 64);
+INSERT INTO `tbl_entries_data_146` (`id`, `entry_id`, `relation_id`) VALUES (32, 88, 64);
 
 -- *** STRUCTURE: `tbl_entries_data_147` ***
 DROP TABLE IF EXISTS `tbl_entries_data_147`;
@@ -1271,13 +1278,16 @@ CREATE TABLE `tbl_entries_data_147` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_147` ***
-INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 65, 'colors-used-throughout-the-brand-identity', 'Colors used throughout the brand identity');
-INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (10, 66, 'an-introduction-to-the-symphony-cms-identity-design', 'An Introduction to the Symphony CMS Identity Design');
-INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 70, 'logo', 'Logo');
-INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 71, 'two-colour', 'Two Colour');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (28, 65, 'colors-used-throughout-the-brand-identity', 'Colors used throughout the brand identity');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (33, 66, 'an-introduction-to-the-symphony-cms-identity-design', 'An Introduction to the Symphony CMS Identity Design');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (34, 70, 'logo', 'Logo');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (16, 71, 'colour-png', 'Colour - PNG');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (18, 86, 'colour-jpeg', 'Colour - JPEG');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (30, 87, 'symphony-grey-423a3a', 'Symphony Grey (#423A3A)');
+INSERT INTO `tbl_entries_data_147` (`id`, `entry_id`, `handle`, `value`) VALUES (29, 88, 'symphony-magenta-b20b4f', 'Symphony Magenta (#B20B4F)');
 
 -- *** STRUCTURE: `tbl_entries_data_148` ***
 DROP TABLE IF EXISTS `tbl_entries_data_148`;
@@ -1289,16 +1299,19 @@ CREATE TABLE `tbl_entries_data_148` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_148` ***
-INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 65, 'These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.', '<p>These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (31, 65, 'These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.', '<p>These standards have been created to ensure accurate color reproduction for various applications and media, with industry standard color matching value for print, screen and web.</p>\n');
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 69, 'Typography is a vital part of the identity system. Each typeface has its own character and evokes a different emotional and intellectual response.', '<p>Typography is a vital part of the identity system. Each typeface has its own character and evokes a different emotional and intellectual response.</p>\n');
-INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 70, 'The Symphony CMS logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Symphony CMS is becoming recognized around the world for its commitment to bringing the power of XSLT to the open source web development community.', '<p>The Symphony CMS logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Symphony CMS is becoming recognized around the world for its commitment to bringing the power of XSLT to the open source web development community.</p>\n');
-INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 71, 'This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.', '<p>This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.</p>\n');
-INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 66, '#### About Symphony\r\n\r\n[Symphony](http://symphony-cms.com/) is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.\r\n', '<h4>About Symphony</h4>\n\n<p><a href=\"http://symphony-cms.com/\">Symphony</a> is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (37, 70, 'The Symphony CMS logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Symphony CMS is becoming recognized around the world for its commitment to bringing the power of XSLT to the open source web development community.', '<p>The Symphony CMS logo has been recently redesigned to better reflect the maturity of the company and its position in the marketplace. Symphony CMS is becoming recognized around the world for its commitment to bringing the power of XSLT to the open source web development community.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (19, 71, 'This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.', '<p>This format is to be used for reproduction in two colours, PANTONE Red 032 and Black. This format is used best when flat colours are required, such as with vinyl signs and vehicle graphics. The JPEG and PNG files are not suitable for spot colour printing but can be used to create the same effect on screen or for desktop printing.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (36, 66, '#### About Symphony\r\n\r\n[Symphony](http://symphony-cms.com/) is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.\r\n', '<h4>About Symphony</h4>\n\n<p><a href=\"http://symphony-cms.com/\">Symphony</a> is an Open Source content management system made for web developers. It gives you all the power and flexibility you’ll need, while keeping out of your way.</p>\n');
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 75, 'The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.', '<p>The corporate identity provides the foundation upon which the image of the organization can be built. It serves to help focus the vision of the community and convey the personality and culture of the organization by means of a consistent application of the identity to all forms of communication.</p>\n');
 INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 76, 'The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.', '<p>The following guidelines provide general information regarding various file formats and the commonly recommended file types for usage in specific applications and media. Some file types are linked to Wikipedia to provide a more thorough understanding of the file formats we have used.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (21, 86, 'This format is to be used for reproduction in 4-colour process printing - CMYK: Cyan, Magenta, Yellow, Black. The JPEG format comes in RGB and CMYK versions. Supply the CMYK version for printing, but only when the AI and EPS versions are not compatible with the process. ALWAYS use AI or EPS when printing whenever support is available for these formats. Supply the RGB version for web content. The PNG format can be used only for web content.', '<p>This format is to be used for reproduction in 4-colour process printing - CMYK: Cyan, Magenta, Yellow, Black. The JPEG format comes in RGB and CMYK versions. Supply the CMYK version for printing, but only when the AI and EPS versions are not compatible with the process. ALWAYS use AI or EPS when printing whenever support is available for these formats. Supply the RGB version for web content. The PNG format can be used only for web content.</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (33, 87, 'The warm grey color used for the Symphony logotype', '<p>The warm grey color used for the Symphony logotype</p>\n');
+INSERT INTO `tbl_entries_data_148` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (32, 88, 'An accent color used as the color of the dot in the Symphony logo', '<p>An accent color used as the color of the dot in the Symphony logo</p>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_149` ***
 DROP TABLE IF EXISTS `tbl_entries_data_149`;
@@ -1310,16 +1323,19 @@ CREATE TABLE `tbl_entries_data_149` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_149` ***
-INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (2, 65, 'For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. \r\n\r\nIt is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).', '<p>For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. </p>\n\n<p>It is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (31, 65, 'For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. \r\n\r\nIt is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).', '<p>For color reproduction, the following the hexadecimal values for colors have been used as the basis for matching colors. Process color equivalents have been indicated below each color swatch. </p>\n\n<p>It is unlikely that print materials would be printed in spot colors, since the cost, in comparison to four color printing, would be prohibitive. PANTONE color swatches are NOT provided as no suitable color matches were found for these colors. In the case that spot colors are required, the closest matches found were PANTONE 166 (orange), PANTONE 5405 (blue), PANTONE 375 (green), PANTONE 291 (sky).</p>\n');
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 69, '#### Print Materials\r\n\r\nAll Corporate Stationery use a typeface family called DIN Mittelschrift, which is based on the German industry standard (\"Deutsche Industrie Norm\") for signage on the Autobahn.\r\n\r\nDIN has a clunky functionalism and a modern character that is highly legible for a geometric sans serif typeface.\r\n\r\nDIN is the supporting text family for all printed materials, including stationery.\r\n\r\n#### Web Type\r\n\r\nType on the web is limited to fonts that tend to be installed on computer systems as part of the most popular operating systems.\r\n\r\nWhere fonts are limited to standard libraries, Helvetica and Arial provide suitable complements or replacements for DIN on the web for headlines and text.', '<h4>Print Materials</h4>\n\n<p>All Corporate Stationery use a typeface family called DIN Mittelschrift, which is based on the German industry standard (&#8220;Deutsche Industrie Norm&#8221;) for signage on the Autobahn.</p>\n\n<p>DIN has a clunky functionalism and a modern character that is highly legible for a geometric sans serif typeface.</p>\n\n<p>DIN is the supporting text family for all printed materials, including stationery.</p>\n\n<h4>Web Type</h4>\n\n<p>Type on the web is limited to fonts that tend to be installed on computer systems as part of the most popular operating systems.</p>\n\n<p>Where fonts are limited to standard libraries, Helvetica and Arial provide suitable complements or replacements for DIN on the web for headlines and text.</p>\n');
-INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (12, 70, 'Logos for each division of Eagle West have been packaged as individual [ZIP](http://en.wikipedia.org/wiki/ZIP_%28file_format%29) files. Contained within each ZIP file are the following file formats: [AI](http://en.wikipedia.org/wiki/Adobe_Illustrator) (Adobe Illustrator Version 8), [EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript), [JPEG](http://en.wikipedia.org/wiki/Jpeg), [PDF](http://en.wikipedia.org/wiki/Pdf), [PNG](http://en.wikipedia.org/wiki/Png). These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files\r\n\r\nNote: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).', '<p>Logos for each division of Eagle West have been packaged as individual <a href=\"http://en.wikipedia.org/wiki/ZIP_%28file_format%29\">ZIP</a> files. Contained within each ZIP file are the following file formats: <a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a> (Adobe Illustrator Version 8), <a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>, <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a>, <a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>, <a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>. These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files</p>\n\n<p>Note: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).</p>\n');
-INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 71, NULL, NULL);
-INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 66, '#### Designed to do things your way\r\n\r\nSymphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.\r\n\r\n#### Powered by XML and XSLT\r\n\r\nSymphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.\r\n\r\nSymphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.\r\n\r\n#### Symphony Resources\r\n\r\nThe Symphony [community forum](http://symphony-cms.com/discuss/) is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.', '<h4>Designed to do things your way</h4>\n\n<p>Symphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.</p>\n\n<h4>Powered by XML and XSLT</h4>\n\n<p>Symphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.</p>\n\n<p>Symphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.</p>\n\n<h4>Symphony Resources</h4>\n\n<p>The Symphony <a href=\"http://symphony-cms.com/discuss/\">community forum</a> is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (37, 70, 'Logos for each division of Eagle West have been packaged as individual [ZIP](http://en.wikipedia.org/wiki/ZIP_%28file_format%29) files. Contained within each ZIP file are the following file formats: [AI](http://en.wikipedia.org/wiki/Adobe_Illustrator) (Adobe Illustrator Version 8), [EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript), [JPEG](http://en.wikipedia.org/wiki/Jpeg), [PDF](http://en.wikipedia.org/wiki/Pdf), [PNG](http://en.wikipedia.org/wiki/Png). These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files\r\n\r\nNote: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).', '<p>Logos for each division of Eagle West have been packaged as individual <a href=\"http://en.wikipedia.org/wiki/ZIP_%28file_format%29\">ZIP</a> files. Contained within each ZIP file are the following file formats: <a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a> (Adobe Illustrator Version 8), <a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>, <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a>, <a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>, <a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>. These file formats are industry standards for printing, sign manufacturing and web graphics. Please follow the guidelines below when providing files for reproduction in various media. > Download Files</p>\n\n<p>Note: to preview overprint/overlay properties of a logo, mouse over the logo and you will be able to view the logo against a red background. You will need a modern browser to view this effect: Firefox, Safari, Opera, Internet Explorer 7 (Internet Explorer 6 does not support transparent PNG files).</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (19, 71, NULL, NULL);
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (36, 66, '#### Designed to do things your way\r\n\r\nSymphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.\r\n\r\n#### Powered by XML and XSLT\r\n\r\nSymphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.\r\n\r\nSymphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.\r\n\r\n#### Symphony Resources\r\n\r\nThe Symphony [community forum](http://symphony-cms.com/discuss/) is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.', '<h4>Designed to do things your way</h4>\n\n<p>Symphony lets you organise everything the way you like, from your publishing environment to your website’s URL structure. Built to be versatile and customisable, Symphony really is what you make of it.</p>\n\n<h4>Powered by XML and XSLT</h4>\n\n<p>Symphony’s templating engine is pure XSLT goodness. XSLT is a standard recommended by the W3C, so learning Symphony means that you’re learning skills that you can also use outside of the system. If you already know the XML and CSS standards, then chances are you should be able to quickly pick up XSLT.</p>\n\n<p>Symphony lets you to create small blocks of XSLT code called utilities, which you can use as building blocks to construct your site’s pages. Due to the nature of XSLT, these utilities are highly reusable, so the next time you’re developing a website you’ll probably find you’ve already done half the work.</p>\n\n<h4>Symphony Resources</h4>\n\n<p>The Symphony <a href=\"http://symphony-cms.com/discuss/\">community forum</a> is full of friendly and knowledgeable Symphony users, and the Symphony team are always quick to respond, so it’s a great place to go if you have questions.</p>\n');
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (13, 75, 'By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.\r\n\r\nWhat follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.', '<p>By definition, a logo is the symbol or word mark used to visually identify an individual, group, idea or product. Over time and through consistent use, it becomes a valuable asset as the corporate image is reinforced through various media and as associations are built between the logo and the relationships people build with the organization.</p>\n\n<p>What follows are guidelines that will help to ensure the consistent application of the corporate identity in various media. The logos have been supplied in several digital formats that will facilitate the production of electronic documents and digital media, as well as printed media, whether one color, spot color or four color process.</p>\n');
 INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (14, 76, '#### Print Reproduction and Signs\r\n\r\nWhen supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator ([AI](http://en.wikipedia.org/wiki/Adobe_Illustrator)) and Encapsulated PostScript ([EPS](http://en.wikipedia.org/wiki/Encapsulated_PostScript)) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.\r\n\r\nSigns are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.\r\n\r\n#### Desktop Applications\r\n\r\nFor Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.\r\n\r\nThe Joint Photographic Experts Group created the [JPEG](http://en.wikipedia.org/wiki/Jpeg) format as a standard compression format for photographs. The Portable Network Graphics ([PNG](http://en.wikipedia.org/wiki/Png)) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.\r\n\r\n#### Web Content\r\n\r\nFor internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.\r\n\r\n#### Cross-Platform Viewing and Printing\r\n\r\nThe Portable Document Format ([PDF](http://en.wikipedia.org/wiki/Pdf)) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.', '<h4>Print Reproduction and Signs</h4>\n\n<p>When supplying artwork for print reproduction, ALWAYS supply the AI or EPS formats, as these are scalable vector files that will provide the highest quality reproduction possible at any size. The Adobe Illustrator (<a href=\"http://en.wikipedia.org/wiki/Adobe_Illustrator\">AI</a>) and Encapsulated PostScript (<a href=\"http://en.wikipedia.org/wiki/Encapsulated_PostScript\">EPS</a>) file formats are used by graphic design and prepress professionals for the best reproduction results on press. Applications such as Adobe InDesign, Adobe Illustrator and Adobe Photoshop are able to open or import AI and EPS formats. QuarkXPress will require the EPS format to place graphics.</p>\n\n<p>Signs are often produced as cut vinyl. This type of application requires a vector format. Be sure NOT to supply raster image artwork to sign manufacturers. This often means that sign manufacturers may try to reproduce vector artwork from the raster image artwork, usually with less than desirable results.</p>\n\n<h4>Desktop Applications</h4>\n\n<p>For Microsoft Word and PowerPoint, use the JPEG and PNG file formats. Unfortunately, Microsoft has not provided adequate support for the superior vector / PostScript file formats, AI and EPS, in their popular office applications. It is therefore necessary to use high resolution raster image file formats, such as JPEG and PNG, for medium quality reproduction on desktop printers.</p>\n\n<p>The Joint Photographic Experts Group created the <a href=\"http://en.wikipedia.org/wiki/Jpeg\">JPEG</a> format as a standard compression format for photographs. The Portable Network Graphics (<a href=\"http://en.wikipedia.org/wiki/Png\">PNG</a>) format has a transparency feature, allowing the ability to overlay graphics over photographs or coloured backgrounds. However, take care when placing logos over background colours. Complex photographic imagery should not be used as a background. Background colours should have a good contrast with the graphics that are being placed over the background.</p>\n\n<h4>Web Content</h4>\n\n<p>For internet delivery, whether in web pages or by email, use JPEG files. It is possible also to use PNG files, although support for this format is not universal. Note that the files that have been provided are large enough for high quality print reproduction and are likely too large to be used for display on a web page or email message. For these applications, use an image editing application to create a smaller file.</p>\n\n<h4>Cross-Platform Viewing and Printing</h4>\n\n<p>The Portable Document Format (<a href=\"http://en.wikipedia.org/wiki/Pdf\">PDF</a>) is a scalable vector- and raster-based format similar to AI and EPS that are often used for high quality screen display and high quality printing. Adobe Reader or Adobe Acrobat is required to be able to view and print this format. Because these readers are available for the most popular operating systems, the PDF format has become a standard for viewing and printing page layouts that maintain the integrity of the original design, regardless of the computer platform used to view and print the document. It may also be possible to supply this format to newspapers and printers for the purpose of creating ads and printed materials, though they generally prefer the EPS format. Adobe InDesign CS2 can also import PDF files into a page layout.</p>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (21, 86, NULL, NULL);
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (33, 87, '##### Process\r\n\r\n* C: 64%\r\n* M: 64%\r\n* Y: 61%\r\n* K: 51%\r\n\r\n##### RGB\r\n\r\n* R: 66\r\n* G: 58\r\n* B: 58\r\n\r\n##### Hex\r\n\r\n* #423A3A', '<h5>Process</h5>\n\n<ul>\n<li>C: 64%</li>\n<li>M: 64%</li>\n<li>Y: 61%</li>\n<li>K: 51%</li>\n</ul>\n\n<h5>RGB</h5>\n\n<ul>\n<li>R: 66</li>\n<li>G: 58</li>\n<li>B: 58</li>\n</ul>\n\n<h5>Hex</h5>\n\n<ul>\n<li>#423A3A</li>\n</ul>\n');
+INSERT INTO `tbl_entries_data_149` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (32, 88, '##### Process\r\n\r\n* C: 24%\r\n* M: 100%\r\n* Y: 55%\r\n* K: 9%\r\n\r\n##### RGB\r\n\r\n* R: 178\r\n* G: 11\r\n* B: 79\r\n\r\n##### Hex\r\n\r\n* #B20B4F', '<h5>Process</h5>\n\n<ul>\n<li>C: 24%</li>\n<li>M: 100%</li>\n<li>Y: 55%</li>\n<li>K: 9%</li>\n</ul>\n\n<h5>RGB</h5>\n\n<ul>\n<li>R: 178</li>\n<li>G: 11</li>\n<li>B: 79</li>\n</ul>\n\n<h5>Hex</h5>\n\n<ul>\n<li>#B20B4F</li>\n</ul>\n');
 
 -- *** STRUCTURE: `tbl_entries_data_15` ***
 DROP TABLE IF EXISTS `tbl_entries_data_15`;
@@ -1360,16 +1376,19 @@ CREATE TABLE `tbl_entries_data_151` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_151` ***
-INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, NULL);
-INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (31, 65, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (36, 66, NULL);
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, NULL);
-INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, NULL);
-INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 70);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (37, 70, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (19, 71, 70);
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, NULL);
 INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, NULL);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (21, 86, 70);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (33, 87, 65);
+INSERT INTO `tbl_entries_data_151` (`id`, `entry_id`, `relation_id`) VALUES (32, 88, 65);
 
 -- *** STRUCTURE: `tbl_entries_data_152` ***
 DROP TABLE IF EXISTS `tbl_entries_data_152`;
@@ -1380,16 +1399,19 @@ CREATE TABLE `tbl_entries_data_152` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_152` ***
-INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 49);
-INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 51);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (31, 65, 49);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (36, 66, 51);
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 49);
-INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, 48);
-INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 48);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (37, 70, 48);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (19, 71, 48);
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, 51);
 INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, 51);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (21, 86, 48);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (33, 87, 49);
+INSERT INTO `tbl_entries_data_152` (`id`, `entry_id`, `relation_id`) VALUES (32, 88, 49);
 
 -- *** STRUCTURE: `tbl_entries_data_153` ***
 DROP TABLE IF EXISTS `tbl_entries_data_153`;
@@ -1400,16 +1422,19 @@ CREATE TABLE `tbl_entries_data_153` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_153` ***
-INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (2, 65, 58);
-INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (11, 66, 61);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (31, 65, 58);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (36, 66, 61);
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (4, 69, 57);
-INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (12, 70, 53);
-INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (8, 71, 53);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (37, 70, 53);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (19, 71, 53);
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (13, 75, 60);
 INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (14, 76, 60);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (21, 86, 53);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (33, 87, 58);
+INSERT INTO `tbl_entries_data_153` (`id`, `entry_id`, `relation_id`) VALUES (32, 88, 58);
 
 -- *** STRUCTURE: `tbl_entries_data_154` ***
 DROP TABLE IF EXISTS `tbl_entries_data_154`;
@@ -1424,9 +1449,13 @@ CREATE TABLE `tbl_entries_data_154` (
   KEY `entry_id` (`entry_id`),
   KEY `file` (`file`),
   KEY `mimetype` (`mimetype`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_154` ***
+INSERT INTO `tbl_entries_data_154` (`id`, `entry_id`, `file`, `size`, `mimetype`, `meta`) VALUES (7, 86, '/assets/images/symphony-logo-200x37.jpg', 6511, 'image/jpg', 'a:3:{s:8:\"creation\";s:25:\"2010-06-04T07:54:12-07:00\";s:5:\"width\";i:200;s:6:\"height\";i:37;}');
+INSERT INTO `tbl_entries_data_154` (`id`, `entry_id`, `file`, `size`, `mimetype`, `meta`) VALUES (5, 71, '/assets/images/symphony-logo-200x37.png', 2266, 'image/png', 'a:3:{s:8:\"creation\";s:25:\"2010-06-04T09:32:50-07:00\";s:5:\"width\";i:200;s:6:\"height\";i:37;}');
+INSERT INTO `tbl_entries_data_154` (`id`, `entry_id`, `file`, `size`, `mimetype`, `meta`) VALUES (11, 70, '/assets/images/symphony-logo-400x91.jpg', 8169, 'image/jpeg', 'a:3:{s:8:\"creation\";s:25:\"2010-06-04T11:05:30-07:00\";s:5:\"width\";i:400;s:6:\"height\";i:91;}');
+INSERT INTO `tbl_entries_data_154` (`id`, `entry_id`, `file`, `size`, `mimetype`, `meta`) VALUES (10, 66, '/assets/images/symphony-brand.jpg', 8169, 'image/jpeg', 'a:3:{s:8:\"creation\";s:25:\"2010-06-04T11:05:03-07:00\";s:5:\"width\";i:400;s:6:\"height\";i:91;}');
 
 -- *** STRUCTURE: `tbl_entries_data_155` ***
 DROP TABLE IF EXISTS `tbl_entries_data_155`;
@@ -1444,21 +1473,6 @@ CREATE TABLE `tbl_entries_data_155` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_155` ***
-
--- *** STRUCTURE: `tbl_entries_data_156` ***
-DROP TABLE IF EXISTS `tbl_entries_data_156`;
-CREATE TABLE `tbl_entries_data_156` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `entry_id` int(11) unsigned NOT NULL,
-  `handle` varchar(255) DEFAULT NULL,
-  `value` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `entry_id` (`entry_id`),
-  KEY `handle` (`handle`),
-  KEY `value` (`value`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- *** DATA: `tbl_entries_data_156` ***
 
 -- *** STRUCTURE: `tbl_entries_data_157` ***
 DROP TABLE IF EXISTS `tbl_entries_data_157`;
@@ -1510,7 +1524,7 @@ CREATE TABLE `tbl_entries_data_159` (
   KEY `entry_id` (`entry_id`),
   KEY `handle` (`handle`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_159` ***
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 53, 'logos', 'Logos');
@@ -1518,7 +1532,7 @@ INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES 
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (3, 55, 'logotype', 'Logotype');
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (4, 56, 'signatures', 'Signatures');
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 57, 'typography', 'Typography');
-INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (6, 58, 'colours', 'Colours');
+INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (11, 58, 'colors', 'Colors');
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (7, 59, 'stationery', 'Stationery');
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 60, 'identity-guidelines', 'Identity Guidelines');
 INSERT INTO `tbl_entries_data_159` (`id`, `entry_id`, `handle`, `value`) VALUES (9, 61, 'overview', 'Overview');
@@ -1548,7 +1562,7 @@ CREATE TABLE `tbl_entries_data_160` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `relation_id` (`relation_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_160` ***
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (1, 53, 48);
@@ -1556,7 +1570,7 @@ INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (2, 
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (3, 55, 48);
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (4, 56, 48);
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (5, 57, 49);
-INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (6, 58, 49);
+INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (11, 58, 49);
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (7, 59, 50);
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (8, 60, 50);
 INSERT INTO `tbl_entries_data_160` (`id`, `entry_id`, `relation_id`) VALUES (9, 61, 51);
@@ -1572,7 +1586,7 @@ CREATE TABLE `tbl_entries_data_161` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   FULLTEXT KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_161` ***
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (1, 53, 'The visual elements of a brand identity', '<p>The visual elements of a brand identity</p>\n');
@@ -1580,7 +1594,7 @@ INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (3, 55, 'The typographic elements of a visual identity', '<p>The typographic elements of a visual identity</p>\n');
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (4, 56, 'A logo format that combines the symbol and logotype', '<p>A logo format that combines the symbol and logotype</p>\n');
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (5, 57, 'Type families chosen for use throughout the identity program', '<p>Type families chosen for use throughout the identity program</p>\n');
-INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (6, 58, 'Colour palette to be used throughout the identity program', '<p>Colour palette to be used throughout the identity program</p>\n');
+INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (11, 58, 'Color palette to be used throughout the identity program', '<p>Color palette to be used throughout the identity program</p>\n');
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (7, 59, 'Letterhead, Business Card, Envelopes and related forms of business communications', '<p>Letterhead, Business Card, Envelopes and related forms of business communications</p>\n');
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (8, 60, 'A document that provides standards and guidelines for using brand assets', '<p>A document that provides standards and guidelines for using brand assets</p>\n');
 INSERT INTO `tbl_entries_data_161` (`id`, `entry_id`, `value`, `value_formatted`) VALUES (9, 61, 'Overviews and text content for online identity assets and guidelines', '<p>Overviews and text content for online identity assets and guidelines</p>\n');
@@ -1613,7 +1627,7 @@ CREATE TABLE `tbl_entries_data_163` (
   PRIMARY KEY (`id`),
   KEY `entry_id` (`entry_id`),
   KEY `value` (`value`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- *** DATA: `tbl_entries_data_163` ***
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (1, 53, 1);
@@ -1622,10 +1636,49 @@ INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (3, 55, 3)
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (4, 62, 4);
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (5, 56, 5);
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (6, 57, 6);
-INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (7, 58, 7);
+INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (11, 58, 7);
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (8, 59, 8);
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (9, 60, 9);
 INSERT INTO `tbl_entries_data_163` (`id`, `entry_id`, `value`) VALUES (10, 61, 10);
+
+-- *** STRUCTURE: `tbl_entries_data_164` ***
+DROP TABLE IF EXISTS `tbl_entries_data_164`;
+CREATE TABLE `tbl_entries_data_164` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_164` ***
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (20, 87, NULL, NULL);
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (8, 86, 'jpg', 'JPG');
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (5, 71, 'png', 'PNG');
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (19, 88, NULL, NULL);
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (18, 65, NULL, NULL);
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (24, 70, NULL, NULL);
+INSERT INTO `tbl_entries_data_164` (`id`, `entry_id`, `handle`, `value`) VALUES (23, 66, NULL, NULL);
+
+-- *** STRUCTURE: `tbl_entries_data_165` ***
+DROP TABLE IF EXISTS `tbl_entries_data_165`;
+CREATE TABLE `tbl_entries_data_165` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- *** DATA: `tbl_entries_data_165` ***
+INSERT INTO `tbl_entries_data_165` (`id`, `entry_id`, `handle`, `value`) VALUES (1, 88, 'b20b4f', '#B20B4F');
+INSERT INTO `tbl_entries_data_165` (`id`, `entry_id`, `handle`, `value`) VALUES (2, 87, '423a3a', '#423A3A');
 
 -- *** STRUCTURE: `tbl_entries_data_17` ***
 DROP TABLE IF EXISTS `tbl_entries_data_17`;
@@ -3232,6 +3285,9 @@ INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `cr
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (83, 5, 1, '2010-06-03 19:59:16', '2010-06-04 02:59:16');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (84, 6, 1, '2010-06-03 20:10:10', '2010-06-04 03:10:10');
 INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (85, 6, 1, '2010-06-03 20:19:40', '2010-06-04 03:19:40');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (86, 22, 1, '2010-06-04 07:54:13', '2010-06-04 14:54:13');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (87, 22, 1, '2010-06-04 10:01:39', '2010-06-04 17:01:39');
+INSERT INTO `tbl_entries` (`id`, `section_id`, `author_id`, `creation_date`, `creation_date_gmt`) VALUES (88, 22, 1, '2010-06-04 10:22:28', '2010-06-04 17:22:28');
 
 -- *** DATA: `tbl_extensions` ***
 INSERT INTO `tbl_extensions` (`id`, `name`, `status`, `version`) VALUES (1, 'debugdevkit', 'enabled', '1.0.8');
@@ -3449,9 +3505,9 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (151, 'Parent Asset', 'parent-asset', 'selectbox_link', 22, 'no', 4, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (152, 'Asset Type', 'asset-type', 'selectbox_link', 22, 'no', 2, 'sidebar', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (153, 'Asset Category', 'asset-category', 'selectbox_link', 22, 'no', 3, 'sidebar', 'yes');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (154, 'Image', 'image', 'upload', 22, 'no', 9, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (155, 'File', 'file', 'upload', 22, 'no', 10, 'main', 'no');
-INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (156, 'File Formats', 'file-formats', 'input', 22, 'no', 11, 'sidebar', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (154, 'Image', 'image', 'upload', 22, 'no', 10, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (155, 'File', 'file', 'upload', 22, 'no', 11, 'main', 'no');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (164, 'File Formats', 'file-formats', 'select', 22, 'no', 12, 'sidebar', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (157, 'Asset Type', 'asset-type', 'input', 23, 'yes', 0, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (158, 'Description', 'description', 'textarea', 23, 'no', 1, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (159, 'Asset Category', 'asset-category', 'input', 24, 'yes', 0, 'main', 'yes');
@@ -3459,6 +3515,7 @@ INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (161, 'Description', 'description', 'textarea', 24, 'yes', 2, 'main', 'no');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (162, 'Sort', 'sort', 'order_entries', 23, 'no', 2, 'main', 'yes');
 INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (163, 'Sort', 'sort', 'order_entries', 24, 'no', 3, 'main', 'yes');
+INSERT INTO `tbl_fields` (`id`, `label`, `element_name`, `type`, `parent_section`, `required`, `sortorder`, `location`, `show_column`) VALUES (165, 'Color', 'color', 'input', 22, 'no', 9, 'sidebar', 'yes');
 
 -- *** DATA: `tbl_pages` ***
 INSERT INTO `tbl_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`) VALUES (1, NULL, 'Forum', 'forum', NULL, 'dpage', 'forum_discussions,forum_read_discussions,navigation,search_comments,whosonline', 'forum_utilities', 3);
@@ -3552,10 +3609,10 @@ INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_secti
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (171, 20, 140, 18, 133, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (159, 18, 131, 19, 137, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (174, 18, 131, 15, 139, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (235, 21, 142, 22, 146, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (238, 22, 145, 22, 151, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (236, 23, 157, 22, 152, 'no');
-INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (237, 24, 159, 22, 153, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (250, 21, 142, 22, 146, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (253, 22, 145, 22, 151, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (251, 23, 157, 22, 152, 'no');
+INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (252, 24, 159, 22, 153, 'no');
 INSERT INTO `tbl_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `cascading_deletion`) VALUES (202, 23, 157, 24, 160, 'no');
 
 -- *** DATA: `tbl_forum_read_discussions` ***
