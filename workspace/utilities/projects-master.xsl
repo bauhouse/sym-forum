@@ -48,7 +48,12 @@
 	<head>
 		<title><xsl:value-of select="$website-name"/> - <xsl:value-of select="$section-title"/></title>
 		<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/public.css"/>
-		<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/projects.css"/>
+		<xsl:if test="$logged-in = 'true'">
+			<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/projects.css"/>
+			<xsl:if test="$root-page = 'brands'">
+				<link rel="stylesheet" type="text/css" href="{$workspace}/assets/css/designadmin/identity.css"/>
+			</xsl:if>
+		</xsl:if>
 	</head>
 </xsl:template>
 
