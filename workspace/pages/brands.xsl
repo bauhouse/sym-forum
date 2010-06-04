@@ -61,6 +61,7 @@
 				<ul class="documents">
 					<xsl:for-each select="brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = 'guidelines']">
 						<li class="document">
+							<xsl:if test="asset/@handle = $category"><xsl:attribute name="class">current</xsl:attribute></xsl:if>
 							<a href="{$root}/brands/{$brand}/guidelines/{asset/@handle}/">
 								<xsl:value-of select="asset"/>
 							</a>
@@ -284,7 +285,7 @@
 				</li>
 			</xsl:for-each>
 		</ul>
-		<h3>Members</h3>
+		<!-- h3>Members</h3>
 		<ul class="links">
 			<xsl:choose>
 				<xsl:when test="$logged-in='true'">
@@ -295,7 +296,7 @@
 					<li><a href="{$root}/login/">Login</a></li>
 				</xsl:otherwise>
 			</xsl:choose>
-		</ul>
+		</ul -->
 	</div>
 </xsl:template>
 
