@@ -66,13 +66,6 @@
 							</a>
 						</li>
 					</xsl:for-each>
-					<xsl:for-each select="brands-entries/entry">
-						<li class="document">
-							<a href="{$root}/brands/{$brand}/guidelines/{title/@handle}/">
-								<xsl:value-of select="title"/>
-							</a>
-						</li>
-					</xsl:for-each>
 				</ul>
 				<xsl:if test="brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = 'identity']">
 					<h3><a href="{$root}/brands/{$brand}/identity/">Identity</a></h3>
@@ -203,30 +196,15 @@
 			</xsl:when>
 			<xsl:when test="$category">
 				<div class="body" id="discussion">
-					<xsl:choose>
-						<xsl:when test="brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = $type and asset/@handle = $category]">
-							<xsl:for-each select="brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = $type and asset/@handle = $category]">
-								<h2><xsl:value-of select="$brand-name"/></h2>
-								<h3><xsl:value-of select="asset"/></h3>
-								<xsl:if test="image/item/path">
-									<p><img class="brand-identity" src="{$root}/{image/item/path}" alt="{asset}"/></p>
-								</xsl:if>
-								<xsl:copy-of select="description/*"/>
-								<xsl:copy-of select="body/*"/>
-							</xsl:for-each>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:for-each select="brands-entries/entry[title/@handle = $category]">
-								<h2><xsl:value-of select="$brand-name"/></h2>
-								<h3><xsl:value-of select="title"/></h3>
-								<xsl:if test="image/item/path">
-									<p><img class="brand-identity" src="{$root}/{image/item/path}" alt="{asset}"/></p>
-								</xsl:if>
-								<xsl:copy-of select="description/*"/>
-								<xsl:copy-of select="body/*"/>
-							</xsl:for-each>
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:for-each select="brand-assets/entry[brand/item/@handle = $brand and asset-type/item/@handle = $type and asset/@handle = $category]">
+						<h2><xsl:value-of select="$brand-name"/></h2>
+						<h3><xsl:value-of select="asset"/></h3>
+						<xsl:if test="image/item/path">
+							<p><img class="brand-identity" src="{$root}/{image/item/path}" alt="{asset}"/></p>
+						</xsl:if>
+						<xsl:copy-of select="description/*"/>
+						<xsl:copy-of select="body/*"/>
+					</xsl:for-each>
 				</div>
 			</xsl:when>
 			<xsl:when test="$type">
