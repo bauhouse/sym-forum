@@ -333,16 +333,20 @@
 			</a>
 		</td>
 		<td class="date">
-			<xsl:call-template name="format-date">
-				<xsl:with-param name="date" select="start-date"/>
-				<xsl:with-param name="format" select="'x m Y'"/>
-			</xsl:call-template>
+			<xsl:if test="start-date">
+				<xsl:call-template name="format-date">
+					<xsl:with-param name="date" select="start-date"/>
+					<xsl:with-param name="format" select="'x m Y'"/>
+				</xsl:call-template>
+			</xsl:if>
 		</td>
 		<td class="date">
-			<xsl:call-template name="format-date">
-				<xsl:with-param name="date" select="due-date"/>
-				<xsl:with-param name="format" select="'x m Y'"/>
-			</xsl:call-template>
+			<xsl:if test="due-date">
+				<xsl:call-template name="format-date">
+					<xsl:with-param name="date" select="due-date"/>
+					<xsl:with-param name="format" select="'x m Y'"/>
+				</xsl:call-template>
+			</xsl:if>
 		</td>
 		<xsl:choose>
 			<xsl:when test="$admin-logged-in='true'">
