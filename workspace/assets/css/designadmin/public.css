@@ -524,7 +524,9 @@ Layout
 #forum-content {
 	margin: 0 0 0 214px;
 	}
-
+#brands .body,
+#brand-assets .body,
+#branding-content .body,
 #brand-panel .body,
 #brand-content .body {
 	padding-top: .6em;
@@ -610,8 +612,8 @@ Layout
 #forum-content .body h2 a {
 	font-weight:normal;
 	}
-/* #brand-content .body h3,
-#forum-content .body h3 {
+/* #forum-content .body h3, */
+#brand-content .body h3 {
 	margin-bottom:0;
 	} */
 #discussions {
@@ -655,6 +657,7 @@ Layout
 ----------------------------------------------- */
 table#discussions {
 	border-collapse: collapse;
+	width: 100%;
 }
 tr.discussion {
 	float:none;
