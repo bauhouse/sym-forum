@@ -5,10 +5,10 @@
 	Class datasourcesites extends Datasource{
 		
 		public $dsParamROOTELEMENT = 'sites';
-		public $dsParamORDER = 'desc';
+		public $dsParamORDER = 'asc';
 		public $dsParamLIMIT = '20';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'date';
+		public $dsParamSORT = 'title';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
@@ -36,7 +36,7 @@
 							'website' => 'http://home/sym/designadmin',
 							'email' => 'bauhouse@gmail.com'),
 					 'version' => '1.0',
-					 'release-date' => '2010-06-04T03:18:08+00:00');	
+					 'release-date' => '2010-06-04T20:05:44+00:00');	
 		}
 		
 		public function getSource(){
