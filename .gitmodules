@@ -66,7 +66,7 @@
 	url = git://github.com/rowan-lewis/reflectionfield.git
 [submodule "extensions/systemidfield"]
 	path = extensions/systemidfield
-	url = http://github.com/rowan-lewis/systemidfield.git
+	url = git://github.com/rowan-lewis/systemidfield.git
 [submodule "extensions/uniqueinputfield"]
 	path = extensions/uniqueinputfield
-	url = http://github.com/pointybeard/uniqueinputfield.git
+	url = git://github.com/pointybeard/uniqueinputfield.git
