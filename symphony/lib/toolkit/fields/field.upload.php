@@ -120,7 +120,9 @@
 		public function entryDataCleanup($entry_id, $data){
 			$file_location = WORKSPACE . '/' . ltrim($data['file'], '/');
 			
-			if(file_exists($file_location)) General::deleteFile($file_location);
+			if(is_file($file_location)){
+				General::deleteFile($file_location);
+			}
 			
 			parent::entryDataCleanup($entry_id);
 			
@@ -159,13 +161,12 @@
 					
 		}		
 		
-		function prepareTableValue($data, XMLElement $link=NULL){
+		public function prepareTableValue($data, XMLElement $link=NULL){
 			if(!$file = $data['file']) return NULL;
 					
 			if($link){
 				$link->setValue(basename($file));
-				//$view_link = Widget::Anchor('(view)', URL . '/workspace' . $file);
-				return $link->generate(); // . ' ' . $view_link->generate();
+				return $link->generate();
 			}
 			
 			else{
@@ -175,7 +176,13 @@
 			
 		}
 
-		function appendFormattedElement(&$wrapper, $data){
+		public function appendFormattedElement(&$wrapper, $data){
+			
+			// It is possible an array of NULL data will be passed in. Check for this.
+			if(!is_array($data) || !isset($data['file']) || is_null($data['file'])){
+				return;
+			}
+			
 			$item = new XMLElement($this->get('element_name'));
 			$file = WORKSPACE . $data['file'];
 			$item->setAttributeArray(array(
@@ -281,7 +288,17 @@
 			}
 				
 			## Its not an array, so just retain the current data and return
-			if(!is_array($data)) return self::__OK__;
+			if(!is_array($data)){
+				
+				$file = WORKSPACE . $data;
+				
+				if(!file_exists($file) || !is_readable($file)){
+					$message = __('The file uploaded is no longer available. Please check that it exists, and is readable.');
+					return self::__INVALID_FIELDS__;
+				}
+				
+				return self::__OK__;
+			}
 
 
 			if(!is_dir(DOCROOT . $this->get('destination') . '/')){
@@ -363,19 +380,48 @@
 
 			$status = self::__OK__;
 			
+			//fixes bug where files are deleted, but their database entries are not.
+			if($data === NULL){
+				return array(
+					'file' => NULL,
+					'mimetype' => NULL,
+					'size' => NULL,
+					'meta' => NULL
+				);
+			}
+			
 			## Its not an array, so just retain the current data and return
 			if(!is_array($data)){
-				
+	
 				$status = self::__OK__;
+				
 				$file = WORKSPACE . $data;
-				// Do a simple reconstruction of the file meta information. This is a workaround for
-				// bug which causes all meta information to be dropped
-				return array(
+				
+				$result = array(
 					'file' => $data,
-					'mimetype' => self::__sniffMIMEType($data),
-					'size' => (file_exists($file) && is_readable($file) ? filesize($file) : NULL),
-					'meta' => serialize(self::getMetaInfo(WORKSPACE . $data, self::__sniffMIMEType($data)))
+					'mimetype' => NULL,
+					'size' => NULL,
+					'meta' => NULL
 				);
+				
+				// Grab the existing entry data to preserve the MIME type and size information
+				if(isset($entry_id) && !is_null($entry_id)){
+					$row = Symphony::Database()->fetchRow(0, sprintf(
+						"SELECT `file`, `mimetype`, `size`, `meta` FROM `tbl_entries_data_%d` WHERE `entry_id` = %d", 
+						$this->get('id'), 
+						$entry_id
+					));
+					if(!empty($row)){
+						$result = $row;
+					}
+				}
+				
+				if(!file_exists($file) || !is_readable($file)){
+					$status = self::__INVALID_FIELDS__;
+					return $result;
+				}
+
+				return $result;
 	
 			}
 
@@ -396,7 +442,7 @@
 				$existing_file = rtrim($rel_path, '/') . '/' . trim(basename($row['file']), '/');
 				
 				// File was removed
-				if($data['error'] == UPLOAD_ERR_NO_FILE && !is_null($existing_file) && file_exists(WORKSPACE . $existing_file)){
+				if($data['error'] == UPLOAD_ERR_NO_FILE && !is_null($existing_file) && is_file(WORKSPACE . $existing_file)){
 					General::deleteFile(WORKSPACE . $existing_file);
 				}
 			}
@@ -421,7 +467,7 @@
 			$file = rtrim($rel_path, '/') . '/' . trim($data['name'], '/');
 			
 			// File has been replaced
-			if(!is_null($existing_file) && (strtolower($existing_file) != strtolower($file)) && file_exists(WORKSPACE . $existing_file)){
+			if(!is_null($existing_file) && (strtolower($existing_file) != strtolower($file)) && is_file(WORKSPACE . $existing_file)){
 				General::deleteFile(WORKSPACE . $existing_file);
 			}
 
@@ -439,28 +485,13 @@
 			
 		}
 		
-		private static function __sniffMIMEType($file){
-			
-			$ext = strtolower(General::getExtension($file));
-			
-			$imageMimeTypes = array(
-				'image/gif',
-				'image/jpg',
-				'image/jpeg',
-				'image/png',
-			);
-			
-			if(General::in_iarray("image/{$ext}", $imageMimeTypes)) return "image/{$ext}";
-			
-			return 'unknown';
-		}
-		
 		public static function getMetaInfo($file, $type){
 
 			$imageMimeTypes = array(
 				'image/gif',
 				'image/jpg',
 				'image/jpeg',
+				'image/pjpeg',
 				'image/png',
 			);
 			
@@ -486,7 +517,7 @@
 				  `id` int(11) unsigned NOT NULL auto_increment,
 				  `entry_id` int(11) unsigned NOT NULL,
 				  `file` varchar(255) default NULL,
-				  `size` int(11) unsigned NOT NULL,
+				  `size` int(11) unsigned NULL,
 				  `mimetype` varchar(50) default NULL,
 				  `meta` varchar(255) default NULL,
 				  PRIMARY KEY  (`id`),

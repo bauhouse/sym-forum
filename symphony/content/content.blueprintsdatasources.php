@@ -83,7 +83,7 @@
 				
 				$fields['order'] = ($existing->dsParamORDER == 'rand' ? 'random' : $existing->dsParamORDER);
 				$fields['param'] = $existing->dsParamPARAMOUTPUT;
-				$fields['required_url_param'] = $existing->dsParamREQUIREDPARAM;
+				$fields['required_url_param'] = trim($existing->dsParamREQUIREDPARAM);
 				
 				$fields['xml_elements'] = array();
 				if(isset($existing->dsParamINCLUDEDELEMENTS) && is_array($existing->dsParamINCLUDEDELEMENTS)){
@@ -422,6 +422,11 @@
 				array('random', ('random' == $fields['order']), __('random')),
 			);
 			
+			// Retain custom sort order
+			if(!in_array($fields['order'], array('asc', 'desc', 'random'))){
+				$options[] = array($fields['order'], true, $fields['order']);
+			}
+			
 			$label->appendChild(Widget::Select('fields[order]', $options));
 			$div->appendChild($label);
 			
@@ -432,7 +437,7 @@
 
 			$label = Widget::Label();
 			$input = Widget::Input('fields[max_records]', $fields['max_records'], NULL, array('size' => '6'));
-			$label->setValue(__('Show a maximum of %s results', array($input->generate(false))));
+			$label->setValue(__('Show a maximum of %s results per page', array($input->generate(false))));
 			if(isset($this->_errors['max_records'])) $div->appendChild(Widget::wrapFormElementWithError($label, $this->_errors['max_records']));
 			else $div->appendChild($label);
 			
@@ -445,7 +450,7 @@
 			$fieldset->appendChild($div);
 			
 			$label = Widget::Label(__('Required URL Parameter <i>Optional</i>'));
-			$label->appendChild(Widget::Input('fields[required_url_param]', $fields['required_url_param']));
+			$label->appendChild(Widget::Input('fields[required_url_param]', trim($fields['required_url_param'])));
 			$fieldset->appendChild($label);
 			
 			$p = new XMLElement('p', __('An empty result will be returned when this parameter does not have a value. Do not wrap the parameter with curly-braces.'));
@@ -917,10 +922,10 @@
 			$isDuplicate = false;
 			$queueForDeletion = NULL;
 			
-			if($this->_context[0] == 'new' && @is_file($file)) $isDuplicate = true;
+			if($this->_context[0] == 'new' && is_file($file)) $isDuplicate = true;
 			elseif($this->_context[0] == 'edit'){
 				$existing_handle = $this->_context[1];
-				if($classname != $existing_handle && @is_file($file)) $isDuplicate = true;
+				if($classname != $existing_handle && is_file($file)) $isDuplicate = true;
 				elseif($classname != $existing_handle) $queueForDeletion = DATASOURCES . '/data.' . $existing_handle . '.php';			
 			}
 			
@@ -962,7 +967,7 @@
 						$params['order'] = $fields['order'];
 						$params['limit'] = $fields['max_records'];						
 						$params['redirectonempty'] = (isset($fields['redirect_on_empty']) ? 'yes' : 'no');
-						$params['requiredparam'] = $fields['required_url_param'];
+						$params['requiredparam'] = trim($fields['required_url_param']);
 						$params['paramoutput'] = $fields['param'];
 						$params['sort'] = $fields['sort'];
 						$params['startpage'] = $fields['page_number'];
@@ -977,7 +982,7 @@
 					
 						$params['order'] = $fields['order'];
 						$params['redirectonempty'] = (isset($fields['redirect_on_empty']) ? 'yes' : 'no');
-						$params['requiredparam'] = $fields['required_url_param'];			
+						$params['requiredparam'] = trim($fields['required_url_param']);			
 						
 						$dsShell = str_replace('<!-- GRAB -->', "include(TOOLKIT . '/data-sources/datasource.navigation.php');", $dsShell);
 						
@@ -1034,7 +1039,7 @@
 						$params['group'] = $fields['group'];
 						$params['limit'] = $fields['max_records'];
 						$params['redirectonempty'] = (isset($fields['redirect_on_empty']) ? 'yes' : 'no');
-						$params['requiredparam'] = $fields['required_url_param'];
+						$params['requiredparam'] = trim($fields['required_url_param']);
 						$params['paramoutput'] = $fields['param'];
 						$params['sort'] = $fields['sort'];
 						$params['startpage'] = $fields['page_number'];

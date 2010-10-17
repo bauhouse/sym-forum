@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS `tbl_authors`;
 CREATE TABLE `tbl_authors` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `password` varchar(32) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `password` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `first_name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `last_name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -125,7 +125,7 @@ DROP TABLE IF EXISTS `tbl_fields_input`;
 CREATE TABLE `tbl_fields_input` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `field_id` int(11) unsigned NOT NULL,
-  `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `validator` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -196,7 +196,7 @@ DROP TABLE IF EXISTS `tbl_fields_taglist`;
 CREATE TABLE `tbl_fields_taglist` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `field_id` int(11) unsigned NOT NULL,
-  `validator` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `validator` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `pre_populate_source` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`),
@@ -220,7 +220,7 @@ CREATE TABLE `tbl_fields_upload` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `field_id` int(11) unsigned NOT NULL,
   `destination` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `validator` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `validator` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `field_id` (`field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

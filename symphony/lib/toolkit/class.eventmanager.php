@@ -6,7 +6,7 @@
 
 	    function __find($name){
 		 
-		    if(@is_file(EVENTS . "/event.$name.php")) return EVENTS;
+		    if(is_file(EVENTS . "/event.$name.php")) return EVENTS;
 			else{	
 				
 				$extensionManager = new ExtensionManager($this->_Parent);
@@ -14,7 +14,7 @@
 				
 				if(is_array($extensions) && !empty($extensions)){
 					foreach($extensions as $e){
-						if(@is_file(EXTENSIONS . "/$e/events/event.$name.php")) return EXTENSIONS . "/$e/events";	
+						if(is_file(EXTENSIONS . "/$e/events/event.$name.php")) return EXTENSIONS . "/$e/events";	
 					}	
 				}		    
 	    	}	
@@ -54,17 +54,17 @@
 						$classname = $this->__getClassName($f);   
 						$path = $this->__getDriverPath($f);
 						$can_parse = false;
-						$type = NULL;
+						$source = NULL;
 								
 						if(is_callable(array($classname,'allowEditorToParse')))
 							$can_parse = @call_user_func(array(&$classname, 'allowEditorToParse'));
 		
 						if(is_callable(array($classname,'getSource')))	
-							$type = @call_user_func(array(&$classname, 'getSource'));
+							$source = @call_user_func(array(&$classname, 'getSource'));
 							
 						$about['can_parse'] = $can_parse;
 						$about['source'] = $source;
-						$result[$f] = $about;		
+						$result[$f] = $about;
 		
 					}
 				}
@@ -109,7 +109,7 @@
 	        $classname = $this->__getClassName($name);	        
 	        $path = $this->__getDriverPath($name);
 	        
-	        if(!@is_file($path)){
+	        if(!is_file($path)){
 		        trigger_error(__('Could not find Event <code>%s</code>. If the Event was provided by an Extensions, ensure that it is installed, and enabled.', array($name)), E_USER_ERROR);	
 		        return false;
 	        }

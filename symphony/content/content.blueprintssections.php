@@ -127,7 +127,7 @@
 			
 			$label = Widget::Label();
 			$input = Widget::Input('meta[hidden]', 'yes', 'checkbox', ($meta['hidden'] == 'yes' ? array('checked' => 'checked') : NULL));
-			$label->setValue(__('%s Hide this section from the Publish menu', array($input->generate(false))));
+			$label->setValue(__('%s Hide this section from the back-end menu', array($input->generate(false))));
 			$namediv->appendChild($label);
 			$div->appendChild($namediv);
 			
@@ -600,7 +600,10 @@
 				}
 
 				## Check for duplicate section handle
-				elseif($meta['name'] != $existing_section->get('name') && Symphony::Database()->fetchRow(0, "SELECT * FROM `tbl_sections` WHERE `name` = '" . $meta['name'] . "' AND `id` != {$section_id} LIMIT 1")){
+				elseif(
+					$meta['name'] != $existing_section->get('name') 
+					&& Symphony::Database()->fetchRow(0, "SELECT * FROM `tbl_sections` WHERE `name` = '" . Symphony::Database()->cleanValue($meta['name']) . "' AND `id` != {$section_id} LIMIT 1")
+				){
 					$this->_errors['name'] = __('A Section with the name <code>%s</code> name already exists', array($meta['name']));
 					$canProceed = false;
 				}
